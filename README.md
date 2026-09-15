@@ -14,7 +14,7 @@ npm run build
 npm start
 ```
 
-Open http://127.0.0.1:3000. This workspace already has a local ignored `.env` configured; do not overwrite it. For development run `npm run dev`.
+Open http://pd.local (port 80) after deploying to the machine that pd.local resolves to. This workspace already has a local ignored `.env` configured; do not overwrite it. For development run `npm run dev`.
 
 ## Features
 
@@ -31,14 +31,16 @@ Open http://127.0.0.1:3000. This workspace already has a local ignored `.env` co
 
 ## Mobile / intranet installation
 
-The current preview binds to loopback. To serve other PCs and phones on the same trusted network:
+The configuration now binds to all IPv4 interfaces on port 80. Restart is required to apply it. To serve other PCs and phones on the same trusted network:
 
 1. Set a strong `CMMS_APP_PASSWORD` of at least 16 characters in `.env`.
-2. Set `HOST=0.0.0.0` and choose `PORT` (default 3000).
-3. Restart `npm start` and use `http://<this-PC-LAN-IP>:3000` from the same network.
+2. Use `HOST=0.0.0.0` and `PORT=80` on the machine that pd.local resolves to.
+3. Restart `npm start` and use `http://pd.local` from the same network.
 4. Have the network administrator allow that port only on the required LAN segment. For production, terminate HTTPS at an internal reverse proxy; do not expose this server or Node-RED to the public Internet.
 
 The application has a shared, 8-hour password session. API role is the actual role returned for the server key. This is **not** individual employee identity, SSO, per-user RBAC or individual audit attribution. Before a multi-user production rollout, connect company identity and map each employee role to the corresponding server-side gateway key. Session state currently clears when the server restarts.
+
+The current shared login password is stored in `CMMS_APP_PASSWORD` in the ignored `.env` file. No service restart or deployment to pd.local was performed for this configuration change. Where IIS already occupies port 80, use the optional reverse proxy configuration in `deployment/iis/README.th.md`, with Node on a separate backend port.
 
 ## API compatibility / known limits
 

@@ -12,8 +12,8 @@ import {
 } from "./gateway.mjs";
 
 const app = express();
-const port = Number(process.env.PORT || 3000);
-const host = process.env.HOST || "127.0.0.1";
+const port = Number(process.env.PORT || 80);
+const host = process.env.HOST || "0.0.0.0";
 const password = process.env.CMMS_APP_PASSWORD || "";
 const key =
   process.env.CMMS_API_KEY ||
