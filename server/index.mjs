@@ -1,4 +1,6 @@
 import "dotenv/config";
+import {setDefaultResultOrder} from 'node:dns';
+setDefaultResultOrder('ipv4first');
 import express from "express";
 import { randomBytes } from "node:crypto";
 import { resolve,dirname,join } from "node:path";
@@ -11,9 +13,11 @@ import {
   normalizeData,
 } from "./gateway.mjs";
 
-import { createUserStore } from "./users.mjs";
+import { createUserStore, publicUser } from "./users.mjs";
 import { canAccess as policyAccess, canPerform as policyPerform } from "../shared/permissions.mjs";
 import {createPermissionsStore} from './permissions-store.mjs';
+import {createIdentityApi} from './identity-api.mjs';
+import {addPartReference} from './part-images.mjs';
 const app = express();
 const port = Number(process.env.PORT || 80);
 const host = process.env.HOST || "0.0.0.0";
@@ -27,14 +31,16 @@ const base = (process.env.CMMS_API_BASE_URL || "http://pd.local:1880").replace(
   /\/$/,
   "",
 );
-const users = createUserStore(
+const databaseIdentity = process.env.CMMS_IDENTITY_STORAGE === 'database';
+const users = databaseIdentity ? null : createUserStore(
   process.env.CMMS_USERS_FILE || "server/users.local.json",
   password,
 );
 const adminKey = process.env.CMMS_API_KEY_ADMIN || key;
 const permissionStore=createPermissionsStore(process.env.CMMS_PERMISSIONS_FILE || join(dirname(process.env.CMMS_USERS_FILE || 'server/users.local.json'),'permissions.local.json'));
-function canAccess(role,page){return policyAccess(role,page,permissionStore.read().roles)}
-function canPerform(role,resource,method,row){return policyPerform(role,resource,method,row,permissionStore.read().roles)}
+const identityApi=databaseIdentity?createIdentityApi(base,adminKey):null;
+function canAccess(req,page){return policyAccess(req.user.role,page,req.policy.roles)}
+function canPerform(req,resource,method,row){return policyPerform(req.user.role,resource,method,row,req.policy.roles)}
 const sessions = new Map();
 const attempts = new Map();
 setInterval(() => {
@@ -74,14 +80,29 @@ app.use("/api", (req, res, next) => {
   }
   next();
 });
+// Load one authoritative identity snapshot for this request. Never fall back to local
+// credentials when database authentication is configured but unavailable.
+app.use('/api',async (req,res,next)=>{
+  try {
+    if(req.path==='/logout')return next();
+    const cookieId=/(?:^|;\s*)cmms_session=([^;]+)/.exec(req.headers.cookie||'')?.[1];
+    const activeSession=sessions.get(cookieId);
+    if(req.path==='/login'||(activeSession&&activeSession.expires>Date.now())) {
+      req.identity=identityApi?await identityApi.read():null;
+      req.policy=identityApi?req.identity.permissions:permissionStore.read();
+    }
+    next();
+  }catch(e){next(e)}
+});
 function currentUser(req) {
   const id = /(?:^|;\s*)cmms_session=([^;]+)/.exec(
     req.headers.cookie || "",
   )?.[1];
   const session = sessions.get(id);
   if (!session || session.expires <= Date.now()) return null;
-  const user = users.get(session.userId);
-  return user?.active && user.version === session.version && session.policyVersion === permissionStore.read().roleVersions[user.role] ? user : null;
+  const stored=req.identity?.users.find(u=>u.id===session.userId);
+  const user = identityApi ? (stored?publicUser(stored):null) : users.get(session.userId);
+  return user?.active && user.version === session.version && session.policyVersion === req.policy?.roleVersions[user.role] ? user : null;
 }
 function authenticated(req) {
   return !!currentUser(req);
@@ -94,7 +115,7 @@ app.get("/api/session", (req, res) => {
     configured: !!key,
     user,
     role: user?.role,
-    permissions:user?permissionStore.read().roles:undefined,
+    permissions:user?req.policy.roles:undefined,
   });
 });
 app.post("/api/login", (req, res) => {
@@ -107,7 +128,7 @@ app.post("/api/login", (req, res) => {
   const input = String(req.body.password || "");
   const user =
     input.length <= 128
-      ? users.authenticate(req.body.username || "admin", input)
+      ? (identityApi?identityApi.authenticate(req.identity,req.body.username || "admin",input):users.authenticate(req.body.username || "admin", input))
       : null;
   if (!user) {
     attempts.set(ip, {
@@ -123,7 +144,7 @@ app.post("/api/login", (req, res) => {
     expires: Date.now() + 8 * 60 * 60 * 1000,
     userId: user.id,
     version: user.version,
-    policyVersion: permissionStore.read().roleVersions[user.role],
+    policyVersion: req.policy?.roleVersions[user.role],
   });
   attempts.delete(ip);
   res.cookie("cmms_session", id, {
@@ -133,7 +154,7 @@ app.post("/api/login", (req, res) => {
     maxAge: 8 * 60 * 60 * 1000,
     path: "/",
   });
-  res.json({ ok: true, user, role: user.role, permissions:permissionStore.read().roles });
+  res.json({ ok: true, user, role: user.role, permissions:req.policy.roles });
 });
 app.post("/api/logout", (req, res) => {
   const id = /(?:^|;\s*)cmms_session=([^;]+)/.exec(
@@ -163,42 +184,42 @@ function forbidden(res) {
     });
 }
 app.get('/api/permissions',(req,res)=>{
-  if(!canAccess(req.user.role,'users'))return forbidden(res);
-  res.json({ok:true,data:permissionStore.read()});
+  if(!canAccess(req,'users'))return forbidden(res);
+  res.json({ok:true,data:req.policy});
 });
-app.put('/api/permissions/:role',(req,res)=>{
-  if(!canAccess(req.user.role,'users'))return forbidden(res);
-  try{res.json({ok:true,data:permissionStore.update(req.params.role,req.body.permissions,req.body.revision,req.user.username)})}
+app.put('/api/permissions/:role',async (req,res)=>{
+  if(!canAccess(req,'users'))return forbidden(res);
+  try{res.json({ok:true,data:await (identityApi?identityApi.updatePermissions(req.params.role,req.body.permissions,req.body.revision,req.user.username):permissionStore.update(req.params.role,req.body.permissions,req.body.revision,req.user.username))})}
   catch(e){res.status(e.status||400).json({ok:false,error:{message:e.message}})}
 });
 app.get("/api/users", (req, res) =>
-  canAccess(req.user.role, "users")
-    ? res.json({ ok: true, data: users.list() })
+  canAccess(req, "users")
+    ? res.json({ ok: true, data: identityApi?req.identity.users.map(publicUser):users.list() })
     : forbidden(res),
 );
-app.post("/api/users", (req, res) => {
-  if (!canAccess(req.user.role, "users")) return forbidden(res);
+app.post("/api/users", async (req, res) => {
+  if (!canAccess(req, "users")) return forbidden(res);
   try {
     res
       .status(201)
-      .json({ ok: true, data: users.saveUser(null, req.body, req.user.id) });
+      .json({ ok: true, data: await (identityApi||users).saveUser(null, req.body, req.user.id) });
   } catch (e) {
-    res.status(400).json({ ok: false, error: { message: e.message } });
+    res.status(e.status||400).json({ ok: false, error: { message: e.message } });
   }
 });
-app.put("/api/users/:id", (req, res) => {
-  if (!canAccess(req.user.role, "users")) return forbidden(res);
+app.put("/api/users/:id", async (req, res) => {
+  if (!canAccess(req, "users")) return forbidden(res);
   try {
     res.json({
       ok: true,
-      data: users.saveUser(req.params.id, req.body, req.user.id),
+      data: await (identityApi||users).saveUser(req.params.id, req.body, req.user.id),
     });
   } catch (e) {
-    res.status(400).json({ ok: false, error: { message: e.message } });
+    res.status(e.status||400).json({ ok: false, error: { message: e.message } });
   }
 });
 app.get("/api/reports", async (req, res) => {
-  if (!canAccess(req.user.role, "reports")) return forbidden(res);
+  if (!canAccess(req, "reports")) return forbidden(res);
   try {
     const entries = await Promise.all(
       ["assets", "work-orders", "maintenance-plans", "spare-parts"].map(
@@ -232,7 +253,7 @@ app.get("/api/lookups", (req, res) => {
   res.json({
     asOf: "2026-09-15",
     vendors:
-      !canAccess(req.user.role,"calibration-history")
+      !canAccess(req,"calibration-history")
         ? []
         : JSON.parse(
             readFileSync(new URL("./vendors.json", import.meta.url), "utf8"),
@@ -277,7 +298,7 @@ async function upstream(
 }
 app.all("/api/cmms/:resource", async (req, res) => {
   const { resource } = req.params;
-  if (!canPerform(req.user.role, resource, req.method)) return forbidden(res);
+  if (!canPerform(req, resource, req.method)) return forbidden(res);
   const error = validateRequest(resource, req.method, req.query, req.body);
   if (error)
     return res
@@ -329,7 +350,7 @@ app.all("/api/cmms/:resource", async (req, res) => {
           return res
             .status(404)
             .json({ ok: false, error: { message: "ไม่พบใบงาน" } });
-        if (!canPerform(req.user.role, resource, req.method, row))
+        if (!canPerform(req, resource, req.method, row))
           return forbidden(res);
       }
       if (!canWrite(probe.json.role, req.method, resource))
@@ -343,7 +364,7 @@ app.all("/api/cmms/:resource", async (req, res) => {
         });
     }
     const query = new URLSearchParams();
-    for (const field of ["id", "search", "limit"])
+    for (const field of ["id", "search", "limit", ...(resource==='spare-parts'?['department','partType']:[])])
       if (req.query[field] !== undefined)
         query.set(field, String(req.query[field]));
     const { status, json } = await upstream(
@@ -354,8 +375,13 @@ app.all("/api/cmms/:resource", async (req, res) => {
       apiKey,
     );
     if (json.ok) {
+      if(resource==='spare-parts'&&req.method==='GET'&&canAccess(req,resource)){
+        const sets=json.data?.recordsets;
+        if(sets?.length>=4){json.facets={departments:sets[1].map(r=>r.Value),partTypes:sets[2].map(r=>r.Value)};json.total=sets[3][0]?.Total;}
+      }
       json.data = normalizeData(json.data);
-      if (!canAccess(req.user.role,resource)) {
+      if(resource==='spare-parts'&&canAccess(req,resource))json.data=json.data.map(addPartReference);
+      if (!canAccess(req,resource)) {
         const fields={
           'spare-parts':['PartID','PartCode','PartName','Quantity','Unit'],
           'assets':['AssetID','MachineCode','TagNo','AssetName'],
@@ -395,9 +421,9 @@ if (process.argv.includes("--production")) {
   app.use(vite.middlewares);
 }
 app.use((err, req, res, next) =>
-  res.status(err.status === 413 ? 413 : 400).json({
+  res.status(err.status === 503 ? 503 : err.status === 413 ? 413 : 400).json({
     ok: false,
-    error: { code: "BAD_REQUEST", message: "Invalid request body" },
+    error: { code: err.status===503?"DATABASE_UNAVAILABLE":"BAD_REQUEST", message: err.status===503?"เชื่อมต่อฐานข้อมูลไม่ได้":"Invalid request body" },
   }),
 );
 app.listen(port, host, () =>

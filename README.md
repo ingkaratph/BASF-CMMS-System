@@ -40,7 +40,9 @@ The configuration now binds to all IPv4 interfaces on port 80. Restart is requir
 
 ## Named accounts and permissions
 
-The application now uses individual usernames and passwords with 8-hour sessions. The initial account is `admin` / the existing `CMMS_APP_PASSWORD` value. This environment value bootstraps the first account only; later password changes belong in **ผู้ใช้และสิทธิ์**. Administrators can create accounts, change roles, disable accounts and reset passwords. Passwords are stored as salted scrypt hashes in ignored `server/users.local.json` (or `CMMS_USERS_FILE`). Keep this file outside the IIS web root and back it up securely. No sample accounts are created.
+The application now uses individual usernames and passwords with 8-hour sessions. The initial account is `admin` / the existing `CMMS_APP_PASSWORD` value. This environment value bootstraps the first account only; later password changes belong in **ผู้ใช้และสิทธิ์**. Administrators can create accounts, change roles, disable accounts and reset passwords. Production accounts now live in `BASF_CHEMCAT_CMMS.cmms_auth.Users`, accessed through the private identity API. Passwords remain salted scrypt hashes; existing accounts were migrated without changing their passwords. Set `CMMS_IDENTITY_STORAGE=database`. The ignored local user file is a pre-migration backup and is used only in explicit local development mode. See [SQL identity deployment and API](deployment/IDENTITY.md).
+
+These are the initial defaults. Administrators can customize Planner, Technician and Production permissions in **ผู้ใช้และสิทธิ์**, with persisted SQL policies, revision checks and an audit trail. Administrator remains reserved.
 
 | Role                  | Master records                  | Active work orders              | History                                                                         | Reports |
 | --------------------- | ------------------------------- | ------------------------------- | ------------------------------------------------------------------------------- | ------- |
@@ -69,7 +71,7 @@ The localhost HTTP.sys frontend has been started on this PC; no deployment or te
 - Warehouse/vendor names are a reference snapshot read on 2026-09-15. Warehouse 1 is EM-MAIN. Maintain `server/vendors.json` and the lookup response when those master lists change, or extend Node-RED with lookup resources.
 - Calibration creation requires an existing CalibrationSpec, as enforced by the upstream procedure.
 - Stock balance transactionality, simultaneous issues and negative-stock prevention remain the responsibility of the SQL gateway/triggers. The app does not invent a balance or directly update stock.
-- No automatic PM-to-WO generation, purchase orders, approvals, notifications, file attachment storage or database schema migrations were added. Those need additional API capabilities/business rules.
+- No automatic PM-to-WO generation, purchase orders, approvals, notifications or file attachment storage were added. Those need additional API capabilities/business rules.
 - Cloud hosting cannot directly reach `pd.local`; this delivery is designed to run inside the plant network.
 
 ## Validation

@@ -39,6 +39,7 @@ export function canWrite(role, method, resource) {
       : method === "DELETE" && role === "ADMIN";
 }
 export function validateRequest(resource, method, query, body) {
+  if(resource==='spare-parts'&&['department','partType'].some(k=>query[k]!==undefined&&(typeof query[k]!=='string'||query[k].length>100)))return 'Invalid part filter';
   if (!resources.includes(resource)) return "Unknown resource";
   if (!["GET", "POST", "PUT", "DELETE"].includes(method))
     return "Method not allowed";

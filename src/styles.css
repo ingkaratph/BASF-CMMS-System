@@ -87,6 +87,18 @@ svg {
   display: flex;
   min-height: 100vh;
 }
+.sidebar-close{position:absolute;right:8px;top:6px}
+.sidebar-toggle{display:inline-flex}
+@media(min-width:721px){.sidebar-hidden .sidebar{display:none}.sidebar-hidden .main-shell{margin-left:0;width:100%}}
+.parts-filters{display:flex;align-items:end;flex-wrap:wrap;gap:14px;padding:16px 22px;border-top:1px solid var(--line)}
+.parts-filters label{display:grid;gap:6px;font-size:12px;color:var(--muted)}
+.parts-filters select{min-width:190px;padding:9px 12px;border:1px solid var(--line);border-radius:5px;background:var(--theme-surface,#fff);color:var(--theme-text,#243348)}
+.parts-filters small{flex-basis:100%;color:var(--muted)}
+.part-reference{width:72px;height:76px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:var(--muted)}
+.part-reference img{width:64px;height:52px;object-fit:contain;background:#fff;border-radius:5px;border:1px solid var(--line)}
+.part-reference small{font-size:10px;white-space:nowrap}
+.empty-reference{border:1px dashed var(--line);border-radius:5px}
+@media(max-width:720px){.parts-filters{padding:14px 16px}.parts-filters label{flex:1;min-width:140px}.parts-filters select{width:100%;min-width:0}}
 .sidebar {
   width: 246px;
   flex-shrink: 0;

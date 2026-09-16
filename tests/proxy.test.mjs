@@ -60,6 +60,7 @@ test("proxy authentication, actual role, mutations, validation and upstream erro
   const child = spawn(process.execPath, ["server/index.mjs", "--production"], {
     env: {
       ...process.env,
+      CMMS_IDENTITY_STORAGE: "local",
       PORT: String(port),
       HOST: "127.0.0.1",
       CMMS_API_KEY: "isolated-test-key",

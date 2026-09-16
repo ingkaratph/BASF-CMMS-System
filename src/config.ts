@@ -170,6 +170,8 @@ export const modules: Record<Resource, Module> = {
     columns: [
       ["PartCode", "รหัสอะไหล่"],
       ["PartName", "ชื่ออะไหล่"],
+      ["Department", "Department"],
+      ["PartType", "PartType"],
       ["Quantity", "คงเหลือ"],
       ["Unit", "หน่วย"],
       ["MinimumStock", "ขั้นต่ำ"],

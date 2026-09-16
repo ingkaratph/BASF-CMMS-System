@@ -1,0 +1,124 @@
+{
+  "label": "CMMS Identity API",
+  "info": "Private backend service, ADMIN API key required. Do not call from browser. Credential hashes remain server-side.",
+  "nodes": [
+    {
+      "id": "6f51426dfcad9cd7",
+      "type": "http in",
+      "url": "/cmms/identity/storage",
+      "method": "post",
+      "name": "CMMS identity service",
+      "x": 170,
+      "y": 120,
+      "wires": [
+        [
+          "c93afa1eb8ea28a3"
+        ]
+      ]
+    },
+    {
+      "id": "c93afa1eb8ea28a3",
+      "type": "function",
+      "name": "Service authorization and validation",
+      "func": "\nconst supplied=msg.req.headers['x-api-key'];\nconst key=env.get('CMMS_API_KEY_ADMIN');\nlet difference=typeof supplied==='string'&&typeof key==='string'?(supplied.length^key.length):1;\nif(typeof supplied==='string'&&typeof key==='string')for(let i=0;i<Math.max(supplied.length,key.length);i++)difference|=(supplied.charCodeAt(i)||0)^(key.charCodeAt(i)||0);\nif(!key||difference){msg.statusCode=401;msg.apiError='Unauthorized';return [null,msg];}\nconst body=msg.payload;\nif(!body||!['READ','SAVE_USER','SAVE_PERMISSIONS'].includes(body.operation)){msg.statusCode=400;msg.apiError='Invalid operation';return [null,msg];}\nconst permissionResources=[\"assets\",\"maintenance-plans\",\"work-orders\",\"spare-parts\",\"stock-transactions\",\"calibration-history\"];const permissionPages=[\"overview\",\"reports\",\"settings\"];const permissionMethods=[\"GET\",\"POST\",\"PUT\",\"DELETE\"];const immutableResources=[\"stock-transactions\",\"calibration-history\"];\nfunction validateRolePermissions(value) {\n  const exact=(obj,keys)=>obj&&typeof obj==='object'&&!Array.isArray(obj)&&Object.keys(obj).length===keys.length&&keys.every(k=>Object.hasOwn(obj,k));\n  if(!exact(value,['pages','resources','history'])||!exact(value.pages,permissionPages)||!exact(value.resources,permissionResources)||!exact(value.history,['edit','delete']))throw new Error('รูปแบบสิทธิ์ไม่ถูกต้อง');\n  if([...Object.values(value.pages),...Object.values(value.history)].some(v=>typeof v!=='boolean'))throw new Error('สิทธิ์ต้องเป็นค่าเปิดหรือปิด');\n  for(const resource of permissionResources){\n    const rights=value.resources[resource];\n    if(!exact(rights,permissionMethods)||Object.values(rights).some(v=>typeof v!=='boolean'))throw new Error('สิทธิ์ข้อมูลไม่ถูกต้อง');\n    if(!rights.GET&&(rights.POST||rights.PUT||rights.DELETE))throw new Error('ต้องเปิดสิทธิ์ดูก่อนให้เพิ่ม แก้ไข หรือลบ');\n    if(immutableResources.includes(resource)&&(rights.PUT||rights.DELETE))throw new Error('ประวัติรับ–เบิกและสอบเทียบไม่รองรับการแก้ไขหรือลบ');\n  }\n  if(value.history.edit&&!value.resources['work-orders'].PUT)throw new Error('การแก้ไขประวัติต้องมีสิทธิ์แก้ไขใบงาน');\n  if(value.history.delete&&!value.resources['work-orders'].DELETE)throw new Error('การลบประวัติต้องมีสิทธิ์ลบใบงาน');\n  if(value.pages.reports&&!['assets','work-orders','maintenance-plans','spare-parts'].every(r=>value.resources[r].GET))throw new Error('รายงานต้องมีสิทธิ์ดูเครื่องจักร ใบงาน แผน PM และอะไหล่');\n}\ntry {if(body.operation==='SAVE_PERMISSIONS')validateRolePermissions(body.permissions);}catch(e){msg.statusCode=400;msg.apiError=e.message;return [null,msg];}\nmsg.operation=body.operation;msg.bodyJson=JSON.stringify(body);\nif(msg.bodyJson.length>65536){msg.statusCode=413;msg.apiError='Payload too large';return [null,msg];}\ndelete msg.req.headers['x-api-key'];\nreturn [msg,null];",
+      "outputs": 2,
+      "libs": [],
+      "x": 440,
+      "y": 120,
+      "wires": [
+        [
+          "da41e14d43246395"
+        ],
+        [
+          "7b6d99a533ddf8f0"
+        ]
+      ]
+    },
+    {
+      "id": "da41e14d43246395",
+      "type": "MSSQL",
+      "mssqlCN": "c52eae4f75434074",
+      "name": "Identity stored procedure",
+      "outField": "payload",
+      "returnType": "1",
+      "throwErrors": "1",
+      "query": "cmms_auth.usp_IdentityStorage",
+      "modeOptType": "execute",
+      "queryOptType": "editor",
+      "paramsOptType": "editor",
+      "parseMustache": false,
+      "params": [
+        {
+          "name": "Operation",
+          "type": "VarChar(30)",
+          "value": "operation",
+          "valueType": "msg",
+          "output": false,
+          "options": {
+            "nullable": false
+          }
+        },
+        {
+          "name": "BodyJson",
+          "type": "NVarChar(MAX)",
+          "value": "bodyJson",
+          "valueType": "msg",
+          "output": false,
+          "options": {
+            "nullable": false
+          }
+        }
+      ],
+      "x": 740,
+      "y": 120,
+      "wires": [
+        [
+          "7b6d99a533ddf8f0"
+        ]
+      ]
+    },
+    {
+      "id": "7b6d99a533ddf8f0",
+      "type": "function",
+      "name": "Private identity response",
+      "func": "\nmsg.headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'};\nif(msg.error||msg.apiError){\n const conflict=/revision conflict|version conflict/i.test(msg.error?.message||'');\n msg.statusCode=msg.statusCode>=400?msg.statusCode:conflict?409:503;\n msg.payload={ok:false,error:{message:msg.apiError||(conflict?'Revision conflict':'เชื่อมต่อฐานข้อมูลไม่ได้')}};\n}else{try{\n const row=msg.payload?.recordset?.[0]||msg.payload?.[0];\n const data=JSON.parse(row.Json);msg.statusCode=200;msg.payload={ok:true,data};\n}catch{msg.statusCode=503;msg.payload={ok:false,error:{message:'เชื่อมต่อฐานข้อมูลไม่ได้'}}}}\ndelete msg.bodyJson;return msg;",
+      "outputs": 1,
+      "libs": [],
+      "x": 990,
+      "y": 120,
+      "wires": [
+        [
+          "e0fd525c6aa49ff7"
+        ]
+      ]
+    },
+    {
+      "id": "e0fd525c6aa49ff7",
+      "type": "http response",
+      "name": "Service response",
+      "statusCode": "",
+      "headers": {},
+      "x": 1230,
+      "y": 120,
+      "wires": []
+    },
+    {
+      "id": "86b9049e8b3bac1e",
+      "type": "catch",
+      "name": "Identity errors",
+      "scope": [
+        "da41e14d43246395",
+        "c93afa1eb8ea28a3"
+      ],
+      "uncaught": false,
+      "x": 730,
+      "y": 220,
+      "wires": [
+        [
+          "7b6d99a533ddf8f0"
+        ]
+      ]
+    }
+  ],
+  "configs": []
+}

@@ -187,6 +187,9 @@ function App() {
   const [username, setUsername] = useState("");
   const [connected, setConnected] = useState(false);
   const [menu, setMenu] = useState(false);
+  const [sidebarHidden,setSidebarHidden]=useState(()=>{try{return localStorage.getItem('cmms-sidebar-hidden')==='true'}catch{return false}});
+  useEffect(()=>{try{localStorage.setItem('cmms-sidebar-hidden',String(sidebarHidden))}catch{}},[sidebarHidden]);
+  useEffect(()=>{const close=(e:KeyboardEvent)=>{if(e.key==='Escape')setMenu(false)};window.addEventListener('keydown',close);return()=>window.removeEventListener('keydown',close)},[]);
   const [role, setRole] = useState<Role>();
   const page:Page=canAccess(role,requestedPage)?requestedPage:([...navigation.map(n=>n[0]),'settings'] as Page[]).find(p=>canAccess(role,p))||'none';
   const dataConnected = (verifiedRole: Role) => {
@@ -203,18 +206,18 @@ function App() {
   );
   useEffect(() => {
     fetch("/api/session")
-      .then((r) => r.json())
+      .then(async r => { const j=await r.json(); if(!r.ok)throw new Error(j.error?.message||"เชื่อมต่อฐานข้อมูลไม่ได้");return j; })
       .then((s) => {
         applyPermissions(s.permissions);
         setSession(s);
         setRole(s.role);
       })
       .catch(() =>
-        setSessionError("เชื่อมต่อเซิร์ฟเวอร์ไม่ได้ กรุณารีเฟรชหน้า"),
+        setSessionError("เชื่อมต่อฐานข้อมูลไม่ได้ กรุณารีเฟรชหน้า"),
       );
   }, []);
   useEffect(()=>{
-    const update=()=>fetch('/api/session').then(r=>r.json()).then(s=>{
+    const update=()=>fetch('/api/session').then(async r=>{const j=await r.json();if(!r.ok)throw new Error(j.error?.message||'เชื่อมต่อฐานข้อมูลไม่ได้');return j}).then(s=>{
       applyPermissions(s.permissions);setSession(s);setRole(s.role);
       if(!s.authenticated){setDetail(null);setForm(null);setConnected(false)}
     }).catch(()=>{});
@@ -331,10 +334,11 @@ function App() {
   const title =
     navigation.find((n) => n[0] === page)?.[1] || "การเชื่อมต่อระบบ";
   return (
-    <div className="app-shell">
+    <div className={`app-shell ${sidebarHidden?"sidebar-hidden":""}`}>
       <ThemeToggle theme={theme} onChange={setTheme} />
       {menu && <div className="sidebar-scrim" onClick={() => setMenu(false)} />}
-      <aside className={`sidebar ${menu ? "open" : ""}`}>
+      <aside id="main-sidebar" className={`sidebar ${menu ? "open" : ""}`}>
+        <button className="sidebar-close icon-button" aria-label="ซ่อนเมนูด้านข้าง" onClick={()=>{setMenu(false);setSidebarHidden(true)}}><X size={18}/></button>
         <a className="brand" href="#overview">
           <img src="/basf-logo.png" alt="BASF — We create chemistry" />
         </a>
@@ -400,9 +404,10 @@ function App() {
         <header className="topbar">
           <div className="breadcrumb">
             <button
-              className="icon-button mobile-menu"
-              aria-label="เปิดเมนู"
-              onClick={() => setMenu(!menu)}
+              className="icon-button sidebar-toggle"
+              aria-label="ซ่อนหรือเปิดเมนูด้านข้าง"
+              aria-controls="main-sidebar"
+              onClick={() => {if(window.matchMedia("(max-width: 720px)").matches)setMenu(!menu);else setSidebarHidden(!sidebarHidden)}}
             >
               <Menu size={22} />
             </button>
@@ -1035,6 +1040,12 @@ function Unavailable({ text }: { text: string }) {
   );
 }
 
+function PartReference({row}:{row:Row}) {
+ const [failed,setFailed]=useState(false);
+ const url=str(row,'ReferenceImageUrl');
+ useEffect(()=>setFailed(false),[url]);
+ return url&&!failed?<a className="part-reference" href={str(row,'ReferenceSourceUrl')} target="_blank" rel="noopener noreferrer" title={str(row,'ReferenceCaption')}><img src={url} alt={`ภาพอ้างอิง ${str(row,'PartName')}`} loading="lazy" onError={()=>setFailed(true)}/><small>อ้างอิง ↗</small></a>:<span className="part-reference empty-reference" title="ยังไม่มีภาพที่ยืนยันความใกล้เคียง"><Package size={22}/><small>ไม่มีภาพ</small></span>;
+}
 function ModulePage({
   resource,
   refresh,
@@ -1058,6 +1069,10 @@ function ModulePage({
   const [query, setQuery] = useState("");
   const [limit, setLimit] = useState(100);
   const [status, setStatus] = useState("all");
+  const [department,setDepartment]=useState('');
+  const [partType,setPartType]=useState('');
+  const [facets,setFacets]=useState<{departments:string[];partTypes:string[]}>({departments:[],partTypes:[]});
+  const [total,setTotal]=useState<number>();
   const [index, setIndex] = useState(0);
   const [retry, setRetry] = useState(0);
   const [view, setView] = useState("list");
@@ -1077,9 +1092,10 @@ function ModulePage({
     setLoading(true);
     setError(undefined);
     setRows([]);
-    api(resource, { search: query, limit }, "GET", undefined, ctrl.signal)
+    api(resource, { search: query, limit, ...(resource==="spare-parts"?{department,partType}:{}) }, "GET", undefined, ctrl.signal)
       .then((j) => {
         setRows(j.data);
+        setTotal(j.total);if(j.facets)setFacets(j.facets);
         onRole(j.role);
       })
       .catch((e) => {
@@ -1089,7 +1105,7 @@ function ModulePage({
         if (!ctrl.signal.aborted) setLoading(false);
       });
     return () => ctrl.abort();
-  }, [resource, refresh, query, limit, retry]);
+  }, [resource, refresh, query, limit, retry, department, partType]);
   const statuses = useMemo(
     () =>
       [
@@ -1175,6 +1191,12 @@ function ModulePage({
             )}
           </div>
         </div>
+        {resource==='spare-parts'&&<div className="parts-filters">
+          <label>Department<select aria-label="กรอง Department" value={department} onChange={e=>{setDepartment(e.target.value);setIndex(0)}}><option value="">ทุก Department</option>{facets.departments.map(v=><option key={v} value={v}>{v==='__missing__'?'ไม่ระบุ':v}</option>)}</select></label>
+          <label>PartType<select aria-label="กรอง PartType" value={partType} onChange={e=>{setPartType(e.target.value);setIndex(0)}}><option value="">ทุก PartType</option>{facets.partTypes.map(v=><option key={v} value={v}>{v==='__missing__'?'ไม่ระบุ':v}</option>)}</select></label>
+          {(department||partType)&&<button className="button" onClick={()=>{setDepartment('');setPartType('');setIndex(0)}}><X size={16}/>ล้างตัวกรองกลุ่ม</button>}
+          <small>กรอง Department และ PartType จากฐานข้อมูลทั้งหมด{total!==undefined?` · พบ ${total.toLocaleString()} รายการ`:''}</small>
+        </div>}
         <div className="table-subbar">
           <span>
             {config.english}
@@ -1231,6 +1253,7 @@ function ModulePage({
               <table>
                 <thead>
                   <tr>
+                    {resource==="spare-parts"&&<th>ภาพอ้างอิง</th>}
                     {config.columns.map(([k, l]) => (
                       <th key={k}>{l}</th>
                     ))}
@@ -1240,6 +1263,7 @@ function ModulePage({
                 <tbody>
                   {visible.map((r, i) => (
                     <tr key={str(r, config.id) || i}>
+                      {resource==="spare-parts"&&<td><PartReference row={r}/></td>}
                       {config.columns.map(([k]) => (
                         <td key={k}>
                           {k === config.columns[0][0] ? (
@@ -1323,7 +1347,7 @@ function ModulePage({
       {resource === "spare-parts" &&
         canAccess(role, "reports") &&
         !loading &&
-        !error && <SpareAnalytics rows={rows} />}
+        !error && <SpareAnalytics rows={filtered} />}
       {resource === "maintenance-plans" &&
         rows.some(
           (r) => value(r, "NextDueDate") && !validDate(value(r, "NextDueDate")),
@@ -1344,7 +1368,7 @@ function ModulePage({
       {resource === "spare-parts" && (
         <p className="data-note">
           คลิกอะไหล่เพื่อดู Min / Max, SAP Material, ต้นทุน และข้อมูลเพิ่มเติม ·
-          ปรับยอดผ่านรายการรับ–เบิกเพื่อรักษาประวัติ
+          ปรับยอดผ่านรายการรับ–เบิกเพื่อรักษาประวัติ · ภาพอ้างอิงจากภายนอก ไม่ใช่ภาพสต็อกจริง คลิกภาพเพื่อดูแหล่งที่มา
         </p>
       )}
       {resource === "calibration-history" && (

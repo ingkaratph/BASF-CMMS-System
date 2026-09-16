@@ -22,6 +22,8 @@ export interface GatewayResponse {
   requestId?: string;
   role: Role;
   data: Row[];
+  total?: number;
+  facets?: {departments:string[];partTypes:string[]};
   error?: { code: string; message: string };
 }
 export class ApiError extends Error {

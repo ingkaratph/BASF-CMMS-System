@@ -166,6 +166,7 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
   const child = spawn(process.execPath, ["server/index.mjs", "--production"], {
     env: {
       ...process.env,
+      CMMS_IDENTITY_STORAGE: "local",
       CMMS_USERS_FILE: file,
       CMMS_APP_PASSWORD: "initial-admin-password",
       CMMS_API_KEY: "operator-key",

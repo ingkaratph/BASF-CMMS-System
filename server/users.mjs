@@ -11,18 +11,6 @@ import { roles } from "../shared/permissions.mjs";
 
 export function createUserStore(path, bootstrapPassword) {
   path = resolve(path);
-  function hash(password) {
-    const salt = randomBytes(16).toString("hex");
-    return `${salt}:${scryptSync(password, salt, 64).toString("hex")}`;
-  }
-  function verify(password, encoded) {
-    const [salt, digest] = encoded.split(":");
-    const actual = scryptSync(String(password), salt, 64);
-    const expected = Buffer.from(digest, "hex");
-    return (
-      expected.length === actual.length && timingSafeEqual(expected, actual)
-    );
-  }
   function save(rows) {
     mkdirSync(dirname(path), { recursive: true });
     const tmp = path + ".tmp";
@@ -42,7 +30,7 @@ export function createUserStore(path, bootstrapPassword) {
         role: "ADMINISTRATOR",
         active: true,
         version: 1,
-        passwordHash: hash(bootstrapPassword),
+        passwordHash: hashPassword(bootstrapPassword),
       },
     ]);
   }
@@ -62,10 +50,33 @@ export function createUserStore(path, bootstrapPassword) {
         scryptSync(String(password), "unrecognized-user", 64);
         return null;
       }
-      return verify(password, u.passwordHash) ? publicUser(u) : null;
+      return verifyPassword(password, u.passwordHash) ? publicUser(u) : null;
     },
     saveUser(id, body, actorId) {
       const rows = read();
+      const u = prepareUser(rows, id, body, actorId);
+      const old = rows.find(u => u.id === id);
+      save(old ? rows.map((x) => (x.id === id ? u : x)) : [...rows, u]);
+      return publicUser(u);
+    },
+  };
+}
+
+export function hashPassword(password) {
+    const salt = randomBytes(16).toString("hex");
+    return `${salt}:${scryptSync(password, salt, 64).toString("hex")}`;
+  }
+export function verifyPassword(password, encoded) {
+    const [salt, digest] = encoded.split(":");
+    const actual = scryptSync(String(password), salt, 64);
+    const expected = Buffer.from(digest, "hex");
+    return (
+      expected.length === actual.length && timingSafeEqual(expected, actual)
+    );
+  }
+
+export function publicUser({passwordHash,...row}) { return row; }
+export function prepareUser(rows,id,body,actorId) {
       const old = id ? rows.find((u) => u.id === id) : null;
       if (id && !old) throw new Error("ไม่พบบัญชีผู้ใช้");
       if (
@@ -122,10 +133,8 @@ export function createUserStore(path, bootstrapPassword) {
         role,
         active,
         version: (old?.version || 0) + 1,
-        passwordHash: body.password ? hash(body.password) : old.passwordHash,
+        passwordHash: body.password ? hashPassword(body.password) : old.passwordHash,
       };
-      save(old ? rows.map((x) => (x.id === id ? u : x)) : [...rows, u]);
-      return publicUser(u);
-    },
-  };
+
+return u;
 }
