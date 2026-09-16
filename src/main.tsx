@@ -28,6 +28,9 @@ import {
   ArrowRight,
   Database,
   FileText,
+  Sun,
+  Moon,
+  Users,
 } from "lucide-react";
 import {
   api,
@@ -41,12 +44,17 @@ import {
   type Row,
   type Resource,
   type Role,
+  type User,
 } from "./api";
 import { modules, type Field } from "./config";
 import { SpareAnalytics } from "./spare-analytics";
 import "./styles.css";
+import "./theme.css";
+import {roleLabels} from "../shared/permissions.mjs";
+import {canAccess,applyPermissions} from "./access";
+import { UserManagement } from "./users";
 
-type Page = Resource | "overview" | "reports" | "settings";
+type Page = Resource | "overview" | "reports" | "settings" | "users" | "none";
 const navigation: [Page, string, typeof Factory][] = [
   ["overview", "ภาพรวม", LayoutDashboard],
   ["work-orders", "ใบงานซ่อมบำรุง", ClipboardList],
@@ -56,6 +64,7 @@ const navigation: [Page, string, typeof Factory][] = [
   ["stock-transactions", "รับ–เบิกอะไหล่", ArrowLeftRight],
   ["calibration-history", "การสอบเทียบ", ShieldCheck],
   ["reports", "รายงานและวิเคราะห์", BarChart3],
+  ["users", "ผู้ใช้และสิทธิ์", Users],
 ];
 function inputDate(v: unknown, type?: string) {
   if (!v) return "";
@@ -147,7 +156,20 @@ function exportCsv(rows: Row[], name: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 function App() {
-  const [page, setPage] = useState<Page>(() => {
+  const [theme, setTheme] = useState<"light" | "dark">(() =>
+    document.documentElement.dataset.theme === "dark" ? "dark" : "light",
+  );
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    try {
+      localStorage.setItem("cmms-theme", theme);
+    } catch {
+      /* Keep working without browser storage. */
+    }
+    const meta = document.querySelector('meta[name="theme-color"]');
+    meta?.setAttribute("content", theme === "dark" ? "#101923" : "#004a96");
+  }, [theme]);
+  const [requestedPage, setPage] = useState<Page>(() => {
     const p = location.hash.slice(1);
     return [...navigation.map((n) => n[0]), "settings"].includes(p as Page)
       ? (p as Page)
@@ -157,11 +179,20 @@ function App() {
     authenticated: boolean;
     loginRequired: boolean;
     configured: boolean;
+    user?: User;
+    role?: Role;
   } | null>(null);
   const [sessionError, setSessionError] = useState("");
   const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [connected, setConnected] = useState(false);
   const [menu, setMenu] = useState(false);
   const [role, setRole] = useState<Role>();
+  const page:Page=canAccess(role,requestedPage)?requestedPage:([...navigation.map(n=>n[0]),'settings'] as Page[]).find(p=>canAccess(role,p))||'none';
+  const dataConnected = (verifiedRole: Role) => {
+    setRole(verifiedRole);
+    setConnected(true);
+  };
   const [refresh, setRefresh] = useState(0);
   const [toast, setToast] = useState("");
   const [form, setForm] = useState<{ resource: Resource; row?: Row } | null>(
@@ -173,11 +204,25 @@ function App() {
   useEffect(() => {
     fetch("/api/session")
       .then((r) => r.json())
-      .then(setSession)
+      .then((s) => {
+        applyPermissions(s.permissions);
+        setSession(s);
+        setRole(s.role);
+      })
       .catch(() =>
         setSessionError("เชื่อมต่อเซิร์ฟเวอร์ไม่ได้ กรุณารีเฟรชหน้า"),
       );
   }, []);
+  useEffect(()=>{
+    const update=()=>fetch('/api/session').then(r=>r.json()).then(s=>{
+      applyPermissions(s.permissions);setSession(s);setRole(s.role);
+      if(!s.authenticated){setDetail(null);setForm(null);setConnected(false)}
+    }).catch(()=>{});
+    const changed=()=>{update();setRefresh(v=>v+1)};
+    window.addEventListener('focus',update);window.addEventListener('cmms-permissions-updated',changed);
+    const timer=setInterval(update,30000);
+    return()=>{clearInterval(timer);window.removeEventListener('focus',update);window.removeEventListener('cmms-permissions-updated',changed)};
+  },[]);
   useEffect(() => {
     const cb = () => {
       const p = location.hash.slice(1) as Page;
@@ -196,7 +241,23 @@ function App() {
     const t = setTimeout(() => setToast(""), 5000);
     return () => clearTimeout(t);
   }, [toast]);
+  useEffect(() => {
+    const expire = () => {
+      setSession((s) =>
+        s
+          ? { ...s, authenticated: false, user: undefined, role: undefined }
+          : s,
+      );
+      setRole(undefined);
+      setConnected(false);
+      setDetail(null);
+      setForm(null);
+    };
+    window.addEventListener("cmms-session-expired", expire);
+    return () => window.removeEventListener("cmms-session-expired", expire);
+  }, []);
   const go = (p: Page) => {
+    if (!canAccess(role, p)) return;
     location.hash = p;
     setPage(p);
     setMenu(false);
@@ -208,11 +269,16 @@ function App() {
       const r = await fetch("/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password }),
+        body: JSON.stringify({ username, password }),
       });
       const j = await r.json();
       if (!r.ok) throw new Error(j.error?.message);
-      setSession((s) => (s ? { ...s, authenticated: true } : s));
+      applyPermissions(j.permissions);
+      setSession((s) =>
+        s ? { ...s, authenticated: true, user: j.user, role: j.role } : s,
+      );
+      setRole(j.role);
+      setConnected(false);
       setPassword("");
     } catch (e) {
       setSessionError((e as Error).message);
@@ -221,6 +287,7 @@ function App() {
   if (!session)
     return (
       <div className="login">
+        <ThemeToggle theme={theme} onChange={setTheme} />
         <div className="login-card">
           <h2>BASF CHEMCAT</h2>
           <p>{sessionError || "กำลังเชื่อมต่อระบบ…"}</p>
@@ -230,10 +297,20 @@ function App() {
   if (!session.authenticated)
     return (
       <div className="login">
+        <ThemeToggle theme={theme} onChange={setTheme} />
         <form className="login-card" onSubmit={login}>
           <img src="/basf-logo.png" alt="BASF We create chemistry" />
           <span className="eyebrow">CHEMCAT · MAINTENANCE</span>
           <h1>เข้าสู่ระบบ CMMS</h1>
+          <label>
+            ชื่อผู้ใช้
+            <input
+              autoComplete="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
+          </label>
           <label>
             รหัสผ่านเข้าใช้งาน
             <input
@@ -255,6 +332,7 @@ function App() {
     navigation.find((n) => n[0] === page)?.[1] || "การเชื่อมต่อระบบ";
   return (
     <div className="app-shell">
+      <ThemeToggle theme={theme} onChange={setTheme} />
       {menu && <div className="sidebar-scrim" onClick={() => setMenu(false)} />}
       <aside className={`sidebar ${menu ? "open" : ""}`}>
         <a className="brand" href="#overview">
@@ -269,34 +347,40 @@ function App() {
         </div>
         <p className="nav-label">WORKSPACE</p>
         <nav>
-          {navigation.map(([id, label, Icon]) => (
-            <button
-              key={id}
-              className={page === id ? "active" : ""}
-              onClick={() => go(id)}
-            >
-              <Icon size={19} />
-              <span>{label}</span>
-              {page === id && <span className="nav-dot" />}
-            </button>
-          ))}
+          {navigation
+            .filter(([id]) => canAccess(role, id))
+            .map(([id, label, Icon]) => (
+              <button
+                key={id}
+                className={page === id ? "active" : ""}
+                onClick={() => go(id)}
+              >
+                <Icon size={19} />
+                <span>{label}</span>
+                {page === id && <span className="nav-dot" />}
+              </button>
+            ))}
         </nav>
         <div className="sidebar-bottom">
           <div className="site-indicator">
             <span /> BASF CHEMCAT<span className="internal">INTERNAL</span>
           </div>
-          <button
-            className={page === "settings" ? "active" : ""}
-            onClick={() => go("settings")}
-          >
-            <Settings size={19} />
-            การเชื่อมต่อระบบ
-          </button>
+          {canAccess(role, "settings") && (
+            <>
+              <button
+                className={page === "settings" ? "active" : ""}
+                onClick={() => go("settings")}
+              >
+                <Settings size={19} />
+                การเชื่อมต่อระบบ
+              </button>
+            </>
+          )}
           <div className="profile">
             <div className="avatar">MT</div>
             <div>
-              <strong>Maintenance team</strong>
-              <small>{role || "ยังไม่ยืนยันสิทธิ์"}</small>
+              <strong>{session.user?.displayName || "Maintenance team"}</strong>
+              <small>{role ? roleLabels[role] : "ยังไม่ยืนยันสิทธิ์"}</small>
             </div>
             {session.loginRequired && (
               <button
@@ -334,8 +418,12 @@ function App() {
                 year: "numeric",
               }).format(new Date())}
             </span>
-            <span className={`connection-dot ${role ? "connected" : ""}`} />
-            <span>{role ? "API connected" : "รอการเชื่อมต่อ"}</span>
+            <span
+              className={`connection-dot ${connected ? "connected" : ""}`}
+            />
+            <span>
+              {connected ? "เชื่อมต่อฐานข้อมูลแล้ว" : "รอการเชื่อมต่อ"}
+            </span>
             <div className="avatar small-avatar">MT</div>
           </div>
         </header>
@@ -390,7 +478,7 @@ function App() {
               <div>
                 <strong>พร้อมเชื่อมต่อข้อมูลโรงงาน</strong>
                 <p>
-                  Node-RED ต้องการ API Key ·
+                  ยังไม่ได้ตั้งค่าการเชื่อมต่อฐานข้อมูล ·
                   ตั้งค่าฝั่งเซิร์ฟเวอร์เพื่อเริ่มอ่านและบันทึกข้อมูลจริง
                 </p>
               </div>
@@ -399,14 +487,17 @@ function App() {
               </button>
             </div>
           )}
-          {page === "overview" || page === "reports" ? (
+          {page === "none" ? <section className="panel report-panel"><h2>ยังไม่ได้รับสิทธิ์เข้าถึงฟังก์ชัน</h2><p>กรุณาติดต่อผู้ดูแลระบบเพื่อกำหนดสิทธิ์ให้บัญชีนี้</p></section> : page === "overview" || page === "reports" ? (
             <Overview
+              role={role}
               report={page === "reports"}
               refresh={refresh}
-              onRole={setRole}
+              onRole={dataConnected}
               go={go}
               onDetail={(resource, row) => setDetail({ resource, row })}
             />
+          ) : page === "users" ? (
+            <UserManagement currentUser={session.user!} />
           ) : page === "settings" ? (
             <SettingsPage
               configured={session.configured}
@@ -419,7 +510,7 @@ function App() {
               resource={page}
               refresh={refresh}
               role={role}
-              onRole={setRole}
+              onRole={dataConnected}
               onNew={() => setForm({ resource: page })}
               onDetail={(row) => setDetail({ resource: page, row })}
             />
@@ -467,13 +558,37 @@ function App() {
   );
 }
 
+function ThemeToggle({
+  theme,
+  onChange,
+}: {
+  theme: "light" | "dark";
+  onChange: (theme: "light" | "dark") => void;
+}) {
+  const label =
+    theme === "dark" ? "เปลี่ยนเป็นธีม Light" : "เปลี่ยนเป็นธีม Dark";
+  return (
+    <button
+      className="theme-toggle"
+      type="button"
+      aria-label={label}
+      title={label}
+      onClick={() => onChange(theme === "dark" ? "light" : "dark")}
+    >
+      {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
+    </button>
+  );
+}
+
 function Overview({
+  role,
   refresh,
   onRole,
   go,
   onDetail,
   report,
 }: {
+  role:Role|undefined;
   refresh: number;
   onRole: (r: Role) => void;
   go: (p: Page) => void;
@@ -488,6 +603,25 @@ function Overview({
     setLoading(true);
     setErrors({});
     setData({});
+    if (report) {
+      fetch("/api/reports", { signal: ctrl.signal })
+        .then(async (response) => {
+          const j = await response.json();
+          if (response.status === 401)
+            window.dispatchEvent(new Event("cmms-session-expired"));
+          if (!response.ok)
+            throw new Error(j.error?.message || "โหลดรายงานไม่ได้");
+          setData(j.data);
+          onRole(j.role);
+        })
+        .catch((e) => {
+          if (!ctrl.signal.aborted) setErrors({ "work-orders": e });
+        })
+        .finally(() => {
+          if (!ctrl.signal.aborted) setLoading(false);
+        });
+      return () => ctrl.abort();
+    }
     Promise.all(
       (
         [
@@ -496,7 +630,7 @@ function Overview({
           "maintenance-plans",
           "spare-parts",
         ] as Resource[]
-      ).map(async (resource) => {
+      ).filter(resource=>canAccess(role,resource)).map(async (resource) => {
         try {
           const j = await api(
             resource,
@@ -518,7 +652,7 @@ function Overview({
       if (!ctrl.signal.aborted) setLoading(false);
     });
     return () => ctrl.abort();
-  }, [refresh]);
+  }, [refresh, report, role]);
   const assets = data.assets;
   const wo = data["work-orders"];
   const plans = data["maintenance-plans"];
@@ -1023,7 +1157,7 @@ function ModulePage({
             </label>
             <button
               className="button"
-              disabled={!filtered.length}
+              disabled={!filtered.length || !canAccess(role, "reports")}
               onClick={() => exportCsv(filtered, resource)}
             >
               <Download size={16} />
@@ -1186,9 +1320,10 @@ function ModulePage({
           ปัจจุบันยังไม่มีการแบ่งหน้าจากเซิร์ฟเวอร์
         </p>
       )}
-      {resource === "spare-parts" && !loading && !error && (
-        <SpareAnalytics rows={rows} />
-      )}
+      {resource === "spare-parts" &&
+        canAccess(role, "reports") &&
+        !loading &&
+        !error && <SpareAnalytics rows={rows} />}
       {resource === "maintenance-plans" &&
         rows.some(
           (r) => value(r, "NextDueDate") && !validDate(value(r, "NextDueDate")),
@@ -1659,10 +1794,12 @@ function Detail({
               </div>
             ))}
         </dl>
-        {resource === "assets" && <RelatedAsset row={row} />}
+        {resource === "assets" && canAccess(role, "maintenance-plans") && (
+          <RelatedAsset row={row} />
+        )}
       </div>
       <div className="modal-actions">
-        {canWrite(role, "DELETE", resource) && id && (
+        {canWrite(role, "DELETE", resource, row) && id && (
           <button
             className="button danger"
             disabled={busy}
@@ -1694,7 +1831,7 @@ function Detail({
         <button className="button" onClick={close}>
           ปิด
         </button>
-        {canWrite(role, "PUT", resource) && id && c.fields.length > 0 && (
+        {canWrite(role, "PUT", resource, row) && id && c.fields.length > 0 && (
           <button className="button primary" onClick={edit}>
             แก้ไข{c.singular}
           </button>
@@ -1773,8 +1910,8 @@ function SettingsPage({
         <div className="settings-icon">
           <Database size={28} />
         </div>
-        <h2>CMMS API Gateway</h2>
-        <p>เชื่อมต่อข้อมูลผ่าน Node-RED</p>
+        <h2>การเชื่อมต่อฐานข้อมูล CMMS</h2>
+        <p>สถานะการเชื่อมต่อฐานข้อมูล</p>
         <dl>
           <div>
             <dt>การตั้งค่า API Key</dt>
@@ -1783,7 +1920,7 @@ function SettingsPage({
             </dd>
           </div>
           <div>
-            <dt>สิทธิ์ที่ Gateway ยืนยัน</dt>
+            <dt>สิทธิ์ที่ระบบยืนยัน</dt>
             <dd>{role || "ยังไม่ยืนยัน"}</dd>
           </div>
           <div>
@@ -1800,7 +1937,7 @@ function SettingsPage({
         <h2>การตั้งค่าโดยผู้ดูแล</h2>
         <ol>
           <li>
-            นำ Key จาก Node-RED มาใส่ใน <code>CMMS_API_KEY</code> ของไฟล์{" "}
+            นำ Key สำหรับฐานข้อมูลมาใส่ใน <code>CMMS_API_KEY</code> ของไฟล์{" "}
             <code>.env</code> บนเซิร์ฟเวอร์
           </li>
           <li>เริ่มเซิร์ฟเวอร์ใหม่ แล้วกดรีเฟรชเพื่อยืนยันการเชื่อมต่อ</li>
@@ -1811,7 +1948,7 @@ function SettingsPage({
         </ol>
         <p>
           Key เก็บอยู่ฝั่งเซิร์ฟเวอร์ สิทธิ์สร้าง แก้ไข และยกเลิกอ้างอิงจาก
-          Gateway
+          ระบบฐานข้อมูล
         </p>
         <div className="notice">
           <ShieldCheck size={22} />

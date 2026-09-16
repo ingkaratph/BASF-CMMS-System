@@ -1,9 +1,13 @@
+import { mkdtempSync, rmSync, rmdirSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import test from "node:test";
 import assert from "node:assert/strict";
 import http from "node:http";
 import { spawn } from "node:child_process";
 
 test("proxy authentication, actual role, mutations, validation and upstream errors", async () => {
+  const userDirectory = mkdtempSync(join(tmpdir(), "cmms-test-"));
   const requests = [];
   let role = "OPERATOR",
     mode = "success";
@@ -36,7 +40,13 @@ test("proxy authentication, actual role, mutations, validation and upstream erro
         requestId: "mock-123",
         data: {
           recordset: [
-            { AssetID: "1", AssetStatus: "Active", Title: "Isolated test" },
+            {
+              WorkOrderID: "1",
+              StatusCode: "OPEN",
+              AssetID: "1",
+              AssetStatus: "Active",
+              Title: "Isolated test",
+            },
           ],
         },
       }),
@@ -53,6 +63,8 @@ test("proxy authentication, actual role, mutations, validation and upstream erro
       PORT: String(port),
       HOST: "127.0.0.1",
       CMMS_API_KEY: "isolated-test-key",
+      CMMS_API_KEY_ADMIN: "isolated-test-key",
+      CMMS_USERS_FILE: join(userDirectory, "users.json"),
       CMMS_APP_PASSWORD: "isolated-login-password",
       CMMS_API_BASE_URL: `http://127.0.0.1:${mock.address().port}`,
     },
@@ -100,7 +112,7 @@ test("proxy authentication, actual role, mutations, validation and upstream erro
     const read = await fetch(base + "/api/cmms/assets?limit=1", { headers });
     const json = await read.json();
     assert.equal(read.status, 200);
-    assert.equal(json.data[0].StatusCode, "ACTIVE");
+    assert.equal(json.data[0].StatusCode, "OPEN");
     assert.equal(requests.at(-1).key, "isolated-test-key");
     assert.equal(JSON.stringify(json).includes("isolated-test-key"), false);
     const create = () =>
@@ -156,7 +168,7 @@ test("proxy authentication, actual role, mutations, validation and upstream erro
           headers,
         })
       ).status,
-      400,
+      403,
     );
     assert.equal(
       (await fetch(base + "/api/cmms/assets?limit=501", { headers })).status,
@@ -174,5 +186,8 @@ test("proxy authentication, actual role, mutations, validation and upstream erro
   } finally {
     child.kill();
     await new Promise((r) => mock.close(r));
+    rmSync(join(userDirectory, "users.json"), { force: true });
+    rmSync(join(userDirectory, "users.json.tmp"), { force: true });
+    rmdirSync(userDirectory);
   }
 });

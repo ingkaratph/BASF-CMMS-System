@@ -14,7 +14,7 @@ npm run build
 npm start
 ```
 
-Open http://pd.local (port 80) after deploying to the machine that pd.local resolves to. This workspace already has a local ignored `.env` configured; do not overwrite it. For development run `npm run dev`.
+Open http://localhost on this PC. On Windows, `npm start` uses PowerShell 7 and an HTTP.sys frontend on port 80, forwarding to a private Node backend on port 3000. Existing Windows services keep their more-specific HTTP.sys paths. The same frontend also accepts `pd.local`, but that hostname works only on the machine its DNS resolves to. This workspace already has a local ignored `.env` configured; do not overwrite it. For development use `PORT=3000`, `HOST=127.0.0.1` and `npm run dev` after stopping an existing backend using that port.
 
 ## Features
 
@@ -38,9 +38,24 @@ The configuration now binds to all IPv4 interfaces on port 80. Restart is requir
 3. Restart `npm start` and use `http://pd.local` from the same network.
 4. Have the network administrator allow that port only on the required LAN segment. For production, terminate HTTPS at an internal reverse proxy; do not expose this server or Node-RED to the public Internet.
 
-The application has a shared, 8-hour password session. API role is the actual role returned for the server key. This is **not** individual employee identity, SSO, per-user RBAC or individual audit attribution. Before a multi-user production rollout, connect company identity and map each employee role to the corresponding server-side gateway key. Session state currently clears when the server restarts.
+## Named accounts and permissions
 
-The current shared login password is stored in `CMMS_APP_PASSWORD` in the ignored `.env` file. No service restart or deployment to pd.local was performed for this configuration change. Where IIS already occupies port 80, use the optional reverse proxy configuration in `deployment/iis/README.th.md`, with Node on a separate backend port.
+The application now uses individual usernames and passwords with 8-hour sessions. The initial account is `admin` / the existing `CMMS_APP_PASSWORD` value. This environment value bootstraps the first account only; later password changes belong in **ผู้ใช้และสิทธิ์**. Administrators can create accounts, change roles, disable accounts and reset passwords. Passwords are stored as salted scrypt hashes in ignored `server/users.local.json` (or `CMMS_USERS_FILE`). Keep this file outside the IIS web root and back it up securely. No sample accounts are created.
+
+| Role                  | Master records                  | Active work orders              | History                                                                         | Reports |
+| --------------------- | ------------------------------- | ------------------------------- | ------------------------------------------------------------------------------- | ------- |
+| Administrator         | Read, create, edit, soft-delete | All supported actions           | Work-order edits allowed; append-only API histories remain immutable            | Yes     |
+| Planner               | Read, create, edit; no delete   | Create, edit, cancel            | Completed/closed/cancelled work orders read-only; stock/calibration append-only | Yes     |
+| Technician            | Read only                       | Create, edit; no delete         | Same history lock                                                               | No      |
+| Production (Operator) | Read assets only                | Create and read, no edit/delete | Read/create stock movements; no calibration                                     | No      |
+
+Production receives a restricted spare-part lookup (code, name, quantity, unit) for the stock form, without access to the master page or cost fields. Master records are assets, PM plans and spare parts. The stock and calibration endpoints currently cannot edit/delete history even for Administrator.
+
+Permissions are enforced in shared policy code and on each server request. Server-side sessions bind to stored users; changing a password, role or active state invalidates existing sessions. Role fields sent in login payloads or request headers do not grant privileges. Each work-order mutation checks the current database status before allowing non-administrator edits. External/concurrent updates outside this application still require the database gateway to enforce atomic history locking; the existing gateway has no conditional update/version parameter.
+
+Administrator operations use `CMMS_API_KEY_ADMIN`. Other operations use `CMMS_API_KEY`; Planner cancellation uses the admin transport key only after application and current-record permission checks. Database transport roles do not replace application roles. SSO and individual attribution inside the existing SQL stored procedure are not implemented.
+
+The localhost HTTP.sys frontend has been started on this PC; no deployment or test of pd.local was performed for the localhost fix. Where IIS already owns a matching site binding, use the optional reverse proxy configuration in `deployment/iis/README.th.md`, with Node on a separate backend port. The Windows launcher requires PowerShell 7 (`pwsh.exe`) on PATH, or an explicit `CMMS_PWSH_PATH`.
 
 ## API compatibility / known limits
 

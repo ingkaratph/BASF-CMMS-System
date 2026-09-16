@@ -1,3 +1,5 @@
+import {type AppRole} from "../shared/permissions.mjs";
+import {canPerform} from "./access";
 export type Resource =
   | "assets"
   | "maintenance-plans"
@@ -6,7 +8,15 @@ export type Resource =
   | "stock-transactions"
   | "calibration-history";
 export type Row = Record<string, string | number | boolean | null>;
-export type Role = "READ_ONLY" | "OPERATOR" | "INTEGRATION" | "ADMIN";
+export type Role = AppRole;
+export interface User {
+  id: string;
+  username: string;
+  displayName: string;
+  role: Role;
+  active: boolean;
+  version: number;
+}
 export interface GatewayResponse {
   ok: boolean;
   requestId?: string;
@@ -40,15 +50,22 @@ export async function api(
     },
   );
   const result = await response.json();
+  if (response.status === 401 && result.error?.code === "LOGIN_REQUIRED")
+    window.dispatchEvent(new Event("cmms-session-expired"));
   if (!response.ok || !result.ok)
     throw new ApiError(
-      result.error?.message || "โหลดข้อมูลไม่สำเร็จ",
+      response.status === 502 ||
+      response.status === 503 ||
+      response.status === 504 ||
+      /node[-\s]?red/i.test(result.error?.message || "")
+        ? "เชื่อมต่อฐานข้อมูลไม่ได้"
+        : result.error?.message || "โหลดข้อมูลไม่สำเร็จ",
       result.requestId,
       result.error?.code,
     );
   if (method === "GET" && !Array.isArray(result.data))
     throw new ApiError(
-      "รูปแบบข้อมูลจาก Gateway ไม่ตรงกับสัญญา API",
+      "รูปแบบข้อมูลที่ได้รับไม่ถูกต้อง",
       result.requestId,
       "INVALID_DATA",
     );
@@ -70,17 +87,9 @@ export function canWrite(
   role: Role | undefined,
   method: string,
   resource: Resource,
+  row?: Row,
 ) {
-  if (
-    ["stock-transactions", "calibration-history"].includes(resource) &&
-    method !== "POST"
-  )
-    return false;
-  return method === "POST"
-    ? ["ADMIN", "OPERATOR", "INTEGRATION"].includes(role || "")
-    : method === "PUT"
-      ? ["ADMIN", "OPERATOR"].includes(role || "")
-      : role === "ADMIN";
+  return canPerform(role, resource, method, row);
 }
 export function validDate(v: unknown) {
   return (

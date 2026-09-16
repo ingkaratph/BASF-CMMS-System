@@ -1,0 +1,131 @@
+import { randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
+import {
+  existsSync,
+  readFileSync,
+  writeFileSync,
+  renameSync,
+  mkdirSync,
+} from "node:fs";
+import { dirname, resolve } from "node:path";
+import { roles } from "../shared/permissions.mjs";
+
+export function createUserStore(path, bootstrapPassword) {
+  path = resolve(path);
+  function hash(password) {
+    const salt = randomBytes(16).toString("hex");
+    return `${salt}:${scryptSync(password, salt, 64).toString("hex")}`;
+  }
+  function verify(password, encoded) {
+    const [salt, digest] = encoded.split(":");
+    const actual = scryptSync(String(password), salt, 64);
+    const expected = Buffer.from(digest, "hex");
+    return (
+      expected.length === actual.length && timingSafeEqual(expected, actual)
+    );
+  }
+  function save(rows) {
+    mkdirSync(dirname(path), { recursive: true });
+    const tmp = path + ".tmp";
+    writeFileSync(tmp, JSON.stringify(rows, null, 2), { mode: 0o600 });
+    renameSync(tmp, path);
+  }
+  if (!existsSync(path)) {
+    if (!bootstrapPassword || bootstrapPassword.length < 12)
+      throw new Error(
+        "Set CMMS_APP_PASSWORD (at least 12 characters) to bootstrap the administrator account.",
+      );
+    save([
+      {
+        id: randomBytes(12).toString("hex"),
+        username: "admin",
+        displayName: "Administrator",
+        role: "ADMINISTRATOR",
+        active: true,
+        version: 1,
+        passwordHash: hash(bootstrapPassword),
+      },
+    ]);
+  }
+  const read = () => JSON.parse(readFileSync(path, "utf8"));
+  const publicUser = ({ passwordHash, ...row }) => row;
+  return {
+    list: () => read().map(publicUser),
+    get: (id) => {
+      const u = read().find((u) => u.id === id);
+      return u ? publicUser(u) : null;
+    },
+    authenticate(username, password) {
+      const u = read().find(
+        (u) => u.username === String(username).trim().toLowerCase(),
+      );
+      if (!u || !u.active) {
+        scryptSync(String(password), "unrecognized-user", 64);
+        return null;
+      }
+      return verify(password, u.passwordHash) ? publicUser(u) : null;
+    },
+    saveUser(id, body, actorId) {
+      const rows = read();
+      const old = id ? rows.find((u) => u.id === id) : null;
+      if (id && !old) throw new Error("ไม่พบบัญชีผู้ใช้");
+      if (
+        Object.keys(body).some(
+          (k) =>
+            !["username", "displayName", "role", "active", "password"].includes(
+              k,
+            ),
+        )
+      )
+        throw new Error("ข้อมูลบัญชีไม่ถูกต้อง");
+      const username = String(body.username ?? old?.username ?? "")
+        .trim()
+        .toLowerCase();
+      const displayName = String(
+        body.displayName ?? old?.displayName ?? "",
+      ).trim();
+      const role = body.role ?? old?.role;
+      const active = body.active ?? old?.active ?? true;
+      if (!/^[a-z0-9._-]{3,50}$/.test(username))
+        throw new Error(
+          "ชื่อบัญชีต้องเป็น a-z, 0-9, จุด ขีด หรือขีดล่าง 3–50 ตัว",
+        );
+      if (
+        !displayName ||
+        displayName.length > 100 ||
+        !roles.includes(role) ||
+        typeof active !== "boolean"
+      )
+        throw new Error("ชื่อหรือสิทธิ์ผู้ใช้ไม่ถูกต้อง");
+      if (rows.some((u) => u.id !== id && u.username === username))
+        throw new Error("ชื่อบัญชีนี้ถูกใช้แล้ว");
+      if (!old && !body.password) throw new Error("กรุณาตั้งรหัสผ่าน");
+      if (
+        body.password !== undefined &&
+        (typeof body.password !== "string" ||
+          body.password.length < 12 ||
+          body.password.length > 128)
+      )
+        throw new Error("รหัสผ่านต้องมี 12–128 ตัวอักษร");
+      if (old?.id === actorId && (!active || role !== "ADMINISTRATOR"))
+        throw new Error("ไม่สามารถปิดบัญชีหรือลดสิทธิ์ของตัวเอง");
+      if (
+        old?.active &&
+        old.role === "ADMINISTRATOR" &&
+        (!active || role !== "ADMINISTRATOR") &&
+        !rows.some((u) => u.id !== id && u.active && u.role === "ADMINISTRATOR")
+      )
+        throw new Error("ต้องเหลือ Administrator อย่างน้อยหนึ่งบัญชี");
+      const u = {
+        id: old?.id || randomBytes(12).toString("hex"),
+        username,
+        displayName,
+        role,
+        active,
+        version: (old?.version || 0) + 1,
+        passwordHash: body.password ? hash(body.password) : old.passwordHash,
+      };
+      save(old ? rows.map((x) => (x.id === id ? u : x)) : [...rows, u]);
+      return publicUser(u);
+    },
+  };
+}
