@@ -1,3 +1,5 @@
+import { CategoryReports } from './category-reports';
+import { IssueParts } from './issue-parts';
 import {ImageViewer} from './image-viewer';
 import React, { useEffect, useState, useMemo } from "react";
 import { createRoot } from "react-dom/client";
@@ -158,6 +160,7 @@ function exportCsv(rows: Row[], name: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 function App() {
+  const [issueSelection,setIssueSelection]=useState<Row[]>([]);
   const [theme, setTheme] = useState<"light" | "dark">(() =>
     document.documentElement.dataset.theme === "dark" ? "dark" : "light",
   );
@@ -516,6 +519,9 @@ function App() {
             <ModulePage
               key={page}
               resource={page}
+              issueSelection={issueSelection}
+              onIssue={(row)=>{setIssueSelection([row]);go('stock-transactions')}}
+              onIssueConsumed={()=>setIssueSelection([])}
               refresh={refresh}
               role={role}
               onRole={dataConnected}
@@ -544,6 +550,7 @@ function App() {
       )}
       {detail && !form && (
         <Detail
+          key={`${detail.resource}-${str(detail.row, modules[detail.resource].id)}`}
           resource={detail.resource}
           row={detail.row}
           role={role}
@@ -721,6 +728,7 @@ function Overview({
     },
   ];
   const firstError = Object.values(errors)[0];
+  if(report) return <CategoryReports data={data} loading={loading} error={firstError} onExport={exportCsv}/>;
   return (
     <>
       <div className="section-kicker">
@@ -1056,6 +1064,7 @@ function PartReference({row}:{row:Row}) {
  return url&&!failed?<><button className="part-reference" type="button" aria-label={`ดูรูป ${label}`} onClick={()=>setOpen(true)}><img src={url} alt={`รูป ${label}`} loading="lazy" onError={()=>setFailed(true)}/><small>ดูรูปภาพ</small></button>{open&&<ImageViewer images={[{url,alt:label}]} initial={0} close={()=>setOpen(false)}/>}</>:<span className="part-reference empty-reference" title="ยังไม่มีภาพที่ยืนยันความใกล้เคียง"><Package size={22}/><small>ไม่มีภาพ</small></span>;
 }
 function ModulePage({
+  issueSelection, onIssue, onIssueConsumed,
   resource,
   refresh,
   role,
@@ -1063,6 +1072,9 @@ function ModulePage({
   onNew,
   onDetail,
 }: {
+  issueSelection: Row[];
+  onIssue:(row:Row)=>void;
+  onIssueConsumed:()=>void;
   resource: Resource;
   refresh: number;
   role: Role | undefined;
@@ -1139,6 +1151,7 @@ function ModulePage({
   const visible = filtered.slice(index * 15, index * 15 + 15);
   return (
     <>
+      {resource === 'stock-transactions' && canWrite(role,'POST','stock-transactions') && <IssueParts initial={issueSelection} onConsumed={onIssueConsumed} role={role} onSaved={()=>setRetry(n=>n+1)}/>}
       <section className="panel resource-panel">
         <div className="table-toolbar">
           <div className="search-field">
@@ -1302,6 +1315,7 @@ function ModulePage({
                         </td>
                       ))}
                       <td>
+                        {resource==='spare-parts'&&canWrite(role,'POST','stock-transactions')&&<button className="button" onClick={()=>onIssue(r)}>เบิก</button>}
                         <button
                           className="icon-button"
                           aria-label="ดูรายละเอียด"
@@ -2043,3 +2057,5 @@ function LookupField({
     </>
   );
 }
+
+

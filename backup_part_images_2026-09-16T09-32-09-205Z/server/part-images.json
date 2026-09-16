@@ -1,0 +1,80 @@
+[
+  {
+    "ids": [
+      "4"
+    ],
+    "model": "6ES7 331-7KF02-0AB0",
+    "file": "siemens-6es7331-7kf02-0ab0.jpg",
+    "source": "https://sieportal.siemens.com/en-au/products-services/detail/6ES7331-7KF02-0AB0",
+    "imageSource": "https://static.siemens.com/mimes/03000300JPG/P_ST70_XX_00026I.jpg",
+    "caption": "ภาพอ้างอิง Siemens SM331 · 6ES7331-7KF02-0AB0",
+    "matchByIdOnly": true,
+    "matchType": "EXACT",
+    "confidence": 100
+  },
+  {
+    "ids": [
+      "2"
+    ],
+    "model": "1319270000 SCS 24VDC P2SIL3DSES",
+    "file": "weidmuller-1319270000.jpg",
+    "source": "https://eshop.weidmueller.com/en/scs-24vdc-p2sil3dses/p/1319270000",
+    "imageSource": "https://assets.dam.weidmueller.com/assets/api/3452677e-da49-49f7-81c1-4de2268a3177/DAP_Master_PP,w_800,q_80",
+    "caption": "ภาพอ้างอิง Weidmüller Safety relay · 1319270000",
+    "matchByIdOnly": true,
+    "matchType": "EXACT",
+    "confidence": 100
+  },
+  {
+    "ids": [
+      "27"
+    ],
+    "model": "CDM2E20-50JZ",
+    "file": "smc-cdm2e20-50jz.png",
+    "source": "https://www.smcpneumatics.com/",
+    "imageSource": "web search result",
+    "caption": "ภาพอ้างอิง SMC air cylinder · CDM2E20-50JZ (ภาพใกล้เคียง/close match)",
+    "matchByIdOnly": true,
+    "matchType": "CLOSE",
+    "confidence": 80
+  },
+  {
+    "ids": [
+      "30"
+    ],
+    "model": "EVC005",
+    "file": "ifm-evc005.png",
+    "source": "https://www.ifm.com/",
+    "imageSource": "web search result",
+    "caption": "ภาพอ้างอิง IFM cable assembly · EVC005",
+    "matchByIdOnly": true,
+    "matchType": "EXACT",
+    "confidence": 100
+  },
+  {
+    "ids": [
+      "8"
+    ],
+    "model": "TL50BGYRAQ",
+    "file": "banner-tl50bgyraq.png",
+    "source": "https://www.bannerengineering.com/us/en/products/part.83216.html",
+    "imageSource": "web search result",
+    "caption": "ภาพอ้างอิง Banner pilot lamp / tower light · TL50BGYRAQ",
+    "matchByIdOnly": true,
+    "matchType": "EXACT",
+    "confidence": 100
+  },
+  {
+    "ids": [
+      "29"
+    ],
+    "model": "DNC-125-PPVA",
+    "file": "festo-dnc-125-ppva.png",
+    "source": "https://www.festo.com/",
+    "imageSource": "web search result",
+    "caption": "ภาพอ้างอิง Festo set of wearing parts / cylinder family · DNC-125-PPVA (ภาพใกล้เคียง/close match)",
+    "matchByIdOnly": true,
+    "matchType": "CLOSE",
+    "confidence": 80
+  }
+]

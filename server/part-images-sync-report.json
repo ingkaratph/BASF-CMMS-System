@@ -1,0 +1,325 @@
+{
+  "updatedAt": "2026-09-16T09:35:56.829Z",
+  "totalSeeds": 1204,
+  "attempted": 51,
+  "matched": 9,
+  "skipped": 0,
+  "failed": 48,
+  "results": [
+    {
+      "PartID": "1",
+      "status": "unmatched",
+      "query": "Honeywell EC 7890 B 1010 Burner Control for X122 product"
+    },
+    {
+      "PartID": "2",
+      "status": "existing",
+      "file": "weidmuller-1319270000.jpg",
+      "matchType": "EXACT",
+      "confidence": 100
+    },
+    {
+      "PartID": "3",
+      "status": "unmatched",
+      "query": "Maxon Ignition product"
+    },
+    {
+      "PartID": "4",
+      "status": "existing",
+      "file": "siemens-6es7331-7kf02-0ab0.jpg",
+      "matchType": "EXACT",
+      "confidence": 100
+    },
+    {
+      "PartID": "5",
+      "status": "unmatched",
+      "query": "Siemens LMV51.100C2 Burner Control for X121 ,X123 product"
+    },
+    {
+      "PartID": "6",
+      "status": "unmatched",
+      "query": "Honeywell EC7890 B 1010 Burner Control product"
+    },
+    {
+      "PartID": "7",
+      "status": "unmatched",
+      "query": "Turck WKC8T-2/TEL Sensor Cable product"
+    },
+    {
+      "PartID": "8",
+      "status": "existing",
+      "file": "banner-tl50bgyraq.png",
+      "matchType": "EXACT",
+      "confidence": 100
+    },
+    {
+      "PartID": "9",
+      "status": "unmatched",
+      "query": "25-1R Chain product"
+    },
+    {
+      "PartID": "10",
+      "status": "unmatched",
+      "query": "25-1R Chain Joint product"
+    },
+    {
+      "PartID": "11",
+      "status": "unmatched",
+      "query": "25-1R Roller Joint product"
+    },
+    {
+      "PartID": "12",
+      "status": "unmatched",
+      "query": "35-1R Chain product"
+    },
+    {
+      "PartID": "13",
+      "status": "unmatched",
+      "query": "35-1 Chain Joint product"
+    },
+    {
+      "PartID": "14",
+      "status": "unmatched",
+      "query": "35-1 Roller Joint product"
+    },
+    {
+      "PartID": "15",
+      "status": "unmatched",
+      "query": "RJ Z-15GW2-B Limit Switch product"
+    },
+    {
+      "PartID": "16",
+      "status": "unmatched",
+      "query": "Tend TZ-7310(D4MC)-5000 Limit Switch product"
+    },
+    {
+      "PartID": "17",
+      "status": "unmatched",
+      "query": "SMC XT 316-30B Air Nocker product"
+    },
+    {
+      "PartID": "18",
+      "status": "unmatched",
+      "query": "FUGI BLC 120-1 AC 550/120 A Fuse product"
+    },
+    {
+      "PartID": "19",
+      "status": "unmatched",
+      "query": "EBARA EBRA CDX 90/10 Centrifugal Pump product"
+    },
+    {
+      "PartID": "20",
+      "status": "unmatched",
+      "query": "ABB 1SFA619550R1071 Emergency stop product"
+    },
+    {
+      "PartID": "21",
+      "status": "unmatched",
+      "query": "Pick & place rubber gripper product"
+    },
+    {
+      "PartID": "22",
+      "status": "unmatched",
+      "query": "Netzsch CPV14-VI-P 1/8-150 Seal solenoid valve product"
+    },
+    {
+      "PartID": "23",
+      "status": "unmatched",
+      "query": "Harting 91A279R08 Connector product"
+    },
+    {
+      "PartID": "24",
+      "status": "unmatched",
+      "query": "ifm EVC004 Connection Units product"
+    },
+    {
+      "PartID": "25",
+      "status": "unmatched",
+      "query": "Festo DFM-50-PAABE6 Seal Kit product"
+    },
+    {
+      "PartID": "26",
+      "status": "unmatched",
+      "query": "Kuka KBR POWER SUPPLY KUKA Power Supply 230V-27V product"
+    },
+    {
+      "PartID": "27",
+      "status": "existing",
+      "file": "smc-cdm2e20-50jz.png",
+      "matchType": "CLOSE",
+      "confidence": 80
+    },
+    {
+      "PartID": "28",
+      "status": "unmatched",
+      "query": "Kuka SIB-Standard Complete product"
+    },
+    {
+      "PartID": "29",
+      "status": "existing",
+      "file": "festo-dnc-125-ppva.png",
+      "matchType": "CLOSE",
+      "confidence": 80
+    },
+    {
+      "PartID": "30",
+      "status": "existing",
+      "file": "ifm-evc005.png",
+      "matchType": "EXACT",
+      "confidence": 100
+    },
+    {
+      "PartID": "31",
+      "status": "unmatched",
+      "query": "SMC VG342R-5DZ-06F-X87 Directional Control Valve product"
+    },
+    {
+      "PartID": "32",
+      "status": "unmatched",
+      "query": "Style 2500 L280xW154 mm. Gasket product"
+    },
+    {
+      "PartID": "33",
+      "status": "unmatched",
+      "query": "Sick WT18-3P431 Photoelectric Proximity Switch product"
+    },
+    {
+      "PartID": "34",
+      "status": "unmatched",
+      "query": "ifm 01D105 01DLF3KG Laser Displacement product"
+    },
+    {
+      "PartID": "35",
+      "status": "unmatched",
+      "query": "V.Light TX2-D190X19-R3-R-24V LED Light Source product"
+    },
+    {
+      "PartID": "36",
+      "status": "unmatched",
+      "query": "V.Light Power Light Source Control product"
+    },
+    {
+      "PartID": "37",
+      "status": "unmatched",
+      "query": "Sick WE100L-F2132 Photo Sensor (Receiver) product"
+    },
+    {
+      "PartID": "38",
+      "status": "matched",
+      "matchType": "CLOSE",
+      "confidence": 77,
+      "file": "38-chanaseel-sus-304.webp",
+      "source": "https://infoupdate.org/new-images-of-shirdi-sai-baba/",
+      "imageSource": "https://curlytales.com/wp-content/uploads/2023/04/Shirdi-Sai-Baba-Temple-To-Be-Shutdown-Indefinitely-From-May-1.-Heres-The-Reason.jpg",
+      "query": "Chanaseel SUS 304 Fitting & Pipe Set L62 product",
+      "score": 65
+    },
+    {
+      "PartID": "39",
+      "status": "unmatched",
+      "query": "118.4/10 mm. Bladder product"
+    },
+    {
+      "PartID": "40",
+      "status": "unmatched",
+      "query": "118.4/5 mm./MC6,MC4 Ring Clamp product"
+    },
+    {
+      "PartID": "41",
+      "status": "unmatched",
+      "query": "118.4/10 mm./MC6,MC4 Ring Clamp product"
+    },
+    {
+      "PartID": "42",
+      "status": "unmatched",
+      "query": "93/5 mm. Ring Clamp product"
+    },
+    {
+      "PartID": "43",
+      "status": "unmatched",
+      "query": "GT10 Pneumatic Vibrator product"
+    },
+    {
+      "PartID": "44",
+      "status": "unmatched",
+      "query": "PS-05N Fotek Proximity Switch product"
+    },
+    {
+      "PartID": "45",
+      "status": "unmatched",
+      "query": "SMC VT307V-5D1-01 Solenoid Valve product"
+    },
+    {
+      "PartID": "46",
+      "status": "unmatched",
+      "query": "VPR-MT32-230 Viper Sounder product"
+    },
+    {
+      "PartID": "47",
+      "status": "unmatched",
+      "query": "P General 20L (Z-118) Milling Hub 20L product"
+    },
+    {
+      "PartID": "48",
+      "status": "unmatched",
+      "query": "Valvario VAS1-R/NW 88007474 Gas Solenoid Valve product"
+    },
+    {
+      "PartID": "49",
+      "status": "matched",
+      "matchType": "CLOSE",
+      "confidence": 69,
+      "file": "49-siemens-et-200sp.webp",
+      "source": "https://press.siemens.com/global/de/pressemitteilung/siemens-xcelerator-beschleunigt-die-digitale-transformation-und-bringt-neue",
+      "imageSource": "https://assets.new.siemens.com/siemens/assets/api/uuid:c0b6418f-c17a-43b5-aa2f-cd556754fdf6/Booth-impression-1080x1920.jpg",
+      "query": "Siemens ET 200SP Digital Output Module product",
+      "score": 43
+    },
+    {
+      "PartID": "50",
+      "status": "matched",
+      "matchType": "CLOSE",
+      "confidence": 69,
+      "file": "50-siemens-s7-1500.webp",
+      "source": "https://blog.siemens.com/2026/01/software-defined-everything-the-foundation-of-the-ai-powered-digital-enterprise/",
+      "imageSource": "https://assets.blog.siemens.com/uploads/2026/01/SiemensHM25Press1_original-1-1024x683.jpg",
+      "query": "Siemens S7-1500 Power Supply PLC product",
+      "score": 43
+    },
+    {
+      "PartID": "51",
+      "status": "unmatched",
+      "query": "Festo FENG-50-300-KF Guid Unit product"
+    },
+    {
+      "PartID": "52",
+      "status": "unmatched",
+      "query": "Elektror HRD 2T FU-95/2,2 Motor Blow product"
+    },
+    {
+      "PartID": "53",
+      "status": "unmatched",
+      "query": "SMC AMH550C-F-10BD-T Micro Mist Separator product"
+    },
+    {
+      "PartID": "54",
+      "status": "unmatched",
+      "query": "SMC CY3B25-PS Seal Kit product"
+    },
+    {
+      "PartID": "55",
+      "status": "unmatched",
+      "query": "TACMINA PZ-30-VTCF-4X9PVC-W-S-JPL Solenoid-Driven Metering Pump product"
+    },
+    {
+      "PartID": "56",
+      "status": "unmatched",
+      "query": "PS2494-YE Power Supply product"
+    },
+    {
+      "PartID": "57",
+      "status": "unmatched",
+      "query": "Shaft for Empty Station Shutter Door product"
+    }
+  ]
+}

@@ -1,0 +1,1199 @@
+﻿PartID,PartCode,PartName,Brand,Description
+1,SPM-CAL-002,Burner Control for X122,Honeywell,EC 7890 B 1010
+3,SPM-CAL-006,Ignition,Maxon,
+5,SPM-CAL-008,"Burner Control for X121 ,X123",Siemens,LMV51.100C2
+6,SPM-CAL-009,Burner Control,Honeywell,EC7890 B 1010
+7,SPM-CAL-010,Sensor Cable,Turck,WKC8T-2/TEL
+9,SPM-CLN-008,Chain,,25-1R
+10,SPM-CLN-009,Chain Joint,,25-1R
+11,SPM-CLN-010,Roller Joint,,25-1R
+12,SPM-CLN-011,Chain,,35-1R
+13,SPM-CLN-012,Chain Joint,,35-1
+14,SPM-CLN-013,Roller Joint,,35-1
+15,SPM-COM-007,Limit Switch,RJ,Z-15GW2-B
+16,SPM-COM-004,Limit Switch,Tend,TZ-7310(D4MC)-5000
+17,SPM-COM-021,Air Nocker,SMC,XT 316-30B
+18,SPM-HEM-001,Fuse,FUGI,BLC 120-1 AC 550/120 A
+19,SPM-HEM-085,Centrifugal Pump,EBARA,EBRA CDX 90/10
+20,SPM-HVA-001,Emergency stop,ABB,1SFA619550R1071
+21,SPM-MC4-029,Pick & place rubber gripper,,Pick & place rubber gripper
+22,SPM-MC4-034,Seal solenoid valve,Netzsch,CPV14-VI-P 1/8-150
+23,SPM-MC4-041,Connector,Harting,91A279R08
+24,SPM-MC4-043,Connection Units,IFM,EVC004
+25,SPM-MC4-044,Seal Kit,Festo,DFM-50-PAABE6
+26,SPM-MC4-049,Power Supply 230V-27V,Kuka,KBR POWER SUPPLY KUKA
+28,SPM-MC4-069,SIB-Standard Complete,Kuka,
+31,SPM-MC4-083,Directional Control Valve,SMC,VG342R-5DZ-06F-X87
+32,SPM-MC4-128,Gasket,,Style 2500 L280xW154 mm.
+33,SPM-MC6-006,Photoelectric Proximity Switch,Sick,WT18-3P431
+34,SPM-MC6-025,Laser Displacement,IFM,01D105 01DLF3KG
+35,SPM-MC6-026,LED Light Source,V.Light,TX2-D190X19-R3-R-24V
+36,SPM-MC6-027,Light Source Control,V.Light,Power
+37,SPM-MC6-030,Photo Sensor (Receiver),Sick,WE100L-F2132
+38,SPM-MC6-060,Fitting & Pipe Set L62,Chanaseel,SUS 304
+39,LEGACY-3529C0A82583,Bladder,,118.4/10 mm.
+40,LEGACY-A56E3AC5A577,Ring Clamp,,"118.4/5 mm./MC6,MC4"
+41,LEGACY-BB5075DBB9EA,Ring Clamp,,"118.4/10 mm./MC6,MC4"
+42,LEGACY-3675CE2535E3,Ring Clamp,,93/5 mm.
+43,SPM-RHK-041,Pneumatic Vibrator,,GT10
+44,SPM-RHK-042,Fotek Proximity Switch,,PS-05N
+45,SPM-RHK-043,Solenoid Valve,SMC,VT307V-5D1-01
+46,SPM-COM-064,Viper Sounder,,VPR-MT32-230
+47,SPM-HEM-099,Milling Hub 20L,P General,20L (Z-118)
+48,SPM-MC4-144,Gas Solenoid Valve,Valvario,VAS1-R/NW 88007474
+49,SPM-MC4-145,Digital Output Module,Siemens,ET 200SP
+50,SPM-MC4-146,Power Supply PLC,Siemens,S7-1500
+51,SPM-MC4-147,Guid Unit,Festo,FENG-50-300-KF
+52,SPM-SCR-039,Motor Blow,Elektror,"HRD 2T FU-95/2,2"
+53,SPM-MCY-128,Micro Mist Separator,SMC,AMH550C-F-10BD-T
+54,SPM-MCY-129,Seal Kit,SMC,CY3B25-PS
+55,SPM-WAS-026,Solenoid-Driven Metering Pump,TACMINA,PZ-30-VTCF-4X9PVC-W-S-JPL
+56,SPM-WAS-027,Power Supply,,PS2494-YE
+57,SPM-RHK-046,Shaft for Empty Station Shutter Door,,
+58,SPM-RHK-044,Air Cylinder,SMC,CDBA2B50-250-HL-XC4
+59,SPM-MC4-152,Flame Monitor,DURAG,AAL 75 P0D
+60,SPM-MC6-162,Weighing Module,,7MH4900-2AA01
+61,SPM-MC6-163,Power cable,,6FX5002-5CA41
+62,SPM-RHK-048,Bearing Housing รอ Flage delete,,UCFL204
+63,SPM-MCY-139,Needle Roller Bearing RNA6902R,NTN,RNA6902R
+64,SPM-MCY-140,Linear Bushing LMF20UU,THK,LMF20UU
+65,SPM-CAL-025,Gas Regulator FMF301510003AD,Pietro Fiorentini,FMF301510003AD
+66,SPM-MC6-168,Double Motor Module,,6AU1425-0AA00-0AA0
+67,SPM-MC6-169,Double Motor Module,,6SL3130-6AE21-0AB1
+68,SPM-CLN-017,Chain,,25-1R
+69,SPM-CLN-018,Chain,,35-1R
+70,SPM-MC6-170,LED Light Source,V.Light,TX2-D190X19-R3-R-24V
+71,SPM-SCR-032,Gas Train,,MB-ZRDLE 407 B01 S20
+72,LEGACY-C729521311C7,Ring Clamp,,83/3 mm.
+73,LEGACY-59C7569293E6,Bladder,,Free Size/All
+74,LEGACY-53585E3676F8,Bladder,,118.4/5 mm.
+75,SPM-NAU-005,Indicator Weight Scale,Precia Molen,X-112-B
+76,SPM-NAU-007,Rotary Joint,Deubltn,Union 1/2 BSPRH (V201-0202-07-010)
+77,SPM-NAU-008,Rotary Joint,Deubltn,Union 3/8 BSPRH (V201-0101-02-032
+78,SPM-NAU-013,Oil Seal 35x52x7,,TC 35x52x7
+79,SPM-PRE-001,Gasket,0,310x66x3
+80,SPM-PRE-002,ER310-01Parect Electronic Regulator,CKD,ER310-010-B
+81,SPM-PRE-003,Ministry Wiring Block Manifold,CKD,MN4TB210-H10-LT30-5-3
+82,SPM-PRE-004,Fuse cap,-,PA 100
+83,SPM-PRE-005,Fuse base,-,AFA 100
+84,SPM-PRE-013,Temp Control,Omron,E5CN-C2MT-500
+85,SPM-PRE-025,Photoelectric sensor,Omron,E3FA-RP21
+86,SPM-PRE-026,Power supply,,RPLD 0060
+87,SPM-PRE-028,Pressure Control,,1PDK230632S00042846
+88,SPM-PRE-029,Transformer,Fida,TRS820P/11
+89,SPM-PRE-033,Digital Controller,Omron,E5CC-RW2AUM-000
+90,SPM-PRE-034,Connecting socket,Omron,P2CF-11
+91,SPM-PRE-035,Magnetic Contactor,Mitsubishi,S-T25 200-240V
+92,SPM-PRE-036,Fire Check Burners,Riello,E19AA8B0
+93,SPM-RHK-002,Cylinder,SMC,CDQ2B40R-50DMZ-M9BVAVL-XC6
+94,SPM-RHK-008,Inductive Sensor PNP,RS Componance,208-184
+95,SPM-SCB-002,Flow switch,Sika,VHS06M25171R21
+96,SPM-SCD-005,Power supply 24VDC,ABB,SM16257932
+97,SPM-SCD-006,Digital Input 24VCD,ABB,SE16250004
+98,SPM-SCD-007,Digital Input,ABB,SC13271356
+99,SPM-SCD-008,Digital Input 10VCD,ABB,SI16291197
+100,SPM-SCD-001,Digital input 24VDC,ABB,SE162102PE
+101,SPM-SCD-002,Power Supply,ABB,SM16265963
+102,SPM-SCD-003,Compact MTU module,ABB,SX16250652
+103,SPM-SCR-020,Pressure Indicator,SMC,PMC51-RFE3/1A6
+104,SPM-WAS-006,Inverter,Fuji,FRN2.2E1S-4A
+105,SPM-WAS-007,Inverter,Fuji,FRN0.75E1S-4A
+106,SPM-WAS-012,Pressure Switch,,25 Bar
+107,SPM-OXI-002,Heater brake alarm,PRIMUS,PM CM-005
+108,SPM-RHK-036,Cylinder,SMC,MGPM25-20Z-M9BWLS-XC4W
+109,SPM-RHK-037,Cylinder,SMC,MGPM16-50Z
+110,SPM-RHK-038,Cylinder,SMC,MGPM25-50Z-M9BWL-XC4
+111,SPM-RHK-039,Cylinder,SMC,MGQM32-50-M9BWL
+112,SPM-RHK-040,Cylinder,SMC,MGPM40-125Z-M9BWL
+113,SPM-COM-055,Power Supply,Dell,XU100116-12004
+114,SPM-SCD-009,Profibus-DP/V1,ABB,CI854AK01
+115,SPM-SCD-010,Digital Input,ABB,DI 818
+116,SPM-SCD-011,Digital Output,ABB,DO 818
+117,SPM-SCD-012,Analog Input,ABB,AI810
+118,SPM-SCD-013,scription AO810V2 Analog Output,ABB,AO810V2
+119,SPM-SCD-014,SB822 Rechargeable Battery,ABB,SB822
+120,SPM-SCD-015,Modulebus Cluster,ABB,TB840A
+121,SPM-SCD-016,Compact MTU,ABB,TU818
+122,SPM-CHI-007,Flow sensor thermal DISP,AIRCO LIMITED,SWT03335
+123,SPM-CHI-008,Flow sensor control,AIRCO LIMITED,CNT05639
+124,SPM-CHI-009,Water flow switch sensor,AIRCO LIMITED,SEN01674
+125,SPM-CHI-010,Clamp adaptor D10,AIRCO LIMITED,"FGT01145 1/2"""
+126,SPM-CHI-011,Portable cable,AIRCO LIMITED,"CON01379 1/2"""
+127,SPM-CHI-012,Dual relay output,AIRCO LIMITED,X13650733070
+128,SPM-CHI-006,Expansion Valve,AIRCO LIMITED,"1 1/8"" x5/8"" M12 Input"
+129,SPM-CHI-002,Temperature Sensor,Trane,X13651507030
+130,SPM-CHI-004,Step Motor Expansion Valve,Parker,SERI-J M12 LESS CABLE
+131,SPM-COM-043,Quick connector,Amko Tech,"Cupla 8P-A 1"""
+132,SPM-COM-044,Quick connector,Amko Tech,"Cupla 8S-A 1"""
+133,SPM-MC4-053,Coupling,Amko Tech,GR38
+134,SPM-SCB-003,Magnehelic,Amko Tech,W46AB SW
+135,SPM-SCB-004,Pressure gauge,Amko Tech,W081 S/N 6374806
+136,SPM-SCB-005,Pressure Gauge,Amko Tech,0000170327RS
+137,SPM-SCB-001,Pressure gauge,Amko Tech,C161100629
+138,SPM-MC6-086,Ball Screw shaft,Aero Group,25x5Rx3-4 (T9) L = 460 mm.
+139,SPM-MC6-076,Single Nut With Flange,Rexroth,MNR-R151221013
+140,SPM-MC6-033,Single Nut With Flange,Rexroth,MNR-R150221085
+141,SPM-MC6-142,Computer,Delta,HMI Computer
+142,SPM-MC6-137,Computer,Dell,HMI Computer
+143,SPM-COB-078,Mini Computer,Asia Tech Solution,GT4500-I5-8th
+144,SPM-SCR-040,Optical filters 2072345,SICK,Referance filter swivel segment
+145,SPM-SCR-041,Reflextors and mirrors 2072339,SICK,Zero-Point reflextor swivel segment
+146,SPM-SCR-042,Emitter 2082776,SICK,UV Emitter Module
+147,SPM-SCR-043,Reflextors and mirrors 2072325,SICK,"Divider mirror ""Referance-4Quadrant"
+148,SPM-SCR-044,Reflextors and mirrors 2072336,SICK,Main beam splitter
+149,SPM-SCR-053,Drying Agent Cartridge 2010549,Sick GM32,2010549
+150,SPM-CHI-013,Thermometer,WISE,T190 Stem Lenge 370 mm.
+151,SPM-CHI-014,Thermometer,WISE,T190 Stem Lenge 400 mm.
+152,SPM-PRE-074,Safety Relay,EUCHNER,CES-AZ-AES-04B(104780)
+153,SPM-PRE-045,Safety Switch,Automation Control,CET1-AX-LRA-00-50X-SC
+154,SPM-PRE-046,Actuator Safety Switch,Automation Control,CET-A-BWK-50X
+155,SPM-MC6-166,Safety Switch Unicode MGB-L2-ARA-BM5A1-S,EUCHNER,MGB-L2-ARA-BM5A1-S1-R-121179
+156,SPM-MC6-167,Escape Release MGB-E-A-100465,EUCHNER,MGB-E-A-100465
+157,SPM-MC4-122,Han 10B-ASG-LB-16,Automation Control,9300101251
+158,SPM-MC4-123,Han Modular,Automation Control,9140009908
+159,SPM-MC4-124,Han Modular,Automation Control,9140009909
+160,SPM-MC4-125,Han 5 MOD STI-ES 16A,Automation Control,9140052616
+161,SPM-MC4-126,Gasket t2 mm.,Automation Control,9140052716
+162,SPM-COM-040,Temperature Control,Automation Control,P6100-2111-002-10
+163,SPM-CAL-017,Inductive Sensor,Automation Control,NI12U-EM18-AP6X-H1141
+164,SPM-CAL-018,Connection Cable,Automation Control,RKC4T-2/TEL
+165,SPM-CAL-019,Safety Bolt,EUCHNER,Ident.-Nr. 123653 CTP-AC-123653
+166,SPM-MC6-020,Manual Switch,Euchner,ZSA2B4S05A
+167,SPM-MC6-007,Handle Module,Euchner,MGB-H-AA1A1-R-100464
+168,SPM-COM-041,Capacitive Switch,Euchner,CHT3-F7XB-64/TG-SR
+169,SPM-RHK-026,Fuse,,CR6L-30
+170,SPM-RHK-027,Fuse,,250FM 250A 690V
+171,SPM-RHK-028,Magnetic Contactor,,SC-N3
+172,SPM-COM-058,Fuse Link,Gunkul,27KV 80A Type K
+173,SPM-RHK-050,Overload Relay,FUJI,TR-ON/3 (0.1-0.15A)
+174,SPM-TRN-028,Ultra-Thin Picking Sensor,PANASONIC,NA1-5-PN
+175,SPM-TRN-029,Photo Sensor,OIMRON,E3JK-RR12-C 2M
+176,SPM-TRN-030,Reflector,OIMRON,E39-R1
+177,SPM-TRN-020,Miniature Power Relay,Banfaifa,MY2N-GS-R
+178,SPM-COM-100,Pressure Transmitter,IFM,PA3029
+179,SPM-STO-002,Inverter,Hoffman Muller,HM-G8A44P0B
+180,SPM-COM-084,Power Supply,Omron,S8FS-C05024 50W 24V 2.2A
+181,SPM-PRE-068,Fuse,SIEMENS,3NA3812 32A SIEMENS
+182,SPM-COM-089,Fuse,BUSSMANN,10x38mm. 4A 500VAC gG C10G4
+183,SPM-COM-090,Fuse,BUSSMANN,22x58mm. 50A 690V gG C22G50
+184,SPM-COM-091,Fuse,SIEMENS,NH-00 3NA3805 16A 500V gL-gG
+185,SPM-COM-092,Fuse,SIEMENS,NH-00 3NA3836 160A 500V gL gG
+186,SPM-COM-093,Fuse,SIEMENS,NH-000 3NA3822 63A 500V gL-gG
+187,SPM-MC4-050,Head lock clamp,Blind,-
+188,SPM-MC4-051,Jaw clamp,Blind,-
+189,SPM-MC4-052,Set screw load cell,Blind,-
+190,SPM-MC4-021,Springs,Blind,UBB8-15
+191,SPM-MC4-022,Fastening,Blind,SSHTI-ST-M12-12
+192,SPM-MC4-011,"Quick release fastener 9""",Blind,"Quick release fastener 9"""
+193,SPM-MC4-181,Bladder Cannon KO Seal,Blind,042.010.00.00.217
+194,SPM-MC4-182,Additional Clmap Holder,Blind,042.010.03.90.050
+195,SPM-MC4-183,Rubber Insert Ø93,Blind,048.002.03.83.001
+196,SPM-MC4-178,Harting Plug Male,HARTING,Station 4+16
+197,SPM-MC4-179,Harting Plug Female,HARTING,Station 4+16
+198,SPM-MC6-001,Lead Switch,Schunk,MMS22-SPM8
+199,SPM-MC6-052,Cylinder,Festo,SCHUNK SRU+40-W-180-3-M
+200,SPM-COM-063,Adaptor for IDS-701,,WTA12-0901200-G
+201,SPM-COM-051,Adaptor,,IVP0900-1000
+202,SPM-COM-038,Adapter for A & D,Burapa Science,TB-249 12V
+203,SPM-COM-039,Adapter for A & D,Burapa Science,TB-249 9V
+204,SPM-COM-054,Weight Monitoring,Jadever,JIK-6CAB
+205,SPM-COM-009,Load Cell 500kg.(7 wire),Burapa Science,IDS608-500K
+206,SPM-COM-011,Load Cell 1000kg.(7 wire),SDS,IDS608-1T
+207,SPM-COM-013,Load Cell 15kg.(4 wire),Tedea-Huntleigh,1022-15K
+208,SPM-COM-001,Load Cell 300kg.(5 wire),Precia Molen,11153832 C 3m
+209,SPM-COM-002,Load Cell 300kg.(7 wire),Precia Molen,1394810 (16)
+210,SPM-COM-003,Load Cell 500kg.(5 wire),SDS,IDS608-500K
+211,SPM-COM-022,Load Cell 2267kg.(5 wire),SDS,IDS608-5KLB
+212,SPM-COM-023,Load Cell 3000kg.(5 wire),SDS,IDS608-3T
+213,SPM-COM-099,Adjust Feet,IDS,IDS608
+214,SPM-COB-080,Precision Balances,AND,GF6002A
+215,SPM-COB-075,Rubber for Weight Balance,-,
+216,SPM-COB-040,AC Adaptor 220V,AND,AX-TB249E
+217,SPM-COM-031,"Diaphragm Pump 1"" ARO",Aro,PD10P-YPS-PTT
+218,SPM-NAU-019,Diaphragm Pump,Aro,"PD03P-ARS-PTT  3/8"" ARO"
+219,SPM-MC6-043,Parallel Gripper Stroke 50.8 mm.,Destaco,DPW-375M-2
+220,SPM-MC6-044,Sensor,Destaco,OISN-014
+221,SPM-MC6-045,"Sensor MTNG KIT,DPW-375(M)-1 & -375(M)-1",Destaco,OSMK-117
+222,SPM-MC6-046,Quick Disconnect 5 Meter Cable Length,Destaco,CABL-013
+223,SPM-MC6-173,"Seal Kit,DPW-375",Cerathai,SLKT-340
+224,SPM-MC6-119,"Seal Kit,DPW-375",Cerathai,SLKT-339
+225,SPM-MC6-121,"Seal Kit,DPW-375",Cerathai,SLKT-340
+226,SPM-MC6-101,Hood seal,Chan Steel,Urethane
+227,SPM-MC6-102,Upper Hood seal,Chan Steel,OD278xID238xt25
+228,SPM-MC6-103,Lower Hood seal,Chan Steel,OD270xID230xt25
+229,SPM-MC6-106,Gusset,Chansteel,t65 x 65 x 100mm.
+230,SPM-MC6-066,Gripper,Chansteel,T20 x 60 x 118 mm.
+231,SPM-MC6-067,Urethane Gripper,Chansteel,T15 x 60 x 60 mm.
+232,SPM-MCY-053,O-Ring,Chan Steel,O-Ring Station 3
+233,SPM-PRE-078,Conveyor Bush,Chan Steel,SUS304
+234,SPM-MCY-173,Un-Jump Plate,Chan Steel,750170
+235,SPM-MCY-169,16CH Relay Interface Module,Delta,UB-10-OR16A
+236,SPM-MC6-185,Robot Gripper Bush,Chan Steel,-
+237,SPM-RHK-055,Slide Pop-Up Assembly,Chan Steel,-
+238,SPM-DIS-011,Shuter Seal,Chan Steel,Dia 285x255x15 mm
+239,SPM-MCY-164,Oval Block,Chan Steel,Size 20x22 mm.
+240,SPM-MCY-166,Filling Pump,Chan Steel,G1WGD 300-2600 ml.
+241,SPM-MCY-167,Filling Head,Chan Steel,G1WGD 300-2600 ml.
+242,SPM-CLN-021,Roller Guide for Clean Skin 4,Chan Steel,Rolls R54
+243,SPM-CLN-022,Roller Guide for Clean Skin 2,Chan Steel,Rolls R129
+244,SPM-CLN-023,Nozzle for Clean Skin,Chan Steel,PNZRF1-3-50
+245,SPM-RHK-049,AC Motor Roller,Chan Steel,MR-Q3-38-420-3AB-AOT975
+246,SPM-MC6-138,Urethane Gripper Pick & Place,Chan Steel,60x90x15 50Shore A
+247,SPM-PRE-057,Sleeve Coupling,Chan Steel,MT-70
+248,SPM-HEM-093,End plate 4L,Chan Steel,Z-116
+249,SPM-RHK-031,Spring,Chan Steel,OD49 x Rod3 x L116mm.
+250,SPM-MC4-140,Joint,Chan Steel,M20xL129
+251,SPM-RHK-005,Brush,Chan Steel,105 x 120 mm.
+252,SPM-MCY-144,Liquid Packing,,SL-02 300-2600ml.
+253,SPM-MCY-145,Calipper Brake,Chan Steel,0.7 Mpa
+254,SPM-HEM-109,Headon pump,Chan Steel,RO 100 GPD Pump
+255,SPM-MC6-174,Nozzle for Bladder,Chan Steel,L 105 mm.
+256,SPM-MCY-146,Nozzle With Bracket,Chan Steel,L 28.5
+257,SPM-MCY-147,Bracket for Nozzle,Chan Steel,-
+258,SPM-MCY-148,Lower Coating Seal,Chan Steel,Dia42 L60 Gap3 mm.
+259,SPM-MCY-149,Lower Coating Seal,Chan Steel,Dia42 L60 Gap5 mm.
+260,SPM-MC6-175,Unload V-Block,Chan Steel,Urethane 50 Shore.A
+261,SPM-MCY-151,Ball Valve Three -way,Chan Steel,300-2600 ml
+262,SPM-MC4-157,Unload Gripper,,Set of Unload Gripper
+263,SPM-MCY-138,Suction Cup Rod M10x1.25,Chan Steel,for SMC
+264,SPM-MCY-135,Suction Cup Rod M10x1.00,Chan Steel,for China
+265,SPM-MCY-136,Lifter Pin,Chan Steel,-
+266,SPM-MC4-133,Weighing Station Base Plate,Chan Steel,DWG.042.010.01.32.016
+267,SPM-MC4-134,Weighing Station Bar,Chan Steel,DWG.042.010.01.32.017
+268,SPM-MC4-127,Gasket t2 mm.,Chan Steel,ID15.5mm.xOD19.9mm.xT2mm.
+269,SPM-MC4-116,Blast Gate Support,Chan Steel,83x235x35 mm.
+270,SPM-MC6-065,Plate Chuck,Chansteel,T15 x 245 x 110 mm.
+271,SPM-HEM-004,Disc Spacer P4,Chan Steel,Ø 4
+272,SPM-CLN-014,Oriental Motor,Chan Steel,USM560-502W-1
+273,SPM-CLN-001,Straight Bevel,Chan Steel,M1.5 x 18PT 20PA ID 15mm.
+274,SPM-CLN-005,Speed Control Unit,Oriental Motor,UPS560-2E2
+275,SPM-CLN-007,Clean Skin Roller Driven kit,Chansteel,
+276,SPM-HEM-021,Cap for Shaft,Chan Steel,OD55xID45xH30
+277,SPM-HEM-022,Mechanical STL Bush (L40),Chan Steel,ID45 x OD55 x L40
+278,SPM-HEM-023,Mechanical STL Bush (L70),Chan Steel,ID45 x OD55 x L70
+279,SPM-PRE-066,Shaft,Chansteel,SCM440 Dia59.9xL371.10mm.
+280,SPM-PRE-077,Conveyor Pin,Chansteel,OD9.9mm x 48 mm
+281,SPM-MC4-143,Motor actuator control valve,Chimpf (Blind),01-15/30 N
+282,SPM-PRE-032,Cylinder,CKD,CMK2-TB-40-75
+283,SPM-PRE-037,Solenoid Valve,CKD,4KB210-08-L
+284,SPM-PRE-042,Switch (SW TOH),CKD,SW TOH
+285,SPM-PRE-043,Switch (SW RO),CKD,SW RO
+286,SPM-PRE-019,Seal Kit,CKD,STS-50K
+287,SPM-PRE-020,Coupling,CKD,No.70
+288,SPM-PRE-021,Coupling,CKD,No.170
+289,SPM-COB-042,Pressure Regulator,CKD,PPD3-R10N-6B
+290,SPM-COB-043,Regulator,CKD,W4000-15W-R1
+291,SPM-COB-033,Solenoid Valve,CKD,ADK11-20A-02H-DC24V
+292,SPM-RHK-004,Solenoid Valve,CKD,PDV3-20A-F4A-AC220V
+293,SPM-PRE-076,Air Cylinder,,STL-B-63-400
+294,SPM-COB-004,Stopper Cylinder,CKD,STK-M-32-15
+295,SPM-COB-009,Digital Pressure Sensor,SUNK,DP2-20
+296,SPM-COB-010,Cylinder,SMC,CY3B25-250-XB9
+297,SPM-INK-001,Print Engine,Code Master,128CH 200DPI
+298,SPM-SCR-045,Ignition electrode,Honetwell,"Kinemax 3""-4"""
+299,SPM-SCR-046,Ignition cable 1500mm Cu (118148),,Ignition cable 1500mm Cu (118148)
+300,SPM-SCR-047,Ignition Transformer,,DEZ100
+301,SPM-SCR-048,Flange,,Rp 1
+302,SPM-SCR-049,Textile Compensator,,"DN500, 450°C, R1 to R3"
+303,SPM-SCR-050,Gas Governor,Dungs,FRS 510
+304,SPM-SCR-051,Spring,,"7 sw, 60-110mbar, Rp 1"
+305,SPM-SCR-052,Adjustable Spring,,"30-70mbar, Rp 1"
+306,SPM-MCY-099,AC Servo Motor (Delta),Delta,ECMA-EA 1310RS
+307,SPM-MC6-057,Load Limit,Destaco,ULS 100-300
+308,SPM-MC6-023,Load Limiter,Destarco,ULS-125-VF
+309,SPM-MC4-045,Gripper robot infeed,Destarco,
+310,SPM-COP-004,Auto drain kit,Domminich Hunter,EF1
+311,SPM-COP-005,Pressure Transmitter,Endress Huaser,AA21JA1CGJGMJA+AAJA
+312,SPM-DIS-002,Topwork valve controller,Topworx,TVL-M2WGNPM
+313,SPM-DIS-003,Butterfy valve,Sealed Air,"d110DN100 4"""
+314,SPM-COM-045,Power supply,,6EP1436-3BA00
+315,SPM-COM-005,Solenoid Assy,SMC,SF4-5DZ-80-Q
+316,SPM-COM-006,Limit Switch,Omron,HL-5030
+317,SPM-CHI-001,Wire Harness Branching Male-Female,Trane,CAB01146
+318,SPM-CLN-015,Speed Control Motor,,USP590-2E2
+319,SPM-CHI-005,Temperature Sensor,Trane,X13650726100
+320,SPM-CHI-003,Electronic Expansion Valve (EXV),Trane,X13650736130
+321,SPM-MC4-054,Efector 190,IFM,DTE101
+322,SPM-MC4-048,Power Supply 3x400,JKA K,Stromversorgung 27V/40A
+323,SPM-MC4-057,Encoder Burnner,Novotechnik,SP2831-308-000-001-019521
+324,SPM-MC4-039,Servo motor,Siemens,1FK7032-2AK71-1RH1
+325,SPM-MC4-040,Servo motor,Siemens,1FK7044-4CF71-1CH1
+326,SPM-MC4-033,Cylender,Festo,ADN-40-60-I-PPS-A
+327,SPM-MC4-066,Support Sensor,Festo,SL-DSM-B
+328,SPM-MC4-067,Set of Wearing Parts,Festo,DNC-40-PPV-A
+329,SPM-MC4-059,Smart Light Grids,Sick,SAR4-S028N3PS1T00
+330,SPM-RHK-003,Fuse,Mersen,DN00UB69V200L
+331,SPM-RHK-011,Standard Mounting Bracket,Keyence,PZ-B61
+332,SPM-SCR-022,Damper,Siemens,
+333,SPM-SCD-004,Relay,Phaenix,PLC-RSC-24DC/21
+334,SPM-PRE-022,Safety relay,Pilz,PNOZ X3 24VAC
+335,SPM-PRE-053,Servo Motor,Siemens,SQM45.295A9
+336,SPM-MC6-133,Connect Cable Area Sensor,,GL-RP5PS
+337,SPM-MC6-078,Handle Module,Euchner,MGB-H-AA1A1-L-100619
+338,SPM-MC6-107,Connecting Cable,Festo,NEBU-M8W3-K-5-LE3
+339,SPM-MC6-108,Air Filter,SMC,AF30-03D-A
+340,SPM-MC6-109,Filter Regulator,SMC,AW20-02BG-A
+341,SPM-MC6-110,T Coupler M12 Male,Murr Elektronik,7000-41201-0000000
+342,SPM-MC6-105,Simitic Net,Siemens,CP343
+343,SPM-MC6-124,Photoelectric Switch,Micro Detector,QMRL/OP-OF
+344,SPM-MC6-083,Festo sub-base,Festo,EF542223 (VMPA-FB-AP-P1)
+345,SPM-MC6-084,Elastomer coupling,FESTO,R+W
+346,SPM-MC6-097,Safety Switch Unicode,Euchner,MGB-L2-ARA-BM3A1-M-R-121222
+347,SPM-MC6-098,Control Unit,Siemens,6SL3040-0MA00-0AA1
+348,SPM-MC6-099,Fillter Regulators,Festo,MS6-LFR-1/2-D6-C-R-V-AD7-AS
+349,SPM-MC6-087,Double Motor Module,Siemens,6SL3120-2TE13-0AA4
+350,SPM-MC6-088,Silencer,SMC,AN900-20
+351,SPM-MC6-089,Vacuum pump,Coax,P6010
+352,SPM-MC4-129,"Actuator 10""",Ebro Valve,SBU-AD-M208-K211-M01
+353,SPM-MC4-036,Temp sensor,Endress Huaser,TMR31-A11ABBC1AAA
+354,SPM-MC4-132,Temp Sensor,Endress+Hauser,TMR31-A1ECACAC1AAA
+355,SPM-CAL-028,Process Transmitter RMA42,Endress+Hauser,RMA42-1009/0
+356,SPM-CAL-031,Temp Transmitter,Endress+Hauser,TMT82-AAA1AD2TKTKA2+LA
+357,SPM-MC6-112,Fuse Robot Fanucth,Fanuc,A60L-0001-0290/LM50C
+358,SPM-MC6-113,Fuse Robot Fanucth,Fanuc,A60L-0001-0450/8RO
+359,SPM-MC6-114,Fuse Robot Fanucth,Fanuc,A60L-0001-00046/1.0
+360,SPM-MC6-115,Fuse Robot Fanucth,Fanuc,A60L-0001-0175/0.5A
+361,SPM-MC6-116,Fuse Robot Fanucth,Fanuc,A60L-0001-0290/LM32C
+362,SPM-MC6-118,Solenoid Valve,Festo,VMPA1-M1H-E-PI
+363,SPM-MC6-135,Bus node,Festo,CPX-FB13
+364,SPM-MC6-136,ON/OFF Valve,Festo,MS6-EM1-1/2-S
+365,SPM-MC6-090,Pressure regulator,Festo,VPPM-6TA-L-1-F-0L6H-S1
+366,SPM-MC6-091,Router,Helmholz,700-873-WAN02
+367,SPM-MC6-094,DROSSEL.R.VENT,Festo,GRLA-1/4-B
+368,SPM-MC6-095,Piloted Check Valve,Festo,HGL-1/4-B
+369,SPM-MC6-096,Rubber Support,Misumi,AEXMF-D15-L10-V4
+370,SPM-MC6-100,M8 Female 0 With Cable,Murr Elektronik,AWG 24
+371,SPM-MC6-085,Rail guide,FESTO,AWMU-30-750
+372,SPM-MC6-125,Photoelectric Switch,Micro Detector,QMRHD/OP-OF
+373,SPM-MC6-126,Interlinking Block,Festo,CPX-GE-EV-S-7/8-5 POL
+374,SPM-MC6-127,Power Supply Socket,Festo,NECU-G78G5-C2
+375,SPM-MC6-128,Drossel.R.Vent,Festo,GRLA-1/4-S-6-D
+376,SPM-MC6-129,Cylinder,Festo,DSBC-40-500-PPVA-N3 (1376667)
+377,SPM-MC6-130,Cylinder,Festo,DSBC-40-500-C-PPVA (1461995)
+378,SPM-MC6-131,Bus Node,Festo,CPX-FB13 (195740)
+379,SPM-MC6-111,Block Gate,FESTO,Using for Holding Bladder
+380,SPM-MC6-079,Lead Switch,Festo,SMT-8M-A-24V
+381,SPM-MC6-080,"Diaphragm kit 1""",Brando,DB018/G
+382,SPM-MC6-081,"Diaphragm kit 1.1/2""",Brando,DB114/C
+383,SPM-MC6-082,"Diaphragm kit 2""",Brando,DB116/C
+384,SPM-MC6-073,Solenoid Valve,Festo,VMPA1-M1H-J-PI 533343
+385,SPM-MC6-074,Solenoid Valve,Festo,VMPA2-M1H-J-PI
+386,SPM-MC6-075,Solenoid Valve,Festo,VMPA2-M1H-E-PI
+387,SPM-PRE-047,SOFT STAR,FESTO,MS6-SV-1/2-D-10V24P-2M12-S0-AG (8038491)
+388,SPM-PRE-048,MICRO FILTER,FESTO,MS6-LFM-1/2-A-R-V (530502)
+389,SPM-PRE-049,Membrane Dryer,Festo,MS6-LDM1-1/2-P20 (No.543644)
+390,SPM-PRE-050,Filter Regulators,Festo,MS6-LFR-1/2-D6-C-R-V-AD1-AS (No.526490)
+391,SPM-MC4-158,Cylinder Linear,Festo,DSL-32-80-270-P-A-S2-B
+392,SPM-MC6-153,Plug Socket With Cable,Festo,"KMYZ-9-24-M8-0,5-LED-B"
+393,SPM-MC6-154,Plug Socket With Cable,Festo,"KMYZ-3-24-M8-0,5-LED-PUR"
+394,SPM-MC6-155,Solenoid Valve,Festo,VMPA1-M1H-J-PI
+395,SPM-MC6-156,Self-aligning Rod Coupler,Festo,"FK-M20X1,5"
+396,SPM-MC6-157,Flow Sensor,Festo,SFAH-5B-Q6S-PNLK-PNVBA-M8
+397,SPM-MC6-158,Solenoid Valve,Festo,MHE3-MS1H-3/2G-1/8
+398,SPM-MC6-159,Proximity Switch,Festo,BES00J7
+399,SPM-MC6-152,Cylinder,FESTO,DSBC-40-200-PPVA-N3 (1376663)
+400,SPM-MCY-134,Proximity Switch,Festo,"SMT-8M-A-NO-24V-E-2,5-OE"
+401,SPM-MCY-150,Proximity Switch,Festo,"SME-8M-DS-24V-K-2,5-OE"
+402,SPM-MCY-152,Proximity Switch,Festo,"SMT-8M-A-PS-24V-E-2,5-OE"
+403,SPM-MCY-153,Air Cylinder,Festo,DSBC-63-250-C-PPVA
+404,SPM-MC4-160,Rod Seal,Festo,DNU-50/63
+405,SPM-MC6-172,"Diaphragm kit 1.1/2""",Brando,DB114/C
+406,SPM-MC6-047,Pressure Switch,Festo,MPPE-3-1/4-6-420-B
+407,SPM-MC6-048,Solenoid Valve,Festo,CPE14-M1BH-5/3G-1/8
+408,SPM-MC6-050,Cylinder,Festo,DNC-40-500-PPV-A-KP
+409,SPM-MC6-051,Cylinder,Festo,DNC-125-200-PPV-A-KP
+410,SPM-MC6-053,Cylinder,Festo,DNC-63-200-PPV-A-KP
+411,SPM-MC6-054,Cylinder,Festo,DNC-40-200-PPV-A-KP
+412,SPM-MC6-055,Seal Kit,Festo,DNC-80-PPV-A
+413,SPM-MC6-056,Cylinder,Festo,DSBC-80-200-PPVA-N3
+414,SPM-MC6-037,Solenoid Valve (Festo),Festo,JWEBH-5/2-D-1-ZSR-C
+415,SPM-MC6-038,Solenoid Valve (Festo),Festo,JMEBH-5/2-D-3-ZSR-C
+416,SPM-MC6-040,Cylinder,Festo,DFM-25-20-P-A-KF
+417,SPM-MC6-041,Solenoid Valve,Festo,VSVA-M52-MZ-A1-1C1-ANP
+418,SPM-MC4-117,Connecting Cable,Festo,NEBU-M8G3-K-5-M8G3 (541349)
+419,SPM-MC4-119,Pressure Switch,Festo,SDE5-D6-O-Q6-P-M8
+420,SPM-MC4-076,Cylinder (1463768),Festo,DSBC-50-130-PPSA-N3
+421,SPM-MC4-077,Cylinder (1463770),Festo,DSBC-50-130-C-PPSA
+422,SPM-MC4-112,1-Way Control Valve,Festo,VFOF-LE-BAH-G18-Q6
+423,SPM-MC4-121,Air Cylinder,Festo,DSNU-16-40-P-A-S6
+424,SPM-MC4-056,Cylinder Linear Unit,Festo,DSL-32-80-270-P-A-S
+425,SPM-MC4-046,Set of Wearing Parts,Festo,DSBC/G-50
+426,SPM-MC4-035,Connecting cable,Festo,NEBU-M8G4-K-2.5-LE4
+427,SPM-MC4-023,Electrical inferface,Festo,CPV14-GE-PT-8/1564984
+428,SPM-MC4-024,Solenoid valve,Festo,CPV14-M1H-5JS-1/8
+429,SPM-MC4-030,Fitting insert 6 mm.(I),Festo,QS-1/8-6 Mat.(153002)
+430,SPM-MC4-031,Cylencer,Festo,UC-1/8
+431,SPM-MC4-063,Mounting Kit,Festo,SMBR-8-16
+432,SPM-MC4-064,Proximity Sensor,Festo,SMT-8M-PS-24V-E-0.3-L-M8D
+433,SPM-MC4-080,Set of Wearing Parts,Festo,DFM-25-PAABE4
+434,SPM-MC4-081,Set of Wearing Parts,Festo,DSBC/G-125
+435,SPM-MC4-072,Proximity Senser,Festo,SMT-10M-PS-24V-E-0.3-L-M8D
+436,SPM-MC4-073,Sensor Bracket,Festo,Sensor Bracket SL-DSM-B
+437,SPM-MC4-084,ROD Clevis,Festo,"SG-M12x1,25"
+438,SPM-MC4-085,1-Way Control Valve,Festo,GRLA-1/8-QS-8-D
+439,SPM-MC4-086,1-Way Control Valve,Festo,GRLA-1/8-QS-6-D
+440,SPM-MC4-087,Proximity Switch,Festo,"SMT-8M-A-PS-24V-E-0,3-M8D"
+441,SPM-MC4-088,Solenoid Coil,Festo,MSFG-24/42-50/60-OD
+442,SPM-MC4-089,Quick Exhaush Valve,Festo,SEU-1/4
+443,SPM-MC4-090,1-Way Control Valve,Festo,GRLA-M5-QS-4-D
+444,SPM-MC4-091,Fitting,Festo,CN-1/8-PK-4
+445,SPM-MC4-092,Solenoid Valve,Festo,MFH-3-1/4
+446,SPM-MC4-093,Solenoid Valve,Festo,MFH-3-1/8
+447,SPM-MC4-094,Pressure Transmitter,Festo,SPTW-P6R-G14-A-M12
+448,SPM-MC4-095,Push-In Fitting,Festo,QS-1/4-12
+449,SPM-MC4-096,1-Way Control Valve,Festo,GRLA-1/4-QS-8-D
+450,SPM-MC4-097,Switch Bracket,Festo,SMBR-8-16
+451,SPM-MC4-098,Guide Unit,Festo,DFM-50-80-P-A-KF
+452,SPM-MC4-099,Guide Unit,Festo,DFM-32-50-P-A-KF
+453,SPM-MC4-100,Semi-Rot Drive,Festo,DRRD-40-180-FH-Y9A
+454,SPM-MC4-101,Guide Unit,Festo,FENG-50-130-KF
+455,SPM-MC4-103,Lubricator,Festo,MS4-LOE-1/4-R-WBM
+456,SPM-MC4-104,Pressure regulator,Festo,VPPX-6L-L-1-G18-OL10H-S1
+457,SPM-MC4-105,Druck-Regelvent,Festo,LRPS-1/4-4
+458,SPM-MC4-106,Druck-Regelvent,Festo,LRPS-1/4-10
+459,SPM-MC4-107,Pressure regulator,Festo,MPPE-3-1/8-6-420-B
+460,SPM-MC4-108,Centering Sleeve,Festo,ZBH-15
+461,SPM-MC4-109,Pinch Valve,Festo,VZQA-C-M22U-25-TT-V4V4E-4
+462,SPM-MC4-110,Guide Unit,Festo,FENG-50-50-KF
+463,SPM-MC4-012,Magnehelic,DWYE Magnelic,2000-1.5KG (S711056)
+464,SPM-MC4-013,Solenoid Valve (JK-559651),Festo,CPV14-M1H-5JS-K-1/8
+465,SPM-MC4-017,Soft start/Quick exhaust valve,Festo,MS6-SV-1/2-E-10V24-AG
+466,SPM-MC4-020,Solenoid valve,Festo,MHE3-MS1H-3/2G-1/8-K
+467,SPM-COM-052,Seal Cartridge,FESTO,VAVC-Q2-M22U-25-E (3970093)
+468,SPM-COM-053,Flow Sensor,FESTO,SFAH-5U-Q6S-PNLK-PNVBA-M8
+469,SPM-MC4-115,Air Cylinder,Flu Tech,BORE 16x40 mm. Type 1280
+470,SPM-MC6-062,"Valve Blow Out 1""",Mecair,VNP208 COIL 24V
+471,SPM-MC6-063,"Valve Blow Out 1.1/2""",Mecair,VNP214 COIL 24V
+472,SPM-MC6-064,"Valve Blow Out 2""",Mecair,VNP216 COIL 24V
+473,SPM-MCY-077,"Pinch Valve 1""",Flutech,F1-PINCH-VMP/EPDM-25
+474,SPM-MCY-078,"Pinch Valve 2""",Flutech,F1-PINCH-VMP/EPDM-50
+475,SPM-MC6-182,Kit Pinch Valve,FLUTECH,VMC DN25
+476,SPM-MC6-184,FPC Aluminum pinch valve,FLUTECH,"Size 1"""
+477,SPM-COM-047,Pinch Valve,Flu-tech,DN25 VMC PN10
+478,SPM-PRE-009,Super Rapid Fuse,Fuji Electric,BLC090-1 90A
+479,SPM-TRN-016,Load Limiter,"Future State (Asia) Co.,Ltd.",ULS-125-V
+480,SPM-CAL-027,Shut Off Valve JSAV 50f50/1-0,Krom Schroder,JSAV 50f50/1-0
+481,SPM-MC4-159,LAMTEC Fieldbus Module,LAMTEC,663R040-1PB
+482,SPM-MC4-154,Kromchoder Gas Solenoid Valve,,VAS240R/NW
+483,SPM-MC4-151,Frequency Converter,Pepperl+Fuchs,KFU8-UFC-1.D
+484,SPM-PRE-063,Rotary Drive,ARIS,Tensor S 20-30
+485,SPM-MC4-161,ERHARDT+LEIMER,General Technology,F31EA
+486,SPM-CAL-029,Process Transmitter,Endress+Hauser,RMA42-AAD
+487,SPM-CAL-021,Solenoid Valve,ASCO,3/2 8320G184 240/60
+488,SPM-CAL-022,Pressure Switch,HONYWELL,C6097A2210
+489,SPM-CAL-023,Motor Control Valve,HONYWELL,M7284 C1000 230V
+490,SPM-MC4-149,Turbine Gas Valve,KROMSCHRODER,DM 25R25-40 Valve
+491,SPM-MC4-150,Safety Temperature Limite,JUMO,701150/8
+492,SPM-PRE-065,Gas Train,DUNGS,MB-ZRDLE 407 B01 S20
+493,SPM-CAL-020,Eucher Safety Switch Unicode,EUCHNER,CTP-L1-AP-U-HA-AZ-SA-124225
+494,SPM-MC6-183,Actuator,BAR,BAR AD-050/090-V22-H
+495,SPM-MCY-165,Actuator,BAR,BAR GD-125/090-F07/F10-Z20-D 90 Z20MM
+496,SPM-CAL-032,Display & Operating Unit,Siemens,AZL52.00B1
+497,SPM-MC4-180,Servo Contro Unit,Siemens,CU320-2 PN
+498,SPM-MC4-184,Analog Input module Energy Meter CT,Siemens,6ES7134-6PA01-0BU0
+499,SPM-MC4-185,BASE UNIT BU Type,Siemens,6ES7193-6BP00-0BU0
+500,SPM-MC4-186,Lamtec FieldBus Module,Lamtech,663R040-1PB ET
+501,SPM-MCY-177,Proximity Sensor,Omron,TL-Q5MC1-Z
+502,SPM-PRE-064,Gas Train,DUNGS,MB-ZRDLE 407 B01 S20
+503,SPM-PRE-054,Gas Valve Actuator,Siemens,SKP25.403E2
+504,SPM-PRE-055,Gas Valve Actuator,Siemens,SKP15.000E2
+505,SPM-PRE-056,Pressure Switch (DUNGS),Dunge,LGW 50 A4
+506,SPM-SCR-023,Flame Detector,Siemens,D-LX 100 UL-B1/M2/97Ex/MCG
+507,SPM-SCR-024,Solenoid valve,NORGREN,Id.Nr.9710000
+508,SPM-SCR-025,Shut-Off Valve,EUCHNER,T72B-2GA-P1N
+509,SPM-SCR-030,Gas Multibloc,DUNGS,MBC-300-VEF
+510,SPM-SCR-031,Gasfilter,DUNGS,GF 4010/1
+511,SPM-PRE-058,Actuator,Siemens,SQM48.497B9
+512,SPM-PRE-059,Pressure switch,DUNGS,LGW 10 A2
+513,SPM-PRE-060,Gas Multi Bloc,DUNGS,MB-VEF 407 B01 S10
+514,SPM-RHK-047,Inductive Sensor,Wenglor,I18H004
+515,SPM-COM-065,Through-Beam-Sensor,Wenglor,P1 KE003
+516,SPM-MCY-130,PNP-NPN Converter,Wenglor,BG7V1P-N-2M
+517,SPM-MCY-131,Reflex Sensor,Wenglor,HB03PBT7
+518,SPM-COM-066,Retro-Reflex Sensor,Wenglor,P1KL002
+519,SPM-COM-067,Through-Beam-Sensor,Wenglor,P1 KS001
+520,SPM-MCY-132,Inductive Sensor,Wenglor,I12G001
+521,SPM-LSR-001,Power Supply,Gentech,JSC20-A12S05 5V/4A
+522,SPM-LSR-002,Power Supply,Gentech,LD60W-DL-G
+523,SPM-LSR-003,Power Supply,Gentech,LRS-350-24
+524,SPM-MC6-061,MFCPick&Placegripper-Nylon,SMC,SSK-092-01&02
+525,SPM-MC6-022,Power Module 240,Siemens,6SL3224-0BE22-2AA0
+526,SPM-MC6-059,Sliding film open series,,JUMO-11-30
+527,SPM-MC4-078,Electronic Level Probe,IFM,LMT100
+528,SPM-MC6-019,SINAMIC Control Unit,Siemens,CU250S-2 USS
+529,SPM-MC6-034,Oil Seal,Thaiphattanasin,90 x 110 x 12
+530,SPM-COB-062,Photoelectric switch,Maxtech,QMRHD/0P-0F
+531,SPM-HEM-058,Speed Counter,Fotek,SM20 Tachometer
+532,SPM-HEM-011,Oil Seal,P-General,85 x 115 x 15
+533,SPM-HEM-012,Oil Seal,P-General,90 x 110 x 8
+534,SPM-HEM-051,Pressure Gauge,P-General,KC-F12
+535,SPM-WAS-010,Pressure Switch,Danfoss,KPI35
+536,SPM-PRE-010,Panel Meter (Amp),Mitsubishi,SD-80A
+537,SPM-PRE-014,Card Communication Unit,Mitsubishi,E53-CN03N2
+538,SPM-PRE-017,Fuse,Bussmann,100A 690V
+539,SPM-PRE-006,Magnetic Contactor,Mitsubishi,S-N20 AC 100 V
+540,SPM-MC6-070,Motor Protective Circuit-breaker,Eaton,PKZM0-10
+541,SPM-WAS-008,Gate Valve,A-Sung,U170215
+542,SPM-WAS-004,Filter,Goshu,BDM-05-20P
+543,SPM-WAS-005,Filter,Goshu,BDM-01-20P
+544,SPM-WAS-021,Float Switch,ShinMaywa,MS11
+545,SPM-WAS-020,"Motor Valve 3Way 1""",Burkert,"3Way 1"""
+546,SPM-WAS-023,RC snubber circuit,ION Pure,W2 T2 91517
+547,SPM-WAS-024,Control Panel for rectifiers-controllers G2,ION Pure,W2T388689
+548,SPM-WAS-032,Filter Cloth S4414 (White),GOSHU,Size 800x800 mm. Open Type
+549,SPM-MCY-170,Pick Electromagnetic,,Dia 42.0
+550,SPM-MCY-171,Pick Electromagnetic,,Dia 54.0
+551,SPM-MCY-172,Pick Electromagnetic,,Dia 63.5
+552,SPM-MC4-061,Harting Plug Female,Harting,Station 3+15
+553,SPM-MC4-062,Harting Plug Male,Harting,Station 3+15
+554,SPM-MC4-162,Iglidur G Flange Bearing,Igus,GFM-2023-16
+555,SPM-MC6-171,Safety Sensor,Leuze,SD4T20-300
+556,SPM-MC6-039,Safety Sensor,Leuze,SD4T20-300
+557,SPM-MCY-101,Inductive Sensor,Wenglor,I12H020
+558,SPM-COM-060,Connector Line,Wenglor,M12x1.5-PIN-5M
+559,SPM-COM-061,Connector Line,Wenglor,
+560,SPM-PRE-052,Battery Module,Innovation Test,6EP1935-6MF01
+561,SPM-COM-086,Cable  Profinet,Inovation Test,CAT 5 6XV1840 2AH10
+562,SPM-COM-087,Cable  Profinet,Inovation Test,CAT 5 6XV1840 2AH10
+563,SPM-COM-048,Busconnector,,6ES7972-0BA12-0XA0
+564,SPM-COM-049,Busconnector,,6ES7972-0BB12-0XA0
+565,SPM-COM-050,Busconnector,,6GK1 500-0FC10
+566,SPM-COM-035,Simatic S7,Inovation Test,6ES7 323-1BH01-OAAD
+567,SPM-COM-036,Connector Profinet,Inovation Test,17400251
+568,SPM-COM-037,Cable  Profinet,Inovation Test,Type A CAT 5 6XV1840 2AH10
+569,SPM-MC6-145,Analog Input Module,Siemens,6ES7 134-4GB11-0AB0
+570,SPM-MC6-146,Analog Output Module,Siemens,6ES7 135-4GB01-0AB0
+571,SPM-MC6-147,Digital  Input Module,Siemens,6ES7 131-4BD01-0AA0
+572,SPM-MC6-148,Digital  Output Module,Siemens,6ES7 132-4BD32-0AA0
+573,SPM-MC6-149,Relay Output Module,Siemens,6ES7 136-6RA00-0BF0
+574,SPM-MC6-150,Power Supply,Siemens,6EP1334-2BA20
+575,SPM-MC6-151,Interface Module,Siemens,6ES7 155-6AU01-0CN0
+576,SPM-MC4-153,Digital Input Module,Siemens,6ES7 136-6BA01-0CA0
+577,SPM-WAS-037,Pressure Switch,JW Tech,DANFOSS KP1
+578,SPM-WAS-038,Pressure Switch,JW Tech,DANFOSS KP2
+579,SPM-DIS-010,Motor Agi R-115,SIEMENS,1LE0023-1CB23-4AB4 7.5KW
+580,SPM-MC6-180,Circulation Fan X-122,SIEMENS,1LE0023-1DB23-4AB4 11KW
+581,SPM-MC6-181,Circulation Fan X-112,SIEMENS,1LE0023-1EB43-4FB4 22KW
+582,SPM-TRN-021,Servo Motor,K Power Engineering,1FL6042-2AF21-1MA1
+583,SPM-TRN-022,PLC S7-1200,K Power Engineering,6ES7214-1AG40-0XB0
+584,SPM-TRN-023,Digital Input SM 1221,K Power Engineering,6ES7221-1BH32-0XB0
+585,SPM-TRN-024,Digital Output SM 1222,K Power Engineering,6ES7222-1HH32-0XB0
+586,SPM-TRN-025,SINAMIC V90 with ProfiNet 0.75kW,K Power Engineering,6LS3210-5FB10-8UF0
+587,SPM-STO-001,Motor,,1LE0021-1AB42-2FA4 2.2KW 4POLES 400VY 3Phase 50Hz
+588,SPM-COM-095,PLC,Keyence,KV-7500
+589,SPM-COM-096,I/O Unit,Keyence,KV-B8XTD
+590,SPM-COM-097,Programmable Display,Keyence,VT5-W07
+591,SPM-COM-098,Ethernet Switch,Keyence,NE-Q05
+592,SPM-LSR-004,Laser Marker,Keyence,MD-X2500A
+593,SPM-MC6-132,Area Safety Sensor,Keyence,GLR48H
+594,SPM-RHK-007,Retro-Reflective M12,Keyence,PR-G61CBD
+595,SPM-RHK-016,Connector Cable M12,Keyence,OP-87635
+596,SPM-RHK-010,Reflector R-2L,Keyence,OP-84219
+597,SPM-PRE-008,Area Sensor Bast ( T ),Keyence,PJ-50A
+598,SPM-CLN-006,Photoelectric Sensor,Keyence,PZ-G5xN/G5xP
+599,SPM-RHK-054,Bearing,SKF,SKF UCFL 204
+600,SPM-MC6-071,Standard Auxiliary Contact,Eaton,PKZM0-10
+601,SPM-MC6-002,Contactor,ETON,DILM7-01
+602,SPM-MC6-011,MICO Auxilary Circuit Switch,Murr Elektronik,46041-3.01-3.03
+603,SPM-MC4-070,Inductive Proximity Switch,Micro Detector,IndMD-AC1/AP-3A
+604,SPM-RHK-019,Fuse,Bussmann,170M1420
+605,SPM-WAS-025,Transmitter,Mettler Toledo,M200 1-Chanel 1/4 Din
+606,SPM-MCY-052,Weight Transm. Precision ETIP,Mettler Toledo,ACT350
+607,SPM-MCY-060,Cable 12p 5.0m.,Mettler Toledo,(M12f90 DN-Open) 30295821
+608,SPM-MCY-057,Weighing Pan WKC Square Threaded SS EN,Mettler Toledo,30315518
+609,SPM-MCY-065,Weight Module,Mettler Toledo,WKC6002C
+610,SPM-WAS-022,Conductivity sensor,Mettler-Toredo,58 031 404
+611,SPM-WAS-019,ORP Sensor,Mettler-Toredo,Easy Sensor ORP 41
+612,SPM-WAS-009,pH Sensor,Mettler,Easy Sensor pH32
+613,SPM-WAS-013,Connection Cable,Mettler-Toredo,Ak9/3m
+614,SPM-WAS-034,Cable,Mettler-Toredo,ISM 4Wire 25ft 7.6m
+615,SPM-WAS-029,pH Sensor,Mettler-Toredo,InPro4260i/SG/120 ISM
+616,SPM-HEM-065,Unframad Mesh,Misimi,PMY18Y-M-330
+617,SPM-MC6-058,Rubber Gripper,MISMI,RBZF-D22-V8-H7-G12-L19
+618,SPM-MC4-130,Economy Belt,Misumi,C-TTBN610T5-100
+619,SPM-MC4-131,Timing Belt T10,Misumi,TTBUV660T10-250
+620,SPM-CLN-016,Speed Control Motor,Orientalmotor,USP560-2E2
+621,SPM-MCY-133,Stopper Bolt M10,Misumi,UNBH10-60
+622,SPM-NAU-020,Rotary Joint,SHOWA GIKEN,ASP-1-10A
+623,SPM-STM-006,X-Axis Atage,,XSLC60
+624,SPM-LIG-001,Rollers,Misumi,MICRO-122-200
+625,SPM-LIG-002,Slim panel,Misumi,PN0025 ROUND
+626,SPM-MC4-068,Rubber Gripper,Misumi,RBZC-D22-V8-H7-G12-L19
+627,SPM-COB-065,Belt,Misumi,HTBN400S5M-150
+628,SPM-COB-066,Belt,Misumi,HTBN288S3M-150
+629,SPM-COB-035,Support Unit Bearing,Misumi,BRWN15
+630,SPM-COB-036,AB Softber,Misumi,FL-1620H
+631,SPM-COB-037,Free Joint,CKD,FJ-L-129716G
+632,SPM-COB-045,Ball Screw,Misumi,BSSE2010L-500-KC15
+633,SPM-COM-042,Limit Switch,,WLCA12-N
+634,SPM-DIS-004,Solenoid valve,SMC,SY5120-5DZ-01
+635,SPM-COB-088,LM Guide Block,THK,SSR20XV1 (GK) BLOCK
+636,SPM-DIS-007,Cylinder,SMC,CM2E20-50Z
+637,SPM-COM-016,Pin Lock Clean Skin,Misumi,GDX10LW-6-SUS
+638,SPM-COM-024,Solenoid Valve,SMC,VXZ242FG 15mm.
+639,SPM-COM-025,Solenoid Valve,SMC,VXZ262KZ2G 25mm.
+640,SPM-COM-033,Regulator,SMC,AR20-N01B-Z-A
+641,SPM-COB-032,Lenior Guide,Misumi,SX2R24G-460
+642,SPM-RHK-009,Limit Switch,Omron,D4B-4170N
+643,SPM-RHK-006,Photoelectric Switch,Omron,E3Z-T81 2M
+644,SPM-NAU-009,Regulator,SMC,AW40-O4BDG-B
+645,SPM-MCY-008,Linear Bush,Misumi,LMK 20LUU
+646,SPM-MCY-010,Linear Bush,Misumi,LMF 30UU
+647,SPM-MCY-011,Linear Bush,Misumi,LMF 20UU
+648,SPM-MCY-012,Linear Bush,Misumi,LMF 50LUU
+649,SPM-MCY-013,Linear Bush,Misumi,LMF 40UU
+650,SPM-MC6-069,Sanitary Fiting Seal,Misumi,SNGSF1.5S
+651,SPM-MC6-187,Rubber Gripper Dia.30,MISUMI,RBXA-D30-L16-V19
+652,SPM-MC6-186,Rubber Gripper Dia.35,MISUMI,RBXN-D35-L16-V19
+653,SPM-RHK-051,Linear Bushing,MISUMI,LMH20
+654,SPM-STM-007,Single Axis Stage,MISUMI,XWG90
+655,SPM-TRN-008,Timing Belts S8M,MISUMI,C-HTBN816S8M-250
+656,SPM-TRN-009,Linear Guide,MISUMI,C-ELGW25-340
+657,SPM-TRN-010,Linear Guide Block,MISUMI,C-ELGWB25
+658,SPM-TRN-011,Linear Guide,MISUMI,C-HLGWHA30-1350-B2-1
+659,SPM-TRN-012,Linear Guide Block,MISUMI,C-HLGWHAB30
+660,SPM-TRN-013,Linear Bush,MISUMI,C-LMH25UU
+661,SPM-TRN-014,Flanged Linear Bush,MISUMI,LHMSWMF25L
+662,SPM-TRN-015,Special Foam Polyurethane,MISUMI,SOFRASA-325-50-5
+663,SPM-COB-083,AC Servo Motor,,HG-KR43B
+664,SPM-COB-084,ENCODER CABLE,NETZSCH,SC-HAJ3ENM1C03 M+A1
+665,SPM-COB-085,AMPLIFIER SLIDE,NETZSCH,SC-J2SJ4CSET-01
+666,SPM-COB-086,Motor Side Power,Mitsubishi,SC-J2SJ4PWBK-1C03M-A1
+667,SPM-COB-087,Servo Amplifier,Mitsubishi,MR-J4-40A
+668,SPM-COB-018,AC Servo Motor,Mitsubishi,HC-MF43
+669,SPM-COB-019,Sequencer Power Unit,Mitsubishi,A1S61PN
+670,SPM-COB-020,Sequencer Output Unit,Mitsubishi,A1SY40
+671,SPM-COB-021,Sequencer Output Unit,Mitsubishi,A1SY41
+672,SPM-COB-022,Position Unit,Mitsubishi,A1SD75-P2-S3
+673,SPM-COB-023,D/A Unit,Mitsubishi,A1S60DA
+674,SPM-COB-026,CPU Unit,Mitsubishi,A2USHCPU-S1
+675,SPM-COB-031,Servo Amplifile,Mitsubishi,MR-J2S-40B
+676,SPM-COB-015,AC Servo Amplifier,Mitsubishi,MR-J2S-40A
+677,SPM-WAS-001,Magnetic Contactor,Mitsubishi,S-T10
+678,SPM-DUS-003,Filter Cartridge,Morerich,OD324 x ID213 x H660 mm.
+679,SPM-DUS-004,Pocket Filter,Morerich,T1000 W250xL570xH470 mm.
+680,SPM-MC4-164,Pocket bag filter,Morerich,W287MMxH287MMxD381mm
+681,SPM-MC4-165,Pocket bag filter,U Source,W592MMxH592MMxD381mm
+682,SPM-RHK-001,SCR,Advanced Energy,Thyro-A 1A 400-100 HRLP3
+683,SPM-DUS-001,Filter Bag,Nederman,PTFE/PTFE754MPS CS30
+684,SPM-HEM-084,Switch Amplifier,Netzsch,KFD2-SR2-Ex2.W (No.132960)
+685,SPM-HEM-046,Centering,Netzsch,140013190
+686,SPM-HEM-047,Flat Seal,Netzsch,
+687,SPM-HEM-048,"Gap Tube 0,6",Netzsch,140013189
+688,SPM-HEM-049,Grinding Disc (NETZSCH),Netzsch,140002223
+689,SPM-HEM-044,RFID for DCS,Turck,TN-M30-H1147
+690,SPM-HEM-026,O-Ring,Netzsch,516697
+691,SPM-HEM-027,O-Ring,Netzsch,517220
+692,SPM-HEM-028,O-Ring,Netzsch,517453
+693,SPM-HEM-029,O-Ring,Netzsch,516960
+694,SPM-HEM-030,O-Ring,Netzsch,517553
+695,SPM-HEM-031,O-Ring,Netzsch,517155
+696,SPM-HEM-032,O-Ring,Netzsch,545034
+697,SPM-HEM-033,O-Ring,Netzsch,517372
+698,SPM-HEM-034,O-Ring,Netzsch,516613
+699,SPM-HEM-035,Ring,Netzsch,422277
+700,SPM-HEM-036,Screen plate,Netzsch,1457810
+701,SPM-HEM-037,Adapter,Netzsch,1457809
+702,SPM-HEM-038,Zirconium oxide beade,Netzsch,1.4 - 1.6 mm.
+703,SPM-HEM-039,Temperatuer guage,Netzsch,"3"" 100c"
+704,SPM-HEM-040,Temp sensor,PM Primus,PT-100
+705,SPM-HEM-041,Screen Plate,Netzsch,Mat.145723 GRD080 574.50/S
+706,SPM-HEM-042,Rubber hose Z-111,Bredel,1.5 Inch
+707,SPM-HEM-106,Zirconium Oxide Beade,Netzsch,1.4-1.6 mm.
+708,SPM-COM-028,"Diaphragm Pump 1/2"" ALMATEC",Amatech,E15EEE
+709,SPM-COM-029,"Diaphragm Pump 1"" ALMATEC",Amatech,E25EEE
+710,SPM-COB-076,Proximity Switch,Omron,E2E-X3D1-N
+711,SPM-COB-077,Proximity Switch,Omron,E2E-X3D2-N
+712,SPM-RHK-012,Optical Fiber Photoelectric Sensor,Omron,E3X-AD51 2M
+713,SPM-RHK-014,Photoelectric Switch Fiber Unit,Omron,E32-D21
+714,SPM-COM-056,Proximiter Sensor,Omron,E2E-X2D2-N
+715,SPM-PRE-051,Ignition Transformer,BRAHMA,TC1LVCSF
+716,SPM-CAL-026,Shut of  Valve,MAXON,075SMA11-AA11-CC22-A0
+717,SPM-CAL-013,Pressure Switch,Kromschorder,DG 50U-3
+718,SPM-CAL-014,Gas Train Valve,Kromschorder,VAS125R-NWSR
+719,SPM-CAL-015,Burner Transformer,Siemens,AGG5.220
+720,SPM-CAL-016,Flame Detector,Siemens,QRA75.A27
+721,SPM-PRE-040,Riello Gas Burner,Siemens,GS 10
+722,SPM-PRE-015,Control Burner (SEIMENS),Siemens,LME22.233C2
+723,SPM-PRE-030,Ignition Electrode,Oven and Furness,1-Pin
+724,SPM-PRE-031,Ignition Electrode,Oven and Furness,2-Pin
+725,SPM-PRE-061,Spark ignition,Oven&Furness,
+726,SPM-CAL-024,Electrode,MAXON,Part No.25663
+727,SPM-PRE-069,Collegamento Lead,RIELLO,(3008453) No.13
+728,SPM-PRE-070,Collegamento Lead,RIELLO,(3002575) No.14
+729,SPM-PRE-071,Probe,RIELLO,(3006708) No.15
+730,SPM-PRE-072,Electrodo,RIELLO,(3006943) No.16
+731,SPM-DIS-008,Impeller,,ID89x340
+732,SPM-HEM-061,Grinding Disc P30,,P30
+733,SPM-HEM-072,Turbide Screen,P.General,P-20
+734,SPM-HEM-073,Turbide Screen,P.General,P-50
+735,SPM-HEM-075,Bottom Plate,P.General,P-20
+736,SPM-HEM-076,Bottom Plate,P.General,P-30
+737,SPM-HEM-077,Bottom Plate,P.General,P-50
+738,SPM-HEM-078,3 Way Suction,P.General,P-20
+739,SPM-HEM-079,3 Way Suction,P.General,P-30
+740,SPM-HEM-080,3 Way Suction,P.General,P-50
+741,SPM-HEM-082,Rotor Screen Urethane,P.General,P-50
+742,SPM-HEM-083,Flont Plate,P.General,P-30
+743,SPM-HEM-101,Drain Plug P20,P.General,Z-115
+744,SPM-HEM-102,Drain Plug P30,P.General,Z-114
+745,SPM-HEM-103,Drain Plug P50,P.General,Z-112
+746,SPM-HEM-086,"Rotor Screen Urethane P20,P30",P.General,"P20,P30"
+747,SPM-HEM-114,Mechanical Seal P2 / Set,P.General,"2207, 2204"
+748,SPM-HEM-115,Oil Seal for P2,P.General,2210
+749,SPM-HEM-116,Grinding Disc for P2,P.General,2308
+750,SPM-HEM-117,Front Plate with stator P2,P.General,"2205, 2303"
+751,SPM-HEM-118,Rotor Screen for P2,P.General,2302/0
+752,SPM-HEM-074,Rotor Screen Urethane  P30,P.General,P30
+753,SPM-HEM-081,Rotor Screen Urethane P20,P.General,P20
+754,SPM-NAU-014,Sock Filter,Pacific Intertech,Sock Filter for Cover Lid
+755,SPM-NAU-015,Rubber Seal R-103,Pacific Intertech,Diameter 412 mm.
+756,SPM-NAU-016,"Rubber Seal R-101,R-102",Pacific Intertech,Diameter 693 mm.
+757,SPM-NAU-017,BFM Seeflex,,040E Connector 150mm.x350mm.
+758,SPM-NAU-018,BFM Seeflex,,040E Connector 200mm.x350mm.
+759,SPM-MC4-155,Solenoid Valve,MAC,82A-CC-000-TM-DDFP-1DA-MODIF.2356 MAC
+760,SPM-MC4-156,Regulator,MAC,PR82-GDDB MAC
+761,SPM-MCY-174,Regulator,AIRTAC,"GAR30010S PT3/8 Mpa ""AIRTAC"""
+762,SPM-MCY-175,Regulator,AIRTAC,"GA300T-P1 ""AIRTAC"""
+763,SPM-MCY-176,Regulator,AIRTAC,"GZ30010 PT3/8 ""AIRTAC"""
+764,SPM-HEM-071,Cover & Sight Glas,P-Genaral,
+765,SPM-HEM-059,"Check Valve 2""",Kitz,"2"""
+766,SPM-HEM-069,Parts Temperature Sensor inlet,P-General,PT-100
+767,SPM-HEM-062,Mechanical Seal P20,P-General,P20
+768,SPM-HEM-063,"Check Valve 1.1/4""",P-General,"1.1/4"""
+769,SPM-HEM-064,Oil Seal 45x60x10,-,45x60x10
+770,SPM-HEM-045,AC Pump,Sofabex,-
+771,SPM-HEM-013,"Check Valve 3/4"" STL",P-General,THKB20A DR-07-62
+772,SPM-HEM-014,"Check Valve 1"" STL",P-General,THKB25A G9-10-51
+773,SPM-HEM-015,Mechanical Seal P50,P-General,50L
+774,SPM-HEM-019,Mechanical Seal P30,P-General,30L
+775,SPM-HEM-050,Turbide Screen P30,P-General,P30
+776,SPM-HEM-052,Grinding Disc 20L,P-General,20L Z-118
+777,SPM-HEM-053,Grinding Disc P50,P-General,P50
+778,SPM-HEM-054,Front Plate 50L,P-General,"Z112,Z113"
+779,SPM-HEM-055,Oil Seal Z115,P-General,60 x 75 x 8
+780,SPM-HEM-056,Meter Range 0-1500,Fotek,DRM-24TH-220V
+781,SPM-HEM-057,Meter Range 0-2000,Fotek,DRM-24TH-220V
+782,SPM-HEM-003,Milling disc P4,P-General,Ø 120 x 18T
+783,SPM-HEM-100,Outer Turbine,P-General,P-30 (Z-114)
+784,SPM-HEM-104,Mechanical Seal P50,P-General,50L
+785,SPM-HEM-105,Mechanical Seal P30,P-General,30L
+786,SPM-HEM-107,Mechanical Seal P20,P-General,20L
+787,SPM-HEM-108,Flow sensor for lubricant,P-General,-
+788,SPM-HEM-110,Flow Sensor for Chiller,P-General,SIKA 1 BSP female 25mm.
+789,SPM-HEM-111,Spring,P-General,-
+790,SPM-HEM-094,Sight glass,P.General,-
+791,SPM-HEM-087,Front plate with cooling staror P-30,P.General,P-30
+792,SPM-HEM-088,Buttom plate with cooling stator P-30,P.General,P-30
+793,SPM-HEM-089,Buttom plate with cooling stator P-20,P.General,P-20
+794,SPM-HEM-090,Pressure transmitter,P.General,7MF1567-3BE00-1AA1
+795,SPM-HEM-091,Temperature gauge for coolling,P.General,HYD-932-002-050-004
+796,SPM-HEM-092,Temperature sensor product & lubricant,P.General,PT100
+797,SPM-HEM-098,Digital scale meter,FOTEK,DRM-24TN
+798,SPM-HEM-096,Front plate with cooling staror P-20,P.General,P-20
+799,SPM-MCY-168,Modular Belt,Phat Flourish,YS100-1
+800,SPM-MC4-163,Modular Belt,Phat Flourish,PF2540 Series with Tab
+801,SPM-WAS-016,"Diaphragm Pump 2""",Versa Matic,E2AA2R229C-ATEX
+802,SPM-RHK-053,Inverter,ABB,0.37kW ACS150-03E-02A4-2
+803,SPM-HSS-001,Impeller Dai 150,Platinum Engineering,Dai 150 Shaft Dai 31.75
+804,SPM-HSS-002,Impeller,,ID38xOD170
+805,SPM-COB-016,Double Actuator,Nutork,Nutork NKD-075
+806,SPM-PRE-041,Pneumatic valve Actuator,Pneumax,DAN0360411S
+807,SPM-PRE-011,Solenoid Valve,CAMOZZI,NA54N-15-02
+808,SPM-NAU-021,SUS Flexible Hose,Premium Flex,"1/2"" x 380 mm."
+809,SPM-RHK-056,Fabric Expansion Joint,Premium Flex,Size : OD400 x ID300 x L 250 mm.
+810,SPM-CAL-033,Safety Relay,Pilz,"PNOZ X3, 230V ac/dc, 24 V"
+811,SPM-MC6-188,Sensor Cable,RS Component,7000-08121-6300500
+812,SPM-TRN-017,Noise Filter,RS Component,FN2030-10-06
+813,SPM-TRN-018,Power Supply,RS Component,24VDC DRL-24V240W1EN
+814,SPM-TRN-019,Safety Relay,RS Component,PNOZ 750104
+815,SPM-COB-082,Relay,,G6B-114PUS 24DC
+816,SPM-COB-070,Vacuum Hood Seal Combo Coater (-),S.W. Support,Vacuum Hood Seal Combo Coater (-)
+817,SPM-COB-049,Upper Hood Seal for Blow Station,S.W. Support,OD256xID196xt20
+818,SPM-COB-091,Inverter X-105,Mitsubishi,FR-D720-0.4K 240V
+819,SPM-COB-058,"Gasket 1/2"" 150#RF",Masterpac-Asia,RY62-05-1665
+820,SPM-COB-059,"Gasket 1"" 150#RF",Masterpac-Asia,RY62-05-1515
+821,SPM-COB-060,"Gasket 1-1/2"" 150#RF",Masterpac-Asia,RY62-05-1515
+822,SPM-COB-061,"Gasket 4"" 150#RF",Masterpac-Asia,RY62-05-1515
+823,SPM-SCR-033,Electropneumatic Positioner,Samson,IP 8384-3 EN (3730-3)
+824,SPM-MC4-141,Temperature sensor,Sangchai Meter,TA2512
+825,SPM-HEM-097,Pulse meter,DIGICON,PM-05-4N
+826,SPM-MC6-009,Inductive Sensor,IFM,IGC204
+827,SPM-SCR-034,Electropneumatic Positioner,Samson,IP 8384-3 EN (3730-3)
+828,SPM-COM-059,Inductive Sensor,fim,IV5004
+829,SPM-MC6-003,Capacitive Sensor,IFM,KQ6005
+830,SPM-SCR-054,Thermocouple,SCMA,"RB-30,6x100mm. PT100 SK"
+831,SPM-COM-034,Cable Connection,SCMA,EVC075
+832,SPM-MC4-042,Binary lavel sensor,IFM,LMACE-A12E/QSKG/0/US
+833,SPM-COM-015,Power Supply,AC-DC,C-250-24
+834,SPM-WAS-035,Pump,GRUNDFOS,CR 5-11 A-FGJ-A-E-HQQE C/W 2.2 KW
+835,SPM-MC4-166,DI Module,Siemens,6ES7131-6BF01-0BA0
+836,SPM-MC4-167,AI Module,Siemens,6ES7134-6GD01-0BA1
+837,SPM-MC4-168,AI Module,Siemens,6ES7134-6HD01-0BA1
+838,SPM-MC4-169,Weighing Module,Siemens,7MH4138-6AA00-0BA0
+839,SPM-MC4-170,IO Link Module,Siemens,6ES7137-6BD00-0BA0
+840,SPM-MC4-171,DO Module,Siemens,6ES7132-6BF01-0BA0
+841,SPM-MC4-172,AO Module,Siemens,6ES7135-6GB00-0BA1
+842,SPM-MC4-173,Base Unit,Siemens,6ES7193-6BP20-0BA0
+843,SPM-MC6-077,Servo Motor,Siemens,1FK7042-5AF7 1-1FH0
+844,SPM-MCY-051,Central Processing Unit,Siemens,S7-1500 CPU 1513F-1PN
+845,SPM-MCY-056,Simotion Drive Based,Siemens,6AU1410-2AD00-0AA0
+846,SPM-MCY-058,Connector,Siemens,6ES7 592-1AM00-0XB0
+847,SPM-MC6-134,Double Motor Module,Siemens,6SL3120-2TE13-0AD0
+848,SPM-MC6-139,Sinamics G110 CPM110,Siemens,6SL3211-0AB12-5BA1
+849,SPM-MC6-140,Sinamics Control Unit CU240S DP F,Siemens,6SL3244-0BA21-1PA0
+850,SPM-MC6-141,Sinamics Control Unit CU240S DP F,Siemens,6SL3040-0MA00-0AA1
+851,SPM-RHK-032,Digital Out put Module,Siemens,6ES7 322-1BL00-0AA0
+852,SPM-MC6-143,Digital input module,Siemens,F-DI 16x24VDC
+853,SPM-MC4-142,Digital output Module,Siemens,F-DQ 8x24VDC/2A/PPM
+854,SPM-MC4-135,Analog input module,Siemens,AI 2xU/I 2-/4-Wire HF
+855,SPM-MC4-136,Analog input module,Siemens,AI 4xU/I 2-/2-Wire ST
+856,SPM-MC4-137,Digital input module,Siemens,DI 8x24VDC ST
+857,SPM-MC4-138,BUS Adaptor,Siemens,BA 2xRJ45
+858,SPM-MC4-139,Trerminal Module TM15,Siemens,Supply 24VDC / 0.15A 24 DI/O
+859,SPM-STM-005,Couter,Siemens,H7CX-A-N
+860,SPM-COM-057,Power Meter PAC3220,Siemens,7KM3220-0BA01-1DA0
+861,SPM-MC4-055,Servo Motor,Siemens,3000-02-25 00:00:00
+862,SPM-MC4-111,Power Connector,Siemens,6FX2003-OLU00
+863,SPM-MC6-024,Power Module 250,Siemens,6SL3225-0BE25-5AA1
+864,SPM-MC6-021,Double Motor Module,Siemens,6SL3120-2TE13-0AA4
+865,SPM-MC6-031,Digital Output Module,Siemens,4/8 F-DO DC24V/2A
+866,SPM-MC6-028,SINAMIC G110,Siemens,6SL3211-0AB12-5BA1
+867,SPM-MC6-029,Control Unit 240,Siemens,6SL3224-0BA21-1PA0
+868,SPM-MC6-012,Digital Input Module,Siemens,4 DI DC24V ST
+869,SPM-MC6-013,Digital Output Module,Siemens,4 DO DC24V/0.5A ST
+870,SPM-MC6-014,Digital Input,Siemens,4/8 F-DI DC24V
+871,SPM-MC6-015,Power Module,Siemens,PM-E DC24..48V/AC24..230V
+872,SPM-MC6-016,Analog Output Module,Siemens,2 AO U ST
+873,SPM-MC6-017,Analog Input Module,Siemens,2 AI I 4WIRE ST
+874,SPM-MC6-018,Relay Output Module,Siemens,1F-RO DC24/AC24-230V/5A
+875,SPM-MC6-144,Adapter Cable for Motor,Siemens,6SL3162-2ME01-0AC0
+876,SPM-MC4-148,Sitop Modular,Siemens,6EP1437-3BA00 24V/40A
+877,SPM-HEM-060,Grinding Disc P20,SKS,P20
+878,SPM-WAS-028,Silencer,SMC,AN600-10
+879,SPM-MC6-161,Silencer,SMC,AN500-06
+880,SPM-PRE-044,Air Cylinder,SMC,MDBC80-150Z
+881,SPM-RHK-052,Air Cylinder,SMC,MGPL25-175Z-M9BWL
+882,SPM-PRE-075,Bearing,FAG,UCFL204-J7
+883,SPM-HEM-112,Belt,LEONE,B82 LEONE
+884,SPM-AIR-001,V-Belt,BANDO,SP-RAF 3305 12.5x800 La
+885,SPM-AIR-002,V-Belt,BANDO,SP-RAF 3355 12.5x925 La
+886,SPM-NAU-010,Oil Seal 35x62x10,SMC,TF 35x62x10
+887,SPM-NAU-011,Bearing 6207-2RS1/C3,SMC,6207-2RS1/C3
+888,SPM-NAU-012,Oil Seal 38x62x8,SMC,TE 38x62x8
+889,SPM-RHK-024,Belt 6x280,Bando,6x280 BANDO
+890,SPM-RHK-025,Belt 6x300,Bando,6x300 BANDO
+891,SPM-WAS-017,"Submersible Pump 2""",Mitsubishi,SSP-405SA
+892,SPM-COM-062,Oil seal,SOG,50x80x10
+893,SPM-RHK-033,Belt,Sriracha Mongkolchai,VC6 x 290 La
+894,SPM-RHK-034,Belt,Sriracha Mongkolchai,VC6 x 330 La
+895,SPM-RHK-035,Belt,Sriracha Mongkolchai,VC6 x 340 La
+896,SPM-PRE-073,V-Belt,BANDO,3V-475
+897,SPM-DUS-002,V-Belt,BANDO,A67
+898,SPM-SCB-009,V-Belt,BANDO,B65
+899,SPM-CAL-030,OptiBelt,-,C-63 (1658x22x160Li C63)
+900,SPM-PRE-062,Bearing,SCHAEFFLER,GE 35-DO-HLN
+901,SPM-MC4-120,Bearing,NKF,6201-2Z/C3
+902,SPM-HEM-066,Oil Seal 40x60x10,Sriracha Mongkolchai,TE 40x60x10
+903,SPM-HEM-067,Bearing NJ208,Sriracha Mongkolchai,NJ208-E-XL-TVP2
+904,SPM-HEM-068,Bearing 6207-2Z,Sriracha Mongkolchai,SKF 6207-2Z
+905,SPM-HEM-010,Oil Seal,-,75 x 90 x 8
+906,SPM-TRN-007,V-Block Plate,SSS,P31MC 0067
+907,SPM-COM-094,Pressure Regulator,SMC,AW20-02BCG-2-D
+908,SPM-COP-006,Auto Drain,SST,ADH4000-04
+909,SPM-MCY-163,Air Dryer,SST,IDG100-F04
+910,SPM-TRN-005,Air Cylinder,SST,MDBF40-220Z-M9BZ
+911,SPM-TRN-006,Air Cylinder,SST,MDBF63-175Z-M9BL
+912,SPM-OXI-012,Solenoid valve,Air TAC,4V21008A Coil 220V
+913,SPM-WAS-036,Pressure Regulator,SMC,AR40-04G-D
+914,SPM-MCY-001,Air Cylinder,SMC,MGPM40-25Z-M9BW
+915,SPM-MCY-002,Air Cylinder,SMC,CDQ2KB50-40DZ-M9BW
+916,SPM-MCY-003,Solenoid Valve,SMC,SY7420-5LZD-C8
+917,SPM-MCY-004,Solenoid Valve,SMC,VF3130-5DU1-02
+918,SPM-MCY-005,Solenoid Valve,SMC,VQZ2120-5LO1-C6
+919,SPM-MCY-006,Vacuum Pad,SMC,ZPT40BN-B8
+920,SPM-MCY-007,Regulator,SMC,AW40-04BG-B
+921,SPM-MCY-009,Air Cylinder,SMC,CDM2FZ25-160Z
+922,SPM-MCY-014,Air Chuck,SMC,MHL2-20D1
+923,SPM-MCY-015,Air Cylinder,SMC,MGPM50-25Z-M9BWL
+924,SPM-MCY-016,Solenoid Valve,SMC,SY7240-5DZ-03
+925,SPM-MCY-017,Air Cylinder,SMC,CP36SDB63-250C-M9BW
+926,SPM-MCY-018,Air Cylinder,SMC,CDM2FZ25-300Z
+927,SPM-MCY-019,Air Cylinder,SMC,CDM2FZ25-200Z
+928,SPM-MCY-020,Air Cylinder,SMC,CDM2FZ25-150Z
+929,SPM-MCY-021,Pressure Regulator,SMC,ITV1050-312CL
+930,SPM-MCY-026,Air Cylinder,SMC,CDQSB12-20D
+931,SPM-MCY-027,Direction Control Valve,SMC,SY5420-5LZD-C6
+932,SPM-MCY-029,Solenoid Valve,SMC,SY5120-5LZD-C8
+933,SPM-MCY-030,Solenoid Valve,SMC,SY5120-5LZD-C6
+934,SPM-MCY-034,Direction Control Valve,SMC,VM130-01-34RA
+935,SPM-MCY-035,Direction Control Valve,SMC,VM130-01-32BA
+936,SPM-MCY-022,Auto Switch,SMC,D-M9BW
+937,SPM-MCY-023,Speed Controller,SMC,AS3201F-03-10SA
+938,SPM-MCY-024,Flow Control Valve,SMC,AS2201F-02-08SA
+939,SPM-MCY-025,Flow Control Valve,SMC,AS2201F-01-06SA
+940,SPM-MCY-028,Speed Control Valve,SMC,AS2201F-02-10SA
+941,SPM-MCY-031,Flow Control Valve,SMC,AS2201F-01-06SA
+942,SPM-MCY-032,Flow Control Valve,SMC,AS2201F-01-08SA
+943,SPM-MCY-033,Lead Switch,SMC,D-M9BW
+944,SPM-MC6-176,Vacuum Pad 32 mm.,SMC,ZP3M-T32RFSJB10
+945,SPM-MC6-177,Vacuum Pad 50 mm.,SMC,ZP3M-T50RFSJB10
+946,SPM-MC6-178,Vacuum Ejector,SMC,ZK2B15K5RWA-08-B
+947,SPM-MC6-179,Mainfold Base for Valve,SMC,SS5Y5-20-02
+948,SPM-RHK-030,Air Cylinder,SMC,MGPM40-25Z-XB6
+949,SPM-MCY-100,Vaccum Pad,SMC,ZPT40BN-B10
+950,SPM-HEM-095,Outer Turbine,SMC,P-20
+951,SPM-RHK-020,Direction Control Valve,SMC,SY5140-5DZ
+952,SPM-RHK-021,Solenoid Valve,SMC,SY7440-5DZ-02
+953,SPM-RHK-022,Solenoid Valve,SMC,SY5240-5DZ
+954,SPM-RHK-023,Air Cylinder,SMC,CDQ2A100-260DCZ-M9BWL-XB10
+955,SPM-RHK-029,Cylinder,SMC,MGPM-32-252
+956,SPM-RHK-015,Set of Wearing Parts,SMC,MGP32-Z-PS
+957,SPM-RHK-017,Cylinder,SMC,CDQ2A100-260DCZ-M9BWL-XB10
+958,SPM-RHK-018,Auto Switch,SMC,D-M9BAVL
+959,SPM-RHK-013,Cylinder,SMC,MGPM32-50Z-M9BWL
+960,SPM-SCR-001,"Solenoid valve 1/2""",SMC,VZWF-B-L-M22C-012-135-E-1P4-10-R1
+961,SPM-SCR-002,MANN Filter,SMC,C11 100
+962,SPM-SCR-003,Pressure Switch,SMC,DGM525
+963,SPM-SCR-005,Solenoid valve 5-4,Genreal Tech,03-EVA 5-4
+964,SPM-SCR-006,Solenoid valve 10-4,Genreal Tech,03-EVA 10-4
+965,SPM-SCR-007,Absorber 2010249,SMC,Drying agent cartridge
+966,SPM-SCR-008,Absorber 5323946,Automatech,Activated carbon sachet
+967,SPM-SCR-009,IO Extension Module,SMC,BL20-2RFID-S
+968,SPM-SCR-011,Solenoid Valve,SMC,AB41-03-6-02H-DC24V
+969,SPM-SCR-012,Solenoid Valve,SMC,WP8551B301MO
+970,SPM-SCR-013,Pressure Switch,SMC,DDCM252
+971,SPM-SCR-015,ET-Modul,SMC,PF3EVFAZ0
+972,SPM-NAU-003,Solenoid Valve,SMC,SY7120-5LZ-01
+973,SPM-NAU-004,Solenoid Valve,SMC,SY7120-5LZ-02
+974,SPM-PRE-007,Air Cylinder With Guid,SMC,4347482
+975,SPM-MC4-075,Guide Cylinder Open-Close Clamp,SMC,
+976,SPM-MC4-058,Soft Start-Up Valve,SMC,AV5000-F10-5DZ-Q
+977,SPM-MC4-032,Auto switch,SMC,D-M9BW
+978,SPM-COM-032,Regulator,SMC,AR30-03BG-1-A
+979,SPM-COM-019,Filter Regulator,SMC,AW20-02BG-2-D
+980,SPM-COP-001,Timer Condensate Drain,SMC,EZ-1 G1/2 230 VAC 16 BAR RED+BVS
+981,SPM-COM-046,Air Combination Set,SMC,AC30-03DG-A
+982,SPM-COB-064,Pressure Regulator,SMC,AR10-M5BG-A
+983,SPM-COB-071,Cylinder Vacuum Hood Combo Coater,SMC,MGPM32-300Z
+984,SPM-COB-072,Pressure Switch,SMC,ISE20C-R-M-02-W
+985,SPM-COB-073,Solenoid Valve,SMC,VT307-4DZ1-02
+986,SPM-COB-074,Solenoid Valve,SMC,VT307-5DZ1-02
+987,SPM-COB-068,Solenoid Valve (SY7420-5DZ-02),SMC,Solenoid Valve (SY7420-5DZ-02)
+988,SPM-COB-069,Lead Switch,SMC,D-M9NW
+989,SPM-COB-052,Lead Switch,SMC,D-M9BAV-WY
+990,SPM-COB-011,Solenoid Valve,SMC,SY7120-5DZ-02
+991,SPM-COB-012,Solenoid Valve,SMC,SY7220-5DZ-02
+992,SPM-MC4-118,Air Cylinder,SMC,MLGPM50-175Z-B
+993,SPM-MC6-036,Valve Blow Out Tank,SMC,VEX1900-20
+994,SPM-RHK-045,Guide Cylinder,FGW,MY1M25-250-M9B
+995,SPM-COM-068,Air Combination,SMC,AC30A-03DG-B
+996,SPM-MCY-162,Air Cylinder,SMC,CDQSB12-20D
+997,SPM-COB-092,Pressure Regulator,,AW40-04BDE-D
+998,SPM-COM-088,Pressure Regulator,,AR20-N01B-Z-D
+999,SPM-PRE-067,AIR CYLINDER,SST,CDM2T40-75Z-M9B
+1000,SPM-TRN-001,Vacuum Pad 32 mm.,SMC,ZP3M-T32RFSJB10
+1001,SPM-TRN-002,Vacuum Pad 50 mm.,SMC,ZP3M-T50RFSJB10
+1002,SPM-TRN-003,Vacuum Ejector,SMC,ZK2B15K5RWA-08-B
+1003,SPM-TRN-004,Mainfold Base for Valve,SMC,SS5Y5-20-02
+1004,SPM-MCY-154,Flow Control Valve,SMC,AS2201F-02-10SA
+1005,SPM-MCY-155,Direction Control Valve,SMC,VXZ262KZ2A
+1006,SPM-MCY-157,Air Cylinder,SMC,CP96SDB63-250C-M9BW
+1007,SPM-MCY-156,Direction Control Valve,SMC,SY7320-5LZD-C10
+1008,SPM-MCY-158,Direction Control Valve,SMC,VM130-01-32GA
+1009,SPM-MCY-159,Solenoid Valve,SMC,4V210-08B
+1010,SPM-MCY-160,Air Cylinder,SMC,CP96SDD50-250C
+1011,SPM-MCY-161,Air Cylinder,SMC,SDA12X20-S
+1012,SPM-MCY-143,Air Cylinder,,MF25X150SU
+1013,SPM-COB-089,Cylinder,SMC,MLGPM50-250Z-B
+1014,SPM-COM-083,Pressure Regulator,SMC,AC30A-03DG-D
+1015,SPM-MCY-137,Belt Conveyor Out Feed,,W250xL4350xT3mm.
+1016,SPM-BLD-001,Bladder,SW Support,42/5 mm.
+1017,SPM-MC4-027,Bottom seal,SW Support,Bottom seal
+1018,SPM-PRE-027,Silicone PAD,SW Support,
+1019,SPM-BLD-016,Bladder,SW Support,52/5 mm.
+1020,SPM-BLD-015,Bladder,SW Support,190.5/5 mm.
+1021,SPM-BLD-013,Bladder,SW Support,54/2 mm.
+1022,SPM-BLD-014,Bladder,SW Support,118.4/5 mm.
+1023,SPM-BLD-007,Bladder,SW Support,51/5 mm.
+1024,SPM-BLD-008,Bladder,SW Support,54/5 mm.
+1025,SPM-BLD-009,Bladder,SW Support,110/5 mm.
+1026,SPM-COM-081,Ring Clamp,SW Support/U-Source,105.7/10 mm./MC4
+1027,SPM-COM-082,Ring Clamp,SW Support/U-Source,52/5 mm./COMBO
+1028,SPM-COM-069,Ring Clamp,SW Support/U-Source,Free Size/All
+1029,SPM-COM-070,Ring Clamp,SW Support/U-Source,42/5 mm./MCY
+1030,SPM-COM-071,Ring Clamp,SW Support/U-Source,51/5 mm./COMBO
+1031,SPM-COM-072,Ring Clamp,SW Support/U-Source,54/5 mm./MCY
+1032,SPM-COM-073,Ring Clamp,SW Support/U-Source,63/5 mm./COMBO
+1033,SPM-COM-074,Ring Clamp,SW Support/U-Source,"93/5 mm./MC6,MC4"
+1034,SPM-COM-075,Ring Clamp,SW Support/U-Source,"99.2/5 mm./MC6,MC4"
+1035,SPM-COM-076,Ring Clamp,SW Support/U-Source,"105.7/5 mm./MC6,MC4"
+1036,SPM-COM-077,Ring Clamp,SW Support/U-Source,"110/5 mm./MC6,MC4"
+1037,SPM-COM-078,Ring Clamp,SW Support/U-Source,"118.4/5 mm./MC6,MC4"
+1038,SPM-COM-079,Ring Clamp,SW Support/U-Source,"118.4/10 mm./MC6,MC4"
+1039,SPM-COM-080,Ring Clamp,SW Support/U-Source,165/5 mm./MC6
+1040,SPM-PRE-023,Silicone sheet,SW Support,THK 10mm. x W280 x L330mm.
+1041,SPM-TRN-026,IAI Control PROFI,"System Upgrade Solution Bkk Co.,Ltd.",SCON-CB-400WAI-PRT-0-2
+1042,SPM-TRN-027,IAI Robot Motor,"System Upgrade Solution Bkk Co.,Ltd.",RCS4-MUSRA8C
+1043,SPM-MC4-174,Actuator (Set),T.V.P. Valve,APS-070/090-12-F05/F07-V17-E
+1044,SPM-MC4-175,Actuator (Set),T.V.P. Valve,APS-090/090-12-F05/F07-V17-H
+1045,SPM-MC4-176,Sleeve RED,T.V.P. Valve,A17/V9
+1046,SPM-MC4-177,Sleeve RED,T.V.P. Valve,A17/V14
+1047,SPM-NAU-022,Check valve,T.V.P. Valve,"1/2"""
+1048,SPM-OXI-001,Fuse 250A,,660GH-250 660V 250AM
+1049,SPM-COB-081,AC Servo Motor,,HC-KFS43B
+1050,SPM-SCB-008,Spray Nozzle (PP),,Model CDH 16T
+1051,SPM-OXI-003,Power regulator (SCR),SANGI ElECTRIC,SCR-3ATP230 (230A)
+1052,SPM-OXI-004,Thermocouple Probe,Thaifurness,Type K
+1053,SPM-OXI-005,Thermocouple wire,Thaifurness,Type K
+1054,SPM-OXI-006,Thermocouple wire,Thaifurness,Type R
+1055,SPM-OXI-007,Programmable controller,Thaifurness,PCA1A00-200
+1056,SPM-OXI-008,Limit Switch,Pten,WLCA12-2-Q
+1057,SPM-OXI-009,Digital indicating controller,Shinho,BCD2A00-06
+1058,SPM-OXI-010,Magnetic Contactors,Mitsubishi,S-N150
+1059,SPM-OXI-011,Main Braker,Mitsubishi,NF-630-CW
+1060,SPM-HEM-119,Chain,Thaipattanasin,40-2R
+1061,SPM-HEM-120,Connecting Link,Thaipattanasin,CL40-2
+1062,SPM-NAU-001,Oil seal 45 x 60 x 8 NBR,Thaiphatanasin,For rotaryvalve R-102
+1063,SPM-NAU-002,Oil seal 50 x 65 x 10 NBR,Thaiphatanasin,For rotaryvalve R-101
+1064,SPM-SCR-019,Actuator,KANA,SQN75.6K4A21
+1065,SPM-COM-085,Power Supply S8FS-C10024,Omron,Power Supply S8FS-C10024
+1066,SPM-MC4-113,Laser Distance Sensor,,OY2P303A0135
+1067,SPM-MC4-114,Retro-Reflex Sensor,,P1KL002
+1068,SPM-COM-020,Power Supply,Omron,S8FS-G150214CD
+1069,SPM-COM-026,Air Gun,SMC,VMG11BU-02-05
+1070,SPM-DIS-009,Chain,KANA,60SS-1R
+1071,SPM-MC4-026,Ball bearing,Thaiphatanasin,9.5 mm.
+1072,SPM-MC4-082,Gates Poly Chain GT Carbon,Thaiphatanasin,8MGT-1600 USA
+1073,SPM-DIS-005,Chain Joint,Thaiphattanasin,60
+1074,SPM-DIS-006,Roller Joint,Thaiphattanasin,60
+1075,SPM-WAS-033,Bravo Butterfly Valve Wafer,BRAVO,"TB-23 5"""
+1076,SPM-PRE-038,Chain Joint,Thaiphattanasin,80
+1077,SPM-PRE-039,RollerJoint,Thaiphattanasin,80
+1078,SPM-CLN-019,Chain,KANA,25-1R
+1079,SPM-CLN-020,Chain,KANA,35-1R
+1080,SPM-HEM-113,Mechanical Seal,PSS,Size 55mm. Z-114
+1081,SPM-MCY-036,Backplane (Delta),Delta,PLC AHBP06M1-5A
+1082,SPM-MCY-037,Backplane (Delta),Delta,PLC AHBP04M1-5A
+1083,SPM-MCY-038,Digital Module (Delta),Delta,AH16AM10N-5A
+1084,SPM-MCY-039,Analog Module (Delta),Delta,AH08DA-5A
+1085,SPM-MCY-040,Power Module (Delta),Delta,PLC AHPs05-5A
+1086,SPM-MCY-041,Servo Motor (Delta),Delta,ECMA-CA0604SS
+1087,SPM-MCY-042,Digital Module (Delta),Delta,AH16AN01T-5A
+1088,SPM-MCY-043,Ethernet RTU Module (Delta),Delta,AHRTU-ETHN-5A
+1089,SPM-MCY-044,Digital Input Module (Delta),Delta,AH32AM10N-5C
+1090,SPM-MCY-045,Communication Module (Delta),Delta,AH10EN-5A
+1091,SPM-MCY-046,Extension Board (Delta),Delta,UB-10-ID16A
+1092,SPM-MCY-047,Digital Module (Delta),Delta,AH32AN02T-5C
+1093,SPM-MCY-048,Extension Board (Delta),Delta,UB-10-ID32A
+1094,SPM-MCY-049,Analog Input Module (Delta),Delta,AH08AD-5A
+1095,SPM-MCY-050,Digital Module (Delta),Delta,AH16AP11R-5A
+1096,SPM-MCY-054,Servo Drive (Delta),Delta,ASD-A2-1021-E
+1097,SPM-MCY-055,Power Supply,Delta,DRL-24V480W1AA
+1098,SPM-MCY-059,Servo Drive (Delta),Delta,ECMA-C10807RS
+1099,SPM-MCY-061,Servo Drive (Delta),Delta,ASD-A2-0721-E
+1100,SPM-MCY-062,Servo Drive (Delta),Delta,ASD-A2-0421-E
+1101,SPM-MCY-063,Inverter (Delta),Delta,MS300 VFD5A5MS43AFSAA 3HP 3Ph
+1102,SPM-MCY-064,Inverter (Delta),Delta,MS300 VFD9A0MS43AFSAA 5HP 3Ph
+1103,SPM-MCY-067,Inverter (Delta),Delta,MS300 VFD4A8MS21AFSAA 1HP 230V
+1104,SPM-SCR-035,Switch Amplifier,Delta,KFD2-SR2-Ex2W (No.203355)
+1105,SPM-SCR-036,Teamperature Converter With Trip,Delta,KFD2-GUT-Ex.1D (No.231225)
+1106,SPM-STM-001,Air Cylinder,Delta,CMK2-LB-32-100
+1107,SPM-STM-002,Limit Switch,Delta,TMD1703
+1108,SPM-STM-003,Limit Switch,Delta,Z-15GW255-B
+1109,SPM-STM-004,Timer,Delta,H3Y-4 200-230V
+1110,SPM-SCR-026,Compensator,Delta,UGK2H2-0355-24193R3
+1111,SPM-MCY-098,Main Backplane (Delta),Delta,AHBP07M2-5A
+1112,SPM-MCY-092,AC Servo Motor (Delta),Delta,ECMA-CA0602SS
+1113,SPM-MCY-093,AC Servo Motor (Delta),Delta,ECMA-CA0604RS
+1114,SPM-MCY-094,Temperature Module (Delta),Delta,AH04PT-5A
+1115,SPM-MCY-095,CPU Module (Delta),Delta,AH20EMC-5A
+1116,SPM-MCY-096,Communication Module (Delta),Delta,AH10PFBS-5A
+1117,SPM-MCY-097,Ethernet  Switches (Delta),Delta,DVS-108W02-2SFP
+1118,SPM-MCY-102,Industrail PC (Delta),Delta,IPC-A300-I734AE00
+1119,SPM-MCY-105,Bladder,Tong Li,Size 67.00
+1120,SPM-MCY-106,Bladder,Tong Li,Size 86.00
+1121,SPM-MCY-107,Bladder,Tong Li,Size 66.50
+1122,SPM-MCY-108,Peristatic pump,JXHIN,JXHIN40
+1123,SPM-MCY-109,Linear Bush,YTP,LMF0UU
+1124,SPM-MCY-110,Spocket,Tong Li,
+1125,SPM-MCY-112,W3 Z Screw,Tong Li,R25-10T3-FSI-280-0.05
+1126,SPM-MCY-113,W1/W2 Z1 Screw,Tong Li,R25-10T3-FSI-415-0.05
+1127,SPM-MCY-114,W1/W2 Z1 Screw,Tong Li,R16-ST3-FSI-175-0.05
+1128,SPM-MCY-115,Flip Z Screw,Tong Li,R25-5T3-FSI-260-0.05
+1129,SPM-MCY-116,Coating lifting screw,Tong Li,R25-10T3-FSI-445-0.05
+1130,SPM-MCY-068,Ball Screw,,HIWIN SB0BC73150
+1131,SPM-MCY-069,Magnetic Contactors,Siemens,3RT6023-1AN20
+1132,SPM-MCY-070,Slip Ring,"Senring Electronics Co.,Ltd.",3004012-74-62790
+1133,SPM-MCY-071,Vacuum Pump,Amila,MN20-B 0.4-0.6mpa
+1134,SPM-MCY-072,Vacuum Switches,Amila,MP20-NPN-L
+1135,SPM-MCY-073,Zero Point Systems Centering Pin1,Euk,EFL1408
+1136,SPM-MCY-074,Zero Point Systems Centering Pin2,Euk,EDL1408
+1137,SPM-MCY-075,Zero Point Systems,Euk,EZPS82
+1138,SPM-MCY-076,Sealing Strip,,12x12 mm.
+1139,SPM-MCY-079,Pick & Place Z Reducer,Sensudrive,NMRV040
+1140,SPM-MCY-080,Pick & Place X Reducer,Sesame,PGL-115-7
+1141,SPM-MCY-081,Flip Servo Motor Reducer,Sesame,PGL-115-L2-30
+1142,SPM-MCY-082,Flip A1 Coupling,Coup-Link,LK8-65-32-22
+1143,SPM-MCY-083,Flip Z Coupling,Coup-Link,LK8-40-14-16
+1144,SPM-MCY-084,Weighing Z1 Coupling,Coup-Link,LK8-40-16-16
+1145,SPM-MCY-085,Weighing Z2 Coupling,Coup-Link,LK8-30-14-12
+1146,SPM-MCY-086,Unloading X Coupling,Coup-Link,LK8-55-22-16
+1147,SPM-MCY-087,0/180 Positioning Electromagnet,KDA,YR-SP35/29K
+1148,SPM-MCY-088,Weighing Z2 Linear Guide,HIWIN,HGH15CA2R150ZAH+ZZ
+1149,SPM-MCY-089,Pick Electromagnet,Tong Li,Diamiter 42
+1150,SPM-MCY-090,Pick Electromagnet,Tong Li,Diamiter 54
+1151,SPM-MCY-091,Pick Electromagnet,Tong Li,Diamiter 63.5
+1152,SPM-MCY-066,Lead Switch,Airtac,DMSG-020
+1153,SPM-MCY-103,Bladder,Tong Li,Size 45.00
+1154,SPM-MCY-104,Bladder,Tong Li,Size 57.50
+1155,SPM-MCY-111,Spocket,Tong Li,-
+1156,SPM-MCY-141,Sealing Strip,,12x12 mm.
+1157,SPM-MCY-142,Conveyor,Tongli,
+1158,SPM-MCY-117,Inner Cleaning Z,Tongli,HX95WG10C150M4
+1159,SPM-MCY-118,Inner Cleaning X,Tongli,HX952WG10C175M4S
+1160,SPM-MCY-119,Weighing Z1 Guide Bar,Tongli,WDC540-392L
+1161,SPM-MCY-120,W3 Guide Bar,Tongli,WDCS40-2421
+1162,SPM-MCY-121,Guide Bar,Tongli,WDCS20-296L
+1163,SPM-MCY-122,V Guide Bar,Tongli,WDCS40-2421
+1164,SPM-MCY-123,Loading Guide Bar Guide Bar,Tongli,WDCS20346L
+1165,SPM-MCY-124,Guide Bar,Tongli,WDCS20-240L
+1166,SPM-MCY-125,Flip A1 Guide Bar,Tongli,WDCS30-140L
+1167,SPM-MCY-126,Flip A2 Guide Bar,Tongli,WDCS30-140
+1168,SPM-MCY-127,Conveyor,Tongli,
+1169,SPM-HEM-002,Mechanical Seal P4,TP Engineering,SP-200 60/ 40 MM
+1170,SPM-COM-027,Mechanical Seal 25-40,TP Engineering,560 D 25-40
+1171,SPM-HEM-008,Face Tungsten 1 (Stationary P4),TP Engineering,125 x 92 x t5
+1172,SPM-HEM-020,Face Tungsten 2  (Rotating P4),TP Engineering,150 x 105 x t5
+1173,SPM-WAS-011,Mechanical Seal WAS,TP Engineering,-
+1174,SPM-WAS-002,Mechanical Seal 15 mm.,Marshal,T604 15 mm. CAR/CBR/NBR
+1175,SPM-WAS-003,Mechanical Seal 18 mm.,Marshal,T604 18 mm. SIC/SIC/VITION
+1176,SPM-HEM-043,Rubber hose Z-112-118,MOUVEX,1 Inch
+1177,SPM-HEM-070,Boot EPDM For AS25,MOUVEX,PUMP AS25
+1178,SPM-WAS-018,Motor Gear,Cyclo,CNVM02-6080-6
+1179,SPM-LIG-003,Xenon Lamp,Wacom,KXL-501HF
+1180,SPM-HEM-005,Fuse base,Trisak Automation,Afa 200 AC 600 V/200 A
+1181,SPM-COM-017,Hi Pressure Control,TRS,YK-03H
+1182,SPM-COM-018,Low Pressure Control,TRS,YK-03L
+1183,SPM-BLD-002,Bladder,U Source,105.7/5 mm.
+1184,SPM-BLD-011,Bladder,U Source,93/7 mm.
+1185,SPM-BLD-012,Bladder,U Source,Free Size/All
+1186,SPM-BLD-003,Bladder,U Source,63.5/3 mm.
+1187,SPM-BLD-004,Bladder,U Source,63.5/5 mm.
+1188,SPM-BLD-005,Bladder,U Source,105.7/7 mm.
+1189,SPM-BLD-006,Bladder,U Source,165.1/5 mm.
+1190,SPM-BLD-010,Bladder,U Source,134/5 mm.
+1191,SPM-SCR-037,Robust controller and display,VEGA,CR-222 22Q
+1192,SPM-SCR-038,Wired radar sensor for continuous,VEGA,RA-222 22K
+1193,SPM-WAS-014,Rota Meter,+GF+,Rota Meter (50-500 l/h)
+1194,SPM-WAS-015,Rota Meter,+GF+,Rota Meter (100-1000 l/h)
+1195,SPM-WAS-030,,VICCHI,"Type 514, 3/4"""
+1196,SPM-WAS-031,,VICCHI,Type GK10 (min)
+1197,SPM-SCB-006,,,"200 L/Hr Type 335,DN 25"
+1198,SPM-SCB-007,,,"200 L/Hr Type 335,DN 40"
+1199,SPM-MC6-164,Dip Pan,W.E. Engineering,W360xL550xH245
+1200,SPM-MC6-165,Exhaust Pipe,W.E. Engineering,Dia.200xH465
+1201,SPM-COB-090,Drain Air Pipe,W.E. Engineering,Dia.200xH520
+1202,SPM-MC6-160,Connection Line,Wenglor,S80W-20M
+1203,SPM-MC6-010,Connection Units,IFM,EVC001
+1204,SPM-MC6-032,Inductive Sensor,IFM,GR711S

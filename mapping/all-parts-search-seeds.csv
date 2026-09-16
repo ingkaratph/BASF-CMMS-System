@@ -1,0 +1,1205 @@
+﻿PartID,PartCode,SAPMaterial,PartName,Brand,Description,Department,PartType,Query,StrongModel,Searchable
+1,SPM-CAL-002,700004765,Burner Control for X122,Honeywell,EC 7890 B 1010,Coating,Electric,Honeywell EC 7890 B 1010 Burner Control for X122,True,True
+2,SPM-CAL-005,700004800,Safety relay,Weidmuller,1319270000 SCS 24VDC P2SIL3DSES,Coating,Electric,Weidmuller 1319270000 SCS 24VDC P2SIL3DSES Safety relay,True,True
+3,SPM-CAL-006,700004801,Ignition,Maxon,,Coating,Electric,Maxon Ignition,False,True
+4,SPM-CAL-007,700004802,Analog Input Module,Siemens,6ES7 331-7KF02-0AB0,Coating,Electric,Siemens 6ES7 331-7KF02-0AB0 Analog Input Module,True,True
+5,SPM-CAL-008,700004803,"Burner Control for X121 ,X123",Siemens,LMV51.100C2,Coating,Electric,"Siemens LMV51.100C2 Burner Control for X121 ,X123",True,True
+6,SPM-CAL-009,700004807,Burner Control,Honeywell,EC7890 B 1010,Coating,Electric,Honeywell EC7890 B 1010 Burner Control,True,True
+7,SPM-CAL-010,700004808,Sensor Cable,Turck,WKC8T-2/TEL,Coating,Electric,Turck WKC8T-2/TEL Sensor Cable,True,True
+8,SPM-CAL-011,700004809,Pilot Lamp,Banner,TL50BGYRAQ,Coating,Electric,Banner TL50BGYRAQ Pilot Lamp,True,True
+9,SPM-CLN-008,700004827,Chain,,25-1R,Coating,Mechanical,25-1R Chain,True,True
+10,SPM-CLN-009,700004828,Chain Joint,,25-1R,Coating,Mechanical,25-1R Chain Joint,True,True
+11,SPM-CLN-010,700004829,Roller Joint,,25-1R,Coating,Mechanical,25-1R Roller Joint,True,True
+12,SPM-CLN-011,700004830,Chain,,35-1R,Coating,Mechanical,35-1R Chain,True,True
+13,SPM-CLN-012,700004831,Chain Joint,,35-1,Coating,Mechanical,35-1 Chain Joint,False,True
+14,SPM-CLN-013,700004832,Roller Joint,,35-1,Coating,Mechanical,35-1 Roller Joint,False,True
+15,SPM-COM-007,700004894,Limit Switch,RJ,Z-15GW2-B,Common Part,Electric,RJ Z-15GW2-B Limit Switch,True,True
+16,SPM-COM-004,700004891,Limit Switch,Tend,TZ-7310(D4MC)-5000,Common Part,Electric,Tend TZ-7310(D4MC)-5000 Limit Switch,True,True
+17,SPM-COM-021,700004904,Air Nocker,SMC,XT 316-30B,Common Part,Mechanical,SMC XT 316-30B Air Nocker,True,True
+18,SPM-HEM-001,700004950,Fuse,FUGI,BLC 120-1 AC 550/120 A,Slurry,Electric,FUGI BLC 120-1 AC 550/120 A Fuse,True,True
+19,SPM-HEM-085,700005024,Centrifugal Pump,EBARA,EBRA CDX 90/10,Slurry,Mechanical,EBARA EBRA CDX 90/10 Centrifugal Pump,True,True
+20,SPM-HVA-001,700005027,Emergency stop,ABB,1SFA619550R1071,Utility,Electric,ABB 1SFA619550R1071 Emergency stop,True,True
+21,SPM-MC4-029,700005043,Pick & place rubber gripper,,Pick & place rubber gripper,Coating,Rubber,Pick & place rubber gripper,False,True
+22,SPM-MC4-034,700005048,Seal solenoid valve,Netzsch,CPV14-VI-P 1/8-150,Coating,Pneumatic & Hydraulic,Netzsch CPV14-VI-P 1/8-150 Seal solenoid valve,True,True
+23,SPM-MC4-041,700005053,Connector,Harting,91A279R08,Coating,Mechanical,Harting 91A279R08 Connector,True,True
+24,SPM-MC4-043,700005055,Connection Units,ifm,EVC004,Coating,Electric,ifm EVC004 Connection Units,True,True
+25,SPM-MC4-044,700005056,Seal Kit,Festo,DFM-50-PAABE6,Coating,Rubber,Festo DFM-50-PAABE6 Seal Kit,True,True
+26,SPM-MC4-049,700005061,Power Supply 230V-27V,Kuka,KBR POWER SUPPLY KUKA,Coating,Electric,Kuka KBR POWER SUPPLY KUKA Power Supply 230V-27V,False,True
+27,SPM-MC4-047,700005059,Cylinder,SMC,CDM2E20-50JZ,Coating,Pneumatic & Hydraulic,SMC CDM2E20-50JZ Cylinder,True,True
+28,SPM-MC4-069,700005079,SIB-Standard Complete,Kuka,,Coating,Electric,Kuka SIB-Standard Complete,False,True
+29,SPM-MC4-074,700005083,Set of Wearing Parts,Festo,DNC-125-PPVA,Coating,Rubber,Festo DNC-125-PPVA Set of Wearing Parts,True,True
+30,SPM-MC4-079,700005088,"Cable Assembly M12,4PIN",ifm,EVC005,Coating,Electric,"ifm EVC005 Cable Assembly M12,4PIN",True,True
+31,SPM-MC4-083,700005092,Directional Control Valve,SMC,VG342R-5DZ-06F-X87,Coating,Mechanical,SMC VG342R-5DZ-06F-X87 Directional Control Valve,True,True
+32,SPM-MC4-128,700005136,Gasket,,Style 2500 L280xW154 mm.,Coating,Mechanical,Style 2500 L280xW154 mm. Gasket,True,True
+33,SPM-MC6-006,700005146,Photoelectric Proximity Switch,Sick,WT18-3P431,Coating,Electric,Sick WT18-3P431 Photoelectric Proximity Switch,True,True
+34,SPM-MC6-025,700005164,Laser Displacement,ifm,01D105 01DLF3KG,Coating,Electric,ifm 01D105 01DLF3KG Laser Displacement,True,True
+35,SPM-MC6-026,700005165,LED Light Source,V.Light,TX2-D190X19-R3-R-24V,Coating,Electric,V.Light TX2-D190X19-R3-R-24V LED Light Source,True,True
+36,SPM-MC6-027,700005166,Light Source Control,V.Light,Power,Coating,Electric,V.Light Power Light Source Control,False,True
+37,SPM-MC6-030,700005169,Photo Sensor (Receiver),Sick,WE100L-F2132,Coating,Electric,Sick WE100L-F2132 Photo Sensor (Receiver),True,True
+38,SPM-MC6-060,700005196,Fitting & Pipe Set L62,Chanaseel,SUS 304,Coating,Mechanical,Chanaseel SUS 304 Fitting & Pipe Set L62,True,True
+39,LEGACY-3529C0A82583,,Bladder,,118.4/10 mm.,,,118.4/10 mm. Bladder,True,True
+40,LEGACY-A56E3AC5A577,,Ring Clamp,,"118.4/5 mm./MC6,MC4",,,"118.4/5 mm./MC6,MC4 Ring Clamp",True,True
+41,LEGACY-BB5075DBB9EA,,Ring Clamp,,"118.4/10 mm./MC6,MC4",,,"118.4/10 mm./MC6,MC4 Ring Clamp",True,True
+42,LEGACY-3675CE2535E3,,Ring Clamp,,93/5 mm.,,,93/5 mm. Ring Clamp,True,True
+43,SPM-RHK-041,700005604,Pneumatic Vibrator,,GT10,Slurry,Pneumatic & Hydraulic,GT10 Pneumatic Vibrator,True,True
+44,SPM-RHK-042,700005605,Fotek Proximity Switch,,PS-05N,Slurry,Electric,PS-05N Fotek Proximity Switch,True,True
+45,SPM-RHK-043,700005606,Solenoid Valve,SMC,VT307V-5D1-01,Slurry,Pneumatic & Hydraulic,SMC VT307V-5D1-01 Solenoid Valve,True,True
+46,SPM-COM-064,700005608,Viper Sounder,,VPR-MT32-230,Common Part,Electric,VPR-MT32-230 Viper Sounder,True,True
+47,SPM-HEM-099,700005609,Milling Hub 20L,P General,20L (Z-118),Slurry,Mechanical,P General 20L (Z-118) Milling Hub 20L,True,True
+48,SPM-MC4-144,700005610,Gas Solenoid Valve,Valvario,VAS1-R/NW 88007474,Coating,Pneumatic & Hydraulic,Valvario VAS1-R/NW 88007474 Gas Solenoid Valve,True,True
+49,SPM-MC4-145,700005611,Digital Output Module,Siemens,ET 200SP,Coating,Electric,Siemens ET 200SP Digital Output Module,True,True
+50,SPM-MC4-146,700005612,Power Supply PLC,Siemens,S7-1500,Coating,Electric,Siemens S7-1500 Power Supply PLC,True,True
+51,SPM-MC4-147,700005613,Guid Unit,Festo,FENG-50-300-KF,Coating,Mechanical,Festo FENG-50-300-KF Guid Unit,True,True
+52,SPM-SCR-039,700005614,Motor Blow,Elektror,"HRD 2T FU-95/2,2",Utility,Mechanical,"Elektror HRD 2T FU-95/2,2 Motor Blow",True,True
+53,SPM-MCY-128,700005628,Micro Mist Separator,SMC,AMH550C-F-10BD-T,Coating,Mechanical,SMC AMH550C-F-10BD-T Micro Mist Separator,True,True
+54,SPM-MCY-129,700005629,Seal Kit,SMC,CY3B25-PS,Coating,Mechanical,SMC CY3B25-PS Seal Kit,True,True
+55,SPM-WAS-026,700005631,Solenoid-Driven Metering Pump,TACMINA,PZ-30-VTCF-4X9PVC-W-S-JPL,Utility,Pneumatic & Hydraulic,TACMINA PZ-30-VTCF-4X9PVC-W-S-JPL Solenoid-Driven Metering Pump,True,True
+56,SPM-WAS-027,700005632,Power Supply,,PS2494-YE,Utility,Electric,PS2494-YE Power Supply,True,True
+57,SPM-RHK-046,700005641,Shaft for Empty Station Shutter Door,,,Slurry,Other,Shaft for Empty Station Shutter Door,False,True
+58,SPM-RHK-044,700005639,Air Cylinder,SMC,CDBA2B50-250-HL-XC4,Slurry,Mechanical,SMC CDBA2B50-250-HL-XC4 Air Cylinder,True,True
+59,SPM-MC4-152,700005967,Flame Monitor,DURAG,AAL 75 P0D,Coating,Electric,DURAG AAL 75 P0D Flame Monitor,True,True
+60,SPM-MC6-162,700005978,Weighing Module,,7MH4900-2AA01,Coating,Pneumatic & Hydraulic,7MH4900-2AA01 Weighing Module,True,True
+61,SPM-MC6-163,700005979,Power cable,,6FX5002-5CA41,Coating,Pneumatic & Hydraulic,6FX5002-5CA41 Power cable,True,True
+62,SPM-RHK-048,700005980,Bearing Housing รอ Flage delete,,UCFL204,Slurry,Pneumatic & Hydraulic,UCFL204 Bearing Housing รอ Flage delete,True,True
+63,SPM-MCY-139,700007022,Needle Roller Bearing RNA6902R,NTN,RNA6902R,Coating,Mechanical,NTN RNA6902R Needle Roller Bearing RNA6902R,True,True
+64,SPM-MCY-140,700007023,Linear Bushing LMF20UU,THK,LMF20UU,Coating,Mechanical,THK LMF20UU Linear Bushing LMF20UU,True,True
+65,SPM-CAL-025,700007025,Gas Regulator FMF301510003AD,Pietro Fiorentini,FMF301510003AD,Coating,Mechanical,Pietro Fiorentini FMF301510003AD Gas Regulator FMF301510003AD,True,True
+66,SPM-MC6-168,700007092,Double Motor Module,,6AU1425-0AA00-0AA0,Coating,Electric,6AU1425-0AA00-0AA0 Double Motor Module,True,True
+67,SPM-MC6-169,700007093,Double Motor Module,,6SL3130-6AE21-0AB1,Coating,Electric,6SL3130-6AE21-0AB1 Double Motor Module,True,True
+68,SPM-CLN-017,700007320,Chain,,25-1R,Coating,Mechanical,25-1R Chain,True,True
+69,SPM-CLN-018,700007321,Chain,,35-1R,Coating,Mechanical,35-1R Chain,True,True
+70,SPM-MC6-170,700007326,LED Light Source,V.Light,TX2-D190X19-R3-R-24V,Coating,Electric,V.Light TX2-D190X19-R3-R-24V LED Light Source,True,True
+71,SPM-SCR-032,,Gas Train,,MB-ZRDLE 407 B01 S20,,,MB-ZRDLE 407 B01 S20 Gas Train,True,True
+72,LEGACY-C729521311C7,,Ring Clamp,,83/3 mm.,,,83/3 mm. Ring Clamp,True,True
+73,LEGACY-59C7569293E6,,Bladder,,Free Size/All,,,Free Size/All Bladder,True,True
+74,LEGACY-53585E3676F8,,Bladder,,118.4/5 mm.,,,118.4/5 mm. Bladder,True,True
+75,SPM-NAU-005,700005351,Indicator Weight Scale,Precia Molen,X-112-B,Slurry,Mechanical,Precia Molen X-112-B Indicator Weight Scale,True,True
+76,SPM-NAU-007,700005352,Rotary Joint,Deubltn,Union 1/2 BSPRH (V201-0202-07-010),Slurry,Mechanical,Deubltn Union 1/2 BSPRH (V201-0202-07-010) Rotary Joint,True,True
+77,SPM-NAU-008,700005353,Rotary Joint,Deubltn,Union 3/8 BSPRH (V201-0101-02-032,Slurry,Mechanical,Deubltn Union 3/8 BSPRH (V201-0101-02-032 Rotary Joint,True,True
+78,SPM-NAU-013,700005358,Oil Seal 35x52x7,,TC 35x52x7,Slurry,Mechanical,TC 35x52x7 Oil Seal 35x52x7,True,True
+79,SPM-PRE-001,700005363,Gasket,0,310x66x3,Coating,Electric,0 310x66x3 Gasket,True,True
+80,SPM-PRE-002,700005364,ER310-01Parect Electronic Regulator,CKD,ER310-010-B,Coating,Electric,CKD ER310-010-B ER310-01Parect Electronic Regulator,True,True
+81,SPM-PRE-003,700005365,Ministry Wiring Block Manifold,CKD,MN4TB210-H10-LT30-5-3,Coating,Electric,CKD MN4TB210-H10-LT30-5-3 Ministry Wiring Block Manifold,True,True
+82,SPM-PRE-004,700005366,Fuse cap,-,PA 100,Coating,Electric,PA 100 Fuse cap,True,True
+83,SPM-PRE-005,700005367,Fuse base,-,AFA 100,Coating,Electric,AFA 100 Fuse base,True,True
+84,SPM-PRE-013,700005374,Temp Control,Omron,E5CN-C2MT-500,Coating,Electric,Omron E5CN-C2MT-500 Temp Control,True,True
+85,SPM-PRE-025,700005383,Photoelectric sensor,Omron,E3FA-RP21,Coating,Electric,Omron E3FA-RP21 Photoelectric sensor,True,True
+86,SPM-PRE-026,700005384,Power supply,,RPLD 0060,Coating,Electric,RPLD 0060 Power supply,True,True
+87,SPM-PRE-028,700005386,Pressure Control,,1PDK230632S00042846,Coating,Pneumatic & Hydraulic,1PDK230632S00042846 Pressure Control,True,True
+88,SPM-PRE-029,700005387,Transformer,Fida,TRS820P/11,Coating,Electric,Fida TRS820P/11 Transformer,True,True
+89,SPM-PRE-033,700005391,Digital Controller,Omron,E5CC-RW2AUM-000,Coating,Pneumatic & Hydraulic,Omron E5CC-RW2AUM-000 Digital Controller,True,True
+90,SPM-PRE-034,700005392,Connecting socket,Omron,P2CF-11,Coating,Pneumatic & Hydraulic,Omron P2CF-11 Connecting socket,True,True
+91,SPM-PRE-035,700005393,Magnetic Contactor,Mitsubishi,S-T25 200-240V,Coating,Electric,Mitsubishi S-T25 200-240V Magnetic Contactor,True,True
+92,SPM-PRE-036,700005394,Fire Check Burners,Riello,E19AA8B0,Coating,Electric,Riello E19AA8B0 Fire Check Burners,True,True
+93,SPM-RHK-002,700005416,Cylinder,SMC,CDQ2B40R-50DMZ-M9BVAVL-XC6,Slurry,Pneumatic & Hydraulic,SMC CDQ2B40R-50DMZ-M9BVAVL-XC6 Cylinder,True,True
+94,SPM-RHK-008,700005422,Inductive Sensor PNP,RS Componance,208-184,Slurry,Electric,RS Componance 208-184 Inductive Sensor PNP,False,True
+95,SPM-SCB-002,700005445,Flow switch,Sika,VHS06M25171R21,Utility,Electric,Sika VHS06M25171R21 Flow switch,True,True
+96,SPM-SCD-005,700005453,Power supply 24VDC,ABB,SM16257932,Slurry,Electric,ABB SM16257932 Power supply 24VDC,True,True
+97,SPM-SCD-006,700005454,Digital Input 24VCD,ABB,SE16250004,Slurry,Electric,ABB SE16250004 Digital Input 24VCD,True,True
+98,SPM-SCD-007,700005455,Digital Input,ABB,SC13271356,Slurry,Electric,ABB SC13271356 Digital Input,True,True
+99,SPM-SCD-008,700005456,Digital Input 10VCD,ABB,SI16291197,Slurry,Electric,ABB SI16291197 Digital Input 10VCD,True,True
+100,SPM-SCD-001,700005449,Digital input 24VDC,ABB,SE162102PE,Slurry,Electric,ABB SE162102PE Digital input 24VDC,True,True
+101,SPM-SCD-002,700005450,Power Supply,ABB,SM16265963,Slurry,Electric,ABB SM16265963 Power Supply,True,True
+102,SPM-SCD-003,700005451,Compact MTU module,ABB,SX16250652,Slurry,Electric,ABB SX16250652 Compact MTU module,True,True
+103,SPM-SCR-020,700005470,Pressure Indicator,SMC,PMC51-RFE3/1A6,Utility,Electric,SMC PMC51-RFE3/1A6 Pressure Indicator,True,True
+104,SPM-WAS-006,700005491,Inverter,Fuji,FRN2.2E1S-4A,Utility,Electric,Fuji FRN2.2E1S-4A Inverter,True,True
+105,SPM-WAS-007,700005492,Inverter,Fuji,FRN0.75E1S-4A,Utility,Electric,Fuji FRN0.75E1S-4A Inverter,True,True
+106,SPM-WAS-012,700005497,Pressure Switch,,25 Bar,Utility,Electric,25 Bar Pressure Switch,True,True
+107,SPM-OXI-002,700005570,Heater brake alarm,PRIMUS,PM CM-005,Coating,Electric,PRIMUS PM CM-005 Heater brake alarm,True,True
+108,SPM-RHK-036,700005599,Cylinder,SMC,MGPM25-20Z-M9BWLS-XC4W,Slurry,Pneumatic & Hydraulic,SMC MGPM25-20Z-M9BWLS-XC4W Cylinder,True,True
+109,SPM-RHK-037,700005600,Cylinder,SMC,MGPM16-50Z,Slurry,Pneumatic & Hydraulic,SMC MGPM16-50Z Cylinder,True,True
+110,SPM-RHK-038,700005601,Cylinder,SMC,MGPM25-50Z-M9BWL-XC4,Slurry,Pneumatic & Hydraulic,SMC MGPM25-50Z-M9BWL-XC4 Cylinder,True,True
+111,SPM-RHK-039,700005602,Cylinder,SMC,MGQM32-50-M9BWL,Slurry,Pneumatic & Hydraulic,SMC MGQM32-50-M9BWL Cylinder,True,True
+112,SPM-RHK-040,700005603,Cylinder,SMC,MGPM40-125Z-M9BWL,Slurry,Pneumatic & Hydraulic,SMC MGPM40-125Z-M9BWL Cylinder,True,True
+113,SPM-COM-055,700004937,Power Supply,Dell,XU100116-12004,Common Part,Electric,Dell XU100116-12004 Power Supply,True,True
+114,SPM-SCD-009,700011858,Profibus-DP/V1,ABB,CI854AK01,Slurry,Electric,ABB CI854AK01 Profibus-DP/V1,True,True
+115,SPM-SCD-010,700011859,Digital Input,ABB,DI 818,Slurry,Electric,ABB DI 818 Digital Input,True,True
+116,SPM-SCD-011,700011860,Digital Output,ABB,DO 818,Slurry,Electric,ABB DO 818 Digital Output,True,True
+117,SPM-SCD-012,700011861,Analog Input,ABB,AI810,Slurry,Electric,ABB AI810 Analog Input,True,True
+118,SPM-SCD-013,700011862,scription AO810V2 Analog Output,ABB,AO810V2,Slurry,Electric,ABB AO810V2 scription AO810V2 Analog Output,True,True
+119,SPM-SCD-014,700011863,SB822 Rechargeable Battery,ABB,SB822,Slurry,Electric,ABB SB822 SB822 Rechargeable Battery,True,True
+120,SPM-SCD-015,700011865,Modulebus Cluster,ABB,TB840A,Slurry,Electric,ABB TB840A Modulebus Cluster,True,True
+121,SPM-SCD-016,700011866,Compact MTU,ABB,TU818,Slurry,Electric,ABB TU818 Compact MTU,True,True
+122,SPM-CHI-007,700005555,Flow sensor thermal DISP,AIRCO LIMITED,SWT03335,Utility,Electric,AIRCO LIMITED SWT03335 Flow sensor thermal DISP,True,True
+123,SPM-CHI-008,700005556,Flow sensor control,AIRCO LIMITED,CNT05639,Utility,Electric,AIRCO LIMITED CNT05639 Flow sensor control,True,True
+124,SPM-CHI-009,700005557,Water flow switch sensor,AIRCO LIMITED,SEN01674,Utility,Electric,AIRCO LIMITED SEN01674 Water flow switch sensor,True,True
+125,SPM-CHI-010,700005558,Clamp adaptor D10,AIRCO LIMITED,"FGT01145 1/2""",Utility,Electric,"AIRCO LIMITED FGT01145 1/2"" Clamp adaptor D10",True,True
+126,SPM-CHI-011,700005559,Portable cable,AIRCO LIMITED,"CON01379 1/2""",Utility,Electric,"AIRCO LIMITED CON01379 1/2"" Portable cable",True,True
+127,SPM-CHI-012,700005561,Dual relay output,AIRCO LIMITED,X13650733070,Utility,Electric,AIRCO LIMITED X13650733070 Dual relay output,True,True
+128,SPM-CHI-006,700005552,Expansion Valve,AIRCO LIMITED,"1 1/8"" x5/8"" M12 Input",Utility,Electric,"AIRCO LIMITED 1 1/8"" x5/8"" M12 Input Expansion Valve",True,True
+129,SPM-CHI-002,700004819,Temperature Sensor,Trane,X13651507030,Utility,Electric,Trane X13651507030 Temperature Sensor,True,True
+130,SPM-CHI-004,700004821,Step Motor Expansion Valve,Parker,SERI-J M12 LESS CABLE,Utility,Electric,Parker SERI-J M12 LESS CABLE Step Motor Expansion Valve,True,True
+131,SPM-COM-043,700004925,Quick connector,Amko Tech,"Cupla 8P-A 1""",Common Part,Mechanical,"Amko Tech Cupla 8P-A 1"" Quick connector",True,True
+132,SPM-COM-044,700004926,Quick connector,Amko Tech,"Cupla 8S-A 1""",Common Part,Mechanical,"Amko Tech Cupla 8S-A 1"" Quick connector",True,True
+133,SPM-MC4-053,700005065,Coupling,Amko Tech,GR38,Coating,Mechanical,Amko Tech GR38 Coupling,True,True
+134,SPM-SCB-003,700005446,Magnehelic,Amko Tech,W46AB SW,Utility,Pneumatic & Hydraulic,Amko Tech W46AB SW Magnehelic,True,True
+135,SPM-SCB-004,700005447,Pressure gauge,Amko Tech,W081 S/N 6374806,Utility,Pneumatic & Hydraulic,Amko Tech W081 S/N 6374806 Pressure gauge,True,True
+136,SPM-SCB-005,700005448,Pressure Gauge,Amko Tech,0000170327RS,Utility,Pneumatic & Hydraulic,Amko Tech 0000170327RS Pressure Gauge,True,True
+137,SPM-SCB-001,700005444,Pressure gauge,Amko Tech,C161100629,Utility,Pneumatic & Hydraulic,Amko Tech C161100629 Pressure gauge,True,True
+138,SPM-MC6-086,700005220,Ball Screw shaft,Aero Group,25x5Rx3-4 (T9) L = 460 mm.,Coating,Mechanical,Aero Group 25x5Rx3-4 (T9) L = 460 mm. Ball Screw shaft,True,True
+139,SPM-MC6-076,700005210,Single Nut With Flange,Rexroth,MNR-R151221013,Coating,Mechanical,Rexroth MNR-R151221013 Single Nut With Flange,True,True
+140,SPM-MC6-033,700005172,Single Nut With Flange,Rexroth,MNR-R150221085,Coating,Mechanical,Rexroth MNR-R150221085 Single Nut With Flange,True,True
+141,SPM-MC6-142,,Computer,Delta,HMI Computer,,Electric,Delta HMI Computer Computer,False,True
+142,SPM-MC6-137,700005263,Computer,Dell,HMI Computer,Coating,Mechanical,Dell HMI Computer Computer,False,True
+143,SPM-COB-078,700004879,Mini Computer,Asia Tech Solution,GT4500-I5-8th,Coating,Electric,Asia Tech Solution GT4500-I5-8th Mini Computer,True,True
+144,SPM-SCR-040,700005634,Optical filters 2072345,SICK,Referance filter swivel segment,Utility,Other,SICK Referance filter swivel segment Optical filters 2072345,False,True
+145,SPM-SCR-041,700005635,Reflextors and mirrors 2072339,SICK,Zero-Point reflextor swivel segment,Utility,Other,SICK Zero-Point reflextor swivel segment Reflextors and mirrors 2072339,True,True
+146,SPM-SCR-042,700005636,Emitter 2082776,SICK,UV Emitter Module,Utility,Other,SICK UV Emitter Module Emitter 2082776,False,True
+147,SPM-SCR-043,700005637,Reflextors and mirrors 2072325,SICK,"Divider mirror ""Referance-4Quadrant",Utility,Other,"SICK Divider mirror ""Referance-4Quadrant Reflextors and mirrors 2072325",True,True
+148,SPM-SCR-044,700005638,Reflextors and mirrors 2072336,SICK,Main beam splitter,Utility,Other,SICK Main beam splitter Reflextors and mirrors 2072336,False,True
+149,SPM-SCR-053,700007024,Drying Agent Cartridge 2010549,Sick GM32,2010549,Utility,Other,Sick GM32 2010549 Drying Agent Cartridge 2010549,False,True
+150,SPM-CHI-013,700013148,Thermometer,WISE,T190 Stem Lenge 370 mm.,Slurry,Mechanical,WISE T190 Stem Lenge 370 mm. Thermometer,True,True
+151,SPM-CHI-014,700013149,Thermometer,WISE,T190 Stem Lenge 400 mm.,Slurry,Mechanical,WISE T190 Stem Lenge 400 mm. Thermometer,True,True
+152,SPM-PRE-074,700011167,Safety Relay,EUCHNER,CES-AZ-AES-04B(104780),Coating,Electric,EUCHNER CES-AZ-AES-04B(104780) Safety Relay,True,True
+153,SPM-PRE-045,700005403,Safety Switch,Automation Control,CET1-AX-LRA-00-50X-SC,Coating,Electric,Automation Control CET1-AX-LRA-00-50X-SC Safety Switch,True,True
+154,SPM-PRE-046,700005404,Actuator Safety Switch,Automation Control,CET-A-BWK-50X,Coating,Electric,Automation Control CET-A-BWK-50X Actuator Safety Switch,True,True
+155,SPM-MC6-166,700007028,Safety Switch Unicode MGB-L2-ARA-BM5A1-S,EUCHNER,MGB-L2-ARA-BM5A1-S1-R-121179,Coating,Electric,EUCHNER MGB-L2-ARA-BM5A1-S1-R-121179 Safety Switch Unicode MGB-L2-ARA-BM5A1-S,True,True
+156,SPM-MC6-167,700007029,Escape Release MGB-E-A-100465,EUCHNER,MGB-E-A-100465,Coating,Electric,EUCHNER MGB-E-A-100465 Escape Release MGB-E-A-100465,True,True
+157,SPM-MC4-122,700005130,Han 10B-ASG-LB-16,Automation Control,9300101251,Coating,Mechanical,Automation Control 9300101251 Han 10B-ASG-LB-16,False,True
+158,SPM-MC4-123,700005131,Han Modular,Automation Control,9140009908,Coating,Mechanical,Automation Control 9140009908 Han Modular,False,True
+159,SPM-MC4-124,700005132,Han Modular,Automation Control,9140009909,Coating,Mechanical,Automation Control 9140009909 Han Modular,False,True
+160,SPM-MC4-125,700005133,Han 5 MOD STI-ES 16A,Automation Control,9140052616,Coating,Mechanical,Automation Control 9140052616 Han 5 MOD STI-ES 16A,False,True
+161,SPM-MC4-126,700005134,Gasket t2 mm.,Automation Control,9140052716,Coating,Mechanical,Automation Control 9140052716 Gasket t2 mm.,False,True
+162,SPM-COM-040,700004922,Temperature Control,Automation Control,P6100-2111-002-10,Common Part,Electric,Automation Control P6100-2111-002-10 Temperature Control,True,True
+163,SPM-CAL-017,700004814,Inductive Sensor,Automation Control,NI12U-EM18-AP6X-H1141,Coating,Electric,Automation Control NI12U-EM18-AP6X-H1141 Inductive Sensor,True,True
+164,SPM-CAL-018,700004815,Connection Cable,Automation Control,RKC4T-2/TEL,Coating,Electric,Automation Control RKC4T-2/TEL Connection Cable,True,True
+165,SPM-CAL-019,700004816,Safety Bolt,EUCHNER,Ident.-Nr. 123653 CTP-AC-123653,Coating,Electric,EUCHNER Ident.-Nr. 123653 CTP-AC-123653 Safety Bolt,True,True
+166,SPM-MC6-020,700005159,Manual Switch,Euchner,ZSA2B4S05A,Coating,Electric,Euchner ZSA2B4S05A Manual Switch,True,True
+167,SPM-MC6-007,700005147,Handle Module,Euchner,MGB-H-AA1A1-R-100464,Coating,Electric,Euchner MGB-H-AA1A1-R-100464 Handle Module,True,True
+168,SPM-COM-041,700004923,Capacitive Switch,Euchner,CHT3-F7XB-64/TG-SR,Common Part,Electric,Euchner CHT3-F7XB-64/TG-SR Capacitive Switch,True,True
+169,SPM-RHK-026,700005440,Fuse,,CR6L-30,Slurry,Electric,CR6L-30 Fuse,True,True
+170,SPM-RHK-027,700005441,Fuse,,250FM 250A 690V,Slurry,Electric,250FM 250A 690V Fuse,True,True
+171,SPM-RHK-028,700005442,Magnetic Contactor,,SC-N3,Slurry,Electric,SC-N3 Magnetic Contactor,True,True
+172,SPM-COM-058,700005519,Fuse Link,Gunkul,27KV 80A Type K,Common Part,Electric,Gunkul 27KV 80A Type K Fuse Link,True,True
+173,SPM-RHK-050,700011240,Overload Relay,FUJI,TR-ON/3 (0.1-0.15A),Slurry,Electric,FUJI TR-ON/3 (0.1-0.15A) Overload Relay,True,True
+174,SPM-TRN-028,700011937,Ultra-Thin Picking Sensor,PANASONIC,NA1-5-PN,Coating,Electric,PANASONIC NA1-5-PN Ultra-Thin Picking Sensor,True,True
+175,SPM-TRN-029,700011936,Photo Sensor,OIMRON,E3JK-RR12-C 2M,Coating,Electric,OIMRON E3JK-RR12-C 2M Photo Sensor,True,True
+176,SPM-TRN-030,700011938,Reflector,OIMRON,E39-R1,Coating,Electric,OIMRON E39-R1 Reflector,True,True
+177,SPM-TRN-020,700011463,Miniature Power Relay,Banfaifa,MY2N-GS-R,Coating,Electric,Banfaifa MY2N-GS-R Miniature Power Relay,True,True
+178,SPM-COM-100,700013174,Pressure Transmitter,ifm,PA3029,Common Part,Electric,ifm PA3029 Pressure Transmitter,True,True
+179,SPM-STO-002,700014012,Inverter,Hoffman Muller,HM-G8A44P0B,Slurry,Electric,Hoffman Muller HM-G8A44P0B Inverter,True,True
+180,SPM-COM-084,700007141,Power Supply,Omron,S8FS-C05024 50W 24V 2.2A,Common Part,Electric,Omron S8FS-C05024 50W 24V 2.2A Power Supply,True,True
+181,SPM-PRE-068,700010630,Fuse,Siemens,3NA3812 32A SIEMENS,Coating,Electric,Siemens 3NA3812 32A SIEMENS Fuse,True,True
+182,SPM-COM-089,700010993,Fuse,BUSSMANN,10x38mm. 4A 500VAC gG C10G4,Common Part,Electric,BUSSMANN 10x38mm. 4A 500VAC gG C10G4 Fuse,True,True
+183,SPM-COM-090,700010992,Fuse,BUSSMANN,22x58mm. 50A 690V gG C22G50,Common Part,Electric,BUSSMANN 22x58mm. 50A 690V gG C22G50 Fuse,True,True
+184,SPM-COM-091,700010994,Fuse,Siemens,NH-00 3NA3805 16A 500V gL-gG,Common Part,Electric,Siemens NH-00 3NA3805 16A 500V gL-gG Fuse,True,True
+185,SPM-COM-092,700010995,Fuse,Siemens,NH-00 3NA3836 160A 500V gL gG,Common Part,Electric,Siemens NH-00 3NA3836 160A 500V gL gG Fuse,True,True
+186,SPM-COM-093,700010996,Fuse,Siemens,NH-000 3NA3822 63A 500V gL-gG,Common Part,Electric,Siemens NH-000 3NA3822 63A 500V gL-gG Fuse,True,True
+187,SPM-MC4-050,700005062,Head lock clamp,Blind,-,Coating,Mechanical,Blind Head lock clamp,False,True
+188,SPM-MC4-051,700005063,Jaw clamp,Blind,-,Coating,Mechanical,Blind Jaw clamp,False,True
+189,SPM-MC4-052,700005064,Set screw load cell,Blind,-,Coating,Mechanical,Blind Set screw load cell,False,True
+190,SPM-MC4-021,700005037,Springs,Blind,UBB8-15,Coating,Mechanical,Blind UBB8-15 Springs,True,True
+191,SPM-MC4-022,700005038,Fastening,Blind,SSHTI-ST-M12-12,Coating,Mechanical,Blind SSHTI-ST-M12-12 Fastening,True,True
+192,SPM-MC4-011,700005032,"Quick release fastener 9""",Blind,"Quick release fastener 9""",Coating,Mechanical,"Blind Quick release fastener 9""",True,True
+193,SPM-MC4-181,700014042,Bladder Cannon KO Seal,Blind,042.010.00.00.217,Coating,Rubber,Blind 042.010.00.00.217 Bladder Cannon KO Seal,False,True
+194,SPM-MC4-182,700014041,Additional Clmap Holder,Blind,042.010.03.90.050,Coating,Rubber,Blind 042.010.03.90.050 Additional Clmap Holder,False,True
+195,SPM-MC4-183,700014043,Rubber Insert Ø93,Blind,048.002.03.83.001,Coating,Rubber,Blind 048.002.03.83.001 Rubber Insert Ø93,False,True
+196,SPM-MC4-178,700013146,Harting Plug Male,HARTING,Station 4+16,Coating,Electric,HARTING Station 4+16 Harting Plug Male,True,True
+197,SPM-MC4-179,700013147,Harting Plug Female,HARTING,Station 4+16,Coating,Electric,HARTING Station 4+16 Harting Plug Female,True,True
+198,SPM-MC6-001,700005143,Lead Switch,Schunk,MMS22-SPM8,Coating,Electric,Schunk MMS22-SPM8 Lead Switch,True,True
+199,SPM-MC6-052,700005188,Cylinder,Festo,SCHUNK SRU+40-W-180-3-M,Coating,Mechanical,Festo SCHUNK SRU+40-W-180-3-M Cylinder,True,True
+200,SPM-COM-063,700005607,Adaptor for IDS-701,,WTA12-0901200-G,Common Part,Electric,WTA12-0901200-G Adaptor for IDS-701,True,True
+201,SPM-COM-051,700004933,Adaptor,,IVP0900-1000,Common Part,Electric,IVP0900-1000 Adaptor,True,True
+202,SPM-COM-038,700004920,Adapter for A & D,Burapa Science,TB-249 12V,Common Part,Electric,Burapa Science TB-249 12V Adapter for A & D,True,True
+203,SPM-COM-039,700004921,Adapter for A & D,Burapa Science,TB-249 9V,Common Part,Electric,Burapa Science TB-249 9V Adapter for A & D,True,True
+204,SPM-COM-054,700004936,Weight Monitoring,Jadever,JIK-6CAB,Common Part,Mechanical,Jadever JIK-6CAB Weight Monitoring,True,True
+205,SPM-COM-009,700004895,Load Cell 500kg.(7 wire),Burapa Science,IDS608-500K,Common Part,Mechanical,Burapa Science IDS608-500K Load Cell 500kg.(7 wire),True,True
+206,SPM-COM-011,700004896,Load Cell 1000kg.(7 wire),SDS,IDS608-1T,Common Part,Mechanical,SDS IDS608-1T Load Cell 1000kg.(7 wire),True,True
+207,SPM-COM-013,700004897,Load Cell 15kg.(4 wire),Tedea-Huntleigh,1022-15K,Common Part,Mechanical,Tedea-Huntleigh 1022-15K Load Cell 15kg.(4 wire),True,True
+208,SPM-COM-001,700004888,Load Cell 300kg.(5 wire),Precia Molen,11153832 C 3m,Common Part,Mechanical,Precia Molen 11153832 C 3m Load Cell 300kg.(5 wire),True,True
+209,SPM-COM-002,700004889,Load Cell 300kg.(7 wire),Precia Molen,1394810 (16),Common Part,Mechanical,Precia Molen 1394810 (16) Load Cell 300kg.(7 wire),False,True
+210,SPM-COM-003,700004890,Load Cell 500kg.(5 wire),SDS,IDS608-500K,Common Part,Mechanical,SDS IDS608-500K Load Cell 500kg.(5 wire),True,True
+211,SPM-COM-022,700004905,Load Cell 2267kg.(5 wire),SDS,IDS608-5KLB,Common Part,Mechanical,SDS IDS608-5KLB Load Cell 2267kg.(5 wire),True,True
+212,SPM-COM-023,700004906,Load Cell 3000kg.(5 wire),SDS,IDS608-3T,Common Part,Mechanical,SDS IDS608-3T Load Cell 3000kg.(5 wire),True,True
+213,SPM-COM-099,700012161,Adjust Feet,IDS,IDS608,Common Part,Electric,IDS IDS608 Adjust Feet,True,True
+214,SPM-COB-080,,Precision Balances,AND,GF6002A,,,AND GF6002A Precision Balances,True,True
+215,SPM-COB-075,700004876,Rubber for Weight Balance,-,,Coating,Rubber,Rubber for Weight Balance,False,True
+216,SPM-COB-040,700004855,AC Adaptor 220V,AND,AX-TB249E,Coating,Electric,AND AX-TB249E AC Adaptor 220V,True,True
+217,SPM-COM-031,700004913,"Diaphragm Pump 1"" ARO",Aro,PD10P-YPS-PTT,Common Part,Pneumatic & Hydraulic,"Aro PD10P-YPS-PTT Diaphragm Pump 1"" ARO",True,True
+218,SPM-NAU-019,700005642,Diaphragm Pump,Aro,"PD03P-ARS-PTT  3/8"" ARO",Slurry,Other,"Aro PD03P-ARS-PTT  3/8"" ARO Diaphragm Pump",True,True
+219,SPM-MC6-043,700005180,Parallel Gripper Stroke 50.8 mm.,Destaco,DPW-375M-2,Coating,Electric,Destaco DPW-375M-2 Parallel Gripper Stroke 50.8 mm.,True,True
+220,SPM-MC6-044,700005181,Sensor,Destaco,OISN-014,Coating,Electric,Destaco OISN-014 Sensor,True,True
+221,SPM-MC6-045,700005182,"Sensor MTNG KIT,DPW-375(M)-1 & -375(M)-1",Destaco,OSMK-117,Coating,Electric,"Destaco OSMK-117 Sensor MTNG KIT,DPW-375(M)-1 & -375(M)-1",True,True
+222,SPM-MC6-046,700005183,Quick Disconnect 5 Meter Cable Length,Destaco,CABL-013,Coating,Electric,Destaco CABL-013 Quick Disconnect 5 Meter Cable Length,True,True
+223,SPM-MC6-173,700007330,"Seal Kit,DPW-375",Cerathai,SLKT-340,Coating,Rubber,"Cerathai SLKT-340 Seal Kit,DPW-375",True,True
+224,SPM-MC6-119,700005249,"Seal Kit,DPW-375",Cerathai,SLKT-339,Coating,Rubber,"Cerathai SLKT-339 Seal Kit,DPW-375",True,True
+225,SPM-MC6-121,700005250,"Seal Kit,DPW-375",Cerathai,SLKT-340,Coating,Rubber,"Cerathai SLKT-340 Seal Kit,DPW-375",True,True
+226,SPM-MC6-101,700005233,Hood seal,Chan Steel,Urethane,Coating,Rubber,Chan Steel Urethane Hood seal,False,True
+227,SPM-MC6-102,700005234,Upper Hood seal,Chan Steel,OD278xID238xt25,Coating,Rubber,Chan Steel OD278xID238xt25 Upper Hood seal,True,True
+228,SPM-MC6-103,700005235,Lower Hood seal,Chan Steel,OD270xID230xt25,Coating,Rubber,Chan Steel OD270xID230xt25 Lower Hood seal,True,True
+229,SPM-MC6-106,700005237,Gusset,Chansteel,t65 x 65 x 100mm.,Coating,Mechanical,Chansteel t65 x 65 x 100mm. Gusset,True,True
+230,SPM-MC6-066,700005202,Gripper,Chansteel,T20 x 60 x 118 mm.,Coating,Mechanical,Chansteel T20 x 60 x 118 mm. Gripper,True,True
+231,SPM-MC6-067,700005203,Urethane Gripper,Chansteel,T15 x 60 x 60 mm.,Coating,Mechanical,Chansteel T15 x 60 x 60 mm. Urethane Gripper,True,True
+232,SPM-MCY-053,700005308,O-Ring,Chan Steel,O-Ring Station 3,Coating,Rubber,Chan Steel O-Ring Station 3 O-Ring,True,True
+233,SPM-PRE-078,700012178,Conveyor Bush,Chan Steel,SUS304,Coating,Mechanical,Chan Steel SUS304 Conveyor Bush,True,True
+234,SPM-MCY-173,700012842,Un-Jump Plate,Chan Steel,750170,Coating,Mechanical,Chan Steel 750170 Un-Jump Plate,False,True
+235,SPM-MCY-169,700012368,16CH Relay Interface Module,Delta,UB-10-OR16A,Coating,Electric,Delta UB-10-OR16A 16CH Relay Interface Module,True,True
+236,SPM-MC6-185,700012858,Robot Gripper Bush,Chan Steel,-,Coating,Mechanical,Chan Steel Robot Gripper Bush,False,True
+237,SPM-RHK-055,700012959,Slide Pop-Up Assembly,Chan Steel,-,Slurry,Mechanical,Chan Steel Slide Pop-Up Assembly,False,True
+238,SPM-DIS-011,700013144,Shuter Seal,Chan Steel,Dia 285x255x15 mm,Slurry,Rubber,Chan Steel Dia 285x255x15 mm Shuter Seal,True,True
+239,SPM-MCY-164,700011794,Oval Block,Chan Steel,Size 20x22 mm.,Coating,Mechanical,Chan Steel Size 20x22 mm. Oval Block,True,True
+240,SPM-MCY-166,700011991,Filling Pump,Chan Steel,G1WGD 300-2600 ml.,Coating,Pneumatic & Hydraulic,Chan Steel G1WGD 300-2600 ml. Filling Pump,True,True
+241,SPM-MCY-167,700011992,Filling Head,Chan Steel,G1WGD 300-2600 ml.,Coating,Pneumatic & Hydraulic,Chan Steel G1WGD 300-2600 ml. Filling Head,True,True
+242,SPM-CLN-021,700011988,Roller Guide for Clean Skin 4,Chan Steel,Rolls R54,Coating,Mechanical,Chan Steel Rolls R54 Roller Guide for Clean Skin 4,True,True
+243,SPM-CLN-022,700011989,Roller Guide for Clean Skin 2,Chan Steel,Rolls R129,Coating,Mechanical,Chan Steel Rolls R129 Roller Guide for Clean Skin 2,True,True
+244,SPM-CLN-023,700012000,Nozzle for Clean Skin,Chan Steel,PNZRF1-3-50,Coating,Mechanical,Chan Steel PNZRF1-3-50 Nozzle for Clean Skin,True,True
+245,SPM-RHK-049,700011142,AC Motor Roller,Chan Steel,MR-Q3-38-420-3AB-AOT975,Slurry,Mechanical,Chan Steel MR-Q3-38-420-3AB-AOT975 AC Motor Roller,True,True
+246,SPM-MC6-138,700005512,Urethane Gripper Pick & Place,Chan Steel,60x90x15 50Shore A,Coating,Rubber,Chan Steel 60x90x15 50Shore A Urethane Gripper Pick & Place,True,True
+247,SPM-PRE-057,700005508,Sleeve Coupling,Chan Steel,MT-70,Coating,Mechanical,Chan Steel MT-70 Sleeve Coupling,True,True
+248,SPM-HEM-093,700005545,End plate 4L,Chan Steel,Z-116,Slurry,Mechanical,Chan Steel Z-116 End plate 4L,True,True
+249,SPM-RHK-031,700005528,Spring,Chan Steel,OD49 x Rod3 x L116mm.,Slurry,Mechanical,Chan Steel OD49 x Rod3 x L116mm. Spring,True,True
+250,SPM-MC4-140,700005554,Joint,Chan Steel,M20xL129,Coating,Mechanical,Chan Steel M20xL129 Joint,True,True
+251,SPM-RHK-005,700005419,Brush,Chan Steel,105 x 120 mm.,Slurry,Mechanical,Chan Steel 105 x 120 mm. Brush,True,True
+252,SPM-MCY-144,700007900,Liquid Packing,,SL-02 300-2600ml.,Coating,Pneumatic & Hydraulic,SL-02 300-2600ml. Liquid Packing,True,True
+253,SPM-MCY-145,700008017,Calipper Brake,Chan Steel,0.7 Mpa,Coating,Pneumatic & Hydraulic,Chan Steel 0.7 Mpa Calipper Brake,True,True
+254,SPM-HEM-109,700008442,Headon pump,Chan Steel,RO 100 GPD Pump,Slurry,Mechanical,Chan Steel RO 100 GPD Pump Headon pump,True,True
+255,SPM-MC6-174,700008726,Nozzle for Bladder,Chan Steel,L 105 mm.,Coating,Mechanical,Chan Steel L 105 mm. Nozzle for Bladder,True,True
+256,SPM-MCY-146,700008727,Nozzle With Bracket,Chan Steel,L 28.5,Coating,Mechanical,Chan Steel L 28.5 Nozzle With Bracket,True,True
+257,SPM-MCY-147,700008728,Bracket for Nozzle,Chan Steel,-,Coating,Mechanical,Chan Steel Bracket for Nozzle,False,True
+258,SPM-MCY-148,700008729,Lower Coating Seal,Chan Steel,Dia42 L60 Gap3 mm.,Coating,Mechanical,Chan Steel Dia42 L60 Gap3 mm. Lower Coating Seal,True,True
+259,SPM-MCY-149,700008790,Lower Coating Seal,Chan Steel,Dia42 L60 Gap5 mm.,Coating,Mechanical,Chan Steel Dia42 L60 Gap5 mm. Lower Coating Seal,True,True
+260,SPM-MC6-175,700009870,Unload V-Block,Chan Steel,Urethane 50 Shore.A,Coating,Mechanical,Chan Steel Urethane 50 Shore.A Unload V-Block,True,True
+261,SPM-MCY-151,700010774,Ball Valve Three -way,Chan Steel,300-2600 ml,Coating,Pneumatic & Hydraulic,Chan Steel 300-2600 ml Ball Valve Three -way,True,True
+262,SPM-MC4-157,700006682,Unload Gripper,,Set of Unload Gripper,Coating,Electric,Set of Unload Gripper Unload Gripper,False,True
+263,SPM-MCY-138,700006691,Suction Cup Rod M10x1.25,Chan Steel,for SMC,Coating,Mechanical,Chan Steel for SMC Suction Cup Rod M10x1.25,False,True
+264,SPM-MCY-135,700005981,Suction Cup Rod M10x1.00,Chan Steel,for China,Coating,Mechanical,Chan Steel for China Suction Cup Rod M10x1.00,False,True
+265,SPM-MCY-136,700005982,Lifter Pin,Chan Steel,-,Coating,Mechanical,Chan Steel Lifter Pin,False,True
+266,SPM-MC4-133,700005141,Weighing Station Base Plate,Chan Steel,DWG.042.010.01.32.016,Coating,Mechanical,Chan Steel DWG.042.010.01.32.016 Weighing Station Base Plate,True,True
+267,SPM-MC4-134,700005142,Weighing Station Bar,Chan Steel,DWG.042.010.01.32.017,Coating,Mechanical,Chan Steel DWG.042.010.01.32.017 Weighing Station Bar,True,True
+268,SPM-MC4-127,700005135,Gasket t2 mm.,Chan Steel,ID15.5mm.xOD19.9mm.xT2mm.,Coating,Mechanical,Chan Steel ID15.5mm.xOD19.9mm.xT2mm. Gasket t2 mm.,True,True
+269,SPM-MC4-116,700005124,Blast Gate Support,Chan Steel,83x235x35 mm.,Coating,Mechanical,Chan Steel 83x235x35 mm. Blast Gate Support,True,True
+270,SPM-MC6-065,700005201,Plate Chuck,Chansteel,T15 x 245 x 110 mm.,Coating,Mechanical,Chansteel T15 x 245 x 110 mm. Plate Chuck,True,True
+271,SPM-HEM-004,700004953,Disc Spacer P4,Chan Steel,Ø 4,Slurry,Mechanical,Chan Steel Ø 4 Disc Spacer P4,False,True
+272,SPM-CLN-014,700004833,Oriental Motor,Chan Steel,USM560-502W-1,Coating,Mechanical,Chan Steel USM560-502W-1 Oriental Motor,True,True
+273,SPM-CLN-001,700004823,Straight Bevel,Chan Steel,M1.5 x 18PT 20PA ID 15mm.,Coating,Mechanical,Chan Steel M1.5 x 18PT 20PA ID 15mm. Straight Bevel,True,True
+274,SPM-CLN-005,700004824,Speed Control Unit,Oriental Motor,UPS560-2E2,Coating,Mechanical,Oriental Motor UPS560-2E2 Speed Control Unit,True,True
+275,SPM-CLN-007,700004826,Clean Skin Roller Driven kit,Chansteel,,Coating,Mechanical,Chansteel Clean Skin Roller Driven kit,False,True
+276,SPM-HEM-021,700004964,Cap for Shaft,Chan Steel,OD55xID45xH30,Slurry,Mechanical,Chan Steel OD55xID45xH30 Cap for Shaft,True,True
+277,SPM-HEM-022,700004965,Mechanical STL Bush (L40),Chan Steel,ID45 x OD55 x L40,Slurry,Mechanical,Chan Steel ID45 x OD55 x L40 Mechanical STL Bush (L40),True,True
+278,SPM-HEM-023,700004966,Mechanical STL Bush (L70),Chan Steel,ID45 x OD55 x L70,Slurry,Mechanical,Chan Steel ID45 x OD55 x L70 Mechanical STL Bush (L70),True,True
+279,SPM-PRE-066,700009868,Shaft,Chansteel,SCM440 Dia59.9xL371.10mm.,Coating,Mechanical,Chansteel SCM440 Dia59.9xL371.10mm. Shaft,True,True
+280,SPM-PRE-077,700012107,Conveyor Pin,Chansteel,OD9.9mm x 48 mm,Coating,Mechanical,Chansteel OD9.9mm x 48 mm Conveyor Pin,True,True
+281,SPM-MC4-143,700005569,Motor actuator control valve,Chimpf (Blind),01-15/30 N,Coating,Mechanical,Chimpf (Blind) 01-15/30 N Motor actuator control valve,True,True
+282,SPM-PRE-032,700005390,Cylinder,CKD,CMK2-TB-40-75,Coating,Pneumatic & Hydraulic,CKD CMK2-TB-40-75 Cylinder,True,True
+283,SPM-PRE-037,700005395,Solenoid Valve,CKD,4KB210-08-L,Coating,Pneumatic & Hydraulic,CKD 4KB210-08-L Solenoid Valve,True,True
+284,SPM-PRE-042,700005400,Switch (SW TOH),CKD,SW TOH,Coating,Electric,CKD SW TOH Switch (SW TOH),False,True
+285,SPM-PRE-043,700005401,Switch (SW RO),CKD,SW RO,Coating,Electric,CKD SW RO Switch (SW RO),False,True
+286,SPM-PRE-019,700005378,Seal Kit,CKD,STS-50K,Coating,Pneumatic & Hydraulic,CKD STS-50K Seal Kit,True,True
+287,SPM-PRE-020,700005379,Coupling,CKD,No.70,Coating,Mechanical,CKD No.70 Coupling,True,True
+288,SPM-PRE-021,700005380,Coupling,CKD,No.170,Coating,Mechanical,CKD No.170 Coupling,True,True
+289,SPM-COB-042,700004856,Pressure Regulator,CKD,PPD3-R10N-6B,Coating,Electric,CKD PPD3-R10N-6B Pressure Regulator,True,True
+290,SPM-COB-043,700004857,Regulator,CKD,W4000-15W-R1,Coating,Mechanical,CKD W4000-15W-R1 Regulator,True,True
+291,SPM-COB-033,700004851,Solenoid Valve,CKD,ADK11-20A-02H-DC24V,Coating,Pneumatic & Hydraulic,CKD ADK11-20A-02H-DC24V Solenoid Valve,True,True
+292,SPM-RHK-004,700005418,Solenoid Valve,CKD,PDV3-20A-F4A-AC220V,Slurry,Pneumatic & Hydraulic,CKD PDV3-20A-F4A-AC220V Solenoid Valve,True,True
+293,SPM-PRE-076,700011839,Air Cylinder,,STL-B-63-400,Coating,Mechanical,STL-B-63-400 Air Cylinder,True,True
+294,SPM-COB-004,700004835,Stopper Cylinder,CKD,STK-M-32-15,Coating,Pneumatic & Hydraulic,CKD STK-M-32-15 Stopper Cylinder,True,True
+295,SPM-COB-009,700004836,Digital Pressure Sensor,SUNK,DP2-20,Coating,Pneumatic & Hydraulic,SUNK DP2-20 Digital Pressure Sensor,True,True
+296,SPM-COB-010,700004837,Cylinder,SMC,CY3B25-250-XB9,Coating,Pneumatic & Hydraulic,SMC CY3B25-250-XB9 Cylinder,True,True
+297,SPM-INK-001,700005028,Print Engine,Code Master,128CH 200DPI,Coating,Electric,Code Master 128CH 200DPI Print Engine,True,True
+298,SPM-SCR-045,700006476,Ignition electrode,Honetwell,"Kinemax 3""-4""",Utility,Other,"Honetwell Kinemax 3""-4"" Ignition electrode",True,True
+299,SPM-SCR-046,700006477,Ignition cable 1500mm Cu (118148),,Ignition cable 1500mm Cu (118148),Utility,Other,Ignition cable 1500mm Cu (118148),True,True
+300,SPM-SCR-047,700006478,Ignition Transformer,,DEZ100,Utility,Other,DEZ100 Ignition Transformer,True,True
+301,SPM-SCR-048,700006479,Flange,,Rp 1,Utility,Other,Rp 1 Flange,True,True
+302,SPM-SCR-049,700006510,Textile Compensator,,"DN500, 450°C, R1 to R3",Utility,Other,"DN500, 450°C, R1 to R3 Textile Compensator",True,True
+303,SPM-SCR-050,700006511,Gas Governor,Dungs,FRS 510,Utility,Other,Dungs FRS 510 Gas Governor,True,True
+304,SPM-SCR-051,700006512,Spring,,"7 sw, 60-110mbar, Rp 1",Utility,Other,"7 sw, 60-110mbar, Rp 1 Spring",True,True
+305,SPM-SCR-052,700006513,Adjustable Spring,,"30-70mbar, Rp 1",Utility,Other,"30-70mbar, Rp 1 Adjustable Spring",True,True
+306,SPM-MCY-099,700005522,AC Servo Motor (Delta),Delta,ECMA-EA 1310RS,Coating,Electric,Delta ECMA-EA 1310RS AC Servo Motor (Delta),True,True
+307,SPM-MC6-057,700005193,Load Limit,Destaco,ULS 100-300,Coating,Electric,Destaco ULS 100-300 Load Limit,True,True
+308,SPM-MC6-023,700005162,Load Limiter,Destarco,ULS-125-VF,Coating,Electric,Destarco ULS-125-VF Load Limiter,True,True
+309,SPM-MC4-045,700005057,Gripper robot infeed,Destarco,,Coating,Mechanical,Destarco Gripper robot infeed,False,True
+310,SPM-COP-004,700004939,Auto drain kit,Domminich Hunter,EF1,Utility,Mechanical,Domminich Hunter EF1 Auto drain kit,True,True
+311,SPM-COP-005,700004940,Pressure Transmitter,Endress Huaser,AA21JA1CGJGMJA+AAJA,Utility,Electric,Endress Huaser AA21JA1CGJGMJA+AAJA Pressure Transmitter,True,True
+312,SPM-DIS-002,700004941,Topwork valve controller,Topworx,TVL-M2WGNPM,Slurry,Mechanical,Topworx TVL-M2WGNPM Topwork valve controller,True,True
+313,SPM-DIS-003,700004942,Butterfy valve,Sealed Air,"d110DN100 4""",Slurry,Mechanical,"Sealed Air d110DN100 4"" Butterfy valve",True,True
+314,SPM-COM-045,700004927,Power supply,,6EP1436-3BA00,Common Part,Electric,6EP1436-3BA00 Power supply,True,True
+315,SPM-COM-005,700004892,Solenoid Assy,SMC,SF4-5DZ-80-Q,Common Part,Pneumatic & Hydraulic,SMC SF4-5DZ-80-Q Solenoid Assy,True,True
+316,SPM-COM-006,700004893,Limit Switch,Omron,HL-5030,Common Part,Electric,Omron HL-5030 Limit Switch,True,True
+317,SPM-CHI-001,700004818,Wire Harness Branching Male-Female,Trane,CAB01146,Utility,Electric,Trane CAB01146 Wire Harness Branching Male-Female,True,True
+318,SPM-CLN-015,700004834,Speed Control Motor,,USP590-2E2,Coating,Mechanical,USP590-2E2 Speed Control Motor,True,True
+319,SPM-CHI-005,700004822,Temperature Sensor,Trane,X13650726100,Utility,Electric,Trane X13650726100 Temperature Sensor,True,True
+320,SPM-CHI-003,700004820,Electronic Expansion Valve (EXV),Trane,X13650736130,Utility,Electric,Trane X13650736130 Electronic Expansion Valve (EXV),True,True
+321,SPM-MC4-054,700005066,Efector 190,ifm,DTE101,Coating,Electric,ifm DTE101 Efector 190,True,True
+322,SPM-MC4-048,700005060,Power Supply 3x400,JKA K,Stromversorgung 27V/40A,Coating,Electric,JKA K Stromversorgung 27V/40A Power Supply 3x400,True,True
+323,SPM-MC4-057,700005069,Encoder Burnner,Novotechnik,SP2831-308-000-001-019521,Coating,Electric,Novotechnik SP2831-308-000-001-019521 Encoder Burnner,True,True
+324,SPM-MC4-039,700005051,Servo motor,Siemens,1FK7032-2AK71-1RH1,Coating,Mechanical,Siemens 1FK7032-2AK71-1RH1 Servo motor,True,True
+325,SPM-MC4-040,700005052,Servo motor,Siemens,1FK7044-4CF71-1CH1,Coating,Mechanical,Siemens 1FK7044-4CF71-1CH1 Servo motor,True,True
+326,SPM-MC4-033,700005047,Cylender,Festo,ADN-40-60-I-PPS-A,Coating,Pneumatic & Hydraulic,Festo ADN-40-60-I-PPS-A Cylender,True,True
+327,SPM-MC4-066,700005076,Support Sensor,Festo,SL-DSM-B,Coating,Mechanical,Festo SL-DSM-B Support Sensor,True,True
+328,SPM-MC4-067,700005077,Set of Wearing Parts,Festo,DNC-40-PPV-A,Coating,Rubber,Festo DNC-40-PPV-A Set of Wearing Parts,True,True
+329,SPM-MC4-059,700005071,Smart Light Grids,Sick,SAR4-S028N3PS1T00,Coating,Electric,Sick SAR4-S028N3PS1T00 Smart Light Grids,True,True
+330,SPM-RHK-003,700005417,Fuse,Mersen,DN00UB69V200L,Slurry,Electric,Mersen DN00UB69V200L Fuse,True,True
+331,SPM-RHK-011,700005425,Standard Mounting Bracket,Keyence,PZ-B61,Slurry,Mechanical,Keyence PZ-B61 Standard Mounting Bracket,True,True
+332,SPM-SCR-022,700005471,Damper,Siemens,,Utility,Mechanical,Siemens Damper,False,True
+333,SPM-SCD-004,700005452,Relay,Phaenix,PLC-RSC-24DC/21,Slurry,Electric,Phaenix PLC-RSC-24DC/21 Relay,True,True
+334,SPM-PRE-022,700005381,Safety relay,Pilz,PNOZ X3 24VAC,Coating,Electric,Pilz PNOZ X3 24VAC Safety relay,True,True
+335,SPM-PRE-053,700005411,Servo Motor,Siemens,SQM45.295A9,Coating,Mechanical,Siemens SQM45.295A9 Servo Motor,True,True
+336,SPM-MC6-133,700005259,Connect Cable Area Sensor,,GL-RP5PS,Coating,Electric,GL-RP5PS Connect Cable Area Sensor,True,True
+337,SPM-MC6-078,700005212,Handle Module,Euchner,MGB-H-AA1A1-L-100619,Coating,Mechanical,Euchner MGB-H-AA1A1-L-100619 Handle Module,True,True
+338,SPM-MC6-107,700005238,Connecting Cable,Festo,NEBU-M8W3-K-5-LE3,Coating,Electric,Festo NEBU-M8W3-K-5-LE3 Connecting Cable,True,True
+339,SPM-MC6-108,700005239,Air Filter,SMC,AF30-03D-A,Coating,Pneumatic & Hydraulic,SMC AF30-03D-A Air Filter,True,True
+340,SPM-MC6-109,700005240,Filter Regulator,SMC,AW20-02BG-A,Coating,Pneumatic & Hydraulic,SMC AW20-02BG-A Filter Regulator,True,True
+341,SPM-MC6-110,700005241,T Coupler M12 Male,Murr Elektronik,7000-41201-0000000,Coating,Electric,Murr Elektronik 7000-41201-0000000 T Coupler M12 Male,False,True
+342,SPM-MC6-105,700005236,Simitic Net,Siemens,CP343,Coating,Electric,Siemens CP343 Simitic Net,True,True
+343,SPM-MC6-124,700005251,Photoelectric Switch,Micro Detector,QMRL/OP-OF,Coating,Electric,Micro Detector QMRL/OP-OF Photoelectric Switch,True,True
+344,SPM-MC6-083,700005217,Festo sub-base,Festo,EF542223 (VMPA-FB-AP-P1),Coating,Electric,Festo EF542223 (VMPA-FB-AP-P1) Festo sub-base,True,True
+345,SPM-MC6-084,700005218,Elastomer coupling,Festo,R+W,Coating,Mechanical,Festo R+W Elastomer coupling,False,True
+346,SPM-MC6-097,700005229,Safety Switch Unicode,Euchner,MGB-L2-ARA-BM3A1-M-R-121222,Coating,Electric,Euchner MGB-L2-ARA-BM3A1-M-R-121222 Safety Switch Unicode,True,True
+347,SPM-MC6-098,700005230,Control Unit,Siemens,6SL3040-0MA00-0AA1,Coating,Electric,Siemens 6SL3040-0MA00-0AA1 Control Unit,True,True
+348,SPM-MC6-099,700005231,Fillter Regulators,Festo,MS6-LFR-1/2-D6-C-R-V-AD7-AS,Coating,Pneumatic & Hydraulic,Festo MS6-LFR-1/2-D6-C-R-V-AD7-AS Fillter Regulators,True,True
+349,SPM-MC6-087,700005221,Double Motor Module,Siemens,6SL3120-2TE13-0AA4,Coating,Electric,Siemens 6SL3120-2TE13-0AA4 Double Motor Module,True,True
+350,SPM-MC6-088,700005222,Silencer,SMC,AN900-20,Coating,Pneumatic & Hydraulic,SMC AN900-20 Silencer,True,True
+351,SPM-MC6-089,700005223,Vacuum pump,Coax,P6010,Coating,Mechanical,Coax P6010 Vacuum pump,True,True
+352,SPM-MC4-129,700005137,"Actuator 10""",Ebro Valve,SBU-AD-M208-K211-M01,Coating,Mechanical,"Ebro Valve SBU-AD-M208-K211-M01 Actuator 10""",True,True
+353,SPM-MC4-036,700005050,Temp sensor,Endress Huaser,TMR31-A11ABBC1AAA,Coating,Electric,Endress Huaser TMR31-A11ABBC1AAA Temp sensor,True,True
+354,SPM-MC4-132,700005140,Temp Sensor,Endress+Hauser,TMR31-A1ECACAC1AAA,Coating,Mechanical,Endress+Hauser TMR31-A1ECACAC1AAA Temp Sensor,True,True
+355,SPM-CAL-028,700007107,Process Transmitter RMA42,Endress+Hauser,RMA42-1009/0,Coating,Electric,Endress+Hauser RMA42-1009/0 Process Transmitter RMA42,True,True
+356,SPM-CAL-031,700011935,Temp Transmitter,Endress+Hauser,TMT82-AAA1AD2TKTKA2+LA,Coating,Electric,Endress+Hauser TMT82-AAA1AD2TKTKA2+LA Temp Transmitter,True,True
+357,SPM-MC6-112,700005243,Fuse Robot Fanucth,Fanuc,A60L-0001-0290/LM50C,Coating,Electric,Fanuc A60L-0001-0290/LM50C Fuse Robot Fanucth,True,True
+358,SPM-MC6-113,700005244,Fuse Robot Fanucth,Fanuc,A60L-0001-0450/8RO,Coating,Electric,Fanuc A60L-0001-0450/8RO Fuse Robot Fanucth,True,True
+359,SPM-MC6-114,700005245,Fuse Robot Fanucth,Fanuc,A60L-0001-00046/1.0,Coating,Electric,Fanuc A60L-0001-00046/1.0 Fuse Robot Fanucth,True,True
+360,SPM-MC6-115,700005246,Fuse Robot Fanucth,Fanuc,A60L-0001-0175/0.5A,Coating,Electric,Fanuc A60L-0001-0175/0.5A Fuse Robot Fanucth,True,True
+361,SPM-MC6-116,700005247,Fuse Robot Fanucth,Fanuc,A60L-0001-0290/LM32C,Coating,Electric,Fanuc A60L-0001-0290/LM32C Fuse Robot Fanucth,True,True
+362,SPM-MC6-118,700005248,Solenoid Valve,Festo,VMPA1-M1H-E-PI,Coating,Pneumatic & Hydraulic,Festo VMPA1-M1H-E-PI Solenoid Valve,True,True
+363,SPM-MC6-135,700005261,Bus node,Festo,CPX-FB13,Coating,Electric,Festo CPX-FB13 Bus node,True,True
+364,SPM-MC6-136,700005262,ON/OFF Valve,Festo,MS6-EM1-1/2-S,Coating,Mechanical,Festo MS6-EM1-1/2-S ON/OFF Valve,True,True
+365,SPM-MC6-090,700005224,Pressure regulator,Festo,VPPM-6TA-L-1-F-0L6H-S1,Coating,Pneumatic & Hydraulic,Festo VPPM-6TA-L-1-F-0L6H-S1 Pressure regulator,True,True
+366,SPM-MC6-091,700005225,Router,Helmholz,700-873-WAN02,Coating,Electric,Helmholz 700-873-WAN02 Router,True,True
+367,SPM-MC6-094,700005226,DROSSEL.R.VENT,Festo,GRLA-1/4-B,Coating,Mechanical,Festo GRLA-1/4-B DROSSEL.R.VENT,True,True
+368,SPM-MC6-095,700005227,Piloted Check Valve,Festo,HGL-1/4-B,Coating,Mechanical,Festo HGL-1/4-B Piloted Check Valve,True,True
+369,SPM-MC6-096,700005228,Rubber Support,Misumi,AEXMF-D15-L10-V4,Coating,Rubber,Misumi AEXMF-D15-L10-V4 Rubber Support,True,True
+370,SPM-MC6-100,700005232,M8 Female 0 With Cable,Murr Elektronik,AWG 24,Coating,Electric,Murr Elektronik AWG 24 M8 Female 0 With Cable,True,True
+371,SPM-MC6-085,700005219,Rail guide,Festo,AWMU-30-750,Coating,Mechanical,Festo AWMU-30-750 Rail guide,True,True
+372,SPM-MC6-125,700005252,Photoelectric Switch,Micro Detector,QMRHD/OP-OF,Coating,Electric,Micro Detector QMRHD/OP-OF Photoelectric Switch,True,True
+373,SPM-MC6-126,700005253,Interlinking Block,Festo,CPX-GE-EV-S-7/8-5 POL,Coating,Electric,Festo CPX-GE-EV-S-7/8-5 POL Interlinking Block,True,True
+374,SPM-MC6-127,700005254,Power Supply Socket,Festo,NECU-G78G5-C2,Coating,Electric,Festo NECU-G78G5-C2 Power Supply Socket,True,True
+375,SPM-MC6-128,700005255,Drossel.R.Vent,Festo,GRLA-1/4-S-6-D,Coating,Pneumatic & Hydraulic,Festo GRLA-1/4-S-6-D Drossel.R.Vent,True,True
+376,SPM-MC6-129,700005256,Cylinder,Festo,DSBC-40-500-PPVA-N3 (1376667),Coating,Mechanical,Festo DSBC-40-500-PPVA-N3 (1376667) Cylinder,True,True
+377,SPM-MC6-130,700005257,Cylinder,Festo,DSBC-40-500-C-PPVA (1461995),Coating,Mechanical,Festo DSBC-40-500-C-PPVA (1461995) Cylinder,True,True
+378,SPM-MC6-131,700005258,Bus Node,Festo,CPX-FB13 (195740),Coating,Electric,Festo CPX-FB13 (195740) Bus Node,True,True
+379,SPM-MC6-111,700005242,Block Gate,Festo,Using for Holding Bladder,Coating,Electric,Festo Using for Holding Bladder Block Gate,False,True
+380,SPM-MC6-079,700005213,Lead Switch,Festo,SMT-8M-A-24V,Coating,Electric,Festo SMT-8M-A-24V Lead Switch,True,True
+381,SPM-MC6-080,700005214,"Diaphragm kit 1""",Brando,DB018/G,Coating,Pneumatic & Hydraulic,"Brando DB018/G Diaphragm kit 1""",True,True
+382,SPM-MC6-081,700005215,"Diaphragm kit 1.1/2""",Brando,DB114/C,Coating,Pneumatic & Hydraulic,"Brando DB114/C Diaphragm kit 1.1/2""",True,True
+383,SPM-MC6-082,700005216,"Diaphragm kit 2""",Brando,DB116/C,Coating,Pneumatic & Hydraulic,"Brando DB116/C Diaphragm kit 2""",True,True
+384,SPM-MC6-073,700005207,Solenoid Valve,Festo,VMPA1-M1H-J-PI 533343,Coating,Pneumatic & Hydraulic,Festo VMPA1-M1H-J-PI 533343 Solenoid Valve,True,True
+385,SPM-MC6-074,700005208,Solenoid Valve,Festo,VMPA2-M1H-J-PI,Coating,Pneumatic & Hydraulic,Festo VMPA2-M1H-J-PI Solenoid Valve,True,True
+386,SPM-MC6-075,700005209,Solenoid Valve,Festo,VMPA2-M1H-E-PI,Coating,Pneumatic & Hydraulic,Festo VMPA2-M1H-E-PI Solenoid Valve,True,True
+387,SPM-PRE-047,700005405,SOFT STAR,Festo,MS6-SV-1/2-D-10V24P-2M12-S0-AG (8038491),Coating,Pneumatic & Hydraulic,Festo MS6-SV-1/2-D-10V24P-2M12-S0-AG (8038491) SOFT STAR,True,True
+388,SPM-PRE-048,700005406,MICRO FILTER,Festo,MS6-LFM-1/2-A-R-V (530502),Coating,Pneumatic & Hydraulic,Festo MS6-LFM-1/2-A-R-V (530502) MICRO FILTER,True,True
+389,SPM-PRE-049,700005407,Membrane Dryer,Festo,MS6-LDM1-1/2-P20 (No.543644),Coating,Pneumatic & Hydraulic,Festo MS6-LDM1-1/2-P20 (No.543644) Membrane Dryer,True,True
+390,SPM-PRE-050,700005408,Filter Regulators,Festo,MS6-LFR-1/2-D6-C-R-V-AD1-AS (No.526490),Coating,Pneumatic & Hydraulic,Festo MS6-LFR-1/2-D6-C-R-V-AD1-AS (No.526490) Filter Regulators,True,True
+391,SPM-MC4-158,700007208,Cylinder Linear,Festo,DSL-32-80-270-P-A-S2-B,Coating,Mechanical,Festo DSL-32-80-270-P-A-S2-B Cylinder Linear,True,True
+392,SPM-MC6-153,700005968,Plug Socket With Cable,Festo,"KMYZ-9-24-M8-0,5-LED-B",Coating,Pneumatic & Hydraulic,"Festo KMYZ-9-24-M8-0,5-LED-B Plug Socket With Cable",True,True
+393,SPM-MC6-154,700005969,Plug Socket With Cable,Festo,"KMYZ-3-24-M8-0,5-LED-PUR",Coating,Pneumatic & Hydraulic,"Festo KMYZ-3-24-M8-0,5-LED-PUR Plug Socket With Cable",True,True
+394,SPM-MC6-155,700005971,Solenoid Valve,Festo,VMPA1-M1H-J-PI,Coating,Pneumatic & Hydraulic,Festo VMPA1-M1H-J-PI Solenoid Valve,True,True
+395,SPM-MC6-156,700005972,Self-aligning Rod Coupler,Festo,"FK-M20X1,5",Coating,Pneumatic & Hydraulic,"Festo FK-M20X1,5 Self-aligning Rod Coupler",True,True
+396,SPM-MC6-157,700005973,Flow Sensor,Festo,SFAH-5B-Q6S-PNLK-PNVBA-M8,Coating,Pneumatic & Hydraulic,Festo SFAH-5B-Q6S-PNLK-PNVBA-M8 Flow Sensor,True,True
+397,SPM-MC6-158,700005974,Solenoid Valve,Festo,MHE3-MS1H-3/2G-1/8,Coating,Pneumatic & Hydraulic,Festo MHE3-MS1H-3/2G-1/8 Solenoid Valve,True,True
+398,SPM-MC6-159,700005975,Proximity Switch,Festo,BES00J7,Coating,Pneumatic & Hydraulic,Festo BES00J7 Proximity Switch,True,True
+399,SPM-MC6-152,700005657,Cylinder,Festo,DSBC-40-200-PPVA-N3 (1376663),Coating,Pneumatic & Hydraulic,Festo DSBC-40-200-PPVA-N3 (1376663) Cylinder,True,True
+400,SPM-MCY-134,700005965,Proximity Switch,Festo,"SMT-8M-A-NO-24V-E-2,5-OE",Coating,Mechanical,"Festo SMT-8M-A-NO-24V-E-2,5-OE Proximity Switch",True,True
+401,SPM-MCY-150,700008925,Proximity Switch,Festo,"SME-8M-DS-24V-K-2,5-OE",Coating,Electric,"Festo SME-8M-DS-24V-K-2,5-OE Proximity Switch",True,True
+402,SPM-MCY-152,700008926,Proximity Switch,Festo,"SMT-8M-A-PS-24V-E-2,5-OE",Coating,Electric,"Festo SMT-8M-A-PS-24V-E-2,5-OE Proximity Switch",True,True
+403,SPM-MCY-153,700008927,Air Cylinder,Festo,DSBC-63-250-C-PPVA,Coating,Mechanical,Festo DSBC-63-250-C-PPVA Air Cylinder,True,True
+404,SPM-MC4-160,700008663,Rod Seal,Festo,DNU-50/63,Coating,Rubber,Festo DNU-50/63 Rod Seal,True,True
+405,SPM-MC6-172,700007299,"Diaphragm kit 1.1/2""",Brando,DB114/C,Coating,Pneumatic & Hydraulic,"Brando DB114/C Diaphragm kit 1.1/2""",True,True
+406,SPM-MC6-047,700005184,Pressure Switch,Festo,MPPE-3-1/4-6-420-B,Coating,Electric,Festo MPPE-3-1/4-6-420-B Pressure Switch,True,True
+407,SPM-MC6-048,700005185,Solenoid Valve,Festo,CPE14-M1BH-5/3G-1/8,Coating,Pneumatic & Hydraulic,Festo CPE14-M1BH-5/3G-1/8 Solenoid Valve,True,True
+408,SPM-MC6-050,700005186,Cylinder,Festo,DNC-40-500-PPV-A-KP,Coating,Mechanical,Festo DNC-40-500-PPV-A-KP Cylinder,True,True
+409,SPM-MC6-051,700005187,Cylinder,Festo,DNC-125-200-PPV-A-KP,Coating,Mechanical,Festo DNC-125-200-PPV-A-KP Cylinder,True,True
+410,SPM-MC6-053,700005189,Cylinder,Festo,DNC-63-200-PPV-A-KP,Coating,Mechanical,Festo DNC-63-200-PPV-A-KP Cylinder,True,True
+411,SPM-MC6-054,700005190,Cylinder,Festo,DNC-40-200-PPV-A-KP,Coating,Mechanical,Festo DNC-40-200-PPV-A-KP Cylinder,True,True
+412,SPM-MC6-055,700005191,Seal Kit,Festo,DNC-80-PPV-A,Coating,Mechanical,Festo DNC-80-PPV-A Seal Kit,True,True
+413,SPM-MC6-056,700005192,Cylinder,Festo,DSBC-80-200-PPVA-N3,Coating,Mechanical,Festo DSBC-80-200-PPVA-N3 Cylinder,True,True
+414,SPM-MC6-037,700005175,Solenoid Valve (Festo),Festo,JWEBH-5/2-D-1-ZSR-C,Coating,Pneumatic & Hydraulic,Festo JWEBH-5/2-D-1-ZSR-C Solenoid Valve (Festo),True,True
+415,SPM-MC6-038,700005176,Solenoid Valve (Festo),Festo,JMEBH-5/2-D-3-ZSR-C,Coating,Pneumatic & Hydraulic,Festo JMEBH-5/2-D-3-ZSR-C Solenoid Valve (Festo),True,True
+416,SPM-MC6-040,700005178,Cylinder,Festo,DFM-25-20-P-A-KF,Coating,Pneumatic & Hydraulic,Festo DFM-25-20-P-A-KF Cylinder,True,True
+417,SPM-MC6-041,700005179,Solenoid Valve,Festo,VSVA-M52-MZ-A1-1C1-ANP,Coating,Pneumatic & Hydraulic,Festo VSVA-M52-MZ-A1-1C1-ANP Solenoid Valve,True,True
+418,SPM-MC4-117,700005125,Connecting Cable,Festo,NEBU-M8G3-K-5-M8G3 (541349),Coating,Electric,Festo NEBU-M8G3-K-5-M8G3 (541349) Connecting Cable,True,True
+419,SPM-MC4-119,700005127,Pressure Switch,Festo,SDE5-D6-O-Q6-P-M8,Coating,Mechanical,Festo SDE5-D6-O-Q6-P-M8 Pressure Switch,True,True
+420,SPM-MC4-076,700005085,Cylinder (1463768),Festo,DSBC-50-130-PPSA-N3,Coating,Pneumatic & Hydraulic,Festo DSBC-50-130-PPSA-N3 Cylinder (1463768),True,True
+421,SPM-MC4-077,700005086,Cylinder (1463770),Festo,DSBC-50-130-C-PPSA,Coating,Pneumatic & Hydraulic,Festo DSBC-50-130-C-PPSA Cylinder (1463770),True,True
+422,SPM-MC4-112,700005120,1-Way Control Valve,Festo,VFOF-LE-BAH-G18-Q6,Coating,Pneumatic & Hydraulic,Festo VFOF-LE-BAH-G18-Q6 1-Way Control Valve,True,True
+423,SPM-MC4-121,700005129,Air Cylinder,Festo,DSNU-16-40-P-A-S6,Coating,Mechanical,Festo DSNU-16-40-P-A-S6 Air Cylinder,True,True
+424,SPM-MC4-056,700005068,Cylinder Linear Unit,Festo,DSL-32-80-270-P-A-S,Coating,Mechanical,Festo DSL-32-80-270-P-A-S Cylinder Linear Unit,True,True
+425,SPM-MC4-046,700005058,Set of Wearing Parts,Festo,DSBC/G-50,Coating,Rubber,Festo DSBC/G-50 Set of Wearing Parts,True,True
+426,SPM-MC4-035,700005049,Connecting cable,Festo,NEBU-M8G4-K-2.5-LE4,Coating,Electric,Festo NEBU-M8G4-K-2.5-LE4 Connecting cable,True,True
+427,SPM-MC4-023,700005039,Electrical inferface,Festo,CPV14-GE-PT-8/1564984,Coating,Electric,Festo CPV14-GE-PT-8/1564984 Electrical inferface,True,True
+428,SPM-MC4-024,700005040,Solenoid valve,Festo,CPV14-M1H-5JS-1/8,Coating,Pneumatic & Hydraulic,Festo CPV14-M1H-5JS-1/8 Solenoid valve,True,True
+429,SPM-MC4-030,700005044,Fitting insert 6 mm.(I),Festo,QS-1/8-6 Mat.(153002),Coating,Mechanical,Festo QS-1/8-6 Mat.(153002) Fitting insert 6 mm.(I),True,True
+430,SPM-MC4-031,700005045,Cylencer,Festo,UC-1/8,Coating,Pneumatic & Hydraulic,Festo UC-1/8 Cylencer,True,True
+431,SPM-MC4-063,700005074,Mounting Kit,Festo,SMBR-8-16,Coating,Mechanical,Festo SMBR-8-16 Mounting Kit,True,True
+432,SPM-MC4-064,700005075,Proximity Sensor,Festo,SMT-8M-PS-24V-E-0.3-L-M8D,Coating,Electric,Festo SMT-8M-PS-24V-E-0.3-L-M8D Proximity Sensor,True,True
+433,SPM-MC4-080,700005089,Set of Wearing Parts,Festo,DFM-25-PAABE4,Coating,Rubber,Festo DFM-25-PAABE4 Set of Wearing Parts,True,True
+434,SPM-MC4-081,700005090,Set of Wearing Parts,Festo,DSBC/G-125,Coating,Rubber,Festo DSBC/G-125 Set of Wearing Parts,True,True
+435,SPM-MC4-072,700005081,Proximity Senser,Festo,SMT-10M-PS-24V-E-0.3-L-M8D,Coating,Electric,Festo SMT-10M-PS-24V-E-0.3-L-M8D Proximity Senser,True,True
+436,SPM-MC4-073,700005082,Sensor Bracket,Festo,Sensor Bracket SL-DSM-B,Coating,Mechanical,Festo Sensor Bracket SL-DSM-B Sensor Bracket,True,True
+437,SPM-MC4-084,700005093,ROD Clevis,Festo,"SG-M12x1,25",Coating,Electric,"Festo SG-M12x1,25 ROD Clevis",True,True
+438,SPM-MC4-085,700005094,1-Way Control Valve,Festo,GRLA-1/8-QS-8-D,Coating,Mechanical,Festo GRLA-1/8-QS-8-D 1-Way Control Valve,True,True
+439,SPM-MC4-086,700005095,1-Way Control Valve,Festo,GRLA-1/8-QS-6-D,Coating,Mechanical,Festo GRLA-1/8-QS-6-D 1-Way Control Valve,True,True
+440,SPM-MC4-087,700005096,Proximity Switch,Festo,"SMT-8M-A-PS-24V-E-0,3-M8D",Coating,Electric,"Festo SMT-8M-A-PS-24V-E-0,3-M8D Proximity Switch",True,True
+441,SPM-MC4-088,700005097,Solenoid Coil,Festo,MSFG-24/42-50/60-OD,Coating,Pneumatic & Hydraulic,Festo MSFG-24/42-50/60-OD Solenoid Coil,True,True
+442,SPM-MC4-089,700005098,Quick Exhaush Valve,Festo,SEU-1/4,Coating,Pneumatic & Hydraulic,Festo SEU-1/4 Quick Exhaush Valve,True,True
+443,SPM-MC4-090,700005099,1-Way Control Valve,Festo,GRLA-M5-QS-4-D,Coating,Mechanical,Festo GRLA-M5-QS-4-D 1-Way Control Valve,True,True
+444,SPM-MC4-091,700005100,Fitting,Festo,CN-1/8-PK-4,Coating,Pneumatic & Hydraulic,Festo CN-1/8-PK-4 Fitting,True,True
+445,SPM-MC4-092,700005101,Solenoid Valve,Festo,MFH-3-1/4,Coating,Pneumatic & Hydraulic,Festo MFH-3-1/4 Solenoid Valve,True,True
+446,SPM-MC4-093,700005102,Solenoid Valve,Festo,MFH-3-1/8,Coating,Pneumatic & Hydraulic,Festo MFH-3-1/8 Solenoid Valve,True,True
+447,SPM-MC4-094,700005103,Pressure Transmitter,Festo,SPTW-P6R-G14-A-M12,Coating,Electric,Festo SPTW-P6R-G14-A-M12 Pressure Transmitter,True,True
+448,SPM-MC4-095,700005104,Push-In Fitting,Festo,QS-1/4-12,Coating,Pneumatic & Hydraulic,Festo QS-1/4-12 Push-In Fitting,True,True
+449,SPM-MC4-096,700005105,1-Way Control Valve,Festo,GRLA-1/4-QS-8-D,Coating,Mechanical,Festo GRLA-1/4-QS-8-D 1-Way Control Valve,True,True
+450,SPM-MC4-097,700005106,Switch Bracket,Festo,SMBR-8-16,Coating,Mechanical,Festo SMBR-8-16 Switch Bracket,True,True
+451,SPM-MC4-098,700005107,Guide Unit,Festo,DFM-50-80-P-A-KF,Coating,Mechanical,Festo DFM-50-80-P-A-KF Guide Unit,True,True
+452,SPM-MC4-099,700005108,Guide Unit,Festo,DFM-32-50-P-A-KF,Coating,Mechanical,Festo DFM-32-50-P-A-KF Guide Unit,True,True
+453,SPM-MC4-100,700005109,Semi-Rot Drive,Festo,DRRD-40-180-FH-Y9A,Coating,Mechanical,Festo DRRD-40-180-FH-Y9A Semi-Rot Drive,True,True
+454,SPM-MC4-101,700005110,Guide Unit,Festo,FENG-50-130-KF,Coating,Mechanical,Festo FENG-50-130-KF Guide Unit,True,True
+455,SPM-MC4-103,700005111,Lubricator,Festo,MS4-LOE-1/4-R-WBM,Coating,Pneumatic & Hydraulic,Festo MS4-LOE-1/4-R-WBM Lubricator,True,True
+456,SPM-MC4-104,700005112,Pressure regulator,Festo,VPPX-6L-L-1-G18-OL10H-S1,Coating,Pneumatic & Hydraulic,Festo VPPX-6L-L-1-G18-OL10H-S1 Pressure regulator,True,True
+457,SPM-MC4-105,700005113,Druck-Regelvent,Festo,LRPS-1/4-4,Coating,Pneumatic & Hydraulic,Festo LRPS-1/4-4 Druck-Regelvent,True,True
+458,SPM-MC4-106,700005114,Druck-Regelvent,Festo,LRPS-1/4-10,Coating,Pneumatic & Hydraulic,Festo LRPS-1/4-10 Druck-Regelvent,True,True
+459,SPM-MC4-107,700005115,Pressure regulator,Festo,MPPE-3-1/8-6-420-B,Coating,Pneumatic & Hydraulic,Festo MPPE-3-1/8-6-420-B Pressure regulator,True,True
+460,SPM-MC4-108,700005116,Centering Sleeve,Festo,ZBH-15,Coating,Mechanical,Festo ZBH-15 Centering Sleeve,True,True
+461,SPM-MC4-109,700005117,Pinch Valve,Festo,VZQA-C-M22U-25-TT-V4V4E-4,Coating,Mechanical,Festo VZQA-C-M22U-25-TT-V4V4E-4 Pinch Valve,True,True
+462,SPM-MC4-110,700005118,Guide Unit,Festo,FENG-50-50-KF,Coating,Mechanical,Festo FENG-50-50-KF Guide Unit,True,True
+463,SPM-MC4-012,700005033,Magnehelic,DWYE Magnelic,2000-1.5KG (S711056),Coating,Pneumatic & Hydraulic,DWYE Magnelic 2000-1.5KG (S711056) Magnehelic,True,True
+464,SPM-MC4-013,700005034,Solenoid Valve (JK-559651),Festo,CPV14-M1H-5JS-K-1/8,Coating,Pneumatic & Hydraulic,Festo CPV14-M1H-5JS-K-1/8 Solenoid Valve (JK-559651),True,True
+465,SPM-MC4-017,700005035,Soft start/Quick exhaust valve,Festo,MS6-SV-1/2-E-10V24-AG,Coating,Pneumatic & Hydraulic,Festo MS6-SV-1/2-E-10V24-AG Soft start/Quick exhaust valve,True,True
+466,SPM-MC4-020,700005036,Solenoid valve,Festo,MHE3-MS1H-3/2G-1/8-K,Coating,Pneumatic & Hydraulic,Festo MHE3-MS1H-3/2G-1/8-K Solenoid valve,True,True
+467,SPM-COM-052,700004934,Seal Cartridge,Festo,VAVC-Q2-M22U-25-E (3970093),Common Part,Rubber,Festo VAVC-Q2-M22U-25-E (3970093) Seal Cartridge,True,True
+468,SPM-COM-053,700004935,Flow Sensor,Festo,SFAH-5U-Q6S-PNLK-PNVBA-M8,Common Part,Electric,Festo SFAH-5U-Q6S-PNLK-PNVBA-M8 Flow Sensor,True,True
+469,SPM-MC4-115,700005123,Air Cylinder,Flu Tech,BORE 16x40 mm. Type 1280,Coating,Mechanical,Flu Tech BORE 16x40 mm. Type 1280 Air Cylinder,True,True
+470,SPM-MC6-062,700005198,"Valve Blow Out 1""",Mecair,VNP208 COIL 24V,Coating,Mechanical,"Mecair VNP208 COIL 24V Valve Blow Out 1""",True,True
+471,SPM-MC6-063,700005199,"Valve Blow Out 1.1/2""",Mecair,VNP214 COIL 24V,Coating,Mechanical,"Mecair VNP214 COIL 24V Valve Blow Out 1.1/2""",True,True
+472,SPM-MC6-064,700005200,"Valve Blow Out 2""",Mecair,VNP216 COIL 24V,Coating,Mechanical,"Mecair VNP216 COIL 24V Valve Blow Out 2""",True,True
+473,SPM-MCY-077,700005332,"Pinch Valve 1""",Flutech,F1-PINCH-VMP/EPDM-25,Coating,Pneumatic & Hydraulic,"Flutech F1-PINCH-VMP/EPDM-25 Pinch Valve 1""",True,True
+474,SPM-MCY-078,700005333,"Pinch Valve 2""",Flutech,F1-PINCH-VMP/EPDM-50,Coating,Pneumatic & Hydraulic,"Flutech F1-PINCH-VMP/EPDM-50 Pinch Valve 2""",True,True
+475,SPM-MC6-182,700011800,Kit Pinch Valve,FLUTECH,VMC DN25,Coating,Mechanical,FLUTECH VMC DN25 Kit Pinch Valve,True,True
+476,SPM-MC6-184,700012423,FPC Aluminum pinch valve,FLUTECH,"Size 1""",Coating,Mechanical,"FLUTECH Size 1"" FPC Aluminum pinch valve",True,True
+477,SPM-COM-047,700004929,Pinch Valve,Flu-tech,DN25 VMC PN10,Common Part,Mechanical,Flu-tech DN25 VMC PN10 Pinch Valve,True,True
+478,SPM-PRE-009,700005371,Super Rapid Fuse,Fuji Electric,BLC090-1 90A,Coating,Electric,Fuji Electric BLC090-1 90A Super Rapid Fuse,True,True
+479,SPM-TRN-016,700011450,Load Limiter,"Future State (Asia) Co.,Ltd.",ULS-125-V,Coating,Electric,"Future State (Asia) Co.,Ltd. ULS-125-V Load Limiter",True,True
+480,SPM-CAL-027,700007027,Shut Off Valve JSAV 50f50/1-0,Krom Schroder,JSAV 50f50/1-0,Coating,Mechanical,Krom Schroder JSAV 50f50/1-0 Shut Off Valve JSAV 50f50/1-0,True,True
+481,SPM-MC4-159,700007145,LAMTEC Fieldbus Module,LAMTEC,663R040-1PB,Coating,Mechanical,LAMTEC 663R040-1PB LAMTEC Fieldbus Module,True,True
+482,SPM-MC4-154,700006067,Kromchoder Gas Solenoid Valve,,VAS240R/NW,Coating,Electric,VAS240R/NW Kromchoder Gas Solenoid Valve,True,True
+483,SPM-MC4-151,700005658,Frequency Converter,Pepperl+Fuchs,KFU8-UFC-1.D,Coating,Electric,Pepperl+Fuchs KFU8-UFC-1.D Frequency Converter,True,True
+484,SPM-PRE-063,700005660,Rotary Drive,ARIS,Tensor S 20-30,Coating,Electric,ARIS Tensor S 20-30 Rotary Drive,True,True
+485,SPM-MC4-161,700008669,ERHARDT+LEIMER,General Technology,F31EA,Coating,Rubber,General Technology F31EA ERHARDT+LEIMER,True,True
+486,SPM-CAL-029,700009118,Process Transmitter,Endress+Hauser,RMA42-AAD,Coating,Electric,Endress+Hauser RMA42-AAD Process Transmitter,True,True
+487,SPM-CAL-021,700005652,Solenoid Valve,ASCO,3/2 8320G184 240/60,Coating,Pneumatic & Hydraulic,ASCO 3/2 8320G184 240/60 Solenoid Valve,True,True
+488,SPM-CAL-022,700005653,Pressure Switch,HONYWELL,C6097A2210,Coating,Electric,HONYWELL C6097A2210 Pressure Switch,True,True
+489,SPM-CAL-023,700005654,Motor Control Valve,HONYWELL,M7284 C1000 230V,Coating,Mechanical,HONYWELL M7284 C1000 230V Motor Control Valve,True,True
+490,SPM-MC4-149,700005655,Turbine Gas Valve,KROMSCHRODER,DM 25R25-40 Valve,Coating,Mechanical,KROMSCHRODER DM 25R25-40 Valve Turbine Gas Valve,True,True
+491,SPM-MC4-150,700005656,Safety Temperature Limite,JUMO,701150/8,Coating,Electric,JUMO 701150/8 Safety Temperature Limite,False,True
+492,SPM-PRE-065,700005662,Gas Train,DUNGS,MB-ZRDLE 407 B01 S20,Coating,Mechanical,DUNGS MB-ZRDLE 407 B01 S20 Gas Train,True,True
+493,SPM-CAL-020,700004817,Eucher Safety Switch Unicode,EUCHNER,CTP-L1-AP-U-HA-AZ-SA-124225,Coating,Electric,EUCHNER CTP-L1-AP-U-HA-AZ-SA-124225 Eucher Safety Switch Unicode,True,True
+494,SPM-MC6-183,700011844,Actuator,BAR,BAR AD-050/090-V22-H,Coating,Mechanical,BAR BAR AD-050/090-V22-H Actuator,True,True
+495,SPM-MCY-165,700011845,Actuator,BAR,BAR GD-125/090-F07/F10-Z20-D 90 Z20MM,Coating,Mechanical,BAR BAR GD-125/090-F07/F10-Z20-D 90 Z20MM Actuator,True,True
+496,SPM-CAL-032,700012361,Display & Operating Unit,Siemens,AZL52.00B1,Coating,Electric,Siemens AZL52.00B1 Display & Operating Unit,True,True
+497,SPM-MC4-180,700013846,Servo Contro Unit,Siemens,CU320-2 PN,Coating,Automation,Siemens CU320-2 PN Servo Contro Unit,True,True
+498,SPM-MC4-184,700014155,Analog Input module Energy Meter CT,Siemens,6ES7134-6PA01-0BU0,Coating,Electric,Siemens 6ES7134-6PA01-0BU0 Analog Input module Energy Meter CT,True,True
+499,SPM-MC4-185,700014156,BASE UNIT BU Type,Siemens,6ES7193-6BP00-0BU0,Coating,Electric,Siemens 6ES7193-6BP00-0BU0 BASE UNIT BU Type,True,True
+500,SPM-MC4-186,700014157,Lamtec FieldBus Module,Lamtech,663R040-1PB ET,Coating,Electric,Lamtech 663R040-1PB ET Lamtec FieldBus Module,True,True
+501,SPM-MCY-177,700014333,Proximity Sensor,Omron,TL-Q5MC1-Z,Coating,Electric,Omron TL-Q5MC1-Z Proximity Sensor,True,True
+502,SPM-PRE-064,,Gas Train,DUNGS,MB-ZRDLE 407 B01 S20,,,DUNGS MB-ZRDLE 407 B01 S20 Gas Train,True,True
+503,SPM-PRE-054,700005412,Gas Valve Actuator,Siemens,SKP25.403E2,Coating,Mechanical,Siemens SKP25.403E2 Gas Valve Actuator,True,True
+504,SPM-PRE-055,700005413,Gas Valve Actuator,Siemens,SKP15.000E2,Coating,Mechanical,Siemens SKP15.000E2 Gas Valve Actuator,True,True
+505,SPM-PRE-056,700005414,Pressure Switch (DUNGS),Dunge,LGW 50 A4,Coating,Pneumatic & Hydraulic,Dunge LGW 50 A4 Pressure Switch (DUNGS),True,True
+506,SPM-SCR-023,700005472,Flame Detector,Siemens,D-LX 100 UL-B1/M2/97Ex/MCG,Utility,Electric,Siemens D-LX 100 UL-B1/M2/97Ex/MCG Flame Detector,True,True
+507,SPM-SCR-024,700005473,Solenoid valve,NORGREN,Id.Nr.9710000,Utility,Pneumatic & Hydraulic,NORGREN Id.Nr.9710000 Solenoid valve,True,True
+508,SPM-SCR-025,700005474,Shut-Off Valve,EUCHNER,T72B-2GA-P1N,Utility,Mechanical,EUCHNER T72B-2GA-P1N Shut-Off Valve,True,True
+509,SPM-SCR-030,700005476,Gas Multibloc,DUNGS,MBC-300-VEF,Utility,Mechanical,DUNGS MBC-300-VEF Gas Multibloc,True,True
+510,SPM-SCR-031,700005477,Gasfilter,DUNGS,GF 4010/1,Utility,Other,DUNGS GF 4010/1 Gasfilter,True,True
+511,SPM-PRE-058,700005527,Actuator,Siemens,SQM48.497B9,Coating,Mechanical,Siemens SQM48.497B9 Actuator,True,True
+512,SPM-PRE-059,700005571,Pressure switch,DUNGS,LGW 10 A2,Coating,Mechanical,DUNGS LGW 10 A2 Pressure switch,True,True
+513,SPM-PRE-060,700005579,Gas Multi Bloc,DUNGS,MB-VEF 407 B01 S10,Coating,Electric,DUNGS MB-VEF 407 B01 S10 Gas Multi Bloc,True,True
+514,SPM-RHK-047,700005843,Inductive Sensor,Wenglor,I18H004,Slurry,Pneumatic & Hydraulic,Wenglor I18H004 Inductive Sensor,True,True
+515,SPM-COM-065,700005844,Through-Beam-Sensor,Wenglor,P1 KE003,Common Part,Electric,Wenglor P1 KE003 Through-Beam-Sensor,True,True
+516,SPM-MCY-130,700005845,PNP-NPN Converter,Wenglor,BG7V1P-N-2M,Coating,Mechanical,Wenglor BG7V1P-N-2M PNP-NPN Converter,True,True
+517,SPM-MCY-131,700005846,Reflex Sensor,Wenglor,HB03PBT7,Coating,Mechanical,Wenglor HB03PBT7 Reflex Sensor,True,True
+518,SPM-COM-066,700005847,Retro-Reflex Sensor,Wenglor,P1KL002,Common Part,Electric,Wenglor P1KL002 Retro-Reflex Sensor,True,True
+519,SPM-COM-067,700005848,Through-Beam-Sensor,Wenglor,P1 KS001,Common Part,Electric,Wenglor P1 KS001 Through-Beam-Sensor,True,True
+520,SPM-MCY-132,700005849,Inductive Sensor,Wenglor,I12G001,Coating,Mechanical,Wenglor I12G001 Inductive Sensor,True,True
+521,SPM-LSR-001,700005960,Power Supply,Gentech,JSC20-A12S05 5V/4A,Coating,Electric,Gentech JSC20-A12S05 5V/4A Power Supply,True,True
+522,SPM-LSR-002,700005961,Power Supply,Gentech,LD60W-DL-G,Coating,Electric,Gentech LD60W-DL-G Power Supply,True,True
+523,SPM-LSR-003,700005962,Power Supply,Gentech,LRS-350-24,Coating,Electric,Gentech LRS-350-24 Power Supply,True,True
+524,SPM-MC6-061,700005197,MFCPick&Placegripper-Nylon,SMC,SSK-092-01&02,Coating,Mechanical,SMC SSK-092-01&02 MFCPick&Placegripper-Nylon,True,True
+525,SPM-MC6-022,700005161,Power Module 240,Siemens,6SL3224-0BE22-2AA0,Coating,Electric,Siemens 6SL3224-0BE22-2AA0 Power Module 240,True,True
+526,SPM-MC6-059,700005195,Sliding film open series,,JUMO-11-30,Coating,Mechanical,JUMO-11-30 Sliding film open series,True,True
+527,SPM-MC4-078,700005087,Electronic Level Probe,ifm,LMT100,Coating,Electric,ifm LMT100 Electronic Level Probe,True,True
+528,SPM-MC6-019,700005158,SINAMIC Control Unit,Siemens,CU250S-2 USS,Coating,Electric,Siemens CU250S-2 USS SINAMIC Control Unit,True,True
+529,SPM-MC6-034,700005173,Oil Seal,Thaiphattanasin,90 x 110 x 12,Coating,Mechanical,Thaiphattanasin 90 x 110 x 12 Oil Seal,True,True
+530,SPM-COB-062,700004865,Photoelectric switch,Maxtech,QMRHD/0P-0F,Coating,Electric,Maxtech QMRHD/0P-0F Photoelectric switch,True,True
+531,SPM-HEM-058,700004999,Speed Counter,Fotek,SM20 Tachometer,Slurry,Electric,Fotek SM20 Tachometer Speed Counter,True,True
+532,SPM-HEM-011,700004957,Oil Seal,P.General,85 x 115 x 15,Slurry,Mechanical,P.General 85 x 115 x 15 Oil Seal,True,True
+533,SPM-HEM-012,700004958,Oil Seal,P.General,90 x 110 x 8,Slurry,Mechanical,P.General 90 x 110 x 8 Oil Seal,True,True
+534,SPM-HEM-051,700004992,Pressure Gauge,P.General,KC-F12,Slurry,Mechanical,P.General KC-F12 Pressure Gauge,True,True
+535,SPM-WAS-010,700005495,Pressure Switch,Danfoss,KPI35,Utility,Electric,Danfoss KPI35 Pressure Switch,True,True
+536,SPM-PRE-010,700005372,Panel Meter (Amp),Mitsubishi,SD-80A,Coating,Electric,Mitsubishi SD-80A Panel Meter (Amp),True,True
+537,SPM-PRE-014,700005375,Card Communication Unit,Mitsubishi,E53-CN03N2,Coating,Electric,Mitsubishi E53-CN03N2 Card Communication Unit,True,True
+538,SPM-PRE-017,700005377,Fuse,Bussmann,100A 690V,Coating,Electric,Bussmann 100A 690V Fuse,True,True
+539,SPM-PRE-006,700005368,Magnetic Contactor,Mitsubishi,S-N20 AC 100 V,Coating,Electric,Mitsubishi S-N20 AC 100 V Magnetic Contactor,True,True
+540,SPM-MC6-070,700005205,Motor Protective Circuit-breaker,Eaton,PKZM0-10,Coating,Mechanical,Eaton PKZM0-10 Motor Protective Circuit-breaker,True,True
+541,SPM-WAS-008,700005493,Gate Valve,A-Sung,U170215,Utility,Mechanical,A-Sung U170215 Gate Valve,True,True
+542,SPM-WAS-004,700005489,Filter,Goshu,BDM-05-20P,Utility,Mechanical,Goshu BDM-05-20P Filter,True,True
+543,SPM-WAS-005,700005490,Filter,Goshu,BDM-01-20P,Utility,Mechanical,Goshu BDM-01-20P Filter,True,True
+544,SPM-WAS-021,700005511,Float Switch,ShinMaywa,MS11,Utility,Electric,ShinMaywa MS11 Float Switch,True,True
+545,SPM-WAS-020,700005505,"Motor Valve 3Way 1""",Burkert,"3Way 1""",Utility,Mechanical,"Burkert 3Way 1"" Motor Valve 3Way 1""",True,True
+546,SPM-WAS-023,700005572,RC snubber circuit,ION Pure,W2 T2 91517,Utility,Electric,ION Pure W2 T2 91517 RC snubber circuit,True,True
+547,SPM-WAS-024,700005573,Control Panel for rectifiers-controllers G2,ION Pure,W2T388689,Utility,Electric,ION Pure W2T388689 Control Panel for rectifiers-controllers G2,True,True
+548,SPM-WAS-032,700009383,Filter Cloth S4414 (White),GOSHU,Size 800x800 mm. Open Type,Utility,Other,GOSHU Size 800x800 mm. Open Type Filter Cloth S4414 (White),True,True
+549,SPM-MCY-170,700012960,Pick Electromagnetic,,Dia 42.0,Coating,Electric,Dia 42.0 Pick Electromagnetic,True,True
+550,SPM-MCY-171,700012961,Pick Electromagnetic,,Dia 54.0,Coating,Electric,Dia 54.0 Pick Electromagnetic,True,True
+551,SPM-MCY-172,700012962,Pick Electromagnetic,,Dia 63.5,Coating,Electric,Dia 63.5 Pick Electromagnetic,True,True
+552,SPM-MC4-061,700005072,Harting Plug Female,Harting,Station 3+15,Coating,Electric,Harting Station 3+15 Harting Plug Female,True,True
+553,SPM-MC4-062,700005073,Harting Plug Male,Harting,Station 3+15,Coating,Electric,Harting Station 3+15 Harting Plug Male,True,True
+554,SPM-MC4-162,700009956,Iglidur G Flange Bearing,Igus,GFM-2023-16,Coating,Mechanical,Igus GFM-2023-16 Iglidur G Flange Bearing,True,True
+555,SPM-MC6-171,700007327,Safety Sensor,Leuze,SD4T20-300,Coating,Electric,Leuze SD4T20-300 Safety Sensor,True,True
+556,SPM-MC6-039,700005177,Safety Sensor,Leuze,SD4T20-300,Coating,Electric,Leuze SD4T20-300 Safety Sensor,True,True
+557,SPM-MCY-101,700005524,Inductive Sensor,Wenglor,I12H020,Coating,Electric,Wenglor I12H020 Inductive Sensor,True,True
+558,SPM-COM-060,700005525,Connector Line,Wenglor,M12x1.5-PIN-5M,Common Part,Electric,Wenglor M12x1.5-PIN-5M Connector Line,True,True
+559,SPM-COM-061,700005526,Connector Line,Wenglor,,Common Part,Electric,Wenglor Connector Line,False,True
+560,SPM-PRE-052,700005410,Battery Module,Innovation Test,6EP1935-6MF01,Coating,Electric,Innovation Test 6EP1935-6MF01 Battery Module,True,True
+561,SPM-COM-086,700008043,Cable  Profinet,Inovation Test,CAT 5 6XV1840 2AH10,Common Part,Electric,Inovation Test CAT 5 6XV1840 2AH10 Cable  Profinet,True,True
+562,SPM-COM-087,700008044,Cable  Profinet,Inovation Test,CAT 5 6XV1840 2AH10,Common Part,Electric,Inovation Test CAT 5 6XV1840 2AH10 Cable  Profinet,True,True
+563,SPM-COM-048,700004930,Busconnector,,6ES7972-0BA12-0XA0,Common Part,Electric,6ES7972-0BA12-0XA0 Busconnector,True,True
+564,SPM-COM-049,700004931,Busconnector,,6ES7972-0BB12-0XA0,Common Part,Electric,6ES7972-0BB12-0XA0 Busconnector,True,True
+565,SPM-COM-050,700004932,Busconnector,,6GK1 500-0FC10,Common Part,Electric,6GK1 500-0FC10 Busconnector,True,True
+566,SPM-COM-035,700004917,Simatic S7,Inovation Test,6ES7 323-1BH01-OAAD,Common Part,Electric,Inovation Test 6ES7 323-1BH01-OAAD Simatic S7,True,True
+567,SPM-COM-036,700004918,Connector Profinet,Inovation Test,17400251,Common Part,Electric,Inovation Test 17400251 Connector Profinet,False,True
+568,SPM-COM-037,700004919,Cable  Profinet,Inovation Test,Type A CAT 5 6XV1840 2AH10,Common Part,Electric,Inovation Test Type A CAT 5 6XV1840 2AH10 Cable  Profinet,True,True
+569,SPM-MC6-145,700005643,Analog Input Module,Siemens,6ES7 134-4GB11-0AB0,Coating,Electric,Siemens 6ES7 134-4GB11-0AB0 Analog Input Module,True,True
+570,SPM-MC6-146,700005644,Analog Output Module,Siemens,6ES7 135-4GB01-0AB0,Coating,Electric,Siemens 6ES7 135-4GB01-0AB0 Analog Output Module,True,True
+571,SPM-MC6-147,700005645,Digital  Input Module,Siemens,6ES7 131-4BD01-0AA0,Coating,Electric,Siemens 6ES7 131-4BD01-0AA0 Digital  Input Module,True,True
+572,SPM-MC6-148,700005646,Digital  Output Module,Siemens,6ES7 132-4BD32-0AA0,Coating,Electric,Siemens 6ES7 132-4BD32-0AA0 Digital  Output Module,True,True
+573,SPM-MC6-149,700005647,Relay Output Module,Siemens,6ES7 136-6RA00-0BF0,Coating,Electric,Siemens 6ES7 136-6RA00-0BF0 Relay Output Module,True,True
+574,SPM-MC6-150,700005648,Power Supply,Siemens,6EP1334-2BA20,Coating,Electric,Siemens 6EP1334-2BA20 Power Supply,True,True
+575,SPM-MC6-151,700005649,Interface Module,Siemens,6ES7 155-6AU01-0CN0,Coating,Electric,Siemens 6ES7 155-6AU01-0CN0 Interface Module,True,True
+576,SPM-MC4-153,,Digital Input Module,Siemens,6ES7 136-6BA01-0CA0,,,Siemens 6ES7 136-6BA01-0CA0 Digital Input Module,True,True
+577,SPM-WAS-037,700013643,Pressure Switch,JW Tech,DANFOSS KP1,Maintenance,Mechanical,JW Tech DANFOSS KP1 Pressure Switch,True,True
+578,SPM-WAS-038,700013644,Pressure Switch,JW Tech,DANFOSS KP2,Maintenance,Mechanical,JW Tech DANFOSS KP2 Pressure Switch,True,True
+579,SPM-DIS-010,700011505,Motor Agi R-115,Siemens,1LE0023-1CB23-4AB4 7.5KW,Slurry,Mechanical,Siemens 1LE0023-1CB23-4AB4 7.5KW Motor Agi R-115,True,True
+580,SPM-MC6-180,700010641,Circulation Fan X-122,Siemens,1LE0023-1DB23-4AB4 11KW,Coating,Mechanical,Siemens 1LE0023-1DB23-4AB4 11KW Circulation Fan X-122,True,True
+581,SPM-MC6-181,700010642,Circulation Fan X-112,Siemens,1LE0023-1EB43-4FB4 22KW,Coating,Mechanical,Siemens 1LE0023-1EB43-4FB4 22KW Circulation Fan X-112,True,True
+582,SPM-TRN-021,700011465,Servo Motor,K Power Engineering,1FL6042-2AF21-1MA1,Coating,Electric,K Power Engineering 1FL6042-2AF21-1MA1 Servo Motor,True,True
+583,SPM-TRN-022,700011466,PLC S7-1200,K Power Engineering,6ES7214-1AG40-0XB0,Coating,Electric,K Power Engineering 6ES7214-1AG40-0XB0 PLC S7-1200,True,True
+584,SPM-TRN-023,700011467,Digital Input SM 1221,K Power Engineering,6ES7221-1BH32-0XB0,Coating,Electric,K Power Engineering 6ES7221-1BH32-0XB0 Digital Input SM 1221,True,True
+585,SPM-TRN-024,700011468,Digital Output SM 1222,K Power Engineering,6ES7222-1HH32-0XB0,Coating,Electric,K Power Engineering 6ES7222-1HH32-0XB0 Digital Output SM 1222,True,True
+586,SPM-TRN-025,700011469,SINAMIC V90 with ProfiNet 0.75kW,K Power Engineering,6LS3210-5FB10-8UF0,Coating,Electric,K Power Engineering 6LS3210-5FB10-8UF0 SINAMIC V90 with ProfiNet 0.75kW,True,True
+587,SPM-STO-001,700013016,Motor,,1LE0021-1AB42-2FA4 2.2KW 4POLES 400VY 3Phase 50Hz,Slurry,Electric,1LE0021-1AB42-2FA4 2.2KW 4POLES 400VY 3Phase 50Hz Motor,True,True
+588,SPM-COM-095,700012108,PLC,Keyence,KV-7500,Common Part,Electric,Keyence KV-7500 PLC,True,True
+589,SPM-COM-096,700012109,I/O Unit,Keyence,KV-B8XTD,Common Part,Electric,Keyence KV-B8XTD I/O Unit,True,True
+590,SPM-COM-097,700012150,Programmable Display,Keyence,VT5-W07,Common Part,Electric,Keyence VT5-W07 Programmable Display,True,True
+591,SPM-COM-098,700012151,Ethernet Switch,Keyence,NE-Q05,Common Part,Electric,Keyence NE-Q05 Ethernet Switch,True,True
+592,SPM-LSR-004,700012152,Laser Marker,Keyence,MD-X2500A,Common Part,Electric,Keyence MD-X2500A Laser Marker,True,True
+593,SPM-MC6-132,,Area Safety Sensor,Keyence,GLR48H,,,Keyence GLR48H Area Safety Sensor,True,True
+594,SPM-RHK-007,700005421,Retro-Reflective M12,Keyence,PR-G61CBD,Slurry,Electric,Keyence PR-G61CBD Retro-Reflective M12,True,True
+595,SPM-RHK-016,700005430,Connector Cable M12,Keyence,OP-87635,Slurry,Electric,Keyence OP-87635 Connector Cable M12,True,True
+596,SPM-RHK-010,700005424,Reflector R-2L,Keyence,OP-84219,Slurry,Other,Keyence OP-84219 Reflector R-2L,True,True
+597,SPM-PRE-008,700005370,Area Sensor Bast ( T ),Keyence,PJ-50A,Coating,Electric,Keyence PJ-50A Area Sensor Bast ( T ),True,True
+598,SPM-CLN-006,700004825,Photoelectric Sensor,Keyence,PZ-G5xN/G5xP,Coating,Electric,Keyence PZ-G5xN/G5xP Photoelectric Sensor,True,True
+599,SPM-RHK-054,700012437,Bearing,SKF,SKF UCFL 204,Slurry,Mechanical,SKF SKF UCFL 204 Bearing,True,True
+600,SPM-MC6-071,700005206,Standard Auxiliary Contact,Eaton,PKZM0-10,Coating,Electric,Eaton PKZM0-10 Standard Auxiliary Contact,True,True
+601,SPM-MC6-002,700005144,Contactor,ETON,DILM7-01,Coating,Electric,ETON DILM7-01 Contactor,True,True
+602,SPM-MC6-011,700005150,MICO Auxilary Circuit Switch,Murr Elektronik,46041-3.01-3.03,Coating,Electric,Murr Elektronik 46041-3.01-3.03 MICO Auxilary Circuit Switch,False,True
+603,SPM-MC4-070,700005080,Inductive Proximity Switch,Micro Detector,IndMD-AC1/AP-3A,Coating,Electric,Micro Detector IndMD-AC1/AP-3A Inductive Proximity Switch,True,True
+604,SPM-RHK-019,700005433,Fuse,Bussmann,170M1420,Slurry,Mechanical,Bussmann 170M1420 Fuse,True,True
+605,SPM-WAS-025,700005574,Transmitter,Mettler Toledo,M200 1-Chanel 1/4 Din,Utility,Electric,Mettler Toledo M200 1-Chanel 1/4 Din Transmitter,True,True
+606,SPM-MCY-052,700005307,Weight Transm. Precision ETIP,Mettler Toledo,ACT350,Coating,Electric,Mettler Toledo ACT350 Weight Transm. Precision ETIP,True,True
+607,SPM-MCY-060,700005315,Cable 12p 5.0m.,Mettler Toledo,(M12f90 DN-Open) 30295821,Coating,Electric,Mettler Toledo (M12f90 DN-Open) 30295821 Cable 12p 5.0m.,True,True
+608,SPM-MCY-057,700005312,Weighing Pan WKC Square Threaded SS EN,Mettler Toledo,30315518,Coating,Mechanical,Mettler Toledo 30315518 Weighing Pan WKC Square Threaded SS EN,False,True
+609,SPM-MCY-065,700005320,Weight Module,Mettler Toledo,WKC6002C,Coating,Electric,Mettler Toledo WKC6002C Weight Module,True,True
+610,SPM-WAS-022,700005553,Conductivity sensor,Mettler Toledo,58 031 404,Utility,Electric,Mettler Toledo 58 031 404 Conductivity sensor,False,True
+611,SPM-WAS-019,700005504,ORP Sensor,Mettler Toledo,Easy Sensor ORP 41,Utility,Electric,Mettler Toledo Easy Sensor ORP 41 ORP Sensor,True,True
+612,SPM-WAS-009,700005494,pH Sensor,Mettler,Easy Sensor pH32,Utility,Electric,Mettler Easy Sensor pH32 pH Sensor,True,True
+613,SPM-WAS-013,700005498,Connection Cable,Mettler Toledo,Ak9/3m,Utility,Electric,Mettler Toledo Ak9/3m Connection Cable,True,True
+614,SPM-WAS-034,700009894,Cable,Mettler Toledo,ISM 4Wire 25ft 7.6m,Utility,Other,Mettler Toledo ISM 4Wire 25ft 7.6m Cable,True,True
+615,SPM-WAS-029,700006212,pH Sensor,Mettler Toledo,InPro4260i/SG/120 ISM,Utility,Mechanical,Mettler Toledo InPro4260i/SG/120 ISM pH Sensor,True,True
+616,SPM-HEM-065,700005006,Unframad Mesh,Misimi,PMY18Y-M-330,Slurry,Other,Misimi PMY18Y-M-330 Unframad Mesh,True,True
+617,SPM-MC6-058,700005194,Rubber Gripper,MISMI,RBZF-D22-V8-H7-G12-L19,Coating,Mechanical,MISMI RBZF-D22-V8-H7-G12-L19 Rubber Gripper,True,True
+618,SPM-MC4-130,700005138,Economy Belt,Misumi,C-TTBN610T5-100,Coating,Mechanical,Misumi C-TTBN610T5-100 Economy Belt,True,True
+619,SPM-MC4-131,700005139,Timing Belt T10,Misumi,TTBUV660T10-250,Coating,Mechanical,Misumi TTBUV660T10-250 Timing Belt T10,True,True
+620,SPM-CLN-016,700005966,Speed Control Motor,Orientalmotor,USP560-2E2,Coating,Mechanical,Orientalmotor USP560-2E2 Speed Control Motor,True,True
+621,SPM-MCY-133,700005964,Stopper Bolt M10,Misumi,UNBH10-60,Coating,Mechanical,Misumi UNBH10-60 Stopper Bolt M10,True,True
+622,SPM-NAU-020,700009645,Rotary Joint,SHOWA GIKEN,ASP-1-10A,Slurry,Mechanical,SHOWA GIKEN ASP-1-10A Rotary Joint,True,True
+623,SPM-STM-006,700009817,X-Axis Atage,,XSLC60,Coating,Mechanical,XSLC60 X-Axis Atage,True,True
+624,SPM-LIG-001,700005029,Rollers,Misumi,MICRO-122-200,Coating,Electric,Misumi MICRO-122-200 Rollers,True,True
+625,SPM-LIG-002,700005030,Slim panel,Misumi,PN0025 ROUND,Coating,Electric,Misumi PN0025 ROUND Slim panel,True,True
+626,SPM-MC4-068,700005078,Rubber Gripper,Misumi,RBZC-D22-V8-H7-G12-L19,Coating,Rubber,Misumi RBZC-D22-V8-H7-G12-L19 Rubber Gripper,True,True
+627,SPM-COB-065,700004867,Belt,Misumi,HTBN400S5M-150,Coating,Mechanical,Misumi HTBN400S5M-150 Belt,True,True
+628,SPM-COB-066,700004868,Belt,Misumi,HTBN288S3M-150,Coating,Mechanical,Misumi HTBN288S3M-150 Belt,True,True
+629,SPM-COB-035,700004852,Support Unit Bearing,Misumi,BRWN15,Coating,Mechanical,Misumi BRWN15 Support Unit Bearing,True,True
+630,SPM-COB-036,700004853,AB Softber,Misumi,FL-1620H,Coating,Mechanical,Misumi FL-1620H AB Softber,True,True
+631,SPM-COB-037,700004854,Free Joint,CKD,FJ-L-129716G,Coating,Mechanical,CKD FJ-L-129716G Free Joint,True,True
+632,SPM-COB-045,700004858,Ball Screw,Misumi,BSSE2010L-500-KC15,Coating,Mechanical,Misumi BSSE2010L-500-KC15 Ball Screw,True,True
+633,SPM-COM-042,700004924,Limit Switch,,WLCA12-N,Common Part,Electric,WLCA12-N Limit Switch,True,True
+634,SPM-DIS-004,700004943,Solenoid valve,SMC,SY5120-5DZ-01,Slurry,Pneumatic & Hydraulic,SMC SY5120-5DZ-01 Solenoid valve,True,True
+635,SPM-COB-088,700004887,LM Guide Block,THK,SSR20XV1 (GK) BLOCK,Coating,Mechanical,THK SSR20XV1 (GK) BLOCK LM Guide Block,True,True
+636,SPM-DIS-007,700004946,Cylinder,SMC,CM2E20-50Z,Slurry,Pneumatic & Hydraulic,SMC CM2E20-50Z Cylinder,True,True
+637,SPM-COM-016,700004899,Pin Lock Clean Skin,Misumi,GDX10LW-6-SUS,Common Part,Mechanical,Misumi GDX10LW-6-SUS Pin Lock Clean Skin,True,True
+638,SPM-COM-024,700004907,Solenoid Valve,SMC,VXZ242FG 15mm.,Common Part,Pneumatic & Hydraulic,SMC VXZ242FG 15mm. Solenoid Valve,True,True
+639,SPM-COM-025,700004908,Solenoid Valve,SMC,VXZ262KZ2G 25mm.,Common Part,Pneumatic & Hydraulic,SMC VXZ262KZ2G 25mm. Solenoid Valve,True,True
+640,SPM-COM-033,700004915,Regulator,SMC,AR20-N01B-Z-A,Common Part,Mechanical,SMC AR20-N01B-Z-A Regulator,True,True
+641,SPM-COB-032,700004850,Lenior Guide,Misumi,SX2R24G-460,Coating,Mechanical,Misumi SX2R24G-460 Lenior Guide,True,True
+642,SPM-RHK-009,700005423,Limit Switch,Omron,D4B-4170N,Slurry,Electric,Omron D4B-4170N Limit Switch,True,True
+643,SPM-RHK-006,700005420,Photoelectric Switch,Omron,E3Z-T81 2M,Slurry,Electric,Omron E3Z-T81 2M Photoelectric Switch,True,True
+644,SPM-NAU-009,700005354,Regulator,SMC,AW40-O4BDG-B,Slurry,Pneumatic & Hydraulic,SMC AW40-O4BDG-B Regulator,True,True
+645,SPM-MCY-008,700005271,Linear Bush,Misumi,LMK 20LUU,Coating,Mechanical,Misumi LMK 20LUU Linear Bush,True,True
+646,SPM-MCY-010,700005273,Linear Bush,Misumi,LMF 30UU,Coating,Mechanical,Misumi LMF 30UU Linear Bush,True,True
+647,SPM-MCY-011,700005274,Linear Bush,Misumi,LMF 20UU,Coating,Mechanical,Misumi LMF 20UU Linear Bush,True,True
+648,SPM-MCY-012,700005275,Linear Bush,Misumi,LMF 50LUU,Coating,Mechanical,Misumi LMF 50LUU Linear Bush,True,True
+649,SPM-MCY-013,700005276,Linear Bush,Misumi,LMF 40UU,Coating,Mechanical,Misumi LMF 40UU Linear Bush,True,True
+650,SPM-MC6-069,700005204,Sanitary Fiting Seal,Misumi,SNGSF1.5S,Coating,Mechanical,Misumi SNGSF1.5S Sanitary Fiting Seal,True,True
+651,SPM-MC6-187,700012860,Rubber Gripper Dia.30,Misumi,RBXA-D30-L16-V19,Coating,Mechanical,Misumi RBXA-D30-L16-V19 Rubber Gripper Dia.30,True,True
+652,SPM-MC6-186,700012862,Rubber Gripper Dia.35,Misumi,RBXN-D35-L16-V19,Coating,Mechanical,Misumi RBXN-D35-L16-V19 Rubber Gripper Dia.35,True,True
+653,SPM-RHK-051,700011511,Linear Bushing,Misumi,LMH20,Slurry,Mechanical,Misumi LMH20 Linear Bushing,True,True
+654,SPM-STM-007,700010693,Single Axis Stage,Misumi,XWG90,Coating,Mechanical,Misumi XWG90 Single Axis Stage,True,True
+655,SPM-TRN-008,700011442,Timing Belts S8M,Misumi,C-HTBN816S8M-250,Coating,Mechanical,Misumi C-HTBN816S8M-250 Timing Belts S8M,True,True
+656,SPM-TRN-009,700011443,Linear Guide,Misumi,C-ELGW25-340,Coating,Mechanical,Misumi C-ELGW25-340 Linear Guide,True,True
+657,SPM-TRN-010,700011444,Linear Guide Block,Misumi,C-ELGWB25,Coating,Mechanical,Misumi C-ELGWB25 Linear Guide Block,True,True
+658,SPM-TRN-011,700011445,Linear Guide,Misumi,C-HLGWHA30-1350-B2-1,Coating,Mechanical,Misumi C-HLGWHA30-1350-B2-1 Linear Guide,True,True
+659,SPM-TRN-012,700011446,Linear Guide Block,Misumi,C-HLGWHAB30,Coating,Mechanical,Misumi C-HLGWHAB30 Linear Guide Block,True,True
+660,SPM-TRN-013,700011447,Linear Bush,Misumi,C-LMH25UU,Coating,Mechanical,Misumi C-LMH25UU Linear Bush,True,True
+661,SPM-TRN-014,700011448,Flanged Linear Bush,Misumi,LHMSWMF25L,Coating,Mechanical,Misumi LHMSWMF25L Flanged Linear Bush,True,True
+662,SPM-TRN-015,700011449,Special Foam Polyurethane,Misumi,SOFRASA-325-50-5,Coating,Rubber,Misumi SOFRASA-325-50-5 Special Foam Polyurethane,True,True
+663,SPM-COB-083,700004882,AC Servo Motor,,HG-KR43B,Coating,Mechanical,HG-KR43B AC Servo Motor,True,True
+664,SPM-COB-084,700004883,ENCODER CABLE,NETZSCH,SC-HAJ3ENM1C03 M+A1,Coating,Mechanical,NETZSCH SC-HAJ3ENM1C03 M+A1 ENCODER CABLE,True,True
+665,SPM-COB-085,700004884,AMPLIFIER SLIDE,NETZSCH,SC-J2SJ4CSET-01,Coating,Mechanical,NETZSCH SC-J2SJ4CSET-01 AMPLIFIER SLIDE,True,True
+666,SPM-COB-086,700004885,Motor Side Power,Mitsubishi,SC-J2SJ4PWBK-1C03M-A1,Coating,Mechanical,Mitsubishi SC-J2SJ4PWBK-1C03M-A1 Motor Side Power,True,True
+667,SPM-COB-087,700004886,Servo Amplifier,Mitsubishi,MR-J4-40A,Coating,Mechanical,Mitsubishi MR-J4-40A Servo Amplifier,True,True
+668,SPM-COB-018,700004842,AC Servo Motor,Mitsubishi,HC-MF43,Coating,Electric,Mitsubishi HC-MF43 AC Servo Motor,True,True
+669,SPM-COB-019,700004843,Sequencer Power Unit,Mitsubishi,A1S61PN,Coating,Electric,Mitsubishi A1S61PN Sequencer Power Unit,True,True
+670,SPM-COB-020,700004844,Sequencer Output Unit,Mitsubishi,A1SY40,Coating,Electric,Mitsubishi A1SY40 Sequencer Output Unit,True,True
+671,SPM-COB-021,700004845,Sequencer Output Unit,Mitsubishi,A1SY41,Coating,Electric,Mitsubishi A1SY41 Sequencer Output Unit,True,True
+672,SPM-COB-022,700004846,Position Unit,Mitsubishi,A1SD75-P2-S3,Coating,Electric,Mitsubishi A1SD75-P2-S3 Position Unit,True,True
+673,SPM-COB-023,700004847,D/A Unit,Mitsubishi,A1S60DA,Coating,Electric,Mitsubishi A1S60DA D/A Unit,True,True
+674,SPM-COB-026,700004848,CPU Unit,Mitsubishi,A2USHCPU-S1,Coating,Electric,Mitsubishi A2USHCPU-S1 CPU Unit,True,True
+675,SPM-COB-031,700004849,Servo Amplifile,Mitsubishi,MR-J2S-40B,Coating,Electric,Mitsubishi MR-J2S-40B Servo Amplifile,True,True
+676,SPM-COB-015,700004840,AC Servo Amplifier,Mitsubishi,MR-J2S-40A,Coating,Electric,Mitsubishi MR-J2S-40A AC Servo Amplifier,True,True
+677,SPM-WAS-001,700005486,Magnetic Contactor,Mitsubishi,S-T10,Utility,Mechanical,Mitsubishi S-T10 Magnetic Contactor,True,True
+678,SPM-DUS-003,700011241,Filter Cartridge,Morerich,OD324 x ID213 x H660 mm.,Utility,Other,Morerich OD324 x ID213 x H660 mm. Filter Cartridge,True,True
+679,SPM-DUS-004,700011235,Pocket Filter,Morerich,T1000 W250xL570xH470 mm.,Coating,Other,Morerich T1000 W250xL570xH470 mm. Pocket Filter,True,True
+680,SPM-MC4-164,700012022,Pocket bag filter,Morerich,W287MMxH287MMxD381mm,Coating,Mechanical,Morerich W287MMxH287MMxD381mm Pocket bag filter,True,True
+681,SPM-MC4-165,700012023,Pocket bag filter,U Source,W592MMxH592MMxD381mm,Coating,Mechanical,U Source W592MMxH592MMxD381mm Pocket bag filter,True,True
+682,SPM-RHK-001,700005415,SCR,Advanced Energy,Thyro-A 1A 400-100 HRLP3,Slurry,Electric,Advanced Energy Thyro-A 1A 400-100 HRLP3 SCR,True,True
+683,SPM-DUS-001,700004949,Filter Bag,Nederman,PTFE/PTFE754MPS CS30,Utility,Mechanical,Nederman PTFE/PTFE754MPS CS30 Filter Bag,True,True
+684,SPM-HEM-084,700005023,Switch Amplifier,Netzsch,KFD2-SR2-Ex2.W (No.132960),Slurry,Electric,Netzsch KFD2-SR2-Ex2.W (No.132960) Switch Amplifier,True,True
+685,SPM-HEM-046,700004987,Centering,Netzsch,140013190,Slurry,Mechanical,Netzsch 140013190 Centering,False,True
+686,SPM-HEM-047,700004988,Flat Seal,Netzsch,,Slurry,Rubber,Netzsch Flat Seal,False,True
+687,SPM-HEM-048,700004989,"Gap Tube 0,6",Netzsch,140013189,Slurry,Mechanical,"Netzsch 140013189 Gap Tube 0,6",False,True
+688,SPM-HEM-049,700004990,Grinding Disc (NETZSCH),Netzsch,140002223,Slurry,Mechanical,Netzsch 140002223 Grinding Disc (NETZSCH),False,True
+689,SPM-HEM-044,700004985,RFID for DCS,Turck,TN-M30-H1147,Slurry,Electric,Turck TN-M30-H1147 RFID for DCS,True,True
+690,SPM-HEM-026,700004967,O-Ring,Netzsch,516697,Slurry,Mechanical,Netzsch 516697 O-Ring,False,True
+691,SPM-HEM-027,700004968,O-Ring,Netzsch,517220,Slurry,Mechanical,Netzsch 517220 O-Ring,False,True
+692,SPM-HEM-028,700004969,O-Ring,Netzsch,517453,Slurry,Mechanical,Netzsch 517453 O-Ring,False,True
+693,SPM-HEM-029,700004970,O-Ring,Netzsch,516960,Slurry,Mechanical,Netzsch 516960 O-Ring,False,True
+694,SPM-HEM-030,700004971,O-Ring,Netzsch,517553,Slurry,Mechanical,Netzsch 517553 O-Ring,False,True
+695,SPM-HEM-031,700004972,O-Ring,Netzsch,517155,Slurry,Mechanical,Netzsch 517155 O-Ring,False,True
+696,SPM-HEM-032,700004973,O-Ring,Netzsch,545034,Slurry,Mechanical,Netzsch 545034 O-Ring,False,True
+697,SPM-HEM-033,700004974,O-Ring,Netzsch,517372,Slurry,Mechanical,Netzsch 517372 O-Ring,False,True
+698,SPM-HEM-034,700004975,O-Ring,Netzsch,516613,Slurry,Mechanical,Netzsch 516613 O-Ring,False,True
+699,SPM-HEM-035,700004976,Ring,Netzsch,422277,Slurry,Mechanical,Netzsch 422277 Ring,False,True
+700,SPM-HEM-036,700004977,Screen plate,Netzsch,1457810,Slurry,Mechanical,Netzsch 1457810 Screen plate,False,True
+701,SPM-HEM-037,700004978,Adapter,Netzsch,1457809,Slurry,Mechanical,Netzsch 1457809 Adapter,False,True
+702,SPM-HEM-038,700004979,Zirconium oxide beade,Netzsch,1.4 - 1.6 mm.,Slurry,Other,Netzsch 1.4 - 1.6 mm. Zirconium oxide beade,True,True
+703,SPM-HEM-039,700004980,Temperatuer guage,Netzsch,"3"" 100c",Slurry,Mechanical,"Netzsch 3"" 100c Temperatuer guage",True,True
+704,SPM-HEM-040,700004981,Temp sensor,PM Primus,PT-100,Slurry,Electric,PM Primus PT-100 Temp sensor,True,True
+705,SPM-HEM-041,700004982,Screen Plate,Netzsch,Mat.145723 GRD080 574.50/S,Slurry,Mechanical,Netzsch Mat.145723 GRD080 574.50/S Screen Plate,True,True
+706,SPM-HEM-042,700004983,Rubber hose Z-111,Bredel,1.5 Inch,Slurry,Rubber,Bredel 1.5 Inch Rubber hose Z-111,True,True
+707,SPM-HEM-106,700007324,Zirconium Oxide Beade,Netzsch,1.4-1.6 mm.,Slurry,Other,Netzsch 1.4-1.6 mm. Zirconium Oxide Beade,True,True
+708,SPM-COM-028,700004911,"Diaphragm Pump 1/2"" ALMATEC",Amatech,E15EEE,Common Part,Pneumatic & Hydraulic,"Amatech E15EEE Diaphragm Pump 1/2"" ALMATEC",True,True
+709,SPM-COM-029,700004912,"Diaphragm Pump 1"" ALMATEC",Amatech,E25EEE,Common Part,Pneumatic & Hydraulic,"Amatech E25EEE Diaphragm Pump 1"" ALMATEC",True,True
+710,SPM-COB-076,700004877,Proximity Switch,Omron,E2E-X3D1-N,Coating,Electric,Omron E2E-X3D1-N Proximity Switch,True,True
+711,SPM-COB-077,700004878,Proximity Switch,Omron,E2E-X3D2-N,Coating,Electric,Omron E2E-X3D2-N Proximity Switch,True,True
+712,SPM-RHK-012,700005426,Optical Fiber Photoelectric Sensor,Omron,E3X-AD51 2M,Slurry,Electric,Omron E3X-AD51 2M Optical Fiber Photoelectric Sensor,True,True
+713,SPM-RHK-014,700005428,Photoelectric Switch Fiber Unit,Omron,E32-D21,Slurry,Electric,Omron E32-D21 Photoelectric Switch Fiber Unit,True,True
+714,SPM-COM-056,700005507,Proximiter Sensor,Omron,E2E-X2D2-N,Common Part,Electric,Omron E2E-X2D2-N Proximiter Sensor,True,True
+715,SPM-PRE-051,700005409,Ignition Transformer,BRAHMA,TC1LVCSF,Coating,Electric,BRAHMA TC1LVCSF Ignition Transformer,True,True
+716,SPM-CAL-026,700007026,Shut of  Valve,MAXON,075SMA11-AA11-CC22-A0,Coating,Mechanical,MAXON 075SMA11-AA11-CC22-A0 Shut of  Valve,True,True
+717,SPM-CAL-013,700004810,Pressure Switch,Kromschorder,DG 50U-3,Coating,Electric,Kromschorder DG 50U-3 Pressure Switch,True,True
+718,SPM-CAL-014,700005669,Gas Train Valve,Kromschorder,VAS125R-NWSR,Coating,Mechanical,Kromschorder VAS125R-NWSR Gas Train Valve,True,True
+719,SPM-CAL-015,700004812,Burner Transformer,Siemens,AGG5.220,Coating,Electric,Siemens AGG5.220 Burner Transformer,True,True
+720,SPM-CAL-016,700004813,Flame Detector,Siemens,QRA75.A27,Coating,Electric,Siemens QRA75.A27 Flame Detector,True,True
+721,SPM-PRE-040,700005398,Riello Gas Burner,Siemens,GS 10,Coating,Electric,Siemens GS 10 Riello Gas Burner,True,True
+722,SPM-PRE-015,700005376,Control Burner (SEIMENS),Siemens,LME22.233C2,Coating,Electric,Siemens LME22.233C2 Control Burner (SEIMENS),True,True
+723,SPM-PRE-030,700005388,Ignition Electrode,Oven and Furness,1-Pin,Coating,Electric,Oven and Furness 1-Pin Ignition Electrode,True,True
+724,SPM-PRE-031,700005389,Ignition Electrode,Oven and Furness,2-Pin,Coating,Electric,Oven and Furness 2-Pin Ignition Electrode,True,True
+725,SPM-PRE-061,700005589,Spark ignition,Oven&Furness,,Coating,Electric,Oven&Furness Spark ignition,False,True
+726,SPM-CAL-024,700005661,Electrode,MAXON,Part No.25663,Coating,Other,MAXON Part No.25663 Electrode,True,True
+727,SPM-PRE-069,700010644,Collegamento Lead,RIELLO,(3008453) No.13,Coating,Electric,RIELLO (3008453) No.13 Collegamento Lead,True,True
+728,SPM-PRE-070,700010645,Collegamento Lead,RIELLO,(3002575) No.14,Coating,Electric,RIELLO (3002575) No.14 Collegamento Lead,True,True
+729,SPM-PRE-071,700010647,Probe,RIELLO,(3006708) No.15,Coating,Electric,RIELLO (3006708) No.15 Probe,True,True
+730,SPM-PRE-072,700010648,Electrodo,RIELLO,(3006943) No.16,Coating,Electric,RIELLO (3006943) No.16 Electrodo,True,True
+731,SPM-DIS-008,700004947,Impeller,,ID89x340,Slurry,Mechanical,ID89x340 Impeller,True,True
+732,SPM-HEM-061,700005002,Grinding Disc P30,,P30,Slurry,Mechanical,P30 Grinding Disc P30,True,True
+733,SPM-HEM-072,700005013,Turbide Screen,P.General,P-20,Slurry,Mechanical,P.General P-20 Turbide Screen,True,True
+734,SPM-HEM-073,700005014,Turbide Screen,P.General,P-50,Slurry,Mechanical,P.General P-50 Turbide Screen,True,True
+735,SPM-HEM-075,700005015,Bottom Plate,P.General,P-20,Slurry,Mechanical,P.General P-20 Bottom Plate,True,True
+736,SPM-HEM-076,700005016,Bottom Plate,P.General,P-30,Slurry,Mechanical,P.General P-30 Bottom Plate,True,True
+737,SPM-HEM-077,700005017,Bottom Plate,P.General,P-50,Slurry,Mechanical,P.General P-50 Bottom Plate,True,True
+738,SPM-HEM-078,700005018,3 Way Suction,P.General,P-20,Slurry,Mechanical,P.General P-20 3 Way Suction,True,True
+739,SPM-HEM-079,700005019,3 Way Suction,P.General,P-30,Slurry,Mechanical,P.General P-30 3 Way Suction,True,True
+740,SPM-HEM-080,700005020,3 Way Suction,P.General,P-50,Slurry,Mechanical,P.General P-50 3 Way Suction,True,True
+741,SPM-HEM-082,700005021,Rotor Screen Urethane,P.General,P-50,Slurry,Mechanical,P.General P-50 Rotor Screen Urethane,True,True
+742,SPM-HEM-083,700005022,Flont Plate,P.General,P-30,Slurry,Mechanical,P.General P-30 Flont Plate,True,True
+743,SPM-HEM-101,700007055,Drain Plug P20,P.General,Z-115,Slurry,Mechanical,P.General Z-115 Drain Plug P20,True,True
+744,SPM-HEM-102,700007056,Drain Plug P30,P.General,Z-114,Slurry,Mechanical,P.General Z-114 Drain Plug P30,True,True
+745,SPM-HEM-103,700007057,Drain Plug P50,P.General,Z-112,Slurry,Mechanical,P.General Z-112 Drain Plug P50,True,True
+746,SPM-HEM-086,700005506,"Rotor Screen Urethane P20,P30",P.General,"P20,P30",Slurry,Mechanical,"P.General P20,P30 Rotor Screen Urethane P20,P30",True,True
+747,SPM-HEM-114,700013622,Mechanical Seal P2 / Set,P.General,"2207, 2204",Slurry,Mechanical,"P.General 2207, 2204 Mechanical Seal P2 / Set",False,True
+748,SPM-HEM-115,700013623,Oil Seal for P2,P.General,2210,Slurry,Mechanical,P.General 2210 Oil Seal for P2,False,True
+749,SPM-HEM-116,700013624,Grinding Disc for P2,P.General,2308,Slurry,Mechanical,P.General 2308 Grinding Disc for P2,False,True
+750,SPM-HEM-117,700013625,Front Plate with stator P2,P.General,"2205, 2303",Slurry,Mechanical,"P.General 2205, 2303 Front Plate with stator P2",False,True
+751,SPM-HEM-118,700013626,Rotor Screen for P2,P.General,2302/0,Slurry,Mechanical,P.General 2302/0 Rotor Screen for P2,False,True
+752,SPM-HEM-074,,Rotor Screen Urethane  P30,P.General,P30,,,P.General P30 Rotor Screen Urethane  P30,True,True
+753,SPM-HEM-081,,Rotor Screen Urethane P20,P.General,P20,,,P.General P20 Rotor Screen Urethane P20,True,True
+754,SPM-NAU-014,700005359,Sock Filter,Pacific Intertech,Sock Filter for Cover Lid,Slurry,Mechanical,Pacific Intertech Sock Filter for Cover Lid Sock Filter,False,True
+755,SPM-NAU-015,700005360,Rubber Seal R-103,Pacific Intertech,Diameter 412 mm.,Slurry,Rubber,Pacific Intertech Diameter 412 mm. Rubber Seal R-103,True,True
+756,SPM-NAU-016,700005361,"Rubber Seal R-101,R-102",Pacific Intertech,Diameter 693 mm.,Slurry,Rubber,"Pacific Intertech Diameter 693 mm. Rubber Seal R-101,R-102",True,True
+757,SPM-NAU-017,700005615,BFM Seeflex,,040E Connector 150mm.x350mm.,Slurry,Other,040E Connector 150mm.x350mm. BFM Seeflex,True,True
+758,SPM-NAU-018,700005616,BFM Seeflex,,040E Connector 200mm.x350mm.,Slurry,Other,040E Connector 200mm.x350mm. BFM Seeflex,True,True
+759,SPM-MC4-155,700006514,Solenoid Valve,MAC,82A-CC-000-TM-DDFP-1DA-MODIF.2356 MAC,Coating,Electric,MAC 82A-CC-000-TM-DDFP-1DA-MODIF.2356 MAC Solenoid Valve,True,True
+760,SPM-MC4-156,700006515,Regulator,MAC,PR82-GDDB MAC,Coating,Electric,MAC PR82-GDDB MAC Regulator,True,True
+761,SPM-MCY-174,700012843,Regulator,AIRTAC,"GAR30010S PT3/8 Mpa ""AIRTAC""",Coating,Mechanical,"AIRTAC GAR30010S PT3/8 Mpa ""AIRTAC"" Regulator",True,True
+762,SPM-MCY-175,700012844,Regulator,AIRTAC,"GA300T-P1 ""AIRTAC""",Coating,Mechanical,"AIRTAC GA300T-P1 ""AIRTAC"" Regulator",True,True
+763,SPM-MCY-176,700012845,Regulator,AIRTAC,"GZ30010 PT3/8 ""AIRTAC""",Coating,Mechanical,"AIRTAC GZ30010 PT3/8 ""AIRTAC"" Regulator",True,True
+764,SPM-HEM-071,700005012,Cover & Sight Glas,P-Genaral,,Slurry,Other,P-Genaral Cover & Sight Glas,False,True
+765,SPM-HEM-059,700005000,"Check Valve 2""",Kitz,"2""",Slurry,Mechanical,"Kitz 2"" Check Valve 2""",False,True
+766,SPM-HEM-069,700005010,Parts Temperature Sensor inlet,P.General,PT-100,Slurry,Electric,P.General PT-100 Parts Temperature Sensor inlet,True,True
+767,SPM-HEM-062,700005003,Mechanical Seal P20,P.General,P20,Slurry,Mechanical,P.General P20 Mechanical Seal P20,True,True
+768,SPM-HEM-063,700005004,"Check Valve 1.1/4""",P.General,"1.1/4""",Slurry,Mechanical,"P.General 1.1/4"" Check Valve 1.1/4""",False,True
+769,SPM-HEM-064,700005005,Oil Seal 45x60x10,-,45x60x10,Slurry,Rubber,45x60x10 Oil Seal 45x60x10,True,True
+770,SPM-HEM-045,700004986,AC Pump,Sofabex,-,Slurry,Mechanical,Sofabex AC Pump,False,True
+771,SPM-HEM-013,700004959,"Check Valve 3/4"" STL",P.General,THKB20A DR-07-62,Slurry,Mechanical,"P.General THKB20A DR-07-62 Check Valve 3/4"" STL",True,True
+772,SPM-HEM-014,700004960,"Check Valve 1"" STL",P.General,THKB25A G9-10-51,Slurry,Mechanical,"P.General THKB25A G9-10-51 Check Valve 1"" STL",True,True
+773,SPM-HEM-015,700004961,Mechanical Seal P50,P.General,50L,Slurry,Mechanical,P.General 50L Mechanical Seal P50,True,True
+774,SPM-HEM-019,700004962,Mechanical Seal P30,P.General,30L,Slurry,Mechanical,P.General 30L Mechanical Seal P30,True,True
+775,SPM-HEM-050,700004991,Turbide Screen P30,P.General,P30,Slurry,Mechanical,P.General P30 Turbide Screen P30,True,True
+776,SPM-HEM-052,700004993,Grinding Disc 20L,P.General,20L Z-118,Slurry,Mechanical,P.General 20L Z-118 Grinding Disc 20L,True,True
+777,SPM-HEM-053,700004994,Grinding Disc P50,P.General,P50,Slurry,Mechanical,P.General P50 Grinding Disc P50,True,True
+778,SPM-HEM-054,700004995,Front Plate 50L,P.General,"Z112,Z113",Slurry,Mechanical,"P.General Z112,Z113 Front Plate 50L",True,True
+779,SPM-HEM-055,700004996,Oil Seal Z115,P.General,60 x 75 x 8,Slurry,Mechanical,P.General 60 x 75 x 8 Oil Seal Z115,True,True
+780,SPM-HEM-056,700004997,Meter Range 0-1500,Fotek,DRM-24TH-220V,Slurry,Electric,Fotek DRM-24TH-220V Meter Range 0-1500,True,True
+781,SPM-HEM-057,700004998,Meter Range 0-2000,Fotek,DRM-24TH-220V,Slurry,Electric,Fotek DRM-24TH-220V Meter Range 0-2000,True,True
+782,SPM-HEM-003,700004952,Milling disc P4,P.General,Ø 120 x 18T,Slurry,Mechanical,P.General Ø 120 x 18T Milling disc P4,True,True
+783,SPM-HEM-100,700006693,Outer Turbine,P.General,P-30 (Z-114),Slurry,Mechanical,P.General P-30 (Z-114) Outer Turbine,True,True
+784,SPM-HEM-104,700007322,Mechanical Seal P50,P.General,50L,Slurry,Mechanical,P.General 50L Mechanical Seal P50,True,True
+785,SPM-HEM-105,700007323,Mechanical Seal P30,P.General,30L,Slurry,Mechanical,P.General 30L Mechanical Seal P30,True,True
+786,SPM-HEM-107,700007325,Mechanical Seal P20,P.General,20L,Slurry,Mechanical,P.General 20L Mechanical Seal P20,True,True
+787,SPM-HEM-108,700008055,Flow sensor for lubricant,P.General,-,Slurry,Mechanical,P.General Flow sensor for lubricant,False,True
+788,SPM-HEM-110,700008668,Flow Sensor for Chiller,P.General,SIKA 1 BSP female 25mm.,Slurry,Mechanical,P.General SIKA 1 BSP female 25mm. Flow Sensor for Chiller,True,True
+789,SPM-HEM-111,700008902,Spring,P.General,-,Slurry,Mechanical,P.General Spring,False,True
+790,SPM-HEM-094,700005546,Sight glass,P.General,-,Slurry,Mechanical,P.General Sight glass,False,True
+791,SPM-HEM-087,700005539,Front plate with cooling staror P-30,P.General,P-30,Slurry,Mechanical,P.General P-30 Front plate with cooling staror P-30,True,True
+792,SPM-HEM-088,700005540,Buttom plate with cooling stator P-30,P.General,P-30,Slurry,Mechanical,P.General P-30 Buttom plate with cooling stator P-30,True,True
+793,SPM-HEM-089,700005541,Buttom plate with cooling stator P-20,P.General,P-20,Slurry,Mechanical,P.General P-20 Buttom plate with cooling stator P-20,True,True
+794,SPM-HEM-090,700005542,Pressure transmitter,P.General,7MF1567-3BE00-1AA1,Slurry,Mechanical,P.General 7MF1567-3BE00-1AA1 Pressure transmitter,True,True
+795,SPM-HEM-091,700005543,Temperature gauge for coolling,P.General,HYD-932-002-050-004,Slurry,Mechanical,P.General HYD-932-002-050-004 Temperature gauge for coolling,True,True
+796,SPM-HEM-092,700005544,Temperature sensor product & lubricant,P.General,PT100,Slurry,Mechanical,P.General PT100 Temperature sensor product & lubricant,True,True
+797,SPM-HEM-098,700005578,Digital scale meter,FOTEK,DRM-24TN,Slurry,Mechanical,FOTEK DRM-24TN Digital scale meter,True,True
+798,SPM-HEM-096,700005568,Front plate with cooling staror P-20,P.General,P-20,Slurry,Mechanical,P.General P-20 Front plate with cooling staror P-20,True,True
+799,SPM-MCY-168,700011987,Modular Belt,Phat Flourish,YS100-1,Coating,Mechanical,Phat Flourish YS100-1 Modular Belt,True,True
+800,SPM-MC4-163,700011986,Modular Belt,Phat Flourish,PF2540 Series with Tab,Coating,Mechanical,Phat Flourish PF2540 Series with Tab Modular Belt,True,True
+801,SPM-WAS-016,700005501,"Diaphragm Pump 2""",Versa Matic,E2AA2R229C-ATEX,Utility,Pneumatic & Hydraulic,"Versa Matic E2AA2R229C-ATEX Diaphragm Pump 2""",True,True
+802,SPM-RHK-053,700011983,Inverter,ABB,0.37kW ACS150-03E-02A4-2,Slurry,Electric,ABB 0.37kW ACS150-03E-02A4-2 Inverter,True,True
+803,SPM-HSS-001,700005025,Impeller Dai 150,Platinum Engineering,Dai 150 Shaft Dai 31.75,Slurry,Mechanical,Platinum Engineering Dai 150 Shaft Dai 31.75 Impeller Dai 150,True,True
+804,SPM-HSS-002,700005026,Impeller,,ID38xOD170,Slurry,Mechanical,ID38xOD170 Impeller,True,True
+805,SPM-COB-016,700004841,Double Actuator,Nutork,Nutork NKD-075,Coating,Pneumatic & Hydraulic,Nutork Nutork NKD-075 Double Actuator,True,True
+806,SPM-PRE-041,700005399,Pneumatic valve Actuator,Pneumax,DAN0360411S,Coating,Electric,Pneumax DAN0360411S Pneumatic valve Actuator,True,True
+807,SPM-PRE-011,700005373,Solenoid Valve,CAMOZZI,NA54N-15-02,Coating,Pneumatic & Hydraulic,CAMOZZI NA54N-15-02 Solenoid Valve,True,True
+808,SPM-NAU-021,700011867,SUS Flexible Hose,Premium Flex,"1/2"" x 380 mm.",Slurry,Mechanical,"Premium Flex 1/2"" x 380 mm. SUS Flexible Hose",True,True
+809,SPM-RHK-056,700012958,Fabric Expansion Joint,Premium Flex,Size : OD400 x ID300 x L 250 mm.,Slurry,Mechanical,Premium Flex Size : OD400 x ID300 x L 250 mm. Fabric Expansion Joint,True,True
+810,SPM-CAL-033,700014034,Safety Relay,Pilz,"PNOZ X3, 230V ac/dc, 24 V",Coating,Electric,"Pilz PNOZ X3, 230V ac/dc, 24 V Safety Relay",True,True
+811,SPM-MC6-188,700013612,Sensor Cable,RS Component,7000-08121-6300500,Coating,Electric,RS Component 7000-08121-6300500 Sensor Cable,False,True
+812,SPM-TRN-017,700011460,Noise Filter,RS Component,FN2030-10-06,Coating,Electric,RS Component FN2030-10-06 Noise Filter,True,True
+813,SPM-TRN-018,700011461,Power Supply,RS Component,24VDC DRL-24V240W1EN,Coating,Electric,RS Component 24VDC DRL-24V240W1EN Power Supply,True,True
+814,SPM-TRN-019,700011462,Safety Relay,RS Component,PNOZ 750104,Coating,Electric,RS Component PNOZ 750104 Safety Relay,True,True
+815,SPM-COB-082,700004881,Relay,,G6B-114PUS 24DC,Coating,Electric,G6B-114PUS 24DC Relay,True,True
+816,SPM-COB-070,700004871,Vacuum Hood Seal Combo Coater (-),S.W. Support,Vacuum Hood Seal Combo Coater (-),Coating,Mechanical,S.W. Support Vacuum Hood Seal Combo Coater (-),True,True
+817,SPM-COB-049,700004859,Upper Hood Seal for Blow Station,S.W. Support,OD256xID196xt20,Coating,Mechanical,S.W. Support OD256xID196xt20 Upper Hood Seal for Blow Station,True,True
+818,SPM-COB-091,700008432,Inverter X-105,Mitsubishi,FR-D720-0.4K 240V,Coating,Electric,Mitsubishi FR-D720-0.4K 240V Inverter X-105,True,True
+819,SPM-COB-058,700004861,"Gasket 1/2"" 150#RF",Masterpac-Asia,RY62-05-1665,Coating,Mechanical,"Masterpac-Asia RY62-05-1665 Gasket 1/2"" 150#RF",True,True
+820,SPM-COB-059,700004862,"Gasket 1"" 150#RF",Masterpac-Asia,RY62-05-1515,Coating,Mechanical,"Masterpac-Asia RY62-05-1515 Gasket 1"" 150#RF",True,True
+821,SPM-COB-060,700004863,"Gasket 1-1/2"" 150#RF",Masterpac-Asia,RY62-05-1515,Coating,Mechanical,"Masterpac-Asia RY62-05-1515 Gasket 1-1/2"" 150#RF",True,True
+822,SPM-COB-061,700004864,"Gasket 4"" 150#RF",Masterpac-Asia,RY62-05-1515,Coating,Mechanical,"Masterpac-Asia RY62-05-1515 Gasket 4"" 150#RF",True,True
+823,SPM-SCR-033,,Electropneumatic Positioner,Samson,IP 8384-3 EN (3730-3),,,Samson IP 8384-3 EN (3730-3) Electropneumatic Positioner,True,True
+824,SPM-MC4-141,700005562,Temperature sensor,Sangchai Meter,TA2512,Coating,Electric,Sangchai Meter TA2512 Temperature sensor,True,True
+825,SPM-HEM-097,700005577,Pulse meter,DIGICON,PM-05-4N,Slurry,Electric,DIGICON PM-05-4N Pulse meter,True,True
+826,SPM-MC6-009,700005148,Inductive Sensor,ifm,IGC204,Coating,Electric,ifm IGC204 Inductive Sensor,True,True
+827,SPM-SCR-034,700005478,Electropneumatic Positioner,Samson,IP 8384-3 EN (3730-3),Utility,Mechanical,Samson IP 8384-3 EN (3730-3) Electropneumatic Positioner,True,True
+828,SPM-COM-059,700005521,Inductive Sensor,fim,IV5004,Common Part,Electric,fim IV5004 Inductive Sensor,True,True
+829,SPM-MC6-003,700005145,Capacitive Sensor,ifm,KQ6005,Coating,Electric,ifm KQ6005 Capacitive Sensor,True,True
+830,SPM-SCR-054,700009869,Thermocouple,SCMA,"RB-30,6x100mm. PT100 SK",Utility,Electric,"SCMA RB-30,6x100mm. PT100 SK Thermocouple",True,True
+831,SPM-COM-034,700004916,Cable Connection,SCMA,EVC075,Common Part,Electric,SCMA EVC075 Cable Connection,True,True
+832,SPM-MC4-042,700005054,Binary lavel sensor,ifm,LMACE-A12E/QSKG/0/US,Coating,Electric,ifm LMACE-A12E/QSKG/0/US Binary lavel sensor,True,True
+833,SPM-COM-015,700004898,Power Supply,AC-DC,C-250-24,Common Part,Electric,AC-DC C-250-24 Power Supply,True,True
+834,SPM-WAS-035,700009955,Pump,GRUNDFOS,CR 5-11 A-FGJ-A-E-HQQE C/W 2.2 KW,Utility,Other,GRUNDFOS CR 5-11 A-FGJ-A-E-HQQE C/W 2.2 KW Pump,True,True
+835,SPM-MC4-166,700012340,DI Module,Siemens,6ES7131-6BF01-0BA0,Coating,Electric,Siemens 6ES7131-6BF01-0BA0 DI Module,True,True
+836,SPM-MC4-167,700012341,AI Module,Siemens,6ES7134-6GD01-0BA1,Coating,Electric,Siemens 6ES7134-6GD01-0BA1 AI Module,True,True
+837,SPM-MC4-168,700012342,AI Module,Siemens,6ES7134-6HD01-0BA1,Coating,Electric,Siemens 6ES7134-6HD01-0BA1 AI Module,True,True
+838,SPM-MC4-169,700012343,Weighing Module,Siemens,7MH4138-6AA00-0BA0,Coating,Electric,Siemens 7MH4138-6AA00-0BA0 Weighing Module,True,True
+839,SPM-MC4-170,700012344,IO Link Module,Siemens,6ES7137-6BD00-0BA0,Coating,Electric,Siemens 6ES7137-6BD00-0BA0 IO Link Module,True,True
+840,SPM-MC4-171,700012345,DO Module,Siemens,6ES7132-6BF01-0BA0,Coating,Electric,Siemens 6ES7132-6BF01-0BA0 DO Module,True,True
+841,SPM-MC4-172,700012346,AO Module,Siemens,6ES7135-6GB00-0BA1,Coating,Electric,Siemens 6ES7135-6GB00-0BA1 AO Module,True,True
+842,SPM-MC4-173,700012347,Base Unit,Siemens,6ES7193-6BP20-0BA0,Coating,Electric,Siemens 6ES7193-6BP20-0BA0 Base Unit,True,True
+843,SPM-MC6-077,700005211,Servo Motor,Siemens,1FK7042-5AF7 1-1FH0,Coating,Electric,Siemens 1FK7042-5AF7 1-1FH0 Servo Motor,True,True
+844,SPM-MCY-051,700005306,Central Processing Unit,Siemens,S7-1500 CPU 1513F-1PN,Coating,Electric,Siemens S7-1500 CPU 1513F-1PN Central Processing Unit,True,True
+845,SPM-MCY-056,700005311,Simotion Drive Based,Siemens,6AU1410-2AD00-0AA0,Coating,Electric,Siemens 6AU1410-2AD00-0AA0 Simotion Drive Based,True,True
+846,SPM-MCY-058,700005313,Connector,Siemens,6ES7 592-1AM00-0XB0,Coating,Electric,Siemens 6ES7 592-1AM00-0XB0 Connector,True,True
+847,SPM-MC6-134,700005260,Double Motor Module,Siemens,6SL3120-2TE13-0AD0,Coating,Mechanical,Siemens 6SL3120-2TE13-0AD0 Double Motor Module,True,True
+848,SPM-MC6-139,700005529,Sinamics G110 CPM110,Siemens,6SL3211-0AB12-5BA1,Coating,Electric,Siemens 6SL3211-0AB12-5BA1 Sinamics G110 CPM110,True,True
+849,SPM-MC6-140,700005530,Sinamics Control Unit CU240S DP F,Siemens,6SL3244-0BA21-1PA0,Coating,Electric,Siemens 6SL3244-0BA21-1PA0 Sinamics Control Unit CU240S DP F,True,True
+850,SPM-MC6-141,700005531,Sinamics Control Unit CU240S DP F,Siemens,6SL3040-0MA00-0AA1,Coating,Electric,Siemens 6SL3040-0MA00-0AA1 Sinamics Control Unit CU240S DP F,True,True
+851,SPM-RHK-032,700005532,Digital Out put Module,Siemens,6ES7 322-1BL00-0AA0,Slurry,Electric,Siemens 6ES7 322-1BL00-0AA0 Digital Out put Module,True,True
+852,SPM-MC6-143,700005566,Digital input module,Siemens,F-DI 16x24VDC,Coating,Electric,Siemens F-DI 16x24VDC Digital input module,True,True
+853,SPM-MC4-142,700005567,Digital output Module,Siemens,F-DQ 8x24VDC/2A/PPM,Coating,Electric,Siemens F-DQ 8x24VDC/2A/PPM Digital output Module,True,True
+854,SPM-MC4-135,700005547,Analog input module,Siemens,AI 2xU/I 2-/4-Wire HF,Coating,Electric,Siemens AI 2xU/I 2-/4-Wire HF Analog input module,True,True
+855,SPM-MC4-136,700005548,Analog input module,Siemens,AI 4xU/I 2-/2-Wire ST,Coating,Electric,Siemens AI 4xU/I 2-/2-Wire ST Analog input module,True,True
+856,SPM-MC4-137,700005549,Digital input module,Siemens,DI 8x24VDC ST,Coating,Electric,Siemens DI 8x24VDC ST Digital input module,True,True
+857,SPM-MC4-138,700005550,BUS Adaptor,Siemens,BA 2xRJ45,Coating,Electric,Siemens BA 2xRJ45 BUS Adaptor,True,True
+858,SPM-MC4-139,700005551,Trerminal Module TM15,Siemens,Supply 24VDC / 0.15A 24 DI/O,Coating,Electric,Siemens Supply 24VDC / 0.15A 24 DI/O Trerminal Module TM15,True,True
+859,SPM-STM-005,700005485,Couter,Siemens,H7CX-A-N,Coating,Electric,Siemens H7CX-A-N Couter,True,True
+860,SPM-COM-057,700005509,Power Meter PAC3220,Siemens,7KM3220-0BA01-1DA0,Common Part,Electric,Siemens 7KM3220-0BA01-1DA0 Power Meter PAC3220,True,True
+861,SPM-MC4-055,700005067,Servo Motor,Siemens,3000-02-25 00:00:00,Coating,Electric,Siemens 3000-02-25 00:00:00 Servo Motor,False,True
+862,SPM-MC4-111,700005119,Power Connector,Siemens,6FX2003-OLU00,Coating,Electric,Siemens 6FX2003-OLU00 Power Connector,True,True
+863,SPM-MC6-024,700005163,Power Module 250,Siemens,6SL3225-0BE25-5AA1,Coating,Electric,Siemens 6SL3225-0BE25-5AA1 Power Module 250,True,True
+864,SPM-MC6-021,700005160,Double Motor Module,Siemens,6SL3120-2TE13-0AA4,Coating,Electric,Siemens 6SL3120-2TE13-0AA4 Double Motor Module,True,True
+865,SPM-MC6-031,700005170,Digital Output Module,Siemens,4/8 F-DO DC24V/2A,Coating,Electric,Siemens 4/8 F-DO DC24V/2A Digital Output Module,True,True
+866,SPM-MC6-028,700005167,SINAMIC G110,Siemens,6SL3211-0AB12-5BA1,Coating,Electric,Siemens 6SL3211-0AB12-5BA1 SINAMIC G110,True,True
+867,SPM-MC6-029,700005168,Control Unit 240,Siemens,6SL3224-0BA21-1PA0,Coating,Electric,Siemens 6SL3224-0BA21-1PA0 Control Unit 240,True,True
+868,SPM-MC6-012,700005151,Digital Input Module,Siemens,4 DI DC24V ST,Coating,Electric,Siemens 4 DI DC24V ST Digital Input Module,True,True
+869,SPM-MC6-013,700005152,Digital Output Module,Siemens,4 DO DC24V/0.5A ST,Coating,Electric,Siemens 4 DO DC24V/0.5A ST Digital Output Module,True,True
+870,SPM-MC6-014,700005153,Digital Input,Siemens,4/8 F-DI DC24V,Coating,Electric,Siemens 4/8 F-DI DC24V Digital Input,True,True
+871,SPM-MC6-015,700005154,Power Module,Siemens,PM-E DC24..48V/AC24..230V,Coating,Electric,Siemens PM-E DC24..48V/AC24..230V Power Module,True,True
+872,SPM-MC6-016,700005155,Analog Output Module,Siemens,2 AO U ST,Coating,Electric,Siemens 2 AO U ST Analog Output Module,True,True
+873,SPM-MC6-017,700005156,Analog Input Module,Siemens,2 AI I 4WIRE ST,Coating,Electric,Siemens 2 AI I 4WIRE ST Analog Input Module,True,True
+874,SPM-MC6-018,700005157,Relay Output Module,Siemens,1F-RO DC24/AC24-230V/5A,Coating,Electric,Siemens 1F-RO DC24/AC24-230V/5A Relay Output Module,True,True
+875,SPM-MC6-144,700005633,Adapter Cable for Motor,Siemens,6SL3162-2ME01-0AC0,Coating,Electric,Siemens 6SL3162-2ME01-0AC0 Adapter Cable for Motor,True,True
+876,SPM-MC4-148,700005630,Sitop Modular,Siemens,6EP1437-3BA00 24V/40A,Coating,Electric,Siemens 6EP1437-3BA00 24V/40A Sitop Modular,True,True
+877,SPM-HEM-060,700005001,Grinding Disc P20,SKS,P20,Slurry,Mechanical,SKS P20 Grinding Disc P20,True,True
+878,SPM-WAS-028,700005651,Silencer,SMC,AN600-10,Utility,Other,SMC AN600-10 Silencer,True,True
+879,SPM-MC6-161,700005977,Silencer,SMC,AN500-06,Coating,Pneumatic & Hydraulic,SMC AN500-06 Silencer,True,True
+880,SPM-PRE-044,700005402,Air Cylinder,SMC,MDBC80-150Z,Coating,Mechanical,SMC MDBC80-150Z Air Cylinder,True,True
+881,SPM-RHK-052,700011634,Air Cylinder,SMC,MGPL25-175Z-M9BWL,Slurry,Mechanical,SMC MGPL25-175Z-M9BWL Air Cylinder,True,True
+882,SPM-PRE-075,700011838,Bearing,FAG,UCFL204-J7,Coating,Mechanical,FAG UCFL204-J7 Bearing,True,True
+883,SPM-HEM-112,700010391,Belt,LEONE,B82 LEONE,Slurry,Mechanical,LEONE B82 LEONE Belt,True,True
+884,SPM-AIR-001,700011233,V-Belt,BANDO,SP-RAF 3305 12.5x800 La,All Department,Other,BANDO SP-RAF 3305 12.5x800 La V-Belt,True,True
+885,SPM-AIR-002,700011234,V-Belt,BANDO,SP-RAF 3355 12.5x925 La,All Department,Other,BANDO SP-RAF 3355 12.5x925 La V-Belt,True,True
+886,SPM-NAU-010,700005355,Oil Seal 35x62x10,SMC,TF 35x62x10,Slurry,Mechanical,SMC TF 35x62x10 Oil Seal 35x62x10,True,True
+887,SPM-NAU-011,700005356,Bearing 6207-2RS1/C3,SMC,6207-2RS1/C3,Slurry,Mechanical,SMC 6207-2RS1/C3 Bearing 6207-2RS1/C3,True,True
+888,SPM-NAU-012,700005357,Oil Seal 38x62x8,SMC,TE 38x62x8,Slurry,Mechanical,SMC TE 38x62x8 Oil Seal 38x62x8,True,True
+889,SPM-RHK-024,700005438,Belt 6x280,Bando,6x280 BANDO,Slurry,Mechanical,Bando 6x280 BANDO Belt 6x280,True,True
+890,SPM-RHK-025,700005439,Belt 6x300,Bando,6x300 BANDO,Slurry,Mechanical,Bando 6x300 BANDO Belt 6x300,True,True
+891,SPM-WAS-017,700005502,"Submersible Pump 2""",Mitsubishi,SSP-405SA,Utility,Pneumatic & Hydraulic,"Mitsubishi SSP-405SA Submersible Pump 2""",True,True
+892,SPM-COM-062,700005560,Oil seal,SOG,50x80x10,Common Part,Rubber,SOG 50x80x10 Oil seal,True,True
+893,SPM-RHK-033,700005563,Belt,Sriracha Mongkolchai,VC6 x 290 La,Slurry,Rubber,Sriracha Mongkolchai VC6 x 290 La Belt,True,True
+894,SPM-RHK-034,700005564,Belt,Sriracha Mongkolchai,VC6 x 330 La,Slurry,Rubber,Sriracha Mongkolchai VC6 x 330 La Belt,True,True
+895,SPM-RHK-035,700005565,Belt,Sriracha Mongkolchai,VC6 x 340 La,Slurry,Rubber,Sriracha Mongkolchai VC6 x 340 La Belt,True,True
+896,SPM-PRE-073,700011063,V-Belt,BANDO,3V-475,Coating,Mechanical,BANDO 3V-475 V-Belt,True,True
+897,SPM-DUS-002,700011064,V-Belt,BANDO,A67,Slurry,Mechanical,BANDO A67 V-Belt,True,True
+898,SPM-SCB-009,700011065,V-Belt,BANDO,B65,Utility,Mechanical,BANDO B65 V-Belt,True,True
+899,SPM-CAL-030,700011066,OptiBelt,-,C-63 (1658x22x160Li C63),Coating,Mechanical,C-63 (1658x22x160Li C63) OptiBelt,True,True
+900,SPM-PRE-062,700005650,Bearing,SCHAEFFLER,GE 35-DO-HLN,Coating,Mechanical,SCHAEFFLER GE 35-DO-HLN Bearing,True,True
+901,SPM-MC4-120,700005128,Bearing,NKF,6201-2Z/C3,Coating,Mechanical,NKF 6201-2Z/C3 Bearing,True,True
+902,SPM-HEM-066,700005007,Oil Seal 40x60x10,Sriracha Mongkolchai,TE 40x60x10,Slurry,Mechanical,Sriracha Mongkolchai TE 40x60x10 Oil Seal 40x60x10,True,True
+903,SPM-HEM-067,700005008,Bearing NJ208,Sriracha Mongkolchai,NJ208-E-XL-TVP2,Slurry,Mechanical,Sriracha Mongkolchai NJ208-E-XL-TVP2 Bearing NJ208,True,True
+904,SPM-HEM-068,700005009,Bearing 6207-2Z,Sriracha Mongkolchai,SKF 6207-2Z,Slurry,Mechanical,Sriracha Mongkolchai SKF 6207-2Z Bearing 6207-2Z,True,True
+905,SPM-HEM-010,700004956,Oil Seal,-,75 x 90 x 8,Slurry,Mechanical,75 x 90 x 8 Oil Seal,True,True
+906,SPM-TRN-007,700011441,V-Block Plate,SSS,P31MC 0067,Coating,Mechanical,SSS P31MC 0067 V-Block Plate,True,True
+907,SPM-COM-094,700011514,Pressure Regulator,SMC,AW20-02BCG-2-D,Common Part,Mechanical,SMC AW20-02BCG-2-D Pressure Regulator,True,True
+908,SPM-COP-006,700011389,Auto Drain,SST,ADH4000-04,Utility,Mechanical,SST ADH4000-04 Auto Drain,True,True
+909,SPM-MCY-163,700011365,Air Dryer,SST,IDG100-F04,Coating,Mechanical,SST IDG100-F04 Air Dryer,True,True
+910,SPM-TRN-005,700011378,Air Cylinder,SST,MDBF40-220Z-M9BZ,Coating,Pneumatic & Hydraulic,SST MDBF40-220Z-M9BZ Air Cylinder,True,True
+911,SPM-TRN-006,700011440,Air Cylinder,SST,MDBF63-175Z-M9BL,Coating,Pneumatic & Hydraulic,SST MDBF63-175Z-M9BL Air Cylinder,True,True
+912,SPM-OXI-012,700013858,Solenoid valve,Air TAC,4V21008A Coil 220V,Coating,Pneumatic & Hydraulic,Air TAC 4V21008A Coil 220V Solenoid valve,True,True
+913,SPM-WAS-036,700013463,Pressure Regulator,SMC,AR40-04G-D,Maintenance,Pneumatic & Hydraulic,SMC AR40-04G-D Pressure Regulator,True,True
+914,SPM-MCY-001,700005264,Air Cylinder,SMC,MGPM40-25Z-M9BW,Coating,Mechanical,SMC MGPM40-25Z-M9BW Air Cylinder,True,True
+915,SPM-MCY-002,700005265,Air Cylinder,SMC,CDQ2KB50-40DZ-M9BW,Coating,Mechanical,SMC CDQ2KB50-40DZ-M9BW Air Cylinder,True,True
+916,SPM-MCY-003,700005266,Solenoid Valve,SMC,SY7420-5LZD-C8,Coating,Pneumatic & Hydraulic,SMC SY7420-5LZD-C8 Solenoid Valve,True,True
+917,SPM-MCY-004,700005267,Solenoid Valve,SMC,VF3130-5DU1-02,Coating,Pneumatic & Hydraulic,SMC VF3130-5DU1-02 Solenoid Valve,True,True
+918,SPM-MCY-005,700005268,Solenoid Valve,SMC,VQZ2120-5LO1-C6,Coating,Pneumatic & Hydraulic,SMC VQZ2120-5LO1-C6 Solenoid Valve,True,True
+919,SPM-MCY-006,700005269,Vacuum Pad,SMC,ZPT40BN-B8,Coating,Mechanical,SMC ZPT40BN-B8 Vacuum Pad,True,True
+920,SPM-MCY-007,700005270,Regulator,SMC,AW40-04BG-B,Coating,Mechanical,SMC AW40-04BG-B Regulator,True,True
+921,SPM-MCY-009,700005272,Air Cylinder,SMC,CDM2FZ25-160Z,Coating,Mechanical,SMC CDM2FZ25-160Z Air Cylinder,True,True
+922,SPM-MCY-014,700005277,Air Chuck,SMC,MHL2-20D1,Coating,Pneumatic & Hydraulic,SMC MHL2-20D1 Air Chuck,True,True
+923,SPM-MCY-015,700005278,Air Cylinder,SMC,MGPM50-25Z-M9BWL,Coating,Mechanical,SMC MGPM50-25Z-M9BWL Air Cylinder,True,True
+924,SPM-MCY-016,700005279,Solenoid Valve,SMC,SY7240-5DZ-03,Coating,Pneumatic & Hydraulic,SMC SY7240-5DZ-03 Solenoid Valve,True,True
+925,SPM-MCY-017,700005280,Air Cylinder,SMC,CP36SDB63-250C-M9BW,Coating,Mechanical,SMC CP36SDB63-250C-M9BW Air Cylinder,True,True
+926,SPM-MCY-018,700005281,Air Cylinder,SMC,CDM2FZ25-300Z,Coating,Mechanical,SMC CDM2FZ25-300Z Air Cylinder,True,True
+927,SPM-MCY-019,700005282,Air Cylinder,SMC,CDM2FZ25-200Z,Coating,Mechanical,SMC CDM2FZ25-200Z Air Cylinder,True,True
+928,SPM-MCY-020,700005283,Air Cylinder,SMC,CDM2FZ25-150Z,Coating,Mechanical,SMC CDM2FZ25-150Z Air Cylinder,True,True
+929,SPM-MCY-021,700005284,Pressure Regulator,SMC,ITV1050-312CL,Coating,Pneumatic & Hydraulic,SMC ITV1050-312CL Pressure Regulator,True,True
+930,SPM-MCY-026,700005285,Air Cylinder,SMC,CDQSB12-20D,Coating,Mechanical,SMC CDQSB12-20D Air Cylinder,True,True
+931,SPM-MCY-027,700005286,Direction Control Valve,SMC,SY5420-5LZD-C6,Coating,Pneumatic & Hydraulic,SMC SY5420-5LZD-C6 Direction Control Valve,True,True
+932,SPM-MCY-029,700005287,Solenoid Valve,SMC,SY5120-5LZD-C8,Coating,Pneumatic & Hydraulic,SMC SY5120-5LZD-C8 Solenoid Valve,True,True
+933,SPM-MCY-030,700005288,Solenoid Valve,SMC,SY5120-5LZD-C6,Coating,Pneumatic & Hydraulic,SMC SY5120-5LZD-C6 Solenoid Valve,True,True
+934,SPM-MCY-034,700005289,Direction Control Valve,SMC,VM130-01-34RA,Coating,Pneumatic & Hydraulic,SMC VM130-01-34RA Direction Control Valve,True,True
+935,SPM-MCY-035,700005290,Direction Control Valve,SMC,VM130-01-32BA,Coating,Pneumatic & Hydraulic,SMC VM130-01-32BA Direction Control Valve,True,True
+936,SPM-MCY-022,,Auto Switch,SMC,D-M9BW,,,SMC D-M9BW Auto Switch,True,True
+937,SPM-MCY-023,,Speed Controller,SMC,AS3201F-03-10SA,,,SMC AS3201F-03-10SA Speed Controller,True,True
+938,SPM-MCY-024,,Flow Control Valve,SMC,AS2201F-02-08SA,,,SMC AS2201F-02-08SA Flow Control Valve,True,True
+939,SPM-MCY-025,,Flow Control Valve,SMC,AS2201F-01-06SA,,,SMC AS2201F-01-06SA Flow Control Valve,True,True
+940,SPM-MCY-028,,Speed Control Valve,SMC,AS2201F-02-10SA,,,SMC AS2201F-02-10SA Speed Control Valve,True,True
+941,SPM-MCY-031,,Flow Control Valve,SMC,AS2201F-01-06SA,,,SMC AS2201F-01-06SA Flow Control Valve,True,True
+942,SPM-MCY-032,,Flow Control Valve,SMC,AS2201F-01-08SA,,,SMC AS2201F-01-08SA Flow Control Valve,True,True
+943,SPM-MCY-033,,Lead Switch,SMC,D-M9BW,,,SMC D-M9BW Lead Switch,True,True
+944,SPM-MC6-176,700010679,Vacuum Pad 32 mm.,SMC,ZP3M-T32RFSJB10,Coating,Pneumatic & Hydraulic,SMC ZP3M-T32RFSJB10 Vacuum Pad 32 mm.,True,True
+945,SPM-MC6-177,700010690,Vacuum Pad 50 mm.,SMC,ZP3M-T50RFSJB10,Coating,Pneumatic & Hydraulic,SMC ZP3M-T50RFSJB10 Vacuum Pad 50 mm.,True,True
+946,SPM-MC6-178,700010691,Vacuum Ejector,SMC,ZK2B15K5RWA-08-B,Coating,Pneumatic & Hydraulic,SMC ZK2B15K5RWA-08-B Vacuum Ejector,True,True
+947,SPM-MC6-179,700010692,Mainfold Base for Valve,SMC,SS5Y5-20-02,Coating,Pneumatic & Hydraulic,SMC SS5Y5-20-02 Mainfold Base for Valve,True,True
+948,SPM-RHK-030,700005510,Air Cylinder,SMC,MGPM40-25Z-XB6,Slurry,Mechanical,SMC MGPM40-25Z-XB6 Air Cylinder,True,True
+949,SPM-MCY-100,700005523,Vaccum Pad,SMC,ZPT40BN-B10,Coating,Rubber,SMC ZPT40BN-B10 Vaccum Pad,True,True
+950,SPM-HEM-095,700005598,Outer Turbine,SMC,P-20,Slurry,Mechanical,SMC P-20 Outer Turbine,True,True
+951,SPM-RHK-020,700005434,Direction Control Valve,SMC,SY5140-5DZ,Slurry,Mechanical,SMC SY5140-5DZ Direction Control Valve,True,True
+952,SPM-RHK-021,700005435,Solenoid Valve,SMC,SY7440-5DZ-02,Slurry,Pneumatic & Hydraulic,SMC SY7440-5DZ-02 Solenoid Valve,True,True
+953,SPM-RHK-022,700005436,Solenoid Valve,SMC,SY5240-5DZ,Slurry,Pneumatic & Hydraulic,SMC SY5240-5DZ Solenoid Valve,True,True
+954,SPM-RHK-023,700005437,Air Cylinder,SMC,CDQ2A100-260DCZ-M9BWL-XB10,Slurry,Mechanical,SMC CDQ2A100-260DCZ-M9BWL-XB10 Air Cylinder,True,True
+955,SPM-RHK-029,700005443,Cylinder,SMC,MGPM-32-252,Slurry,Pneumatic & Hydraulic,SMC MGPM-32-252 Cylinder,True,True
+956,SPM-RHK-015,700005429,Set of Wearing Parts,SMC,MGP32-Z-PS,Slurry,Rubber,SMC MGP32-Z-PS Set of Wearing Parts,True,True
+957,SPM-RHK-017,700005431,Cylinder,SMC,CDQ2A100-260DCZ-M9BWL-XB10,Slurry,Pneumatic & Hydraulic,SMC CDQ2A100-260DCZ-M9BWL-XB10 Cylinder,True,True
+958,SPM-RHK-018,700005432,Auto Switch,SMC,D-M9BAVL,Slurry,Electric,SMC D-M9BAVL Auto Switch,True,True
+959,SPM-RHK-013,700005427,Cylinder,SMC,MGPM32-50Z-M9BWL,Slurry,Pneumatic & Hydraulic,SMC MGPM32-50Z-M9BWL Cylinder,True,True
+960,SPM-SCR-001,700005457,"Solenoid valve 1/2""",SMC,VZWF-B-L-M22C-012-135-E-1P4-10-R1,Utility,Pneumatic & Hydraulic,"SMC VZWF-B-L-M22C-012-135-E-1P4-10-R1 Solenoid valve 1/2""",True,True
+961,SPM-SCR-002,700005458,MANN Filter,SMC,C11 100,Utility,Mechanical,SMC C11 100 MANN Filter,True,True
+962,SPM-SCR-003,700005459,Pressure Switch,SMC,DGM525,Utility,Mechanical,SMC DGM525 Pressure Switch,True,True
+963,SPM-SCR-005,700005460,Solenoid valve 5-4,Genreal Tech,03-EVA 5-4,Utility,Pneumatic & Hydraulic,Genreal Tech 03-EVA 5-4 Solenoid valve 5-4,True,True
+964,SPM-SCR-006,700005461,Solenoid valve 10-4,Genreal Tech,03-EVA 10-4,Utility,Pneumatic & Hydraulic,Genreal Tech 03-EVA 10-4 Solenoid valve 10-4,True,True
+965,SPM-SCR-007,700005462,Absorber 2010249,SMC,Drying agent cartridge,Utility,Other,SMC Drying agent cartridge Absorber 2010249,False,True
+966,SPM-SCR-008,700005463,Absorber 5323946,Automatech,Activated carbon sachet,Utility,Other,Automatech Activated carbon sachet Absorber 5323946,False,True
+967,SPM-SCR-009,700005464,IO Extension Module,SMC,BL20-2RFID-S,Utility,Electric,SMC BL20-2RFID-S IO Extension Module,True,True
+968,SPM-SCR-011,700005465,Solenoid Valve,SMC,AB41-03-6-02H-DC24V,Utility,Pneumatic & Hydraulic,SMC AB41-03-6-02H-DC24V Solenoid Valve,True,True
+969,SPM-SCR-012,700005466,Solenoid Valve,SMC,WP8551B301MO,Utility,Pneumatic & Hydraulic,SMC WP8551B301MO Solenoid Valve,True,True
+970,SPM-SCR-013,700005467,Pressure Switch,SMC,DDCM252,Utility,Electric,SMC DDCM252 Pressure Switch,True,True
+971,SPM-SCR-015,700005468,ET-Modul,SMC,PF3EVFAZ0,Utility,Electric,SMC PF3EVFAZ0 ET-Modul,True,True
+972,SPM-NAU-003,700005349,Solenoid Valve,SMC,SY7120-5LZ-01,Slurry,Pneumatic & Hydraulic,SMC SY7120-5LZ-01 Solenoid Valve,True,True
+973,SPM-NAU-004,700005350,Solenoid Valve,SMC,SY7120-5LZ-02,Slurry,Pneumatic & Hydraulic,SMC SY7120-5LZ-02 Solenoid Valve,True,True
+974,SPM-PRE-007,700005369,Air Cylinder With Guid,SMC,4347482,Coating,Pneumatic & Hydraulic,SMC 4347482 Air Cylinder With Guid,False,True
+975,SPM-MC4-075,700005084,Guide Cylinder Open-Close Clamp,SMC,,Coating,Pneumatic & Hydraulic,SMC Guide Cylinder Open-Close Clamp,False,True
+976,SPM-MC4-058,700005070,Soft Start-Up Valve,SMC,AV5000-F10-5DZ-Q,Coating,Pneumatic & Hydraulic,SMC AV5000-F10-5DZ-Q Soft Start-Up Valve,True,True
+977,SPM-MC4-032,700005046,Auto switch,SMC,D-M9BW,Coating,Electric,SMC D-M9BW Auto switch,True,True
+978,SPM-COM-032,700004914,Regulator,SMC,AR30-03BG-1-A,Common Part,Mechanical,SMC AR30-03BG-1-A Regulator,True,True
+979,SPM-COM-019,700004902,Filter Regulator,SMC,AW20-02BG-2-D,Common Part,Pneumatic & Hydraulic,SMC AW20-02BG-2-D Filter Regulator,True,True
+980,SPM-COP-001,700004938,Timer Condensate Drain,SMC,EZ-1 G1/2 230 VAC 16 BAR RED+BVS,Utility,Mechanical,SMC EZ-1 G1/2 230 VAC 16 BAR RED+BVS Timer Condensate Drain,True,True
+981,SPM-COM-046,700004928,Air Combination Set,SMC,AC30-03DG-A,Common Part,Electric,SMC AC30-03DG-A Air Combination Set,True,True
+982,SPM-COB-064,700004866,Pressure Regulator,SMC,AR10-M5BG-A,Coating,Electric,SMC AR10-M5BG-A Pressure Regulator,True,True
+983,SPM-COB-071,700004872,Cylinder Vacuum Hood Combo Coater,SMC,MGPM32-300Z,Coating,Pneumatic & Hydraulic,SMC MGPM32-300Z Cylinder Vacuum Hood Combo Coater,True,True
+984,SPM-COB-072,700004873,Pressure Switch,SMC,ISE20C-R-M-02-W,Coating,Electric,SMC ISE20C-R-M-02-W Pressure Switch,True,True
+985,SPM-COB-073,700004874,Solenoid Valve,SMC,VT307-4DZ1-02,Coating,Pneumatic & Hydraulic,SMC VT307-4DZ1-02 Solenoid Valve,True,True
+986,SPM-COB-074,700004875,Solenoid Valve,SMC,VT307-5DZ1-02,Coating,Pneumatic & Hydraulic,SMC VT307-5DZ1-02 Solenoid Valve,True,True
+987,SPM-COB-068,700004869,Solenoid Valve (SY7420-5DZ-02),SMC,Solenoid Valve (SY7420-5DZ-02),Coating,Pneumatic & Hydraulic,SMC Solenoid Valve (SY7420-5DZ-02),True,True
+988,SPM-COB-069,700004870,Lead Switch,SMC,D-M9NW,Coating,Electric,SMC D-M9NW Lead Switch,True,True
+989,SPM-COB-052,700004860,Lead Switch,SMC,D-M9BAV-WY,Coating,Electric,SMC D-M9BAV-WY Lead Switch,True,True
+990,SPM-COB-011,700004838,Solenoid Valve,SMC,SY7120-5DZ-02,Coating,Pneumatic & Hydraulic,SMC SY7120-5DZ-02 Solenoid Valve,True,True
+991,SPM-COB-012,700004839,Solenoid Valve,SMC,SY7220-5DZ-02,Coating,Pneumatic & Hydraulic,SMC SY7220-5DZ-02 Solenoid Valve,True,True
+992,SPM-MC4-118,700005126,Air Cylinder,SMC,MLGPM50-175Z-B,Coating,Mechanical,SMC MLGPM50-175Z-B Air Cylinder,True,True
+993,SPM-MC6-036,700005174,Valve Blow Out Tank,SMC,VEX1900-20,Coating,Pneumatic & Hydraulic,SMC VEX1900-20 Valve Blow Out Tank,True,True
+994,SPM-RHK-045,700005640,Guide Cylinder,FGW,MY1M25-250-M9B,Slurry,Pneumatic & Hydraulic,FGW MY1M25-250-M9B Guide Cylinder,True,True
+995,SPM-COM-068,700005963,Air Combination,SMC,AC30A-03DG-B,Common Part,Electric,SMC AC30A-03DG-B Air Combination,True,True
+996,SPM-MCY-162,700009251,Air Cylinder,SMC,CDQSB12-20D,Coating,Mechanical,SMC CDQSB12-20D Air Cylinder,True,True
+997,SPM-COB-092,700009729,Pressure Regulator,,AW40-04BDE-D,Coating,Electric,AW40-04BDE-D Pressure Regulator,True,True
+998,SPM-COM-088,700009780,Pressure Regulator,,AR20-N01B-Z-D,Common Part,Mechanical,AR20-N01B-Z-D Pressure Regulator,True,True
+999,SPM-PRE-067,700009954,AIR CYLINDER,SST,CDM2T40-75Z-M9B,Coating,Pneumatic & Hydraulic,SST CDM2T40-75Z-M9B AIR CYLINDER,True,True
+1000,SPM-TRN-001,700010679,Vacuum Pad 32 mm.,SMC,ZP3M-T32RFSJB10,Coating,Pneumatic & Hydraulic,SMC ZP3M-T32RFSJB10 Vacuum Pad 32 mm.,True,True
+1001,SPM-TRN-002,700010690,Vacuum Pad 50 mm.,SMC,ZP3M-T50RFSJB10,Coating,Pneumatic & Hydraulic,SMC ZP3M-T50RFSJB10 Vacuum Pad 50 mm.,True,True
+1002,SPM-TRN-003,700010691,Vacuum Ejector,SMC,ZK2B15K5RWA-08-B,Coating,Pneumatic & Hydraulic,SMC ZK2B15K5RWA-08-B Vacuum Ejector,True,True
+1003,SPM-TRN-004,700010692,Mainfold Base for Valve,SMC,SS5Y5-20-02,Coating,Pneumatic & Hydraulic,SMC SS5Y5-20-02 Mainfold Base for Valve,True,True
+1004,SPM-MCY-154,700008940,Flow Control Valve,SMC,AS2201F-02-10SA,Coating,Pneumatic & Hydraulic,SMC AS2201F-02-10SA Flow Control Valve,True,True
+1005,SPM-MCY-155,700008941,Direction Control Valve,SMC,VXZ262KZ2A,Coating,Pneumatic & Hydraulic,SMC VXZ262KZ2A Direction Control Valve,True,True
+1006,SPM-MCY-157,700008942,Air Cylinder,SMC,CP96SDB63-250C-M9BW,Coating,Pneumatic & Hydraulic,SMC CP96SDB63-250C-M9BW Air Cylinder,True,True
+1007,SPM-MCY-156,700008943,Direction Control Valve,SMC,SY7320-5LZD-C10,Coating,Pneumatic & Hydraulic,SMC SY7320-5LZD-C10 Direction Control Valve,True,True
+1008,SPM-MCY-158,700008944,Direction Control Valve,SMC,VM130-01-32GA,Coating,Pneumatic & Hydraulic,SMC VM130-01-32GA Direction Control Valve,True,True
+1009,SPM-MCY-159,700008945,Solenoid Valve,SMC,4V210-08B,Coating,Pneumatic & Hydraulic,SMC 4V210-08B Solenoid Valve,True,True
+1010,SPM-MCY-160,700008946,Air Cylinder,SMC,CP96SDD50-250C,Coating,Pneumatic & Hydraulic,SMC CP96SDD50-250C Air Cylinder,True,True
+1011,SPM-MCY-161,700008947,Air Cylinder,SMC,SDA12X20-S,Coating,Pneumatic & Hydraulic,SMC SDA12X20-S Air Cylinder,True,True
+1012,SPM-MCY-143,700007879,Air Cylinder,,MF25X150SU,Coating,Mechanical,MF25X150SU Air Cylinder,True,True
+1013,SPM-COB-089,700005659,Cylinder,SMC,MLGPM50-250Z-B,Coating,Pneumatic & Hydraulic,SMC MLGPM50-250Z-B Cylinder,True,True
+1014,SPM-COM-083,700007084,Pressure Regulator,SMC,AC30A-03DG-D,Common Part,Rubber,SMC AC30A-03DG-D Pressure Regulator,True,True
+1015,SPM-MCY-137,700006516,Belt Conveyor Out Feed,,W250xL4350xT3mm.,Coating,Mechanical,W250xL4350xT3mm. Belt Conveyor Out Feed,True,True
+1016,SPM-BLD-001,700010788,Bladder,SW Support,42/5 mm.,Common Part,Rubber,SW Support 42/5 mm. Bladder,True,True
+1017,SPM-MC4-027,700005042,Bottom seal,SW Support,Bottom seal,Coating,Pneumatic & Hydraulic,SW Support Bottom seal,False,True
+1018,SPM-PRE-027,700005385,Silicone PAD,SW Support,,Coating,Rubber,SW Support Silicone PAD,False,True
+1019,SPM-BLD-016,700013861,Bladder,SW Support,52/5 mm.,Common Part,Rubber,SW Support 52/5 mm. Bladder,True,True
+1020,SPM-BLD-015,700012857,Bladder,SW Support,190.5/5 mm.,Common Part,Rubber,SW Support 190.5/5 mm. Bladder,True,True
+1021,SPM-BLD-013,700012364,Bladder,SW Support,54/2 mm.,Common Part,Rubber,SW Support 54/2 mm. Bladder,True,True
+1022,SPM-BLD-014,700012840,Bladder,SW Support,118.4/5 mm.,Common Part,Rubber,SW Support 118.4/5 mm. Bladder,True,True
+1023,SPM-BLD-007,700011341,Bladder,SW Support,51/5 mm.,Common Part,Rubber,SW Support 51/5 mm. Bladder,True,True
+1024,SPM-BLD-008,700011342,Bladder,SW Support,54/5 mm.,Common Part,Rubber,SW Support 54/5 mm. Bladder,True,True
+1025,SPM-BLD-009,700011343,Bladder,SW Support,110/5 mm.,Common Part,Rubber,SW Support 110/5 mm. Bladder,True,True
+1026,SPM-COM-081,700006323,Ring Clamp,SW Support/U-Source,105.7/10 mm./MC4,Common Part,Rubber,SW Support/U-Source 105.7/10 mm./MC4 Ring Clamp,True,True
+1027,SPM-COM-082,700006324,Ring Clamp,SW Support/U-Source,52/5 mm./COMBO,Common Part,Rubber,SW Support/U-Source 52/5 mm./COMBO Ring Clamp,True,True
+1028,SPM-COM-069,700006085,Ring Clamp,SW Support/U-Source,Free Size/All,Common Part,Rubber,SW Support/U-Source Free Size/All Ring Clamp,True,True
+1029,SPM-COM-070,700006087,Ring Clamp,SW Support/U-Source,42/5 mm./MCY,Common Part,Rubber,SW Support/U-Source 42/5 mm./MCY Ring Clamp,True,True
+1030,SPM-COM-071,700006088,Ring Clamp,SW Support/U-Source,51/5 mm./COMBO,Common Part,Rubber,SW Support/U-Source 51/5 mm./COMBO Ring Clamp,True,True
+1031,SPM-COM-072,700006089,Ring Clamp,SW Support/U-Source,54/5 mm./MCY,Common Part,Rubber,SW Support/U-Source 54/5 mm./MCY Ring Clamp,True,True
+1032,SPM-COM-073,700006110,Ring Clamp,SW Support/U-Source,63/5 mm./COMBO,Common Part,Rubber,SW Support/U-Source 63/5 mm./COMBO Ring Clamp,True,True
+1033,SPM-COM-074,700006111,Ring Clamp,SW Support/U-Source,"93/5 mm./MC6,MC4",Common Part,Rubber,"SW Support/U-Source 93/5 mm./MC6,MC4 Ring Clamp",True,True
+1034,SPM-COM-075,700006112,Ring Clamp,SW Support/U-Source,"99.2/5 mm./MC6,MC4",Common Part,Rubber,"SW Support/U-Source 99.2/5 mm./MC6,MC4 Ring Clamp",True,True
+1035,SPM-COM-076,700006113,Ring Clamp,SW Support/U-Source,"105.7/5 mm./MC6,MC4",Common Part,Rubber,"SW Support/U-Source 105.7/5 mm./MC6,MC4 Ring Clamp",True,True
+1036,SPM-COM-077,700006114,Ring Clamp,SW Support/U-Source,"110/5 mm./MC6,MC4",Common Part,Rubber,"SW Support/U-Source 110/5 mm./MC6,MC4 Ring Clamp",True,True
+1037,SPM-COM-078,700006115,Ring Clamp,SW Support/U-Source,"118.4/5 mm./MC6,MC4",Common Part,Rubber,"SW Support/U-Source 118.4/5 mm./MC6,MC4 Ring Clamp",True,True
+1038,SPM-COM-079,700006116,Ring Clamp,SW Support/U-Source,"118.4/10 mm./MC6,MC4",Common Part,Rubber,"SW Support/U-Source 118.4/10 mm./MC6,MC4 Ring Clamp",True,True
+1039,SPM-COM-080,700006117,Ring Clamp,SW Support/U-Source,165/5 mm./MC6,Common Part,Rubber,SW Support/U-Source 165/5 mm./MC6 Ring Clamp,True,True
+1040,SPM-PRE-023,700005382,Silicone sheet,SW Support,THK 10mm. x W280 x L330mm.,Coating,Mechanical,SW Support THK 10mm. x W280 x L330mm. Silicone sheet,True,True
+1041,SPM-TRN-026,700011472,IAI Control PROFI,"System Upgrade Solution Bkk Co.,Ltd.",SCON-CB-400WAI-PRT-0-2,Coating,Electric,"System Upgrade Solution Bkk Co.,Ltd. SCON-CB-400WAI-PRT-0-2 IAI Control PROFI",True,True
+1042,SPM-TRN-027,700011471,IAI Robot Motor,"System Upgrade Solution Bkk Co.,Ltd.",RCS4-MUSRA8C,Coating,Electric,"System Upgrade Solution Bkk Co.,Ltd. RCS4-MUSRA8C IAI Robot Motor",True,True
+1043,SPM-MC4-174,700012849,Actuator (Set),T.V.P. Valve,APS-070/090-12-F05/F07-V17-E,Coating,Mechanical,T.V.P. Valve APS-070/090-12-F05/F07-V17-E Actuator (Set),True,True
+1044,SPM-MC4-175,700012850,Actuator (Set),T.V.P. Valve,APS-090/090-12-F05/F07-V17-H,Coating,Mechanical,T.V.P. Valve APS-090/090-12-F05/F07-V17-H Actuator (Set),True,True
+1045,SPM-MC4-176,700012851,Sleeve RED,T.V.P. Valve,A17/V9,Coating,Mechanical,T.V.P. Valve A17/V9 Sleeve RED,True,True
+1046,SPM-MC4-177,700012852,Sleeve RED,T.V.P. Valve,A17/V14,Coating,Mechanical,T.V.P. Valve A17/V14 Sleeve RED,True,True
+1047,SPM-NAU-022,700014241,Check valve,T.V.P. Valve,"1/2""",Slurry,Mechanical,"T.V.P. Valve 1/2"" Check valve",False,True
+1048,SPM-OXI-001,700005362,Fuse 250A,,660GH-250 660V 250AM,Coating,Electric,660GH-250 660V 250AM Fuse 250A,True,True
+1049,SPM-COB-081,700004880,AC Servo Motor,,HC-KFS43B,Coating,Mechanical,HC-KFS43B AC Servo Motor,True,True
+1050,SPM-SCB-008,700009384,Spray Nozzle (PP),,Model CDH 16T,Utility,Pneumatic & Hydraulic,Model CDH 16T Spray Nozzle (PP),True,True
+1051,SPM-OXI-003,700005580,Power regulator (SCR),SANGI ElECTRIC,SCR-3ATP230 (230A),Coating,Electric,SANGI ElECTRIC SCR-3ATP230 (230A) Power regulator (SCR),True,True
+1052,SPM-OXI-004,700005581,Thermocouple Probe,Thaifurness,Type K,Coating,Electric,Thaifurness Type K Thermocouple Probe,False,True
+1053,SPM-OXI-005,700005582,Thermocouple wire,Thaifurness,Type K,Coating,Electric,Thaifurness Type K Thermocouple wire,False,True
+1054,SPM-OXI-006,700005583,Thermocouple wire,Thaifurness,Type R,Coating,Electric,Thaifurness Type R Thermocouple wire,False,True
+1055,SPM-OXI-007,700005584,Programmable controller,Thaifurness,PCA1A00-200,Coating,Electric,Thaifurness PCA1A00-200 Programmable controller,True,True
+1056,SPM-OXI-008,700005585,Limit Switch,Pten,WLCA12-2-Q,Coating,Electric,Pten WLCA12-2-Q Limit Switch,True,True
+1057,SPM-OXI-009,700005586,Digital indicating controller,Shinho,BCD2A00-06,Coating,Electric,Shinho BCD2A00-06 Digital indicating controller,True,True
+1058,SPM-OXI-010,700005587,Magnetic Contactors,Mitsubishi,S-N150,Coating,Electric,Mitsubishi S-N150 Magnetic Contactors,True,True
+1059,SPM-OXI-011,700005588,Main Braker,Mitsubishi,NF-630-CW,Coating,Electric,Mitsubishi NF-630-CW Main Braker,True,True
+1060,SPM-HEM-119,700014092,Chain,Thaipattanasin,40-2R,Slurry,Mechanical,Thaipattanasin 40-2R Chain,True,True
+1061,SPM-HEM-120,700014093,Connecting Link,Thaipattanasin,CL40-2,Slurry,Mechanical,Thaipattanasin CL40-2 Connecting Link,True,True
+1062,SPM-NAU-001,700005347,Oil seal 45 x 60 x 8 NBR,Thaiphatanasin,For rotaryvalve R-102,Slurry,Rubber,Thaiphatanasin For rotaryvalve R-102 Oil seal 45 x 60 x 8 NBR,True,True
+1063,SPM-NAU-002,700005348,Oil seal 50 x 65 x 10 NBR,Thaiphatanasin,For rotaryvalve R-101,Slurry,Rubber,Thaiphatanasin For rotaryvalve R-101 Oil seal 50 x 65 x 10 NBR,True,True
+1064,SPM-SCR-019,700005469,Actuator,KANA,SQN75.6K4A21,Utility,Mechanical,KANA SQN75.6K4A21 Actuator,True,True
+1065,SPM-COM-085,700008050,Power Supply S8FS-C10024,Omron,Power Supply S8FS-C10024,Common Part,Electric,Omron Power Supply S8FS-C10024,True,True
+1066,SPM-MC4-113,700005121,Laser Distance Sensor,,OY2P303A0135,Coating,Electric,OY2P303A0135 Laser Distance Sensor,True,True
+1067,SPM-MC4-114,700005122,Retro-Reflex Sensor,,P1KL002,Coating,Electric,P1KL002 Retro-Reflex Sensor,True,True
+1068,SPM-COM-020,700004903,Power Supply,Omron,S8FS-G150214CD,Common Part,Electric,Omron S8FS-G150214CD Power Supply,True,True
+1069,SPM-COM-026,700004909,Air Gun,SMC,VMG11BU-02-05,Common Part,Pneumatic & Hydraulic,SMC VMG11BU-02-05 Air Gun,True,True
+1070,SPM-DIS-009,700011238,Chain,KANA,60SS-1R,Slurry,Mechanical,KANA 60SS-1R Chain,True,True
+1071,SPM-MC4-026,700005041,Ball bearing,Thaiphatanasin,9.5 mm.,Coating,Mechanical,Thaiphatanasin 9.5 mm. Ball bearing,True,True
+1072,SPM-MC4-082,700005091,Gates Poly Chain GT Carbon,Thaiphatanasin,8MGT-1600 USA,Coating,Mechanical,Thaiphatanasin 8MGT-1600 USA Gates Poly Chain GT Carbon,True,True
+1073,SPM-DIS-005,700004944,Chain Joint,Thaiphattanasin,60,Slurry,Mechanical,Thaiphattanasin 60 Chain Joint,False,True
+1074,SPM-DIS-006,700004945,Roller Joint,Thaiphattanasin,60,Slurry,Mechanical,Thaiphattanasin 60 Roller Joint,False,True
+1075,SPM-WAS-033,700009728,Bravo Butterfly Valve Wafer,BRAVO,"TB-23 5""",Utility,Other,"BRAVO TB-23 5"" Bravo Butterfly Valve Wafer",True,True
+1076,SPM-PRE-038,700005396,Chain Joint,Thaiphattanasin,80,Coating,Mechanical,Thaiphattanasin 80 Chain Joint,False,True
+1077,SPM-PRE-039,700005397,RollerJoint,Thaiphattanasin,80,Coating,Mechanical,Thaiphattanasin 80 RollerJoint,False,True
+1078,SPM-CLN-019,700011236,Chain,KANA,25-1R,Coating,Mechanical,KANA 25-1R Chain,True,True
+1079,SPM-CLN-020,700011237,Chain,KANA,35-1R,Coating,Mechanical,KANA 35-1R Chain,True,True
+1080,SPM-HEM-113,700012367,Mechanical Seal,PSS,Size 55mm. Z-114,Slurry,Mechanical,PSS Size 55mm. Z-114 Mechanical Seal,True,True
+1081,SPM-MCY-036,700005291,Backplane (Delta),Delta,PLC AHBP06M1-5A,Coating,Electric,Delta PLC AHBP06M1-5A Backplane (Delta),True,True
+1082,SPM-MCY-037,700005292,Backplane (Delta),Delta,PLC AHBP04M1-5A,Coating,Electric,Delta PLC AHBP04M1-5A Backplane (Delta),True,True
+1083,SPM-MCY-038,700005293,Digital Module (Delta),Delta,AH16AM10N-5A,Coating,Electric,Delta AH16AM10N-5A Digital Module (Delta),True,True
+1084,SPM-MCY-039,700005294,Analog Module (Delta),Delta,AH08DA-5A,Coating,Electric,Delta AH08DA-5A Analog Module (Delta),True,True
+1085,SPM-MCY-040,700005295,Power Module (Delta),Delta,PLC AHPs05-5A,Coating,Electric,Delta PLC AHPs05-5A Power Module (Delta),True,True
+1086,SPM-MCY-041,700005296,Servo Motor (Delta),Delta,ECMA-CA0604SS,Coating,Electric,Delta ECMA-CA0604SS Servo Motor (Delta),True,True
+1087,SPM-MCY-042,700005297,Digital Module (Delta),Delta,AH16AN01T-5A,Coating,Electric,Delta AH16AN01T-5A Digital Module (Delta),True,True
+1088,SPM-MCY-043,700005298,Ethernet RTU Module (Delta),Delta,AHRTU-ETHN-5A,Coating,Electric,Delta AHRTU-ETHN-5A Ethernet RTU Module (Delta),True,True
+1089,SPM-MCY-044,700005299,Digital Input Module (Delta),Delta,AH32AM10N-5C,Coating,Electric,Delta AH32AM10N-5C Digital Input Module (Delta),True,True
+1090,SPM-MCY-045,700005300,Communication Module (Delta),Delta,AH10EN-5A,Coating,Electric,Delta AH10EN-5A Communication Module (Delta),True,True
+1091,SPM-MCY-046,700005301,Extension Board (Delta),Delta,UB-10-ID16A,Coating,Electric,Delta UB-10-ID16A Extension Board (Delta),True,True
+1092,SPM-MCY-047,700005302,Digital Module (Delta),Delta,AH32AN02T-5C,Coating,Electric,Delta AH32AN02T-5C Digital Module (Delta),True,True
+1093,SPM-MCY-048,700005303,Extension Board (Delta),Delta,UB-10-ID32A,Coating,Electric,Delta UB-10-ID32A Extension Board (Delta),True,True
+1094,SPM-MCY-049,700005304,Analog Input Module (Delta),Delta,AH08AD-5A,Coating,Electric,Delta AH08AD-5A Analog Input Module (Delta),True,True
+1095,SPM-MCY-050,700005305,Digital Module (Delta),Delta,AH16AP11R-5A,Coating,Electric,Delta AH16AP11R-5A Digital Module (Delta),True,True
+1096,SPM-MCY-054,700005309,Servo Drive (Delta),Delta,ASD-A2-1021-E,Coating,Mechanical,Delta ASD-A2-1021-E Servo Drive (Delta),True,True
+1097,SPM-MCY-055,700005310,Power Supply,Delta,DRL-24V480W1AA,Coating,Electric,Delta DRL-24V480W1AA Power Supply,True,True
+1098,SPM-MCY-059,700005314,Servo Drive (Delta),Delta,ECMA-C10807RS,Coating,Mechanical,Delta ECMA-C10807RS Servo Drive (Delta),True,True
+1099,SPM-MCY-061,700005316,Servo Drive (Delta),Delta,ASD-A2-0721-E,Coating,Mechanical,Delta ASD-A2-0721-E Servo Drive (Delta),True,True
+1100,SPM-MCY-062,700005317,Servo Drive (Delta),Delta,ASD-A2-0421-E,Coating,Mechanical,Delta ASD-A2-0421-E Servo Drive (Delta),True,True
+1101,SPM-MCY-063,700005318,Inverter (Delta),Delta,MS300 VFD5A5MS43AFSAA 3HP 3Ph,Coating,Electric,Delta MS300 VFD5A5MS43AFSAA 3HP 3Ph Inverter (Delta),True,True
+1102,SPM-MCY-064,700005319,Inverter (Delta),Delta,MS300 VFD9A0MS43AFSAA 5HP 3Ph,Coating,Electric,Delta MS300 VFD9A0MS43AFSAA 5HP 3Ph Inverter (Delta),True,True
+1103,SPM-MCY-067,700005322,Inverter (Delta),Delta,MS300 VFD4A8MS21AFSAA 1HP 230V,Coating,Electric,Delta MS300 VFD4A8MS21AFSAA 1HP 230V Inverter (Delta),True,True
+1104,SPM-SCR-035,700005479,Switch Amplifier,Delta,KFD2-SR2-Ex2W (No.203355),Utility,Mechanical,Delta KFD2-SR2-Ex2W (No.203355) Switch Amplifier,True,True
+1105,SPM-SCR-036,700005480,Teamperature Converter With Trip,Delta,KFD2-GUT-Ex.1D (No.231225),Utility,Mechanical,Delta KFD2-GUT-Ex.1D (No.231225) Teamperature Converter With Trip,True,True
+1106,SPM-STM-001,700005481,Air Cylinder,Delta,CMK2-LB-32-100,Coating,Mechanical,Delta CMK2-LB-32-100 Air Cylinder,True,True
+1107,SPM-STM-002,700005482,Limit Switch,Delta,TMD1703,Coating,Electric,Delta TMD1703 Limit Switch,True,True
+1108,SPM-STM-003,700005483,Limit Switch,Delta,Z-15GW255-B,Coating,Electric,Delta Z-15GW255-B Limit Switch,True,True
+1109,SPM-STM-004,700005484,Timer,Delta,H3Y-4 200-230V,Coating,Electric,Delta H3Y-4 200-230V Timer,True,True
+1110,SPM-SCR-026,700005475,Compensator,Delta,UGK2H2-0355-24193R3,Utility,Mechanical,Delta UGK2H2-0355-24193R3 Compensator,True,True
+1111,SPM-MCY-098,700005520,Main Backplane (Delta),Delta,AHBP07M2-5A,Coating,Electric,Delta AHBP07M2-5A Main Backplane (Delta),True,True
+1112,SPM-MCY-092,700005513,AC Servo Motor (Delta),Delta,ECMA-CA0602SS,Coating,Electric,Delta ECMA-CA0602SS AC Servo Motor (Delta),True,True
+1113,SPM-MCY-093,700005514,AC Servo Motor (Delta),Delta,ECMA-CA0604RS,Coating,Electric,Delta ECMA-CA0604RS AC Servo Motor (Delta),True,True
+1114,SPM-MCY-094,700005515,Temperature Module (Delta),Delta,AH04PT-5A,Coating,Electric,Delta AH04PT-5A Temperature Module (Delta),True,True
+1115,SPM-MCY-095,700005516,CPU Module (Delta),Delta,AH20EMC-5A,Coating,Electric,Delta AH20EMC-5A CPU Module (Delta),True,True
+1116,SPM-MCY-096,700005517,Communication Module (Delta),Delta,AH10PFBS-5A,Coating,Electric,Delta AH10PFBS-5A Communication Module (Delta),True,True
+1117,SPM-MCY-097,700005518,Ethernet  Switches (Delta),Delta,DVS-108W02-2SFP,Coating,Electric,Delta DVS-108W02-2SFP Ethernet  Switches (Delta),True,True
+1118,SPM-MCY-102,700005533,Industrail PC (Delta),Delta,IPC-A300-I734AE00,Coating,Electric,Delta IPC-A300-I734AE00 Industrail PC (Delta),True,True
+1119,SPM-MCY-105,700005536,Bladder,Tong Li,Size 67.00,Coating,Rubber,Tong Li Size 67.00 Bladder,True,True
+1120,SPM-MCY-106,700005537,Bladder,Tong Li,Size 86.00,Coating,Rubber,Tong Li Size 86.00 Bladder,True,True
+1121,SPM-MCY-107,700005538,Bladder,Tong Li,Size 66.50,Coating,Rubber,Tong Li Size 66.50 Bladder,True,True
+1122,SPM-MCY-108,700005590,Peristatic pump,JXHIN,JXHIN40,Coating,Mechanical,JXHIN JXHIN40 Peristatic pump,True,True
+1123,SPM-MCY-109,700005591,Linear Bush,YTP,LMF0UU,Coating,Mechanical,YTP LMF0UU Linear Bush,True,True
+1124,SPM-MCY-110,700005592,Spocket,Tong Li,,Coating,Mechanical,Tong Li Spocket,False,True
+1125,SPM-MCY-112,700005593,W3 Z Screw,Tong Li,R25-10T3-FSI-280-0.05,Coating,Mechanical,Tong Li R25-10T3-FSI-280-0.05 W3 Z Screw,True,True
+1126,SPM-MCY-113,700005594,W1/W2 Z1 Screw,Tong Li,R25-10T3-FSI-415-0.05,Coating,Mechanical,Tong Li R25-10T3-FSI-415-0.05 W1/W2 Z1 Screw,True,True
+1127,SPM-MCY-114,700005595,W1/W2 Z1 Screw,Tong Li,R16-ST3-FSI-175-0.05,Coating,Mechanical,Tong Li R16-ST3-FSI-175-0.05 W1/W2 Z1 Screw,True,True
+1128,SPM-MCY-115,700005596,Flip Z Screw,Tong Li,R25-5T3-FSI-260-0.05,Coating,Mechanical,Tong Li R25-5T3-FSI-260-0.05 Flip Z Screw,True,True
+1129,SPM-MCY-116,700005597,Coating lifting screw,Tong Li,R25-10T3-FSI-445-0.05,Coating,Mechanical,Tong Li R25-10T3-FSI-445-0.05 Coating lifting screw,True,True
+1130,SPM-MCY-068,700005323,Ball Screw,,HIWIN SB0BC73150,Coating,Mechanical,HIWIN SB0BC73150 Ball Screw,True,True
+1131,SPM-MCY-069,700005324,Magnetic Contactors,Siemens,3RT6023-1AN20,Coating,Mechanical,Siemens 3RT6023-1AN20 Magnetic Contactors,True,True
+1132,SPM-MCY-070,700005325,Slip Ring,"Senring Electronics Co.,Ltd.",3004012-74-62790,Coating,Mechanical,"Senring Electronics Co.,Ltd. 3004012-74-62790 Slip Ring",False,True
+1133,SPM-MCY-071,700005326,Vacuum Pump,Amila,MN20-B 0.4-0.6mpa,Coating,Mechanical,Amila MN20-B 0.4-0.6mpa Vacuum Pump,True,True
+1134,SPM-MCY-072,700005327,Vacuum Switches,Amila,MP20-NPN-L,Coating,Electric,Amila MP20-NPN-L Vacuum Switches,True,True
+1135,SPM-MCY-073,700005328,Zero Point Systems Centering Pin1,Euk,EFL1408,Coating,Mechanical,Euk EFL1408 Zero Point Systems Centering Pin1,True,True
+1136,SPM-MCY-074,700005329,Zero Point Systems Centering Pin2,Euk,EDL1408,Coating,Mechanical,Euk EDL1408 Zero Point Systems Centering Pin2,True,True
+1137,SPM-MCY-075,700005330,Zero Point Systems,Euk,EZPS82,Coating,Mechanical,Euk EZPS82 Zero Point Systems,True,True
+1138,SPM-MCY-076,700005331,Sealing Strip,,12x12 mm.,Coating,Rubber,12x12 mm. Sealing Strip,True,True
+1139,SPM-MCY-079,700005334,Pick & Place Z Reducer,Sensudrive,NMRV040,Coating,Mechanical,Sensudrive NMRV040 Pick & Place Z Reducer,True,True
+1140,SPM-MCY-080,700005335,Pick & Place X Reducer,Sesame,PGL-115-7,Coating,Mechanical,Sesame PGL-115-7 Pick & Place X Reducer,True,True
+1141,SPM-MCY-081,700005336,Flip Servo Motor Reducer,Sesame,PGL-115-L2-30,Coating,Mechanical,Sesame PGL-115-L2-30 Flip Servo Motor Reducer,True,True
+1142,SPM-MCY-082,700005337,Flip A1 Coupling,Coup-Link,LK8-65-32-22,Coating,Mechanical,Coup-Link LK8-65-32-22 Flip A1 Coupling,True,True
+1143,SPM-MCY-083,700005338,Flip Z Coupling,Coup-Link,LK8-40-14-16,Coating,Mechanical,Coup-Link LK8-40-14-16 Flip Z Coupling,True,True
+1144,SPM-MCY-084,700005339,Weighing Z1 Coupling,Coup-Link,LK8-40-16-16,Coating,Mechanical,Coup-Link LK8-40-16-16 Weighing Z1 Coupling,True,True
+1145,SPM-MCY-085,700005340,Weighing Z2 Coupling,Coup-Link,LK8-30-14-12,Coating,Mechanical,Coup-Link LK8-30-14-12 Weighing Z2 Coupling,True,True
+1146,SPM-MCY-086,700005341,Unloading X Coupling,Coup-Link,LK8-55-22-16,Coating,Mechanical,Coup-Link LK8-55-22-16 Unloading X Coupling,True,True
+1147,SPM-MCY-087,700005342,0/180 Positioning Electromagnet,KDA,YR-SP35/29K,Coating,Mechanical,KDA YR-SP35/29K 0/180 Positioning Electromagnet,True,True
+1148,SPM-MCY-088,700005343,Weighing Z2 Linear Guide,HIWIN,HGH15CA2R150ZAH+ZZ,Coating,Mechanical,HIWIN HGH15CA2R150ZAH+ZZ Weighing Z2 Linear Guide,True,True
+1149,SPM-MCY-089,700005344,Pick Electromagnet,Tong Li,Diamiter 42,Coating,Mechanical,Tong Li Diamiter 42 Pick Electromagnet,True,True
+1150,SPM-MCY-090,700005345,Pick Electromagnet,Tong Li,Diamiter 54,Coating,Mechanical,Tong Li Diamiter 54 Pick Electromagnet,True,True
+1151,SPM-MCY-091,700005346,Pick Electromagnet,Tong Li,Diamiter 63.5,Coating,Mechanical,Tong Li Diamiter 63.5 Pick Electromagnet,True,True
+1152,SPM-MCY-066,700005321,Lead Switch,Airtac,DMSG-020,Coating,Electric,Airtac DMSG-020 Lead Switch,True,True
+1153,SPM-MCY-103,,Bladder,Tong Li,Size 45.00,,Rubber,Tong Li Size 45.00 Bladder,True,True
+1154,SPM-MCY-104,,Bladder,Tong Li,Size 57.50,,Rubber,Tong Li Size 57.50 Bladder,True,True
+1155,SPM-MCY-111,,Spocket,Tong Li,-,,Mechanical,Tong Li Spocket,False,True
+1156,SPM-MCY-141,700007331,Sealing Strip,,12x12 mm.,Coating,Rubber,12x12 mm. Sealing Strip,True,True
+1157,SPM-MCY-142,700007332,Conveyor,Tongli,,Coating,Mechanical,Tongli Conveyor,False,True
+1158,SPM-MCY-117,700005617,Inner Cleaning Z,Tongli,HX95WG10C150M4,Coating,Mechanical,Tongli HX95WG10C150M4 Inner Cleaning Z,True,True
+1159,SPM-MCY-118,700005618,Inner Cleaning X,Tongli,HX952WG10C175M4S,Coating,Mechanical,Tongli HX952WG10C175M4S Inner Cleaning X,True,True
+1160,SPM-MCY-119,700005619,Weighing Z1 Guide Bar,Tongli,WDC540-392L,Coating,Mechanical,Tongli WDC540-392L Weighing Z1 Guide Bar,True,True
+1161,SPM-MCY-120,700005620,W3 Guide Bar,Tongli,WDCS40-2421,Coating,Mechanical,Tongli WDCS40-2421 W3 Guide Bar,True,True
+1162,SPM-MCY-121,700005621,Guide Bar,Tongli,WDCS20-296L,Coating,Mechanical,Tongli WDCS20-296L Guide Bar,True,True
+1163,SPM-MCY-122,700005622,V Guide Bar,Tongli,WDCS40-2421,Coating,Mechanical,Tongli WDCS40-2421 V Guide Bar,True,True
+1164,SPM-MCY-123,700005623,Loading Guide Bar Guide Bar,Tongli,WDCS20346L,Coating,Mechanical,Tongli WDCS20346L Loading Guide Bar Guide Bar,True,True
+1165,SPM-MCY-124,700005624,Guide Bar,Tongli,WDCS20-240L,Coating,Mechanical,Tongli WDCS20-240L Guide Bar,True,True
+1166,SPM-MCY-125,700005625,Flip A1 Guide Bar,Tongli,WDCS30-140L,Coating,Mechanical,Tongli WDCS30-140L Flip A1 Guide Bar,True,True
+1167,SPM-MCY-126,700005626,Flip A2 Guide Bar,Tongli,WDCS30-140,Coating,Mechanical,Tongli WDCS30-140 Flip A2 Guide Bar,True,True
+1168,SPM-MCY-127,700005627,Conveyor,Tongli,,Coating,Mechanical,Tongli Conveyor,False,True
+1169,SPM-HEM-002,700004951,Mechanical Seal P4,TP Engineering,SP-200 60/ 40 MM,Slurry,Mechanical,TP Engineering SP-200 60/ 40 MM Mechanical Seal P4,True,True
+1170,SPM-COM-027,700004910,Mechanical Seal 25-40,TP Engineering,560 D 25-40,Common Part,Mechanical,TP Engineering 560 D 25-40 Mechanical Seal 25-40,True,True
+1171,SPM-HEM-008,700004955,Face Tungsten 1 (Stationary P4),TP Engineering,125 x 92 x t5,Slurry,Mechanical,TP Engineering 125 x 92 x t5 Face Tungsten 1 (Stationary P4),True,True
+1172,SPM-HEM-020,700004963,Face Tungsten 2  (Rotating P4),TP Engineering,150 x 105 x t5,Slurry,Mechanical,TP Engineering 150 x 105 x t5 Face Tungsten 2  (Rotating P4),True,True
+1173,SPM-WAS-011,700005496,Mechanical Seal WAS,TP Engineering,-,Utility,Pneumatic & Hydraulic,TP Engineering Mechanical Seal WAS,False,True
+1174,SPM-WAS-002,700005487,Mechanical Seal 15 mm.,Marshal,T604 15 mm. CAR/CBR/NBR,Utility,Mechanical,Marshal T604 15 mm. CAR/CBR/NBR Mechanical Seal 15 mm.,True,True
+1175,SPM-WAS-003,700005488,Mechanical Seal 18 mm.,Marshal,T604 18 mm. SIC/SIC/VITION,Utility,Mechanical,Marshal T604 18 mm. SIC/SIC/VITION Mechanical Seal 18 mm.,True,True
+1176,SPM-HEM-043,700004984,Rubber hose Z-112-118,MOUVEX,1 Inch,Slurry,Rubber,MOUVEX 1 Inch Rubber hose Z-112-118,True,True
+1177,SPM-HEM-070,700005011,Boot EPDM For AS25,MOUVEX,PUMP AS25,Slurry,Mechanical,MOUVEX PUMP AS25 Boot EPDM For AS25,True,True
+1178,SPM-WAS-018,700005503,Motor Gear,Cyclo,CNVM02-6080-6,Utility,Mechanical,Cyclo CNVM02-6080-6 Motor Gear,True,True
+1179,SPM-LIG-003,700005031,Xenon Lamp,Wacom,KXL-501HF,Coating,Electric,Wacom KXL-501HF Xenon Lamp,True,True
+1180,SPM-HEM-005,700004954,Fuse base,Trisak Automation,Afa 200 AC 600 V/200 A,Slurry,Electric,Trisak Automation Afa 200 AC 600 V/200 A Fuse base,True,True
+1181,SPM-COM-017,700004900,Hi Pressure Control,TRS,YK-03H,Common Part,Electric,TRS YK-03H Hi Pressure Control,True,True
+1182,SPM-COM-018,700004901,Low Pressure Control,TRS,YK-03L,Common Part,Electric,TRS YK-03L Low Pressure Control,True,True
+1183,SPM-BLD-002,700011141,Bladder,U Source,105.7/5 mm.,Common Part,Rubber,U Source 105.7/5 mm. Bladder,True,True
+1184,SPM-BLD-011,700012162,Bladder,U Source,93/7 mm.,Common Part,Rubber,U Source 93/7 mm. Bladder,True,True
+1185,SPM-BLD-012,700012163,Bladder,U Source,Free Size/All,Common Part,Rubber,U Source Free Size/All Bladder,True,True
+1186,SPM-BLD-003,700011275,Bladder,U Source,63.5/3 mm.,Common Part,Rubber,U Source 63.5/3 mm. Bladder,True,True
+1187,SPM-BLD-004,700011276,Bladder,U Source,63.5/5 mm.,Common Part,Rubber,U Source 63.5/5 mm. Bladder,True,True
+1188,SPM-BLD-005,700011277,Bladder,U Source,105.7/7 mm.,Common Part,Rubber,U Source 105.7/7 mm. Bladder,True,True
+1189,SPM-BLD-006,700011278,Bladder,U Source,165.1/5 mm.,Common Part,Rubber,U Source 165.1/5 mm. Bladder,True,True
+1190,SPM-BLD-010,700012013,Bladder,U Source,134/5 mm.,Common Part,Rubber,U Source 134/5 mm. Bladder,True,True
+1191,SPM-SCR-037,700005575,Robust controller and display,VEGA,CR-222 22Q,Utility,Electric,VEGA CR-222 22Q Robust controller and display,True,True
+1192,SPM-SCR-038,700005576,Wired radar sensor for continuous,VEGA,RA-222 22K,Utility,Electric,VEGA RA-222 22K Wired radar sensor for continuous,True,True
+1193,SPM-WAS-014,700005499,Rota Meter,+GF+,Rota Meter (50-500 l/h),Utility,Mechanical,+GF+ Rota Meter (50-500 l/h) Rota Meter,True,True
+1194,SPM-WAS-015,700005500,Rota Meter,+GF+,Rota Meter (100-1000 l/h),Utility,Mechanical,+GF+ Rota Meter (100-1000 l/h) Rota Meter,True,True
+1195,SPM-WAS-030,700008742,,VICCHI,"Type 514, 3/4""",Utility,Mechanical,"VICCHI Type 514, 3/4""",True,True
+1196,SPM-WAS-031,700008743,,VICCHI,Type GK10 (min),Utility,Electric,VICCHI Type GK10 (min),True,True
+1197,SPM-SCB-006,700006517,,,"200 L/Hr Type 335,DN 25",Utility,Pneumatic & Hydraulic,"200 L/Hr Type 335,DN 25",True,True
+1198,SPM-SCB-007,700006518,,,"200 L/Hr Type 335,DN 40",Utility,Pneumatic & Hydraulic,"200 L/Hr Type 335,DN 40",True,True
+1199,SPM-MC6-164,700006519,Dip Pan,W.E. Engineering,W360xL550xH245,Coating,Pneumatic & Hydraulic,W.E. Engineering W360xL550xH245 Dip Pan,True,True
+1200,SPM-MC6-165,700006520,Exhaust Pipe,W.E. Engineering,Dia.200xH465,Coating,Pneumatic & Hydraulic,W.E. Engineering Dia.200xH465 Exhaust Pipe,True,True
+1201,SPM-COB-090,700008018,Drain Air Pipe,W.E. Engineering,Dia.200xH520,Coating,Pneumatic & Hydraulic,W.E. Engineering Dia.200xH520 Drain Air Pipe,True,True
+1202,SPM-MC6-160,700005976,Connection Line,Wenglor,S80W-20M,Coating,Pneumatic & Hydraulic,Wenglor S80W-20M Connection Line,True,True
+1203,SPM-MC6-010,700005149,Connection Units,ifm,EVC001,Coating,Electric,ifm EVC001 Connection Units,True,True
+1204,SPM-MC6-032,700005171,Inductive Sensor,ifm,GR711S,Coating,Electric,ifm GR711S Inductive Sensor,True,True

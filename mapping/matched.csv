@@ -1,0 +1,7 @@
+﻿PartID,PartCode,PartName,Brand,Description,ImageFile,Source,Caption
+4,SPM-CAL-007,Analog Input Module,Siemens,6ES7 331-7KF02-0AB0,siemens-6es7331-7kf02-0ab0.jpg,https://sieportal.siemens.com/en-au/products-services/detail/6ES7331-7KF02-0AB0,ภาพอ้างอิง Siemens SM331 · 6ES7331-7KF02-0AB0
+2,SPM-CAL-005,Safety relay,Weidmuller,1319270000 SCS 24VDC P2SIL3DSES,weidmuller-1319270000.jpg,https://eshop.weidmueller.com/en/scs-24vdc-p2sil3dses/p/1319270000,ภาพอ้างอิง Weidmüller Safety relay · 1319270000
+27,SPM-MC4-047,Cylinder,SMC,CDM2E20-50JZ,smc-cdm2e20-50jz.png,https://www.smcpneumatics.com/,ภาพอ้างอิง SMC air cylinder · CDM2E20-50JZ (ภาพใกล้เคียง/close match)
+30,SPM-MC4-079,"Cable Assembly M12,4PIN",IFM,EVC005,ifm-evc005.png,https://www.ifm.com/,ภาพอ้างอิง IFM cable assembly · EVC005
+8,SPM-CAL-011,Pilot Lamp,Banner,TL50BGYRAQ,banner-tl50bgyraq.png,https://www.bannerengineering.com/us/en/products/part.83216.html,ภาพอ้างอิง Banner pilot lamp / tower light · TL50BGYRAQ
+29,SPM-MC4-074,Set of Wearing Parts,Festo,DNC-125-PPVA,festo-dnc-125-ppva.png,https://www.festo.com/,ภาพอ้างอิง Festo set of wearing parts / cylinder family · DNC-125-PPVA (ภาพใกล้เคียง/close match)

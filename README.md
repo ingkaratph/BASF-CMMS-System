@@ -91,5 +91,7 @@ Secrets must stay in `.env`, which is ignored by Git. The SQL credentials suppli
 - Spare parts support one uploaded photo; each machine profile supports up to five photos plus PDF, DWG and DXF attachments. Maximum input size is 15 MB per file. JPG, PNG and WebP are validated and converted to WebP.
 - Only Administrator and Planner with master-edit permission may upload or delete attachments. Downloads require a session and permission to view the corresponding resource.
 - Files and their index are stored in `server/uploads` (ignored by Git), configurable through `CMMS_MEDIA_DIR`. Back up the entire directory, including `index.json`, together. Files reside on the PC running this application, not in SQL or on the API service.
-- Two exact-model reference photos are supplied in `public/part-images`; source attribution is in `server/part-images.json`. Uploaded photos take priority over references.
+- Local reference photos currently cover 57 CSV inventory records in `public/part-images`; source attribution and representative-image labels are in `server/part-images.json`. The offline review is `outputs/spare-image-review/index.html`, with 1,147 records still unmapped. Uploaded photos take priority over references.
 - The production launcher reloads API settings from `.env` so stale inherited environment keys do not override the configured service credentials.
+
+Work orders display RequestedDate and sort loaded results newest first, with missing dates last. Machine detail work orders open on double-click or Enter. Photos open in an in-page gallery with keyboard navigation, without displaying image filenames.

@@ -1,0 +1,62 @@
+[
+  {
+    "PartID": "4",
+    "PartCode": "SPM-CAL-007",
+    "PartName": "Analog Input Module",
+    "Brand": "Siemens",
+    "Description": "6ES7 331-7KF02-0AB0",
+    "ImageFile": "siemens-6es7331-7kf02-0ab0.jpg",
+    "Source": "https://sieportal.siemens.com/en-au/products-services/detail/6ES7331-7KF02-0AB0",
+    "Caption": "ภาพอ้างอิง Siemens SM331 · 6ES7331-7KF02-0AB0"
+  },
+  {
+    "PartID": "2",
+    "PartCode": "SPM-CAL-005",
+    "PartName": "Safety relay",
+    "Brand": "Weidmuller",
+    "Description": "1319270000 SCS 24VDC P2SIL3DSES",
+    "ImageFile": "weidmuller-1319270000.jpg",
+    "Source": "https://eshop.weidmueller.com/en/scs-24vdc-p2sil3dses/p/1319270000",
+    "Caption": "ภาพอ้างอิง Weidmüller Safety relay · 1319270000"
+  },
+  {
+    "PartID": "27",
+    "PartCode": "SPM-MC4-047",
+    "PartName": "Cylinder",
+    "Brand": "SMC",
+    "Description": "CDM2E20-50JZ",
+    "ImageFile": "smc-cdm2e20-50jz.png",
+    "Source": "https://www.smcpneumatics.com/",
+    "Caption": "ภาพอ้างอิง SMC air cylinder · CDM2E20-50JZ (ภาพใกล้เคียง/close match)"
+  },
+  {
+    "PartID": "30",
+    "PartCode": "SPM-MC4-079",
+    "PartName": "Cable Assembly M12,4PIN",
+    "Brand": "IFM",
+    "Description": "EVC005",
+    "ImageFile": "ifm-evc005.png",
+    "Source": "https://www.ifm.com/",
+    "Caption": "ภาพอ้างอิง IFM cable assembly · EVC005"
+  },
+  {
+    "PartID": "8",
+    "PartCode": "SPM-CAL-011",
+    "PartName": "Pilot Lamp",
+    "Brand": "Banner",
+    "Description": "TL50BGYRAQ",
+    "ImageFile": "banner-tl50bgyraq.png",
+    "Source": "https://www.bannerengineering.com/us/en/products/part.83216.html",
+    "Caption": "ภาพอ้างอิง Banner pilot lamp / tower light · TL50BGYRAQ"
+  },
+  {
+    "PartID": "29",
+    "PartCode": "SPM-MC4-074",
+    "PartName": "Set of Wearing Parts",
+    "Brand": "Festo",
+    "Description": "DNC-125-PPVA",
+    "ImageFile": "festo-dnc-125-ppva.png",
+    "Source": "https://www.festo.com/",
+    "Caption": "ภาพอ้างอิง Festo set of wearing parts / cylinder family · DNC-125-PPVA (ภาพใกล้เคียง/close match)"
+  }
+]

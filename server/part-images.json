@@ -1,18 +1,891 @@
 [
   {
-    "ids": ["4"],
+    "ids": [
+      "4"
+    ],
     "model": "6ES7 331-7KF02-0AB0",
     "file": "siemens-6es7331-7kf02-0ab0.jpg",
     "source": "https://sieportal.siemens.com/en-au/products-services/detail/6ES7331-7KF02-0AB0",
     "imageSource": "https://static.siemens.com/mimes/03000300JPG/P_ST70_XX_00026I.jpg",
-    "caption": "ภาพอ้างอิง Siemens SM331 · 6ES7331-7KF02-0AB0"
+    "caption": "ภาพอ้างอิง Siemens SM331 · 6ES7331-7KF02-0AB0",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "confidence": 100
   },
   {
-    "ids": ["2"],
+    "ids": [
+      "2"
+    ],
     "model": "1319270000 SCS 24VDC P2SIL3DSES",
     "file": "weidmuller-1319270000.jpg",
     "source": "https://eshop.weidmueller.com/en/scs-24vdc-p2sil3dses/p/1319270000",
     "imageSource": "https://assets.dam.weidmueller.com/assets/api/3452677e-da49-49f7-81c1-4de2268a3177/DAP_Master_PP,w_800,q_80",
-    "caption": "ภาพอ้างอิง Weidmüller Safety relay · 1319270000"
+    "caption": "ภาพอ้างอิง Weidmüller Safety relay · 1319270000",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "confidence": 100
+  },
+  {
+    "ids": [
+      "27"
+    ],
+    "model": "CDM2E20-50JZ",
+    "file": "smc-cdm2e20-50jz.png",
+    "source": "https://www.smcpneumatics.com/",
+    "imageSource": "web search result",
+    "caption": "ภาพอ้างอิง SMC air cylinder · CDM2E20-50JZ (ภาพใกล้เคียง/close match)",
+    "matchByIdOnly": false,
+    "matchType": "CLOSE",
+    "confidence": 80
+  },
+  {
+    "ids": [
+      "8"
+    ],
+    "model": "TL50BGYRAQ",
+    "file": "banner-tl50bgyraq.png",
+    "source": "https://www.bannerengineering.com/us/en/products/part.83216.html",
+    "imageSource": "web search result",
+    "caption": "ภาพอ้างอิง Banner pilot lamp / tower light · TL50BGYRAQ",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "confidence": 100
+  },
+  {
+    "ids": [
+      "178"
+    ],
+    "model": "PA3029",
+    "brand": "IFM",
+    "partName": "Pressure Transmitter",
+    "partCode": "SPM-COM-100",
+    "file": "csv-178-pa3029.webp",
+    "source": "https://www.ifm.com/ca/en/product/PA3029",
+    "imageSource": "https://media.ifm.com/dam/019ef10e-f721-7a39-9f72-6f622e6e2ca4/original%2Cf_avif%2Cw_576%2Ch_576%2Cbc_white/PA3029.avif",
+    "caption": "ภาพอ้างอิง IFM PA3029",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.019Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "24"
+    ],
+    "model": "EVC004",
+    "brand": "IFM",
+    "partName": "Connection Units",
+    "partCode": "SPM-MC4-043",
+    "file": "csv-24-evc004.webp",
+    "source": "https://www.ifm.com/ca/en/product/EVC004",
+    "imageSource": "https://media.ifm.com/dam/019ef0b6-7c00-730a-8307-d7ca09e4f280/original%2Cf_avif%2Cw_576%2Ch_576%2Cbc_white/EVC004.avif",
+    "caption": "ภาพอ้างอิง IFM EVC004",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.089Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "321"
+    ],
+    "model": "DTE101",
+    "brand": "IFM",
+    "partName": "Efector 190",
+    "partCode": "SPM-MC4-054",
+    "file": "csv-321-dte101.webp",
+    "source": "https://www.ifm.com/ca/en/product/DTE101",
+    "imageSource": "https://media.ifm.com/dam/019ef080-5e07-7321-98ec-7d9b621ddbb8/original%2Cf_avif%2Cw_576%2Ch_576%2Cbc_white/DTE101.avif",
+    "caption": "ภาพอ้างอิง IFM DTE101",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.160Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "527"
+    ],
+    "model": "LMT100",
+    "brand": "IFM",
+    "partName": "Electronic Level Probe",
+    "partCode": "SPM-MC4-078",
+    "file": "csv-527-lmt100.webp",
+    "source": "https://www.ifm.com/ca/en/product/LMT100",
+    "imageSource": "https://media.ifm.com/dam/019ef0f4-bbaa-7f1a-9cad-4f26eee87dae/original%2Cf_avif%2Cw_576%2Ch_576%2Cbc_white/LMT100.avif",
+    "caption": "ภาพอ้างอิง IFM LMT100",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.230Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "30"
+    ],
+    "model": "EVC005",
+    "brand": "IFM",
+    "partName": "Cable Assembly M12,4PIN",
+    "partCode": "SPM-MC4-079",
+    "file": "csv-30-evc005.webp",
+    "source": "https://www.ifm.com/ca/en/product/EVC005",
+    "imageSource": "https://media.ifm.com/dam/019ef0b6-7c00-730a-8307-d7ca09e4f280/original%2Cf_avif%2Cw_576%2Ch_576%2Cbc_white/EVC005.avif",
+    "caption": "ภาพอ้างอิง IFM EVC005",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.305Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "829"
+    ],
+    "model": "KQ6005",
+    "brand": "IFM",
+    "partName": "Capacitive Sensor",
+    "partCode": "SPM-MC6-003",
+    "file": "csv-829-kq6005.webp",
+    "source": "https://www.ifm.com/ca/en/product/KQ6005",
+    "imageSource": "https://media.ifm.com/dam/019ef139-0207-7a00-810e-f81967f41ce6/original%2Cf_avif%2Cw_576%2Ch_576%2Cbc_white/KQ6005.avif",
+    "caption": "ภาพอ้างอิง IFM KQ6005",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.366Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "826"
+    ],
+    "model": "IGC204",
+    "brand": "IFM",
+    "partName": "Inductive Sensor",
+    "partCode": "SPM-MC6-009",
+    "file": "csv-826-igc204.webp",
+    "source": "https://www.ifm.com/ca/en/product/IGC204",
+    "imageSource": "https://media.ifm.com/dam/019ef0da-508c-7be6-9b85-91b1b24fdbee/original%2Cf_avif%2Cw_576%2Ch_576%2Cbc_white/IGC204.avif",
+    "caption": "ภาพอ้างอิง IFM IGC204",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.431Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "1203"
+    ],
+    "model": "EVC001",
+    "brand": "IFM",
+    "partName": "Connection Units",
+    "partCode": "SPM-MC6-010",
+    "file": "csv-1203-evc001.webp",
+    "source": "https://www.ifm.com/ca/en/product/EVC001",
+    "imageSource": "https://media.ifm.com/dam/019ef0b6-8c32-748f-ba28-d54a1418be8a/original%2Cf_avif%2Cw_576%2Ch_576%2Cbc_white/EVC001.avif",
+    "caption": "ภาพอ้างอิง IFM EVC001",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.494Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "85"
+    ],
+    "model": "E3FA-RP21",
+    "brand": "Omron",
+    "partName": "Photoelectric sensor",
+    "partCode": "SPM-PRE-025",
+    "file": "csv-85-e3fa-rp21.webp",
+    "source": "https://industrial.omron.eu/en/products/E3FA-RP21",
+    "imageSource": "https://8z1xg04k.tinifycdn.com/images/E3FA-RP21.jpg?resize.method=fit&resize.width=400&resize.height=400",
+    "caption": "ภาพอ้างอิง Omron E3FA-RP21",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.521Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "89"
+    ],
+    "model": "E5CC-RW2AUM-000",
+    "brand": "Omron",
+    "partName": "Digital Controller",
+    "partCode": "SPM-PRE-033",
+    "file": "csv-89-e5cc-rw2aum-000.webp",
+    "source": "https://industrial.omron.eu/en/products/E5CC-RW2AUM-000",
+    "imageSource": "https://8z1xg04k.tinifycdn.com/images/E5CC-QX2AUM-000.jpg?resize.method=fit&resize.width=400&resize.height=400",
+    "caption": "ภาพอ้างอิง Omron E5CC-RW2AUM-000 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:05.551Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "642"
+    ],
+    "model": "D4B-4170N",
+    "brand": "Omron",
+    "partName": "Limit Switch",
+    "partCode": "SPM-RHK-009",
+    "file": "csv-642-d4b-4170n.webp",
+    "source": "https://industrial.omron.eu/en/products/D4B-4170N",
+    "imageSource": "https://8z1xg04k.tinifycdn.com/images/D4B-1170N.jpg?resize.method=fit&resize.width=400&resize.height=400",
+    "caption": "ภาพอ้างอิง Omron D4B-4170N · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:05.577Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "990"
+    ],
+    "model": "SY7120-5DZ-02",
+    "brand": "SMC",
+    "partName": "Solenoid Valve",
+    "partCode": "SPM-COB-011",
+    "file": "csv-990-sy7120-5dz-02.webp",
+    "source": "https://sigmasurplus.com/smc-sy7120-5dz-02-valve/",
+    "imageSource": "https://cdn11.bigcommerce.com/s-8sozkw0fuc/images/stencil/1280x1280/products/212137/1618709/275206__3__38736.1716432286.jpg?c=1",
+    "caption": "ภาพอ้างอิง SMC SY7120-5DZ-02",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.633Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "936",
+      "943",
+      "977"
+    ],
+    "model": "D-M9BW",
+    "brand": "SMC",
+    "partName": "Lead Switch",
+    "partCode": "SPM-MCY-033",
+    "file": "csv-943-d-m9bw.webp",
+    "source": "https://www.genbaichiba.com/shop/g/g01008135/",
+    "imageSource": "https://www.genbaichiba.com/img/goods/L/01008135.jpg",
+    "caption": "ภาพอ้างอิง SMC D-M9BW",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.678Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "876"
+    ],
+    "model": "6EP1437-3BA00 24V/40A",
+    "brand": "Siemens",
+    "partName": "Sitop Modular",
+    "partCode": "SPM-MC4-148",
+    "file": "csv-876-6ep1437-3ba00.webp",
+    "source": "https://iqelectro.com/products/6ep1437-3ba00-siemens-sitop-modular-40-power-supply-400-500vac-3ph-40a-24vdc?srsltid=AfmBOoqUroVTRlpB32_R4ZTMQarg90lrKsElI01AgOTm5ZgO69mV9EV_",
+    "imageSource": "https://iqelectro.com/cdn/shop/files/6EP1437-3BA00.webp?v=1708086904",
+    "caption": "ภาพอ้างอิง Siemens 6EP1437-3BA00 24V/40A · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:05.736Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "634"
+    ],
+    "model": "SY5120-5DZ-01",
+    "brand": "SMC",
+    "partName": "Solenoid valve",
+    "partCode": "SPM-DIS-004",
+    "file": "csv-634-sy5120-5dz-01.webp",
+    "source": "https://us.rs-online.com/product/smc-corporation/sy5120-5dz-01/70272364/",
+    "imageSource": "https://assets.rs-online.com/f_auto%2Cq_auto/70272364.jpg",
+    "caption": "ภาพอ้างอิง SMC SY5120-5DZ-01",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.892Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "991"
+    ],
+    "model": "SY7220-5DZ-02",
+    "brand": "SMC",
+    "partName": "Solenoid Valve",
+    "partCode": "SPM-COB-012",
+    "file": "csv-991-sy7220-5dz-02.webp",
+    "source": "https://www.allworldmachinery.com/itemdetail/SY7220-5DZ-02",
+    "imageSource": "https://www.allworldmachinery.com/ecomm_images/items/large/sy7220-5dz-02.png",
+    "caption": "ภาพอ้างอิง SMC SY7220-5DZ-02",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:05.930Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "836"
+    ],
+    "model": "6ES7134-6GD01-0BA1",
+    "brand": "Siemens",
+    "partName": "AI Module",
+    "partCode": "SPM-MC4-167",
+    "file": "csv-836-6es7134-6gd01-0ba1.webp",
+    "source": "https://ph.rs-online.com/web/p/plc-accessories/2034096",
+    "imageSource": "https://media.rs-online.com/image/upload/bo_1.5px_solid_white%2Cb_auto%2Cc_pad%2Cdpr_2%2Cf_auto%2Ch_399%2Cq_auto%2Cw_710/c_pad%2Ch_399%2Cw_710/R2034096-01?pgw=1",
+    "caption": "ภาพอ้างอิง Siemens 6ES7134-6GD01-0BA1 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:06.042Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "839"
+    ],
+    "model": "6ES7137-6BD00-0BA0",
+    "brand": "Siemens",
+    "partName": "IO Link Module",
+    "partCode": "SPM-MC4-170",
+    "file": "csv-839-6es7137-6bd00-0ba0.webp",
+    "source": "https://www.manomano.fr/p/6es7137-6bd00-0ba0-simatic-et-200sp-cm-4xio-link-st-module-de-communication-io-link-master-8713246",
+    "imageSource": "https://cdn.manomano.com/images/images_products/6837096/P/126734038_1.jpg",
+    "caption": "ภาพอ้างอิง Siemens 6ES7137-6BD00-0BA0 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:06.073Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "835"
+    ],
+    "model": "6ES7131-6BF01-0BA0",
+    "brand": "Siemens",
+    "partName": "DI Module",
+    "partCode": "SPM-MC4-166",
+    "file": "csv-835-6es7131-6bf01-0ba0.webp",
+    "source": "https://iqelectro.com/products/6es7131-6bf01-0ba0-siemens-esimatic-et200sp-digital-input-module",
+    "imageSource": "https://iqelectro.com/cdn/shop/files/7999fa7b57c24d7a80e867092508a0b1.jpg?v=1745927681&width=750",
+    "caption": "ภาพอ้างอิง Siemens 6ES7131-6BF01-0BA0 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:06.143Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "840"
+    ],
+    "model": "6ES7132-6BF01-0BA0",
+    "brand": "Siemens",
+    "partName": "DO Module",
+    "partCode": "SPM-MC4-171",
+    "file": "csv-840-6es7132-6bf01-0ba0.webp",
+    "source": "https://uk.rs-online.com/web/p/plc-accessories/2034179",
+    "imageSource": "https://media.rs-online.com/R2034179-01.jpg",
+    "caption": "ภาพอ้างอิง Siemens 6ES7132-6BF01-0BA0 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:06.282Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "842"
+    ],
+    "model": "6ES7193-6BP20-0BA0",
+    "brand": "Siemens",
+    "partName": "Base Unit",
+    "partCode": "SPM-MC4-173",
+    "file": "csv-842-6es7193-6bp20-0ba0.webp",
+    "source": "https://industrie24.com/en/products/siemens-anschlussmodul-baseunit-baugruppe-6es7193-6bp20-0ba0",
+    "imageSource": "https://industrie24.com/cdn/shop/files/Photoroom_168_20250704_120810.jpg?v=1753084480",
+    "caption": "ภาพอ้างอิง Siemens 6ES7193-6BP20-0BA0 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:06.527Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "864",
+      "349"
+    ],
+    "model": "6SL3120-2TE13-0AA4",
+    "brand": "Siemens",
+    "partName": "Double Motor Module",
+    "partCode": "SPM-MC6-087",
+    "file": "csv-349-6sl3120-2te13-0aa4.webp",
+    "source": "https://sklep.adegis.com/produkt/6sl3120-2te13-0aa4-modul-siemens-sinamics-s120",
+    "imageSource": "https://cdn.adegis.com/unsafe/fit-in/center/middle/smart/filters%3Afill%28transparent%29%3Aformat%28webp%29%3Aupscale%28%29/media/catalog/product/6/s/6sl3120_2te13_0aa4_0.jpg",
+    "caption": "ภาพอ้างอิง Siemens 6SL3120-2TE13-0AA4 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:06.621Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "863"
+    ],
+    "model": "6SL3225-0BE25-5AA1",
+    "brand": "Siemens",
+    "partName": "Power Module 250",
+    "partCode": "SPM-MC6-024",
+    "file": "csv-863-6sl3225-0be25-5aa1.webp",
+    "source": "https://baa.vn/vn/san-pham/bien-tan-siemens-6sl3225-0be25-5aa1_806047",
+    "imageSource": "https://baa.vn/images/model/9674/800/6sl3225-0be25-5aa1-sinamic-g120-series-siemens-bien-tan-tieu-chuan.jpg",
+    "caption": "ภาพอ้างอิง Siemens 6SL3225-0BE25-5AA1 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:06.720Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "350"
+    ],
+    "model": "AN900-20",
+    "brand": "SMC",
+    "partName": "Silencer",
+    "partCode": "SPM-MC6-088",
+    "file": "csv-350-an900-20.webp",
+    "source": "https://www.industrialautomationcanada.com/smc-an900-20-silencer-wow/",
+    "imageSource": "https://cdn11.bigcommerce.com/s-1uwkvsfr/images/stencil/original/products/76899/344291/apizlrt3r__49065.1592359945.jpg",
+    "caption": "ภาพอ้างอิง SMC AN900-20",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:06.798Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "569"
+    ],
+    "model": "6ES7 134-4GB11-0AB0",
+    "brand": "Siemens",
+    "partName": "Analog Input Module",
+    "partCode": "SPM-MC6-145",
+    "file": "csv-569-6es7134-4gb11-0ab0.webp",
+    "source": "https://iqelectro.com/products/6es7134-4gb11-0ab0-siemens-analog-current-input-module-2-channel",
+    "imageSource": "https://iqelectro.com/cdn/shop/files/6ES7134-4GB11-0AB0.webp?v=1710163680",
+    "caption": "ภาพอ้างอิง Siemens 6ES7 134-4GB11-0AB0 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:06.911Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "847"
+    ],
+    "model": "6SL3120-2TE13-0AD0",
+    "brand": "Siemens",
+    "partName": "Double Motor Module",
+    "partCode": "SPM-MC6-134",
+    "file": "csv-847-6sl3120-2te13-0ad0.webp",
+    "source": "https://cnctoolsllc.com/products/siemens-motor-module-6sl3120-2te13-0ad0-new-in-stock",
+    "imageSource": "https://cnctoolsllc.com/cdn/shop/products/Copyofcnctoolscertified-2023-03-20T092844.895_500x500.png?v=1679322625",
+    "caption": "ภาพอ้างอิง Siemens 6SL3120-2TE13-0AD0 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:06.951Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "875"
+    ],
+    "model": "6SL3162-2ME01-0AC0",
+    "brand": "Siemens",
+    "partName": "Adapter Cable for Motor",
+    "partCode": "SPM-MC6-144",
+    "file": "csv-875-6sl3162-2me01-0ac0.webp",
+    "source": "https://www.hjstmotor.com/siemens-6sl3162-2me01-0ac0-sinamics-s120-cd-type-adapter-cable-for-motor-connection-product/",
+    "imageSource": "https://www.hjstmotor.com/uploads/6SL3162-2ME01-0AC0-1-%E6%8B%B7%E8%B4%9D.png",
+    "caption": "ภาพอ้างอิง Siemens 6SL3162-2ME01-0AC0 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:07.182Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "572"
+    ],
+    "model": "6ES7 132-4BD32-0AA0",
+    "brand": "Siemens",
+    "partName": "Digital  Output Module",
+    "partCode": "SPM-MC6-148",
+    "file": "csv-572-6es7132-4bd32-0aa0.webp",
+    "source": "https://sklep.adegis.com/produkt/6es7132-4bd32-0aa0-siemens-simatic-et200-et-200s",
+    "imageSource": "https://cdn.adegis.com/unsafe/fit-in/center/middle/smart/filters%3Afill%28transparent%29%3Aformat%28webp%29%3Aupscale%28%29/media/catalog/product/6/e/6es7132_4bd32_0aa0_0_apmxsffi2pk8v9t6.jpg",
+    "caption": "ภาพอ้างอิง Siemens 6ES7 132-4BD32-0AA0 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:07.296Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "575"
+    ],
+    "model": "6ES7 155-6AU01-0CN0",
+    "brand": "Siemens",
+    "partName": "Interface Module",
+    "partCode": "SPM-MC6-151",
+    "file": "csv-575-6es7155-6au01-0cn0.webp",
+    "source": "https://uk.rs-online.com/web/p/interface-modules/2034026",
+    "imageSource": "https://media.rs-online.com/image/upload/bo_1.5px_solid_white%2Cb_auto%2Cc_pad%2Cdpr_2%2Cf_auto%2Ch_399%2Cq_auto%2Cw_710/c_pad%2Ch_399%2Cw_710/R2034026-01?pgw=1",
+    "caption": "ภาพอ้างอิง Siemens 6ES7 155-6AU01-0CN0 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:07.406Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "939",
+      "941"
+    ],
+    "model": "AS2201F-01-06SA",
+    "brand": "SMC",
+    "partName": "Flow Control Valve",
+    "partCode": "SPM-MCY-031",
+    "file": "csv-941-as2201f-01-06sa.webp",
+    "source": "https://us.rs-online.com/product/smc-corporation/as2201f-01-06sa/70271277/?srsltid=AfmBOoq-LvPZqsNFAnwTrS9vgbtEA3s0x1PTiqII-mSzvOd1BoM2C4G8",
+    "imageSource": "https://res.cloudinary.com/allied-electronics-automation/image/upload/b_rgb%3AFFFFFF%2Cc_pad%2Cdpr_1.0%2Cf_auto%2Ch_457%2Cq_auto%2Cw_800/c_pad%2Ch_457%2Cw_800/70271277_left.jpg?_i=AB&pgw=1",
+    "caption": "ภาพอ้างอิง SMC AS2201F-01-06SA",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:07.447Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "938"
+    ],
+    "model": "AS2201F-02-08SA",
+    "brand": "SMC",
+    "partName": "Flow Control Valve",
+    "partCode": "SPM-MCY-024",
+    "file": "csv-938-as2201f-02-08sa.webp",
+    "source": "https://www.moglix.com/smc-1-4-inch-elbow-type-speed-controller-as2201f-02-08sa/mp/msnpkepe37rd9g",
+    "imageSource": "https://cdn.moglix.com/p/J8wOFpwJsnS69-xxlarge.jpg",
+    "caption": "ภาพอ้างอิง SMC AS2201F-02-08SA",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:07.529Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "937"
+    ],
+    "model": "AS3201F-03-10SA",
+    "brand": "SMC",
+    "partName": "Speed Controller",
+    "partCode": "SPM-MCY-023",
+    "file": "csv-937-as3201f-03-10sa.webp",
+    "source": "https://th.rs-online.com/web/p/pneumatic-function-fittings/8270822",
+    "imageSource": "https://media.rs-online.com/image/upload/bo_1.5px_solid_white%2Cb_auto%2Cc_pad%2Cdpr_2%2Cf_auto%2Ch_399%2Cq_auto%2Cw_710/c_pad%2Ch_399%2Cw_710/W8270822-01?pgw=1",
+    "caption": "ภาพอ้างอิง SMC AS3201F-03-10SA",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:07.651Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "988"
+    ],
+    "model": "D-M9NW",
+    "brand": "SMC",
+    "partName": "Lead Switch",
+    "partCode": "SPM-COB-069",
+    "file": "csv-988-d-m9nw.webp",
+    "source": "https://mx.rs-online.com/product/smc-corporation/d-m9nw/70072760/",
+    "imageSource": "https://assets.rs-online.com/image/upload/v1634119907/70072760.jpg",
+    "caption": "ภาพอ้างอิง SMC D-M9NW",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:07.795Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "845"
+    ],
+    "model": "6AU1410-2AD00-0AA0",
+    "brand": "Siemens",
+    "partName": "Simotion Drive Based",
+    "partCode": "SPM-MCY-056",
+    "file": "csv-845-6au1410-2ad00-0aa0.webp",
+    "source": "https://au.wiautomation.com/siemens/drives-motors-circuits-protection/sinamics/6AU14102AD000AA0",
+    "imageSource": "https://images.wiautomation.com/public/images/landing/anticipa/product/6AU14102AD000AA0.jpg",
+    "caption": "ภาพอ้างอิง Siemens 6AU1410-2AD00-0AA0 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:07.871Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "851"
+    ],
+    "model": "6ES7 322-1BL00-0AA0",
+    "brand": "Siemens",
+    "partName": "Digital Out put Module",
+    "partCode": "SPM-RHK-032",
+    "file": "csv-851-6es7322-1bl00-0aa0.webp",
+    "source": "https://industrie24.com/products/siemens-6es7322-1bl00-0aa0-sps-e-a-modul-simatic-s7-300-series",
+    "imageSource": "https://industrie24.com/cdn/shop/files/PhotoRoom_013_20231205_164727.jpg?v=1702471416&width=1600",
+    "caption": "ภาพอ้างอิง Siemens 6ES7 322-1BL00-0AA0 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:08.131Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "953"
+    ],
+    "model": "SY5240-5DZ",
+    "brand": "SMC",
+    "partName": "Solenoid Valve",
+    "partCode": "SPM-RHK-022",
+    "file": "csv-953-sy5240-5dz.webp",
+    "source": "https://www.industrialautomationcanada.com/smc-sy5240-5dz-solenoid-valve-2-position-24vdc-used/",
+    "imageSource": "https://cdn11.bigcommerce.com/s-1uwkvsfr/images/stencil/1280x1280/products/148425/565889/iac19-20150.1__81930.1692115322.JPG?c=2",
+    "caption": "ภาพอ้างอิง SMC SY5240-5DZ",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:08.248Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "878"
+    ],
+    "model": "AN600-10",
+    "brand": "SMC",
+    "partName": "Silencer",
+    "partCode": "SPM-WAS-028",
+    "file": "csv-878-an600-10.webp",
+    "source": "https://th.rs-online.com/web/p/pneumatic-silencers/7005774",
+    "imageSource": "https://media.rs-online.com/F7005774-01.jpg",
+    "caption": "ภาพอ้างอิง SMC AN600-10",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:08.413Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "540"
+    ],
+    "model": "PKZM0-10",
+    "brand": "Eaton",
+    "partName": "Motor Protective Circuit-breaker",
+    "partCode": "SPM-MC6-070",
+    "file": "csv-540-pkzm0-10.webp",
+    "source": "https://uk.rs-online.com/web/p/motor-protection/0818744",
+    "imageSource": "https://media.rs-online.com/f_auto/F0818744-01.jpg",
+    "caption": "ภาพอ้างอิง Eaton PKZM0-10",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:08.650Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "519"
+    ],
+    "model": "P1 KS001",
+    "brand": "Wenglor",
+    "partName": "Through-Beam-Sensor",
+    "partCode": "SPM-COM-067",
+    "file": "csv-519-p1ks001.webp",
+    "source": "https://www.wenglor.com/en/Sensors/Photoelectronic-Sensors/Through-Beam-Sensors/Through-Beam-Sensor/p/P1KS001",
+    "imageSource": "https://www.wenglor.com/medias/B-PRO-P1KExxx-05ws872Wx491H.webp?context=bWFzdGVyfGltYWdlc19Qcm9kdWt0YmlsZHwzMDUxOHxpbWFnZS93ZWJwfGltYWdlc19Qcm9kdWt0YmlsZC9oN2QvaDM0LzkxMTcwMzc5MjAyODYud2VicHxiMGI2MGYwMDM4ZTBmYjJiNmNiMGY3N2MwMGQzODU1YzM5YmJlMWEwYzQwZWYxNDYxODRkYjEyYjQ1ZjBmNDQ5",
+    "caption": "ภาพอ้างอิง Wenglor P1 KS001 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:08.717Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "588"
+    ],
+    "model": "KV-7500",
+    "brand": "Keyence",
+    "partName": "PLC",
+    "partCode": "SPM-COM-095",
+    "file": "csv-588-kv-7500.webp",
+    "source": "https://koeed.com/products/new-keyence-kv-7500-plc-cpu-unit-with-box",
+    "imageSource": "https://koeed.com/cdn/shop/files/s-l1600_b5284278-6e6f-4921-849c-e289f6e1197e.jpg?v=1723623700&width=1200",
+    "caption": "ภาพอ้างอิง Keyence KV-7500",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:08.873Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "590"
+    ],
+    "model": "VT5-W07",
+    "brand": "Keyence",
+    "partName": "Programmable Display",
+    "partCode": "SPM-COM-097",
+    "file": "csv-590-vt5-w07.webp",
+    "source": "https://thai.fakiki.com/en/products/aunused-vt5-w07-touch-panel-%E0%B9%81%E0%B8%9C%E0%B8%87%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9C%E0%B8%B1%E0%B8%AA-%E0%B8%AA%E0%B9%80%E0%B8%9B%E0%B8%84-dc24v-vt5-series-keyence",
+    "imageSource": "https://thai.fakiki.com/cdn/shop/files/66009-246-1_grande.jpg?v=1703139257",
+    "caption": "ภาพอ้างอิง Keyence VT5-W07",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:08.937Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "591"
+    ],
+    "model": "NE-Q05",
+    "brand": "Keyence",
+    "partName": "Ethernet Switch",
+    "partCode": "SPM-COM-098",
+    "file": "csv-591-ne-q05.webp",
+    "source": "https://sapotas.jp/product.php?id=12996",
+    "imageSource": "https://files.bcart.jp/sapotas/uploads/code/code12551-12600/12600.2.jpg",
+    "caption": "ภาพอ้างอิง Keyence NE-Q05",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:09.156Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "593"
+    ],
+    "model": "GLR48H",
+    "brand": "Keyence",
+    "partName": "Area Safety Sensor",
+    "partCode": "SPM-MC6-132",
+    "file": "csv-593-glr48h.webp",
+    "source": "https://sbindustrialsupply.com/shop/new-keyence-gl-r48h-light-curtain-set-transmitter-receiver-glr48h/?srsltid=AfmBOorJyT9xtNKR1x2e1LzlaBYm-8ZSNS6wWO0wC2MOSYf_hHkDfuY2",
+    "imageSource": "https://sbindustrialsupply.com/wp-content/uploads/imported/9/69/NEW-KEYENCE-GL-R48H-LIGHT-CURTAIN-SET-TRANSMITTER-RECEIVER-GLR48H-193846964169.JPG",
+    "caption": "ภาพอ้างอิง Keyence GLR48H",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:09.325Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "483"
+    ],
+    "model": "KFU8-UFC-1.D",
+    "brand": "Pepperl+Fuchs",
+    "partName": "Frequency Converter",
+    "partCode": "SPM-MC4-151",
+    "file": "csv-483-kfu8-ufc-1d.webp",
+    "source": "https://ca.rs-online.com/product/pepperl-fuchs-process-automation/kfu8-ufc-1-d/70526964/",
+    "imageSource": "https://res.cloudinary.com/allied-electronics-automation/image/upload/b_rgb%3AFFFFFF%2Cc_pad%2Cdpr_2.0%2Cf_auto%2Ch_400%2Cq_auto%2Cw_400/c_pad%2Ch_400%2Cw_400/70526964_front.jpg?_i=AB&pgw=1",
+    "caption": "ภาพอ้างอิง Pepperl+Fuchs KFU8-UFC-1.D",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:09.436Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "517"
+    ],
+    "model": "HB03PBT7",
+    "brand": "Wenglor",
+    "partName": "Reflex Sensor",
+    "partCode": "SPM-MCY-131",
+    "file": "csv-517-hb03pbt7.webp",
+    "source": "https://www.wenglor.com/es/Sensores/Sensores-optoelectronicos/Sensores-reflex/Sensores-reflex-con-supresion-de-fondo/Sensor-reflex-con-supresion-de-fondo/p/HB03PBT7",
+    "imageSource": "https://www.wenglor.com/medias/B-PRO-HB03xxxx-02ws872Wx491H.webp?context=bWFzdGVyfGltYWdlc19Qcm9kdWt0YmlsZHwzMTY2MnxpbWFnZS93ZWJwfGltYWdlc19Qcm9kdWt0YmlsZC9oZWIvaGFkLzkxMTcxODUzNzYyODYud2VicHxmNzMyZWNlNmZlNDQ5ZjJkMmI0YmQwYjc0MDkxZTI0ZTVkZWY2ODgwYWMzMzk2ZDE2Y2M3MjU3OTc0YjBhMDFj",
+    "caption": "ภาพอ้างอิง Wenglor HB03PBT7 · ภาพตัวแทนจากหน้าสินค้า",
+    "matchByIdOnly": false,
+    "matchType": "REPRESENTATIVE",
+    "reviewedAt": "2026-09-16T11:56:09.497Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "597"
+    ],
+    "model": "PJ-50A",
+    "brand": "Keyence",
+    "partName": "Area Sensor Bast ( T )",
+    "partCode": "SPM-PRE-008",
+    "file": "csv-597-pj-50a.webp",
+    "source": "https://industrialpartsrus.com/keyence-pj-50a-expandable-area-sensor-transmitter-and-receiver/",
+    "imageSource": "https://cdn11.bigcommerce.com/s-i1ufh3/images/stencil/500x659/products/14734/82461/ip09092-33b251dabf9bb7faeebffd5d6f6559a2d727581e-2__48295.1635465700.png?c=2",
+    "caption": "ภาพอ้างอิง Keyence PJ-50A",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:09.538Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "331"
+    ],
+    "model": "PZ-B61",
+    "brand": "Keyence",
+    "partName": "Standard Mounting Bracket",
+    "partCode": "SPM-RHK-011",
+    "file": "csv-331-pz-b61.webp",
+    "source": "https://fakiki.com/category/100_007_001_001/308-260.html",
+    "imageSource": "https://fakiki.com/client_info/FAKIKI/itemimage/308-260/308-260-1.jpg",
+    "caption": "ภาพอ้างอิง Keyence PZ-B61",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:09.599Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "596"
+    ],
+    "model": "OP-84219",
+    "brand": "Keyence",
+    "partName": "Reflector R-2L",
+    "partCode": "SPM-RHK-010",
+    "file": "csv-596-op-84219.webp",
+    "source": "https://fakiki.com/category/100_007_012/251-694.html",
+    "imageSource": "https://fakiki.com/client_info/FAKIKI/itemimage/251-694/251-694-1.jpg",
+    "caption": "ภาพอ้างอิง Keyence OP-84219",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:09.662Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
+  },
+  {
+    "ids": [
+      "595"
+    ],
+    "model": "OP-87635",
+    "brand": "Keyence",
+    "partName": "Connector Cable M12",
+    "partCode": "SPM-RHK-016",
+    "file": "csv-595-op-87635.webp",
+    "source": "https://vb-steuerungstechnik.de/Keyence-OP-87635-Verbindungskabel-M12-10m",
+    "imageSource": "https://vb-steuerungstechnik.de/media/image/product/12776/md/keyence-op-87635-verbindungskabel-m12-10m.jpg",
+    "caption": "ภาพอ้างอิง Keyence OP-87635",
+    "matchByIdOnly": false,
+    "matchType": "EXACT",
+    "reviewedAt": "2026-09-16T11:56:09.717Z",
+    "inputFile": "cmms-spare-parts-2026-09-16.csv"
   }
 ]

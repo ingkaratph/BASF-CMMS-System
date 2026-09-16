@@ -1,0 +1,7 @@
+{
+  "totalParts": 1204,
+  "seededForSearch": 1204,
+  "baselineMapped": 6,
+  "strategy": "Attempt every searchable row using Brand + Description/Model + PartName; exact preferred; close allowed; low-confidence skipped.",
+  "requiresInternetDuringSync": true
+}

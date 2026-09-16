@@ -1943,3 +1943,4 @@ footer {
     font-size: 13px;
   }
 }
+.report-category-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.category-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:20px 0}.category-metrics>div{padding:20px;display:grid;gap:12px}.category-metrics strong{font-size:28px}.issue-picker{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px;max-height:300px;overflow:auto;margin:16px 0}.issue-choice{display:grid;text-align:left;gap:6px;padding:14px;border:1px solid var(--line);border-radius:8px;background:transparent;color:inherit;cursor:pointer}.issue-choice:disabled{opacity:.5;cursor:default}.issue-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:18px 0}.issue-fields label{display:grid;gap:8px}.report-panel form input[type=number]{min-width:100px;width:110px}
