@@ -37,10 +37,13 @@ test("resource, method, identifier and bounds validation", () => {
   assert.ok(validateRequest("users", "GET", {}));
   assert.ok(validateRequest("assets", "PUT", {}, {}));
   assert.ok(validateRequest("assets", "GET", { id: "1 OR 1=1" }));
-  assert.ok(validateRequest("assets", "GET", { limit: "501" }));
+  assert.ok(validateRequest("assets", "GET", { limit: "2001" }));
   assert.ok(validateRequest("assets", "GET", { limit: "1.5" }));
   assert.ok(validateRequest("assets", "GET", { search: "a".repeat(101) }));
   assert.equal(validateRequest("assets", "GET", { limit: "500" }), null);
+  assert.equal(validateRequest("assets", "GET", { limit: "2000" }), null);
+  assert.equal(validateRequest("spare-parts", "GET", { department: "", partType: "" }), null);
+  assert.ok(validateRequest("spare-parts", "GET", { department: ["bad"] }));
 });
 test("validate meaningful stock quantities, financial bounds, allowed fields and completion", () => {
   const body = {

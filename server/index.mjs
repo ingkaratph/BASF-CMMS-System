@@ -18,6 +18,7 @@ import { canAccess as policyAccess, canPerform as policyPerform } from "../share
 import {createPermissionsStore} from './permissions-store.mjs';
 import {createIdentityApi} from './identity-api.mjs';
 import {addPartReference} from './part-images.mjs';
+import {createMediaStore,canManageMedia,mediaResources} from './media-store.mjs';
 const app = express();
 const port = Number(process.env.PORT || 80);
 const host = process.env.HOST || "0.0.0.0";
@@ -27,7 +28,7 @@ const key =
   process.env.CMMS_API_KEY_OPERATOR ||
   process.env.CMMS_API_KEY_READONLY ||
   "";
-const base = (process.env.CMMS_API_BASE_URL || "http://pd.local:1880").replace(
+const base = (process.env.CMMS_API_BASE_URL || "http://mt.local:1880").replace(
   /\/$/,
   "",
 );
@@ -42,6 +43,7 @@ const identityApi=databaseIdentity?createIdentityApi(base,adminKey):null;
 function canAccess(req,page){return policyAccess(req.user.role,page,req.policy.roles)}
 function canPerform(req,resource,method,row){return policyPerform(req.user.role,resource,method,row,req.policy.roles)}
 const sessions = new Map();
+const mediaStore=createMediaStore(process.env.CMMS_MEDIA_DIR||'server/uploads');
 const attempts = new Map();
 setInterval(() => {
   const now = Date.now();
@@ -183,6 +185,35 @@ function forbidden(res) {
       error: { code: "FORBIDDEN", message: "คุณไม่มีสิทธิ์ใช้ฟังก์ชันนี้" },
     });
 }
+function mediaAccess(req,res,next){
+  const {resource,id}=req.params;
+  if(!mediaResources.includes(resource)||!/^\d{1,20}$/.test(id))return res.status(400).json({ok:false,error:{message:'รายการไม่ถูกต้อง'}});
+  if(!canAccess(req,resource))return forbidden(res);
+  if(!['GET','HEAD'].includes(req.method)&&(!canManageMedia(req.user.role)||!canPerform(req,resource,'PUT')))return forbidden(res);
+  next();
+}
+app.get('/api/media/:resource/:id',mediaAccess,(req,res)=>res.json({ok:true,data:mediaStore.list(req.params.resource,req.params.id)}));
+app.get('/api/media/:resource/:id/files/:fileId',mediaAccess,(req,res)=>{
+ const item=mediaStore.find(req.params.resource,req.params.id,req.params.fileId);
+ if(!item)return res.status(404).json({ok:false,error:{message:'ไม่พบไฟล์'}});
+ res.set('Content-Security-Policy',"sandbox; default-src 'none'");
+ if(item.kind==='image')res.type(item.mime).sendFile(item.path);
+ else res.download(item.path,item.name);
+});
+app.post('/api/media/:resource/:id',mediaAccess,express.raw({type:'application/octet-stream',limit:'15mb'}),async(req,res)=>{
+ try{
+  const {resource,id}=req.params;
+  const probe=await upstream(resource,'GET','id='+encodeURIComponent(id),undefined,req.user.role==='ADMINISTRATOR'?adminKey:key);
+  if(probe.status!==200||!probe.json.ok)throw Object.assign(new Error('เชื่อมต่อฐานข้อมูลไม่ได้'),{status:503});
+  if(!normalizeData(probe.json.data).some(row=>String(row[resource==='assets'?'AssetID':'PartID'])===id))throw Object.assign(new Error('ไม่พบรายการในฐานข้อมูล'),{status:404});
+  const item=await mediaStore.add(resource,id,req.body,req.query.name,req.user.username);
+  res.status(201).json({ok:true,data:item});
+ }catch(e){res.status(e.status||400).json({ok:false,error:{message:e.message}})}
+});
+app.delete('/api/media/:resource/:id/files/:fileId',mediaAccess,(req,res)=>{
+ try{mediaStore.remove(req.params.resource,req.params.id,req.params.fileId);res.json({ok:true})}
+ catch(e){res.status(e.status||400).json({ok:false,error:{message:e.message}})}
+});
 app.get('/api/permissions',(req,res)=>{
   if(!canAccess(req,'users'))return forbidden(res);
   res.json({ok:true,data:req.policy});
@@ -227,7 +258,7 @@ app.get("/api/reports", async (req, res) => {
           const response = await upstream(
             resource,
             "GET",
-            "limit=500",
+            "limit=2000",
             undefined,
             req.user.role === "ADMINISTRATOR" ? adminKey : key,
           );
@@ -365,7 +396,7 @@ app.all("/api/cmms/:resource", async (req, res) => {
     }
     const query = new URLSearchParams();
     for (const field of ["id", "search", "limit", ...(resource==='spare-parts'?['department','partType']:[])])
-      if (req.query[field] !== undefined)
+      if (req.query[field] !== undefined && req.query[field] !== '')
         query.set(field, String(req.query[field]));
     const { status, json } = await upstream(
       resource,
@@ -381,6 +412,7 @@ app.all("/api/cmms/:resource", async (req, res) => {
       }
       json.data = normalizeData(json.data);
       if(resource==='spare-parts'&&canAccess(req,resource))json.data=json.data.map(addPartReference);
+      if(mediaResources.includes(resource)&&canAccess(req,resource))json.data=mediaStore.enrich(resource,json.data);
       if (!canAccess(req,resource)) {
         const fields={
           'spare-parts':['PartID','PartCode','PartName','Quantity','Unit'],

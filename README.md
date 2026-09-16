@@ -1,6 +1,6 @@
 # BASF CHEMCAT CMMS
 
-React + TypeScript web application with a Node.js/Express server-side API gateway. The application uses the six existing Node-RED CMMS API resources. No SQL credentials, SQL queries, or CMMS keys are shipped in the browser bundle.
+React + TypeScript web application with a Node.js/Express server-side API gateway. The application uses the six existing CMMS API resources at `http://mt.local:1880`. No SQL credentials, SQL queries, or CMMS keys are shipped in the browser bundle.
 
 ## Start on this PC
 
@@ -9,7 +9,7 @@ Requires Node.js 22+.
 ```powershell
 npm install
 # Copy .env.example to .env only on a fresh installation.
-# Set CMMS_API_KEY to the Node-RED OPERATOR key in .env.
+# Set CMMS_API_KEY to the service operator key in .env.
 npm run build
 npm start
 ```
@@ -63,7 +63,7 @@ The localhost HTTP.sys frontend has been started on this PC; no deployment or te
 
 - Real Node-RED response uses `data.recordset` / `data.recordsets`, unlike the handoff's flat array. Server normalizes both.
 - Real asset fields `AssetStatus`, `Criticality`, PM `FrequencyUnit` and stock `TransactionType` are mapped to the UI contract.
-- The gateway allows at most 500 rows and has no offset/cursor, date range or aggregate endpoint. Counts and reports describe **loaded rows**, not the whole database. Search narrows the data. No complete-plant count, MTBF or MTTR is claimed.
+- The frontend and local gateway request up to 2,000 rows. The UI shows the actual received count even if the upstream service applies a lower cap. The latest live check returned 1,204 spare parts and 586 assets. The API has no offset/cursor, date range or aggregate endpoint. Counts and reports describe **loaded rows**, not the whole database. Search narrows the data. No complete-plant count, MTBF or MTTR is claimed.
 - Dates in 1900/1901 are flagged for review and excluded from overdue KPIs. Source data is not modified. Bangkok timezone is used for displaying and editing source dates.
 - Empty calibration results remain “not specified”; they are never labelled FAIL.
 - Unknown minimum/reorder thresholds are not treated as zero. Unknown costs/currencies are excluded from monetary totals.
@@ -71,7 +71,7 @@ The localhost HTTP.sys frontend has been started on this PC; no deployment or te
 - Warehouse/vendor names are a reference snapshot read on 2026-09-15. Warehouse 1 is EM-MAIN. Maintain `server/vendors.json` and the lookup response when those master lists change, or extend Node-RED with lookup resources.
 - Calibration creation requires an existing CalibrationSpec, as enforced by the upstream procedure.
 - Stock balance transactionality, simultaneous issues and negative-stock prevention remain the responsibility of the SQL gateway/triggers. The app does not invent a balance or directly update stock.
-- No automatic PM-to-WO generation, purchase orders, approvals, notifications or file attachment storage were added. Those need additional API capabilities/business rules.
+- No automatic PM-to-WO generation, purchase orders, approvals, notifications were added. Those need additional API capabilities/business rules.
 - Cloud hosting cannot directly reach `pd.local`; this delivery is designed to run inside the plant network.
 
 ## Validation
@@ -84,3 +84,12 @@ npm run build
 Tests cover the actual response envelope, authorization matrix, immutable history, payload constraints, session login/logout, CSRF origin checks and upstream error/request-ID propagation using an isolated HTTP mock. Production data is not created, edited or deleted by tests. Live GET verification covers all six resources plus search/id/limit.
 
 Secrets must stay in `.env`, which is ignored by Git. The SQL credentials supplied for investigation are not saved in this application. `gateway-reference.local.sql` is an ignored read-only inspection reference, not a migration.
+
+## Local photos and drawings
+
+- Sidebar visibility is saved per browser. Spare inventory filters support Department, PartType and all values together.
+- Spare parts support one uploaded photo; each machine profile supports up to five photos plus PDF, DWG and DXF attachments. Maximum input size is 15 MB per file. JPG, PNG and WebP are validated and converted to WebP.
+- Only Administrator and Planner with master-edit permission may upload or delete attachments. Downloads require a session and permission to view the corresponding resource.
+- Files and their index are stored in `server/uploads` (ignored by Git), configurable through `CMMS_MEDIA_DIR`. Back up the entire directory, including `index.json`, together. Files reside on the PC running this application, not in SQL or on the API service.
+- Two exact-model reference photos are supplied in `public/part-images`; source attribution is in `server/part-images.json`. Uploaded photos take priority over references.
+- The production launcher reloads API settings from `.env` so stale inherited environment keys do not override the configured service credentials.

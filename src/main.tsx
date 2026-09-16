@@ -1,3 +1,4 @@
+import {ImageViewer} from './image-viewer';
 import React, { useEffect, useState, useMemo } from "react";
 import { createRoot } from "react-dom/client";
 import {
@@ -53,6 +54,7 @@ import "./theme.css";
 import {roleLabels} from "../shared/permissions.mjs";
 import {canAccess,applyPermissions} from "./access";
 import { UserManagement } from "./users";
+import {MediaGallery} from "./media-gallery";
 
 type Page = Resource | "overview" | "reports" | "settings" | "users" | "none";
 const navigation: [Page, string, typeof Factory][] = [
@@ -198,6 +200,7 @@ function App() {
   };
   const [refresh, setRefresh] = useState(0);
   const [toast, setToast] = useState("");
+  useEffect(()=>{const changed=()=>setRefresh(v=>v+1);window.addEventListener("cmms-media-updated",changed);return()=>window.removeEventListener("cmms-media-updated",changed)},[]);
   const [form, setForm] = useState<{ resource: Resource; row?: Row } | null>(
     null,
   );
@@ -544,6 +547,7 @@ function App() {
           resource={detail.resource}
           row={detail.row}
           role={role}
+          openRelated={(row) => setDetail({resource:"work-orders",row})}
           close={() => setDetail(null)}
           edit={() => setForm(detail)}
           removed={() => {
@@ -639,7 +643,7 @@ function Overview({
         try {
           const j = await api(
             resource,
-            { limit: 500 },
+            { limit: 2000 },
             "GET",
             undefined,
             ctrl.signal,
@@ -725,7 +729,7 @@ function Overview({
           ภาพรวมการปฏิบัติงาน
         </span>
         <span>
-          ข้อมูลสูงสุด 500 รายการ / หมวด{loading ? " · กำลังโหลด…" : ""}
+          ข้อมูลสูงสุด 2000 รายการ / หมวด{loading ? " · กำลังโหลด…" : ""}
         </span>
       </div>
       <div className="metrics">
@@ -977,7 +981,7 @@ function Overview({
       {report && (
         <section className="panel report-panel">
           <h2>ส่งออกรายงาน</h2>
-          <p>ข้อมูลที่โหลดสูงสุด 500 รายการต่อหมวด ไม่ใช่ผลรวมทั้งฐานข้อมูล</p>
+          <p>ข้อมูลที่โหลดสูงสุด 2000 รายการต่อหมวด ไม่ใช่ผลรวมทั้งฐานข้อมูล</p>
           <div className="report-cards">
             {(
               [
@@ -1012,7 +1016,7 @@ function Overview({
         </section>
       )}
       <p className="data-note">
-        ค่ารวมคำนวณจากข้อมูลที่ API ส่งกลับ สูงสุด 500 รายการต่อหมวด ·
+        ค่ารวมคำนวณจากข้อมูลที่ API ส่งกลับ สูงสุด 2000 รายการต่อหมวด ·
         เมื่อข้อมูลไม่พร้อมจะแสดง —
       </p>
     </>
@@ -1040,11 +1044,16 @@ function Unavailable({ text }: { text: string }) {
   );
 }
 
+function newestRequest(a:Row,b:Row){
+ const stamp=(r:Row)=>validDate(value(r,'RequestedDate'))?Date.parse(str(r,'RequestedDate')):Number.NEGATIVE_INFINITY;
+ return (stamp(b)-stamp(a)) || Number(value(b,'WorkOrderID'))-Number(value(a,'WorkOrderID'));
+}
 function PartReference({row}:{row:Row}) {
- const [failed,setFailed]=useState(false);
+ const [failed,setFailed]=useState(false),[open,setOpen]=useState(false);
  const url=str(row,'ReferenceImageUrl');
+ const label=str(row,'PartName')||str(row,'AssetName');
  useEffect(()=>setFailed(false),[url]);
- return url&&!failed?<a className="part-reference" href={str(row,'ReferenceSourceUrl')} target="_blank" rel="noopener noreferrer" title={str(row,'ReferenceCaption')}><img src={url} alt={`ภาพอ้างอิง ${str(row,'PartName')}`} loading="lazy" onError={()=>setFailed(true)}/><small>อ้างอิง ↗</small></a>:<span className="part-reference empty-reference" title="ยังไม่มีภาพที่ยืนยันความใกล้เคียง"><Package size={22}/><small>ไม่มีภาพ</small></span>;
+ return url&&!failed?<><button className="part-reference" type="button" aria-label={`ดูรูป ${label}`} onClick={()=>setOpen(true)}><img src={url} alt={`รูป ${label}`} loading="lazy" onError={()=>setFailed(true)}/><small>ดูรูปภาพ</small></button>{open&&<ImageViewer images={[{url,alt:label}]} initial={0} close={()=>setOpen(false)}/>}</>:<span className="part-reference empty-reference" title="ยังไม่มีภาพที่ยืนยันความใกล้เคียง"><Package size={22}/><small>ไม่มีภาพ</small></span>;
 }
 function ModulePage({
   resource,
@@ -1067,7 +1076,7 @@ function ModulePage({
   const [error, setError] = useState<Error>();
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
-  const [limit, setLimit] = useState(100);
+  const [limit, setLimit] = useState(2000);
   const [status, setStatus] = useState("all");
   const [department,setDepartment]=useState('');
   const [partType,setPartType]=useState('');
@@ -1092,9 +1101,9 @@ function ModulePage({
     setLoading(true);
     setError(undefined);
     setRows([]);
-    api(resource, { search: query, limit, ...(resource==="spare-parts"?{department,partType}:{}) }, "GET", undefined, ctrl.signal)
+    api(resource, { search: query, limit, ...(resource==="spare-parts"?{...(department?{department}:{}),...(partType?{partType}:{})}:{}) }, "GET", undefined, ctrl.signal)
       .then((j) => {
-        setRows(j.data);
+        setRows(resource === "work-orders" ? [...j.data].sort(newestRequest) : j.data);
         setTotal(j.total);if(j.facets)setFacets(j.facets);
         onRole(j.role);
       })
@@ -1192,9 +1201,9 @@ function ModulePage({
           </div>
         </div>
         {resource==='spare-parts'&&<div className="parts-filters">
-          <label>Department<select aria-label="กรอง Department" value={department} onChange={e=>{setDepartment(e.target.value);setIndex(0)}}><option value="">ทุก Department</option>{facets.departments.map(v=><option key={v} value={v}>{v==='__missing__'?'ไม่ระบุ':v}</option>)}</select></label>
-          <label>PartType<select aria-label="กรอง PartType" value={partType} onChange={e=>{setPartType(e.target.value);setIndex(0)}}><option value="">ทุก PartType</option>{facets.partTypes.map(v=><option key={v} value={v}>{v==='__missing__'?'ไม่ระบุ':v}</option>)}</select></label>
-          {(department||partType)&&<button className="button" onClick={()=>{setDepartment('');setPartType('');setIndex(0)}}><X size={16}/>ล้างตัวกรองกลุ่ม</button>}
+          <label>Department<select aria-label="กรอง Department" value={department} onChange={e=>{setDepartment(e.target.value);setIndex(0);setStatus("all")}}><option value="">ทุก Department</option>{facets.departments.map(v=><option key={v} value={v}>{v==='__missing__'?'ไม่ระบุ':v}</option>)}</select></label>
+          <label>PartType<select aria-label="กรอง PartType" value={partType} onChange={e=>{setPartType(e.target.value);setIndex(0);setStatus("all")}}><option value="">ทุก PartType</option>{facets.partTypes.map(v=><option key={v} value={v}>{v==='__missing__'?'ไม่ระบุ':v}</option>)}</select></label>
+          {(department||partType)&&<button className="button" onClick={()=>{setDepartment('');setPartType('');setIndex(0);setStatus('all')}}><X size={16}/>ล้างตัวกรองกลุ่ม</button>}
           <small>กรอง Department และ PartType จากฐานข้อมูลทั้งหมด{total!==undefined?` · พบ ${total.toLocaleString()} รายการ`:''}</small>
         </div>}
         <div className="table-subbar">
@@ -1229,7 +1238,7 @@ function ModulePage({
                   setIndex(0);
                 }}
               >
-                {[50, 100, 250, 500].map((n) => (
+                {[100, 250, 500, 1000, 2000].map((n) => (
                   <option key={n}>{n}</option>
                 ))}
               </select>
@@ -1253,7 +1262,7 @@ function ModulePage({
               <table>
                 <thead>
                   <tr>
-                    {resource==="spare-parts"&&<th>ภาพอ้างอิง</th>}
+                    {["spare-parts","assets"].includes(resource)&&<th>รูปภาพ</th>}
                     {config.columns.map(([k, l]) => (
                       <th key={k}>{l}</th>
                     ))}
@@ -1263,7 +1272,7 @@ function ModulePage({
                 <tbody>
                   {visible.map((r, i) => (
                     <tr key={str(r, config.id) || i}>
-                      {resource==="spare-parts"&&<td><PartReference row={r}/></td>}
+                      {["spare-parts","assets"].includes(resource)&&<td><PartReference row={r}/></td>}
                       {config.columns.map(([k]) => (
                         <td key={k}>
                           {k === config.columns[0][0] ? (
@@ -1337,11 +1346,10 @@ function ModulePage({
           <Empty />
         )}
       </section>
-      {rows.length >= limit && (
+      {((total!==undefined&&total>rows.length)||rows.length>=limit) && (
         <p className="data-note warning">
-          แสดงถึงขีดจำกัด {limit} รายการ อาจมีข้อมูลเพิ่มเติม
-          กรุณาค้นหาให้เฉพาะเจาะจง · API
-          ปัจจุบันยังไม่มีการแบ่งหน้าจากเซิร์ฟเวอร์
+          โหลดแล้ว {rows.length.toLocaleString()} รายการ{total!==undefined?` จากทั้งหมด ${total.toLocaleString()} รายการที่ตรงตัวกรอง`:" อาจมีข้อมูลเพิ่มเติม"} · เลือกโหลดสูงสุด {limit.toLocaleString()} รายการ
+          กรุณาใช้คำค้นหาหรือตัวกรองเพื่อเจาะจงรายการที่ต้องการ
         </p>
       )}
       {resource === "spare-parts" &&
@@ -1368,7 +1376,7 @@ function ModulePage({
       {resource === "spare-parts" && (
         <p className="data-note">
           คลิกอะไหล่เพื่อดู Min / Max, SAP Material, ต้นทุน และข้อมูลเพิ่มเติม ·
-          ปรับยอดผ่านรายการรับ–เบิกเพื่อรักษาประวัติ · ภาพอ้างอิงจากภายนอก ไม่ใช่ภาพสต็อกจริง คลิกภาพเพื่อดูแหล่งที่มา
+          ปรับยอดผ่านรายการรับ–เบิกเพื่อรักษาประวัติ · ภาพอ้างอิงจากภายนอก ไม่ใช่ภาพสต็อกจริง คลิกภาพเพื่อเปิด Gallery
         </p>
       )}
       {resource === "calibration-history" && (
@@ -1767,6 +1775,7 @@ function Detail({
   close,
   edit,
   removed,
+  openRelated,
 }: {
   resource: Resource;
   row: Row;
@@ -1774,6 +1783,7 @@ function Detail({
   close: () => void;
   edit: () => void;
   removed: () => void;
+  openRelated: (row:Row) => void;
 }) {
   const [confirm, setConfirm] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -1804,9 +1814,10 @@ function Detail({
           <Badge>{str(row, c.status || "StatusCode")}</Badge>
         </div>
         {error && <ErrorBox error={error} />}
+        {["spare-parts","assets"].includes(resource)&&<MediaGallery resource={resource} id={id} role={role} row={row}/>}
         <dl className="detail-grid">
           {Object.entries(row)
-            .filter(([k]) => !/ID$/i.test(k))
+            .filter(([k]) => !/ID$/i.test(k)&&!/^Reference|^ImageOrigin/.test(k))
             .map(([k, v]) => (
               <div key={k}>
                 <dt>
@@ -1819,7 +1830,7 @@ function Detail({
             ))}
         </dl>
         {resource === "assets" && canAccess(role, "maintenance-plans") && (
-          <RelatedAsset row={row} />
+          <RelatedAsset row={row} openRelated={openRelated} />
         )}
       </div>
       <div className="modal-actions">
@@ -1864,7 +1875,7 @@ function Detail({
     </Modal>
   );
 }
-function RelatedAsset({ row }: { row: Row }) {
+function RelatedAsset({ row, openRelated }: { row: Row; openRelated:(row:Row)=>void }) {
   const [records, setRecords] = useState<Partial<Record<Resource, Row[]>>>({});
   const [error, setError] = useState<Error>();
   useEffect(() => {
@@ -1872,7 +1883,7 @@ function RelatedAsset({ row }: { row: Row }) {
     for (const r of ["maintenance-plans", "work-orders"] as Resource[])
       api(
         r,
-        { search: str(row, "MachineCode") || str(row, "TagNo"), limit: 500 },
+        { search: str(row, "MachineCode") || str(row, "TagNo"), limit: 2000 },
         "GET",
         undefined,
         ctrl.signal,
@@ -1880,7 +1891,7 @@ function RelatedAsset({ row }: { row: Row }) {
         .then((j) =>
           setRecords((prev) => ({
             ...prev,
-            [r]: j.data.filter(
+            [r]: (r === "work-orders" ? [...j.data].sort(newestRequest) : j.data).filter(
               (x) => str(x, "AssetID") === str(row, "AssetID"),
             ),
           })),
@@ -1893,7 +1904,7 @@ function RelatedAsset({ row }: { row: Row }) {
   return (
     <div className="related">
       <h3>แผน PM และประวัติการซ่อม</h3>
-      <p className="data-note">จากผลการค้นหาสูงสุด 500 รายการต่อหมวด</p>
+      <p className="data-note">จากผลการค้นหาสูงสุด 2000 รายการต่อหมวด</p>
       {error && <ErrorBox error={error} />}{" "}
       {(["maintenance-plans", "work-orders"] as Resource[]).map((r) => (
         <section key={r}>
@@ -1901,11 +1912,11 @@ function RelatedAsset({ row }: { row: Row }) {
             {modules[r].title} ({records[r]?.length ?? "…"})
           </h4>
           {records[r]?.map((item, i) => (
-            <div className="related-row" key={i}>
+            <div className={`related-row ${r === "work-orders" ? "related-work-order" : ""}`} key={i} role={r === "work-orders" ? "button" : undefined} tabIndex={r === "work-orders" ? 0 : undefined} title={r === "work-orders" ? "ดับเบิ้ลคลิกเพื่อดูใบงาน หรือกด Enter" : undefined} onDoubleClick={()=>{if(r === "work-orders")openRelated(item)}} onKeyDown={e=>{if(r === "work-orders" && (e.key === "Enter" || e.key === " ")){e.preventDefault();openRelated(item)}}}>
               <span>{str(item, "TaskDescription") || str(item, "Title")}</span>
               <span>
                 {display(
-                  value(item, r === "work-orders" ? "DueDate" : "NextDueDate"),
+                  value(item, r === "work-orders" ? "RequestedDate" : "NextDueDate"),
                   "DueDate",
                 )}
               </span>

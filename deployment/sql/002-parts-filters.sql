@@ -134,7 +134,7 @@ BEGIN
         THROW 57002, 'Unsupported API resource.', 1;
 
     IF @Limit IS NULL OR @Limit < 1 SET @Limit=100;
-    IF @Limit > 500 SET @Limit=500;
+    IF @Limit > 2000 SET @Limit=2000;
 
     IF ISJSON(@BodyJson)<>1
         THROW 57003, 'Request body is not valid JSON.', 1;
@@ -230,8 +230,8 @@ BEGIN
 
         IF @Resource=N'spare-parts'
         BEGIN
-            DECLARE @FilterDepartment nvarchar(100)=JSON_VALUE(@BodyJson,'$.department'),
-                    @FilterPartType nvarchar(100)=JSON_VALUE(@BodyJson,'$.partType');
+            DECLARE @FilterDepartment nvarchar(100)=NULLIF(LTRIM(RTRIM(JSON_VALUE(@BodyJson,'$.department'))),N''),
+                    @FilterPartType nvarchar(100)=NULLIF(LTRIM(RTRIM(JSON_VALUE(@BodyJson,'$.partType'))),N'');
             SELECT * INTO #FilteredParts FROM inv.vwSparePartListAPI
             WHERE (@Id IS NULL OR PartID=@Id)
               AND (@Search IS NULL OR PartCode LIKE N'%'+@Search+N'%' OR SAPMaterial LIKE N'%'+@Search+N'%' OR PartName LIKE N'%'+@Search+N'%' OR Description LIKE N'%'+@Search+N'%' OR Brand LIKE N'%'+@Search+N'%')

@@ -80,6 +80,7 @@ export const modules: Record<Resource, Module> = {
     status: "StatusCode",
     columns: [
       ["WorkOrderNo", "ใบงาน"],
+      ["RequestedDate", "วันที่ส่ง Request"],
       ["Title", "รายละเอียดงาน"],
       ["MachineCode", "Machine code"],
       ["PriorityCode", "ความเร่งด่วน"],

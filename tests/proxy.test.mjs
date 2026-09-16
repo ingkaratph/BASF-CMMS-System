@@ -172,7 +172,7 @@ test("proxy authentication, actual role, mutations, validation and upstream erro
       403,
     );
     assert.equal(
-      (await fetch(base + "/api/cmms/assets?limit=501", { headers })).status,
+      (await fetch(base + "/api/cmms/assets?limit=2001", { headers })).status,
       400,
     );
     mode = "error";

@@ -15,7 +15,7 @@ try {
         $env:PORT = "$BackendPort"
         $env:HOST = '127.0.0.1'
         $null = New-Item -ItemType Directory -Path (Join-Path $projectPath 'artifacts') -Force
-        $backendProcess = Start-Process -FilePath (Get-Command node).Source -ArgumentList 'server/index.mjs','--production' -WorkingDirectory $projectPath -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $projectPath 'artifacts/backend.log') -RedirectStandardError (Join-Path $projectPath 'artifacts/backend-error.log')
+        $backendProcess = Start-Process -FilePath (Get-Command node).Source -ArgumentList 'scripts/production.mjs','--production' -WorkingDirectory $projectPath -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $projectPath 'artifacts/backend.log') -RedirectStandardError (Join-Path $projectPath 'artifacts/backend-error.log')
         $ready = $false
         for ($attempt = 0; $attempt -lt 30; $attempt++) {
             if ($backendProcess.HasExited) { throw 'CMMS backend stopped. See artifacts/backend-error.log.' }

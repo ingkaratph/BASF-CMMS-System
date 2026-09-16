@@ -13,3 +13,4 @@ server/users.local.json
 server/users.local.json.tmp
 server/permissions.local.json
 server/permissions.local.json.tmp
+server/uploads/

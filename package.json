@@ -15,7 +15,8 @@
     "lucide-react": "^0.468.0",
     "mssql": "^12.7.2",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "sharp": "^0.35.4"
   },
   "devDependencies": {
     "@playwright/test": "^1.51.1",

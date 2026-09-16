@@ -6,7 +6,7 @@ import {randomBytes} from 'node:crypto';
 import {defaultPermissions,roles,permissionResources,permissionPages,permissionMethods,immutableResources} from '../shared/permissions.mjs';
 import {validateRolePermissions} from '../server/permissions-store.mjs';
 
-const base=(process.env.CMMS_API_BASE_URL||'http://pd.local:1880').replace(/\/$/,'');
+const base=(process.env.CMMS_API_BASE_URL||'http://mt.local:1880').replace(/\/$/,'');
 if(!process.env.CMMS_SQL_PASSWORD)throw new Error('CMMS_SQL_PASSWORD is required for deployment only');
 const pool=await sql.connect({server:process.env.CMMS_SQL_HOST||'pd.local',port:1433,user:process.env.CMMS_SQL_USER||'sa',password:process.env.CMMS_SQL_PASSWORD,database:'BASF_CHEMCAT_CMMS',options:{encrypt:false,trustServerCertificate:true},connectionTimeout:15000});
 try {

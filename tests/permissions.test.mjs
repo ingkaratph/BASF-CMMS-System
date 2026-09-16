@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdtempSync, rmSync, rmdirSync } from "node:fs";
+import { mkdtempSync, rmSync, rmdirSync, readdirSync, existsSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import http from "node:http";
@@ -94,6 +94,7 @@ test("named accounts, stored password hashes and session version revocation", ()
   } finally {
     rmSync(file, { force: true });
     rmSync(file + ".tmp", { force: true });
+    if(existsSync(join(dir,"media"))){for(const name of readdirSync(join(dir,"media")))rmSync(join(dir,"media",name));rmdirSync(join(dir,"media"));}
     rmdirSync(dir);
   }
 });
@@ -168,6 +169,7 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
       ...process.env,
       CMMS_IDENTITY_STORAGE: "local",
       CMMS_USERS_FILE: file,
+      CMMS_MEDIA_DIR: join(dir,"media"),
       CMMS_APP_PASSWORD: "initial-admin-password",
       CMMS_API_KEY: "operator-key",
       CMMS_API_KEY_ADMIN: "admin-key",
@@ -298,6 +300,20 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
         .status,
       200,
     );
+    for(const role of ['TECHNICIAN','PRODUCTION']){
+      const forbiddenUpload=await fetch(base+'/api/media/assets/1?name=manual.pdf',{method:'POST',headers:{Cookie:cookies[role],'Content-Type':'application/octet-stream'},body:Buffer.from('%PDF-1.4\n%%EOF')});
+      assert.equal(forbiddenUpload.status,403);
+    }
+    const upload=await fetch(base+'/api/media/assets/1?name=manual.pdf',{method:'POST',headers:{Cookie:cookies.PLANNER,'Content-Type':'application/octet-stream'},body:Buffer.from('%PDF-1.4\n%%EOF')});
+    assert.equal(upload.status,201);const media=(await upload.json()).data;
+    assert.equal((await fetch(base+media.url)).status,401);
+    const download=await request('TECHNICIAN',media.url);assert.equal(download.status,200);assert.match(download.headers.get('content-disposition'),/^attachment/);
+    assert.equal((await request('TECHNICIAN',media.url,'DELETE')).status,403);
+    assert.equal((await request('ADMINISTRATOR',media.url.replace('/assets/1/','/assets/2/'))).status,404);
+    assert.equal((await request('PLANNER',media.url,'DELETE')).status,200);
+    assert.equal((await request('PLANNER',media.url)).status,404);
+    await request('ADMINISTRATOR','/api/cmms/spare-parts?department=&partType=&limit=2000');
+    const forwarded=new URL(calls.at(-1).url,'http://test');assert.equal(forwarded.searchParams.has('department'),false);assert.equal(forwarded.searchParams.has('partType'),false);assert.equal(forwarded.searchParams.get('limit'),'2000');
     const account = store.list().find((u) => u.role === "TECHNICIAN");
     assert.equal(
       (
@@ -313,6 +329,7 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
     await new Promise((r) => mock.close(r));
     rmSync(file, { force: true });
     rmSync(file + ".tmp", { force: true });
+    if(existsSync(join(dir,"media"))){for(const name of readdirSync(join(dir,"media")))rmSync(join(dir,"media",name));rmdirSync(join(dir,"media"));}
     rmdirSync(dir);
   }
 });

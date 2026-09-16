@@ -17,7 +17,7 @@ if (useWindowsFrontend) {
 }
 const child = useWindowsFrontend
   ? spawn(process.env.CMMS_PWSH_PATH || "pwsh.exe", ["-NoProfile", "-File", fileURLToPath(new URL("./start-windows-http.ps1", import.meta.url))], { cwd: root, stdio: "inherit", windowsHide: true })
-  : spawn(process.execPath, ["server/index.mjs", "--production"], { cwd: root, stdio: "inherit", windowsHide: true });
+  : spawn(process.execPath, ["scripts/production.mjs", "--production"], { cwd: root, stdio: "inherit", windowsHide: true });
 child.on("error", error => {
   console.error(useWindowsFrontend ? "Cannot start PowerShell 7. Set CMMS_PWSH_PATH to pwsh.exe, then run npm start again." : error.message);
   process.exitCode = 1;
