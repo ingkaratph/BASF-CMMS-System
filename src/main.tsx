@@ -372,7 +372,7 @@ function App() {
           <div className="site-indicator">
             <span /> BASF CHEMCAT<span className="internal">INTERNAL</span>
           </div>
-          {canAccess(role, "settings") && (
+          {/* {canAccess(role, "settings") && (
             <>
               <button
                 className={page === "settings" ? "active" : ""}
@@ -382,7 +382,7 @@ function App() {
                 การเชื่อมต่อระบบ
               </button>
             </>
-          )}
+          )} */}
           <div className="profile">
             <div className="avatar">MT</div>
             <div>
