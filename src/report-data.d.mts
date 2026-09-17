@@ -1,0 +1,11 @@
+import type {Row} from './api';
+export type ChartItem={label:string;value:number};
+export function get(row:Row,key:string):unknown;
+export function text(row:Row,key:string):string;
+export function number(row:Row,key:string):number|null;
+export function validDate(v:unknown):boolean;
+export function closed(row:Row):boolean;
+export function active(row:Row):boolean;
+export function late(row:Row,key:string):boolean;
+export function group(rows:Row[],label:(r:Row)=>string,amount?:(r:Row)=>number):ChartItem[];
+export function maintenanceSummary(work:Row[],assets:Row[]):{jobs:Row[];measured:number;missing:number;totalHours:number;machines:ChartItem[];trend:ChartItem[];undated:number;meanRepairHours:number|null;durationCount:number};
