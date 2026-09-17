@@ -47,7 +47,7 @@ test('SQL identity mode uses service API, enforces custom rights, revokes sessio
  });
  api.listen(0,'127.0.0.1');await once(api,'listening');
  const reserve=http.createServer();reserve.listen(0,'127.0.0.1');await once(reserve,'listening');const port=reserve.address().port;await new Promise(r=>reserve.close(r));
- const child=spawn(process.execPath,['server/index.mjs','--production'],{env:{...process.env,PORT:String(port),HOST:'127.0.0.1',CMMS_IDENTITY_STORAGE:'database',CMMS_API_BASE_URL:`http://127.0.0.1:${api.address().port}`,CMMS_API_KEY_ADMIN:'test-service-key',CMMS_API_KEY:'test-service-key',CMMS_APP_PASSWORD:'local-password-must-not-work'}});
+ const child=spawn(process.execPath,['server/index.mjs','--production'],{env:{...process.env,CMMS_INVENTORY_VALUATION_ENABLED:'false',PORT:String(port),HOST:'127.0.0.1',CMMS_IDENTITY_STORAGE:'database',CMMS_API_BASE_URL:`http://127.0.0.1:${api.address().port}`,CMMS_API_KEY_ADMIN:'test-service-key',CMMS_API_KEY:'test-service-key',CMMS_APP_PASSWORD:'local-password-must-not-work'}});
  let logs='';child.stdout.on('data',d=>logs+=d);child.stderr.on('data',d=>logs+=d);
  const base=`http://127.0.0.1:${port}`;
  const call=async(path,method='GET',body,cookie)=>{const r=await fetch(base+path,{method,headers:{'Content-Type':'application/json',...(cookie?{cookie}:{})},body:body?JSON.stringify(body):undefined});return {status:r.status,body:await r.json(),cookie:r.headers.get('set-cookie')?.split(';')[0]};};

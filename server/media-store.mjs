@@ -3,7 +3,7 @@ import {resolve,join} from 'node:path';
 import {randomUUID} from 'node:crypto';
 import sharp from 'sharp';
 const fail=(message,status=400)=>Object.assign(new Error(message),{status});
-export const mediaResources=['assets','spare-parts'];
+export const mediaResources=['assets','spare-parts','stock-transactions'];
 export function canManageMedia(role){return ['ADMINISTRATOR','PLANNER'].includes(role)}
 export function createMediaStore(directory){
  const root=resolve(directory);const indexFile=join(root,'index.json');
@@ -22,22 +22,23 @@ export function createMediaStore(directory){
    if(['jpg','jpeg','png','webp'].includes(ext)){
     try{const img=sharp(buffer,{limitInputPixels:40000000,animated:false});const meta=await img.metadata();if(!['jpeg','png','webp'].includes(meta.format))throw Error();data=await img.rotate().resize({width:1600,height:1600,fit:'inside',withoutEnlargement:true}).webp({quality:85}).toBuffer();}catch{throw fail('ไฟล์รูปภาพไม่ถูกต้อง หรือมีขนาดภาพเกิน 40 ล้านพิกเซล')}
     kind='image';mime='image/webp';storedExt='webp';
-   }else if(resource==='assets'&&ext==='pdf'&&buffer.subarray(0,5).toString()==='%PDF-'){
+   }else if(['assets','stock-transactions'].includes(resource)&&ext==='pdf'&&buffer.subarray(0,5).toString()==='%PDF-'){
     kind='document';mime='application/pdf';storedExt='pdf';
    }else if(resource==='assets'&&ext==='dwg'&&/^AC10\d{2}/.test(buffer.subarray(0,6).toString())){
     kind='document';mime='application/octet-stream';storedExt='dwg';
    }else if(resource==='assets'&&ext==='dxf'&&(/AutoCAD Binary DXF/.test(buffer.subarray(0,30).toString())||/^\s*0\s*\r?\nSECTION\s*\r?\n/i.test(buffer.subarray(0,100).toString()))){
     kind='document';mime='application/octet-stream';storedExt='dxf';
-   }else throw fail(resource==='assets'?'รองรับ JPG, PNG, WebP, PDF, DWG และ DXF เท่านั้น':'รองรับ JPG, PNG และ WebP เท่านั้น');
+   }else throw fail(resource==='assets'?'รองรับ JPG, PNG, WebP, PDF, DWG และ DXF เท่านั้น':resource==='stock-transactions'?'รองรับ JPG, PNG, WebP และ PDF เท่านั้น':'รองรับ JPG, PNG และ WebP เท่านั้น');
    // No awaits below: quota check and atomic index update cannot interleave.
    const rows=read();const same=rows.filter(x=>x.resource===resource&&x.recordId===String(id));
-   if(kind==='image'&&same.filter(x=>x.kind==='image').length>=(resource==='assets'?5:1))throw fail(resource==='assets'?'เครื่องจักรเก็บรูปได้สูงสุด 5 ภาพ':'อะไหล่เก็บรูปได้ 1 ภาพ กรุณาลบภาพเดิมก่อนเปลี่ยน',409);
+   if(same.length>=20)throw fail('เก็บไฟล์ได้สูงสุด 20 ไฟล์ต่อรายการ',409);
+   if(kind==='image'&&same.filter(x=>x.kind==='image').length>=(resource==='spare-parts'?1:5))throw fail('เก็บรูปได้สูงสุด '+(resource==='spare-parts'?1:5)+' ภาพ',409);
    const item={id:randomUUID(),resource,recordId:String(id),name,kind,mime,size:data.length,createdAt:new Date().toISOString(),createdBy:actor};item.file=item.id+'.'+storedExt;
    mkdirSync(root,{recursive:true});writeFileSync(join(root,item.file),data);
    try{save([...rows,item])}catch(e){unlinkSync(join(root,item.file));throw e}
    return publicItem(item);
   },
   remove(resource,id,fileId){valid(resource,id);const rows=read(),item=rows.find(x=>x.resource===resource&&x.recordId===String(id)&&x.id===fileId);if(!item)throw fail('ไม่พบไฟล์',404);save(rows.filter(x=>x.id!==fileId));if(existsSync(join(root,item.file)))unlinkSync(join(root,item.file));},
-  enrich(resource,rows){const files=read();return rows.map(row=>{const id=String(row[resource==='assets'?'AssetID':'PartID']);const image=files.find(x=>x.resource===resource&&x.recordId===id&&x.kind==='image');return image?{...row,ReferenceImageUrl:publicItem(image).url,ReferenceSourceUrl:publicItem(image).url,ReferenceCaption:'ภาพที่อัปโหลด · '+image.name,ImageOrigin:'local'}:row})}
+  enrich(resource,rows){const files=read();return rows.map(row=>{const id=String(row[resource==='assets'?'AssetID':resource==='stock-transactions'?'StockTransactionID':'PartID']);const image=files.find(x=>x.resource===resource&&x.recordId===id&&x.kind==='image');return image?{...row,ReferenceImageUrl:publicItem(image).url,ReferenceSourceUrl:publicItem(image).url,ReferenceCaption:'ภาพที่อัปโหลด · '+image.name,ImageOrigin:'local'}:row})}
  };
 }

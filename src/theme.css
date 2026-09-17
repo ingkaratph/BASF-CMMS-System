@@ -84,3 +84,6 @@
   .theme-toggle { width: 40px; height: 40px; }
   .topbar-right { gap: 5px; }
 }
+
+[data-theme="dark"] .button.danger{background:#842b32;border-color:#d55b64;color:#fff}
+[data-theme="dark"] .button.danger:hover:not(:disabled){background:#a53640}

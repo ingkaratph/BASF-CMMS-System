@@ -31,6 +31,7 @@ export function defaultPermissions() {
 const defaults=defaultPermissions();
 export function canAccess(role,page,policies=defaults) {
   if(!roles.includes(role))return false;
+  if(page==='vendors'||page==='pm-history')return canAccess(role,'maintenance-plans',policies);
   if(page==='users')return role==='ADMINISTRATOR';
   const rules=policies?.[role];
   if(permissionResources.includes(page))return rules?.resources?.[page]?.GET===true;

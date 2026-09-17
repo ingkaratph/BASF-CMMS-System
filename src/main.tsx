@@ -1,7 +1,9 @@
+import {VendorList,CalibrationPoints,PMHistory,PartHistory} from './master-data';
 import { CategoryReports } from './category-reports';
 import { IssueParts } from './issue-parts';
 import {ImageViewer} from './image-viewer';
 import React, { useEffect, useState, useMemo } from "react";
+import {createPortal} from "react-dom";
 import { createRoot } from "react-dom/client";
 import {
   LayoutDashboard,
@@ -58,14 +60,14 @@ import {canAccess,applyPermissions} from "./access";
 import { UserManagement } from "./users";
 import {MediaGallery} from "./media-gallery";
 
-type Page = Resource | "overview" | "reports" | "settings" | "users" | "none";
+type Page = "vendors" | "pm-history" | Resource | "overview" | "reports" | "settings" | "users" | "none";
 const navigation: [Page, string, typeof Factory][] = [
   ["overview", "ภาพรวม", LayoutDashboard],
   ["work-orders", "ใบงานซ่อมบำรุง", ClipboardList],
   ["maintenance-plans", "แผนบำรุงรักษา", CalendarDays],
   ["assets", "ทะเบียนเครื่องจักร", Factory],
   ["spare-parts", "คลังอะไหล่", Package],
-  ["stock-transactions", "รับ–เบิกอะไหล่", ArrowLeftRight],
+  ["stock-transactions", "ประวัติรับ–เบิก", ArrowLeftRight],
   ["calibration-history", "การสอบเทียบ", ShieldCheck],
   ["reports", "รายงานและวิเคราะห์", BarChart3],
   ["users", "ผู้ใช้และสิทธิ์", Users],
@@ -175,7 +177,7 @@ function App() {
     meta?.setAttribute("content", theme === "dark" ? "#101923" : "#004a96");
   }, [theme]);
   const [requestedPage, setPage] = useState<Page>(() => {
-    const p = location.hash.slice(1);
+    const p = location.hash.slice(1) === "pm-history" ? "maintenance-plans" : location.hash.slice(1);
     return [...navigation.map((n) => n[0]), "settings"].includes(p as Page)
       ? (p as Page)
       : "overview";
@@ -234,7 +236,7 @@ function App() {
   },[]);
   useEffect(() => {
     const cb = () => {
-      const p = location.hash.slice(1) as Page;
+      const p = (location.hash.slice(1) === "pm-history" ? "maintenance-plans" : location.hash.slice(1)) as Page;
       setPage(
         [...navigation.map((n) => n[0]), "settings"].includes(p)
           ? p
@@ -265,7 +267,9 @@ function App() {
     window.addEventListener("cmms-session-expired", expire);
     return () => window.removeEventListener("cmms-session-expired", expire);
   }, []);
-  const go = (p: Page) => {
+  const [inventoryFilter,setInventoryFilter]=useState("all");
+  const go = (p: Page, stockFilter="all") => {
+    setInventoryFilter(stockFilter);
     if (!canAccess(role, p)) return;
     location.hash = p;
     setPage(p);
@@ -507,7 +511,7 @@ function App() {
               go={go}
               onDetail={(resource, row) => setDetail({ resource, row })}
             />
-          ) : page === "users" ? (
+          ) : page === "vendors" ? (<VendorList role={role} refresh={refresh}/>) : page === "pm-history" ? (<PMHistory refresh={refresh}/>) : page === "users" ? (
             <UserManagement currentUser={session.user!} />
           ) : page === "settings" ? (
             <SettingsPage
@@ -519,6 +523,7 @@ function App() {
             <ModulePage
               key={page}
               resource={page}
+              inventoryFilter={inventoryFilter}
               issueSelection={issueSelection}
               onIssue={(row)=>{setIssueSelection([row]);go('stock-transactions')}}
               onIssueConsumed={()=>setIssueSelection([])}
@@ -554,6 +559,7 @@ function App() {
           resource={detail.resource}
           row={detail.row}
           role={role}
+          addToCart={()=>{setIssueSelection([detail.row]);setDetail(null);go("spare-parts")}}
           openRelated={(row) => setDetail({resource:"work-orders",row})}
           close={() => setDetail(null)}
           edit={() => setForm(detail)}
@@ -607,7 +613,7 @@ function Overview({
   role:Role|undefined;
   refresh: number;
   onRole: (r: Role) => void;
-  go: (p: Page) => void;
+  go: (p: Page, stockFilter?:string) => void;
   onDetail: (r: Resource, row: Row) => void;
   report: boolean;
 }) {
@@ -650,7 +656,7 @@ function Overview({
         try {
           const j = await api(
             resource,
-            { limit: 2000 },
+            { limit: 5000 },
             "GET",
             undefined,
             ctrl.signal,
@@ -737,7 +743,7 @@ function Overview({
           ภาพรวมการปฏิบัติงาน
         </span>
         <span>
-          ข้อมูลสูงสุด 2000 รายการ / หมวด{loading ? " · กำลังโหลด…" : ""}
+          ข้อมูลสูงสุด 5000 รายการ / หมวด{loading ? " · กำลังโหลด…" : ""}
         </span>
       </div>
       <div className="metrics">
@@ -946,7 +952,7 @@ function Overview({
             <Package size={20} />
           </div>
           {[
-            ["ต้องเติมสต็อก", low?.length, "red"],
+            ["ต้องเติมสต็อก", low?.length, "red", "reorder"],
             [
               "เคลื่อนไหวช้า (180–364 วัน)",
               parts?.filter(
@@ -955,7 +961,7 @@ function Overview({
                   num(r, "DaysSinceLastTransaction") >= 180 &&
                   num(r, "DaysSinceLastTransaction") < 365,
               ).length,
-              "amber",
+              "amber", "slow",
             ],
             [
               "ไม่เคลื่อนไหว ≥ 365 วัน",
@@ -964,13 +970,13 @@ function Overview({
                   num(r, "Quantity") > 0 &&
                   num(r, "DaysSinceLastTransaction") >= 365,
               ).length,
-              "gray",
+              "gray", "idle",
             ],
-          ].map(([label, count, color]) => (
+          ].map(([label, count, color, stockFilter]) => (
             <button
               key={label}
               className="stock-health"
-              onClick={() => go("spare-parts")}
+              onClick={() => go("spare-parts",String(stockFilter))}
             >
               <span className={`status-square ${color}`} />
               <span>{label}</span>
@@ -989,7 +995,7 @@ function Overview({
       {report && (
         <section className="panel report-panel">
           <h2>ส่งออกรายงาน</h2>
-          <p>ข้อมูลที่โหลดสูงสุด 2000 รายการต่อหมวด ไม่ใช่ผลรวมทั้งฐานข้อมูล</p>
+          <p>ข้อมูลที่โหลดสูงสุด 5000 รายการต่อหมวด ไม่ใช่ผลรวมทั้งฐานข้อมูล</p>
           <div className="report-cards">
             {(
               [
@@ -1024,7 +1030,7 @@ function Overview({
         </section>
       )}
       <p className="data-note">
-        ค่ารวมคำนวณจากข้อมูลที่ API ส่งกลับ สูงสุด 2000 รายการต่อหมวด ·
+        ค่ารวมคำนวณจากข้อมูลที่ API ส่งกลับ สูงสุด 5000 รายการต่อหมวด ·
         เมื่อข้อมูลไม่พร้อมจะแสดง —
       </p>
     </>
@@ -1064,7 +1070,7 @@ function PartReference({row}:{row:Row}) {
  return url&&!failed?<><button className="part-reference" type="button" aria-label={`ดูรูป ${label}`} onClick={()=>setOpen(true)}><img src={url} alt={`รูป ${label}`} loading="lazy" onError={()=>setFailed(true)}/><small>ดูรูปภาพ</small></button>{open&&<ImageViewer images={[{url,alt:label}]} initial={0} close={()=>setOpen(false)}/>}</>:<span className="part-reference empty-reference" title="ยังไม่มีภาพที่ยืนยันความใกล้เคียง"><Package size={22}/><small>ไม่มีภาพ</small></span>;
 }
 function ModulePage({
-  issueSelection, onIssue, onIssueConsumed,
+  inventoryFilter, issueSelection, onIssue, onIssueConsumed,
   resource,
   refresh,
   role,
@@ -1072,6 +1078,7 @@ function ModulePage({
   onNew,
   onDetail,
 }: {
+  inventoryFilter: string;
   issueSelection: Row[];
   onIssue:(row:Row)=>void;
   onIssueConsumed:()=>void;
@@ -1082,14 +1089,23 @@ function ModulePage({
   onNew: () => void;
   onDetail: (r: Row) => void;
 }) {
+  const [maintenanceTab,setMaintenanceTab]=useState(location.hash === "#pm-history" ? "history" : "plans");
+  const [assetTab,setAssetTab]=useState('assets');
+  
+  const [cartRows,setCartRows]=useState<Row[]>([]),[cartOpen,setCartOpen]=useState(false),[cartCount,setCartCount]=useState(0);
+  useEffect(()=>{if(resource==='spare-parts'&&issueSelection.length){setCartRows(issueSelection);onIssueConsumed()}},[issueSelection,resource]);
+  const canIssue=canWrite(role,'POST','stock-transactions');
+  const showIssue=false;
   const config = modules[resource];
   const [rows, setRows] = useState<Row[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<Error>();
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
-  const [limit, setLimit] = useState(2000);
+  const [limit, setLimit] = useState(5000);
   const [status, setStatus] = useState("all");
+  const [health,setHealth]=useState(inventoryFilter);
+  useEffect(()=>{setHealth(inventoryFilter);setIndex(0)},[inventoryFilter]);
   const [department,setDepartment]=useState('');
   const [partType,setPartType]=useState('');
   const [facets,setFacets]=useState<{departments:string[];partTypes:string[]}>({departments:[],partTypes:[]});
@@ -1110,6 +1126,7 @@ function ModulePage({
   }, [search]);
   useEffect(() => {
     const ctrl = new AbortController();
+    if(showIssue)return ()=>ctrl.abort();
     setLoading(true);
     setError(undefined);
     setRows([]);
@@ -1126,7 +1143,7 @@ function ModulePage({
         if (!ctrl.signal.aborted) setLoading(false);
       });
     return () => ctrl.abort();
-  }, [resource, refresh, query, limit, retry, department, partType]);
+  }, [resource, refresh, query, limit, retry, department, partType, showIssue]);
   const statuses = useMemo(
     () =>
       [
@@ -1138,7 +1155,7 @@ function ModulePage({
       ].sort(),
     [rows, config],
   );
-  const filtered = rows.filter(
+  const filtered = rows.filter(r=>resource!=="spare-parts"||matchesInventoryHealth(r,health)).filter(
     (r) =>
       status === "all" ||
       (status === "overdue"
@@ -1149,10 +1166,18 @@ function ModulePage({
         : str(r, config.status || "StatusCode") === status),
   );
   const visible = filtered.slice(index * 15, index * 15 + 15);
+  const maintenanceTabs=resource==='maintenance-plans'&&<div className="report-category-tabs" aria-label="แผนและประวัติบำรุงรักษา"><button className="button" aria-pressed={maintenanceTab==='plans'} onClick={()=>setMaintenanceTab('plans')}>แผนบำรุงรักษา</button><button className="button" aria-pressed={maintenanceTab==='history'} onClick={()=>setMaintenanceTab('history')}>ประวัติ PM</button></div>;
+  const assetTabs=resource==='assets'&&<div className="report-category-tabs"><button className="button" aria-pressed={assetTab==='assets'} onClick={()=>setAssetTab('assets')}>ทะเบียนเครื่องจักร</button>{canAccess(role,'vendors')&&<button className="button" aria-pressed={assetTab==='vendors'} onClick={()=>setAssetTab('vendors')}>Vendor list</button>}</div>;
+  if(resource==='assets'&&assetTab==='vendors'&&canAccess(role,'vendors'))return <>{assetTabs}<VendorList role={role} refresh={refresh}/></>;
+  if(resource==='maintenance-plans'&&maintenanceTab==='history')return <>{maintenanceTabs}<PMHistory refresh={refresh}/></>;
+
   return (
     <>
-      {resource === 'stock-transactions' && canWrite(role,'POST','stock-transactions') && <IssueParts initial={issueSelection} onConsumed={onIssueConsumed} role={role} onSaved={()=>setRetry(n=>n+1)}/>}
-      <section className="panel resource-panel">
+      {maintenanceTabs}
+      {assetTabs}
+      {resource==='spare-parts'&&canIssue&&<><button className="button primary cart-open" onClick={()=>setCartOpen(v=>!v)}>ตะกร้าทำรายการ ({cartCount})</button>{createPortal(<div className="cart-overlay" style={{display:cartOpen?undefined:'none'}}><div className="cart-dialog" role="dialog" aria-label="ตะกร้าทำรายการ"><button className="button cart-close" onClick={()=>setCartOpen(false)}>กลับไปเลือกอะไหล่</button><IssueParts cartOnly onCount={setCartCount} initial={cartRows} onConsumed={()=>setCartRows([])} role={role} onSaved={()=>setRetry(n=>n+1)}/></div></div>,document.body)}</>}
+      <section className="panel resource-panel" style={{display:showIssue?'none':undefined}}>
+        {resource==='stock-transactions'&&<h3>ประวัติรับ–เบิกอะไหล่</h3>}
         <div className="table-toolbar">
           <div className="search-field">
             <Search size={18} />
@@ -1201,7 +1226,7 @@ function ModulePage({
               <Download size={16} />
               <span>ส่งออก</span>
             </button>
-            {config.fields.length > 0 && (
+            {config.fields.length > 0 && resource!=='stock-transactions' && (
               <button
                 className="button primary"
                 disabled={!canWrite(role, "POST", resource)}
@@ -1214,9 +1239,9 @@ function ModulePage({
           </div>
         </div>
         {resource==='spare-parts'&&<div className="parts-filters">
-          <label>Department<select aria-label="กรอง Department" value={department} onChange={e=>{setDepartment(e.target.value);setIndex(0);setStatus("all")}}><option value="">ทุก Department</option>{facets.departments.map(v=><option key={v} value={v}>{v==='__missing__'?'ไม่ระบุ':v}</option>)}</select></label>
+          <label>สุขภาพคลัง<select aria-label="กรองสุขภาพคลัง" value={health} onChange={e=>{setHealth(e.target.value);setIndex(0)}}><option value="all">ทั้งหมด</option><option value="reorder">ต้องเติมสต็อก</option><option value="slow">เคลื่อนไหวช้า (180–364 วัน)</option><option value="idle">ไม่เคลื่อนไหว ≥ 365 วัน</option></select></label><label>Department<select aria-label="กรอง Department" value={department} onChange={e=>{setDepartment(e.target.value);setIndex(0);setStatus("all")}}><option value="">ทุก Department</option>{facets.departments.map(v=><option key={v} value={v}>{v==='__missing__'?'ไม่ระบุ':v}</option>)}</select></label>
           <label>PartType<select aria-label="กรอง PartType" value={partType} onChange={e=>{setPartType(e.target.value);setIndex(0);setStatus("all")}}><option value="">ทุก PartType</option>{facets.partTypes.map(v=><option key={v} value={v}>{v==='__missing__'?'ไม่ระบุ':v}</option>)}</select></label>
-          {(department||partType)&&<button className="button" onClick={()=>{setDepartment('');setPartType('');setIndex(0);setStatus('all')}}><X size={16}/>ล้างตัวกรองกลุ่ม</button>}
+          {(department||partType||health!=="all")&&<button className="button" onClick={()=>{setDepartment('');setPartType('');setHealth('all');setIndex(0);setStatus('all')}}><X size={16}/>ล้างตัวกรองกลุ่ม</button>}
           <small>กรอง Department และ PartType จากฐานข้อมูลทั้งหมด{total!==undefined?` · พบ ${total.toLocaleString()} รายการ`:''}</small>
         </div>}
         <div className="table-subbar">
@@ -1251,7 +1276,7 @@ function ModulePage({
                   setIndex(0);
                 }}
               >
-                {[100, 250, 500, 1000, 2000].map((n) => (
+                {[100, 250, 500, 1000, 5000].map((n) => (
                   <option key={n}>{n}</option>
                 ))}
               </select>
@@ -1275,7 +1300,7 @@ function ModulePage({
               <table>
                 <thead>
                   <tr>
-                    {["spare-parts","assets"].includes(resource)&&<th>รูปภาพ</th>}
+                    {["spare-parts","assets","stock-transactions"].includes(resource)&&<th>รูปภาพ</th>}
                     {config.columns.map(([k, l]) => (
                       <th key={k}>{l}</th>
                     ))}
@@ -1285,7 +1310,7 @@ function ModulePage({
                 <tbody>
                   {visible.map((r, i) => (
                     <tr key={str(r, config.id) || i}>
-                      {["spare-parts","assets"].includes(resource)&&<td><PartReference row={r}/></td>}
+                      {["spare-parts","assets","stock-transactions"].includes(resource)&&<td><PartReference row={r}/></td>}
                       {config.columns.map(([k]) => (
                         <td key={k}>
                           {k === config.columns[0][0] ? (
@@ -1315,7 +1340,7 @@ function ModulePage({
                         </td>
                       ))}
                       <td>
-                        {resource==='spare-parts'&&canWrite(role,'POST','stock-transactions')&&<button className="button" onClick={()=>onIssue(r)}>เบิก</button>}
+                        {resource==='spare-parts'&&canWrite(role,'POST','stock-transactions')&&<button className="button cart-add" aria-label="เพิ่มเข้าตะกร้า" title="เพิ่มเข้าตะกร้า" onClick={()=>{setCartRows([r])}}><Plus size={18}/></button>}
                         <button
                           className="icon-button"
                           aria-label="ดูรายละเอียด"
@@ -1343,9 +1368,10 @@ function ModulePage({
                 >
                   <ChevronLeft size={18} />
                 </button>
-                <span>
-                  {index + 1} / {Math.ceil(filtered.length / 15)}
-                </span>
+                {Math.floor(index/10)>0&&<button aria-label="หน้าสิบหน้าก่อนหน้า" onClick={()=>setIndex(Math.max(0,Math.floor(index/10)*10-10))}>…</button>}
+                {Array.from({length:Math.min(10,Math.ceil(filtered.length/15)-Math.floor(index/10)*10)},(_,n)=>Math.floor(index/10)*10+n).map(page=><button key={page} aria-label={'หน้า '+(page+1)} aria-current={page===index?'page':undefined} className={page===index?'page-current':''} onClick={()=>setIndex(page)}>{page+1}</button>)}
+                {(Math.floor(index/10)+1)*10<Math.ceil(filtered.length/15)&&<button aria-label="หน้าสิบหน้าถัดไป" onClick={()=>setIndex((Math.floor(index/10)+1)*10)}>…</button>}
+                <span>/</span><button aria-label="หน้าสุดท้าย" title="ไปหน้าสุดท้าย" onClick={()=>setIndex(Math.ceil(filtered.length/15)-1)}>{Math.ceil(filtered.length/15)}</button>
                 <button
                   aria-label="หน้าถัดไป"
                   disabled={(index + 1) * 15 >= filtered.length}
@@ -1360,7 +1386,7 @@ function ModulePage({
           <Empty />
         )}
       </section>
-      {((total!==undefined&&total>rows.length)||rows.length>=limit) && (
+      {!showIssue&&((total!==undefined&&total>rows.length)||rows.length>=limit) && (
         <p className="data-note warning">
           โหลดแล้ว {rows.length.toLocaleString()} รายการ{total!==undefined?` จากทั้งหมด ${total.toLocaleString()} รายการที่ตรงตัวกรอง`:" อาจมีข้อมูลเพิ่มเติม"} · เลือกโหลดสูงสุด {limit.toLocaleString()} รายการ
           กรุณาใช้คำค้นหาหรือตัวกรองเพื่อเจาะจงรายการที่ต้องการ
@@ -1790,6 +1816,7 @@ function Detail({
   edit,
   removed,
   openRelated,
+  addToCart,
 }: {
   resource: Resource;
   row: Row;
@@ -1798,12 +1825,15 @@ function Detail({
   edit: () => void;
   removed: () => void;
   openRelated: (row:Row) => void;
+  addToCart: () => void;
 }) {
+  const [showCalibration,setShowCalibration]=useState(false);
   const [confirm, setConfirm] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<Error>();
   const c = modules[resource];
   const id = str(row, c.id);
+  if(resource==='calibration-history'&&showCalibration)return <Modal title={'รายละเอียดจุดสอบเทียบ · '+(str(row,'TagNo')||str(row,'AssetName'))} close={()=>setShowCalibration(false)} wide><div className="detail-body"><p>Record วันที่ {display(row.CalibrationDate,'CalibrationDate')} · {str(row,'CertificateNo')||'ไม่ระบุใบรับรอง'}</p><CalibrationPoints refresh={0} eventId={id}/></div><div className="modal-actions"><button className="button" onClick={()=>setShowCalibration(false)}>กลับ Calibration Detail</button></div></Modal>;
   return (
     <Modal
       title={
@@ -1828,7 +1858,8 @@ function Detail({
           <Badge>{str(row, c.status || "StatusCode")}</Badge>
         </div>
         {error && <ErrorBox error={error} />}
-        {["spare-parts","assets"].includes(resource)&&<MediaGallery resource={resource} id={id} role={role} row={row}/>}
+        {["spare-parts","assets","stock-transactions"].includes(resource)&&<MediaGallery resource={resource} id={id} role={role} row={row}/>}
+        {resource==='calibration-history'&&id&&<button className="button primary" onClick={()=>setShowCalibration(true)}>Detail เพิ่มเติม · จุด CAL</button>}
         <dl className="detail-grid">
           {Object.entries(row)
             .filter(([k]) => !/ID$/i.test(k)&&!/^Reference|^ImageOrigin/.test(k))
@@ -1843,6 +1874,7 @@ function Detail({
               </div>
             ))}
         </dl>
+        {resource==='spare-parts'&&canAccess(role,'stock-transactions')&&<PartHistory key={id} id={id}/>}
         {resource === "assets" && canAccess(role, "maintenance-plans") && (
           <RelatedAsset row={row} openRelated={openRelated} />
         )}
@@ -1877,6 +1909,7 @@ function Detail({
                   : "ยกเลิกรายการ"}
           </button>
         )}
+        {resource==='spare-parts'&&canWrite(role,'POST','stock-transactions')&&<button className="button primary cart-add" aria-label="เพิ่มเข้าตะกร้า" title="เพิ่มเข้าตะกร้า" onClick={addToCart}><Plus size={18}/></button>}
         <button className="button" onClick={close}>
           ปิด
         </button>
@@ -1897,7 +1930,7 @@ function RelatedAsset({ row, openRelated }: { row: Row; openRelated:(row:Row)=>v
     for (const r of ["maintenance-plans", "work-orders"] as Resource[])
       api(
         r,
-        { search: str(row, "MachineCode") || str(row, "TagNo"), limit: 2000 },
+        { search: str(row, "MachineCode") || str(row, "TagNo"), limit: 5000 },
         "GET",
         undefined,
         ctrl.signal,
@@ -1918,7 +1951,7 @@ function RelatedAsset({ row, openRelated }: { row: Row; openRelated:(row:Row)=>v
   return (
     <div className="related">
       <h3>แผน PM และประวัติการซ่อม</h3>
-      <p className="data-note">จากผลการค้นหาสูงสุด 2000 รายการต่อหมวด</p>
+      <p className="data-note">จากผลการค้นหาสูงสุด 5000 รายการต่อหมวด</p>
       {error && <ErrorBox error={error} />}{" "}
       {(["maintenance-plans", "work-orders"] as Resource[]).map((r) => (
         <section key={r}>
@@ -2059,3 +2092,10 @@ function LookupField({
 }
 
 
+
+function matchesInventoryHealth(row:Row,filter:string){
+ if(filter==='reorder')return (value(row,'ReorderPoint')!==null&&num(row,'Quantity')<=num(row,'ReorderPoint'))||(value(row,'MinimumStock')!==null&&num(row,'Quantity')<num(row,'MinimumStock'));
+ if(filter==='slow')return num(row,'Quantity')>0&&num(row,'DaysSinceLastTransaction')>=180&&num(row,'DaysSinceLastTransaction')<365;
+ if(filter==='idle')return num(row,'Quantity')>0&&num(row,'DaysSinceLastTransaction')>=365;
+ return true;
+}

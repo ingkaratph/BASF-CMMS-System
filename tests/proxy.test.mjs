@@ -59,7 +59,7 @@ test("proxy authentication, actual role, mutations, validation and upstream erro
   await new Promise((r) => holder.close(r));
   const child = spawn(process.execPath, ["server/index.mjs", "--production"], {
     env: {
-      ...process.env,
+      ...process.env,CMMS_INVENTORY_VALUATION_ENABLED:'false',
       CMMS_IDENTITY_STORAGE: "local",
       PORT: String(port),
       HOST: "127.0.0.1",
@@ -172,7 +172,7 @@ test("proxy authentication, actual role, mutations, validation and upstream erro
       403,
     );
     assert.equal(
-      (await fetch(base + "/api/cmms/assets?limit=2001", { headers })).status,
+      (await fetch(base + "/api/cmms/assets?limit=5001", { headers })).status,
       400,
     );
     mode = "error";

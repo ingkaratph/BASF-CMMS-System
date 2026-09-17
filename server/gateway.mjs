@@ -53,9 +53,9 @@ export function validateRequest(resource, method, query, body) {
     query.limit &&
     (!/^\d+$/.test(String(query.limit)) ||
       +query.limit < 1 ||
-      +query.limit > 2000)
+      +query.limit > 5000)
   )
-    return "Limit must be between 1 and 2000";
+    return "Limit must be between 1 and 5000";
   if (
     query.search &&
     (typeof query.search !== "string" || query.search.length > 100)

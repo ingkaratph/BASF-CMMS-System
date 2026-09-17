@@ -173,10 +173,8 @@ export const modules: Record<Resource, Module> = {
       ["PartName", "ชื่ออะไหล่"],
       ["Department", "Department"],
       ["PartType", "PartType"],
+      ["CabinetClass", "Location"],
       ["Quantity", "คงเหลือ"],
-      ["Unit", "หน่วย"],
-      ["MinimumStock", "ขั้นต่ำ"],
-      ["ReorderPoint", "จุดสั่งซื้อ"],
       ["StockStatus", "สถานะสต็อก"],
       ["MovementStatus", "การเคลื่อนไหว"],
       ["LastTransaction", "เคลื่อนไหวล่าสุด"],
@@ -307,3 +305,4 @@ modules["maintenance-plans"].edit = [
   f("nextDueDate", "วันครบกำหนด", "date", true),
   f("remark", "หมายเหตุ", "textarea"),
 ];
+

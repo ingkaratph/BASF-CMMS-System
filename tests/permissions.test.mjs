@@ -147,6 +147,7 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
               : [
                   {
                     AssetID: "1",
+                    StockTransactionID: "1",
                     PartID: "1",
                     PartCode: "PART",
                     PartName: "Part",
@@ -166,7 +167,7 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
   await new Promise((r) => holder.close(r));
   const child = spawn(process.execPath, ["server/index.mjs", "--production"], {
     env: {
-      ...process.env,
+      ...process.env,CMMS_INVENTORY_VALUATION_ENABLED:'false',
       CMMS_IDENTITY_STORAGE: "local",
       CMMS_USERS_FILE: file,
       CMMS_MEDIA_DIR: join(dir,"media"),
@@ -215,9 +216,17 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
       });
     for (const role of ["PLANNER", "TECHNICIAN", "PRODUCTION"])
       assert.equal((await request(role, "/api/users")).status, 403);
+    for(const role of ['TECHNICIAN','PRODUCTION']){
+      assert.equal((await request(role,'/api/cmms/stock-transactions','POST',{transactionTypeCode:'RECEIVE',partId:1,warehouseId:1,quantity:1})).status,403);
+      for(const transactionTypeCode of ['ISSUE','RETURN'])assert.equal((await request(role,'/api/cmms/stock-transactions','POST',{transactionTypeCode,partId:1,warehouseId:1,quantity:1})).status,201);
+    }
+    assert.equal((await request('PLANNER','/api/cmms/stock-transactions','POST',{transactionTypeCode:'RECEIVE',partId:1,warehouseId:1,quantity:1})).status,201);
+    assert.equal((await request('ADMINISTRATOR','/api/cmms/spare-parts?id=1','PUT',{partCode:'P',partName:'P',unit:'PC',quantity:99})).status,400);
     for (const role of ["TECHNICIAN", "PRODUCTION"])
       assert.equal((await request(role, "/api/reports")).status, 403);
     assert.equal((await request("PLANNER", "/api/reports")).status, 200);
+    for(const role of ["TECHNICIAN","PRODUCTION"])assert.equal((await request(role,"/api/inventory-valuation")).status,403);
+    assert.equal((await request("PLANNER","/api/inventory-valuation")).status,503);
     calls = [];
     assert.equal(
       (
@@ -304,6 +313,7 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
       const forbiddenUpload=await fetch(base+'/api/media/assets/1?name=manual.pdf',{method:'POST',headers:{Cookie:cookies[role],'Content-Type':'application/octet-stream'},body:Buffer.from('%PDF-1.4\n%%EOF')});
       assert.equal(forbiddenUpload.status,403);
     }
+    for(const role of ['TECHNICIAN','PRODUCTION']){const r=await fetch(base+'/api/media/stock-transactions/1?name=record.pdf',{method:'POST',headers:{Cookie:cookies[role],'Content-Type':'application/octet-stream'},body:Buffer.from('%PDF-1.4\n%%EOF')});assert.equal(r.status,201);const item=(await r.json()).data;assert.equal((await request(role,item.url)).status,200);assert.equal((await request(role,item.url,'DELETE')).status,403);}
     const upload=await fetch(base+'/api/media/assets/1?name=manual.pdf',{method:'POST',headers:{Cookie:cookies.PLANNER,'Content-Type':'application/octet-stream'},body:Buffer.from('%PDF-1.4\n%%EOF')});
     assert.equal(upload.status,201);const media=(await upload.json()).data;
     assert.equal((await fetch(base+media.url)).status,401);

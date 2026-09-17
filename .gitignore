@@ -14,3 +14,6 @@ server/users.local.json.tmp
 server/permissions.local.json
 server/permissions.local.json.tmp
 server/uploads/
+
+server/inventory-valuations.local.json
+server/inventory-valuations.local.json.tmp

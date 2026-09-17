@@ -1,3 +1,4 @@
+import {createMasterData,installMasterDataRoutes} from './master-data.mjs';
 import "dotenv/config";
 import {setDefaultResultOrder} from 'node:dns';
 setDefaultResultOrder('ipv4first');
@@ -19,6 +20,8 @@ import {createPermissionsStore} from './permissions-store.mjs';
 import {createIdentityApi} from './identity-api.mjs';
 import {addPartReference} from './part-images.mjs';
 import {createMediaStore,canManageMedia,mediaResources} from './media-store.mjs';
+import {createInventoryValuation} from './inventory-valuation.mjs';
+const valuation=process.env.CMMS_INVENTORY_VALUATION_ENABLED==='true'&&process.env.CMMS_SQL_PASSWORD?createInventoryValuation({sqlConfig:{server:process.env.CMMS_SQL_HOST||'mt.local',port:Number(process.env.CMMS_SQL_PORT||1433),user:process.env.CMMS_SQL_USER||'sa',password:process.env.CMMS_SQL_PASSWORD,database:'BASF_CHEMCAT_CMMS',options:{encrypt:false,trustServerCertificate:true},connectionTimeout:10000,requestTimeout:30000}}):null;
 const app = express();
 const port = Number(process.env.PORT || 80);
 const host = process.env.HOST || "0.0.0.0";
@@ -189,7 +192,10 @@ function mediaAccess(req,res,next){
   const {resource,id}=req.params;
   if(!mediaResources.includes(resource)||!/^\d{1,20}$/.test(id))return res.status(400).json({ok:false,error:{message:'รายการไม่ถูกต้อง'}});
   if(!canAccess(req,resource))return forbidden(res);
-  if(!['GET','HEAD'].includes(req.method)&&(!canManageMedia(req.user.role)||!canPerform(req,resource,'PUT')))return forbidden(res);
+  if(!['GET','HEAD'].includes(req.method)){
+   if(resource==='stock-transactions'){if(req.method!=='POST'||!canPerform(req,resource,'POST'))return forbidden(res);}
+   else if(!canManageMedia(req.user.role)||!canPerform(req,resource,'PUT'))return forbidden(res);
+  }
   next();
 }
 app.get('/api/media/:resource/:id',mediaAccess,(req,res)=>res.json({ok:true,data:mediaStore.list(req.params.resource,req.params.id)}));
@@ -205,7 +211,7 @@ app.post('/api/media/:resource/:id',mediaAccess,express.raw({type:'application/o
   const {resource,id}=req.params;
   const probe=await upstream(resource,'GET','id='+encodeURIComponent(id),undefined,req.user.role==='ADMINISTRATOR'?adminKey:key);
   if(probe.status!==200||!probe.json.ok)throw Object.assign(new Error('เชื่อมต่อฐานข้อมูลไม่ได้'),{status:503});
-  if(!normalizeData(probe.json.data).some(row=>String(row[resource==='assets'?'AssetID':'PartID'])===id))throw Object.assign(new Error('ไม่พบรายการในฐานข้อมูล'),{status:404});
+  if(!normalizeData(probe.json.data).some(row=>String(row[resource==='assets'?'AssetID':resource==='stock-transactions'?'StockTransactionID':'PartID'])===id))throw Object.assign(new Error('ไม่พบรายการในฐานข้อมูล'),{status:404});
   const item=await mediaStore.add(resource,id,req.body,req.query.name,req.user.username);
   res.status(201).json({ok:true,data:item});
  }catch(e){res.status(e.status||400).json({ok:false,error:{message:e.message}})}
@@ -249,16 +255,23 @@ app.put("/api/users/:id", async (req, res) => {
     res.status(e.status||400).json({ ok: false, error: { message: e.message } });
   }
 });
+const masterData=process.env.CMMS_SQL_PASSWORD?createMasterData({server:process.env.CMMS_SQL_HOST||'mt.local',user:process.env.CMMS_SQL_USER||'sa',password:process.env.CMMS_SQL_PASSWORD,database:'BASF_CHEMCAT_CMMS',options:{encrypt:false,trustServerCertificate:true},connectionTimeout:10000,requestTimeout:30000}):null;
+installMasterDataRoutes(app,masterData,canAccess,(req,method)=>['ADMINISTRATOR','PLANNER'].includes(req.user.role)&&canPerform(req,'maintenance-plans',method));
+app.get('/api/inventory-valuation',async(req,res)=>{
+ if(!canAccess(req,'reports'))return forbidden(res);
+ if(!valuation)return res.status(503).json({ok:false,error:{message:'ยังไม่ได้ตั้งค่าฐานข้อมูลมูลค่าคงคลัง'}});
+ try{res.json({ok:true,data:await valuation.get()})}catch{res.status(503).json({ok:false,error:{message:'เชื่อมต่อฐานข้อมูลไม่ได้ หรือบันทึกประวัติมูลค่าคงคลังไม่สำเร็จ'}})}
+});
 app.get("/api/reports", async (req, res) => {
   if (!canAccess(req, "reports")) return forbidden(res);
   try {
     const entries = await Promise.all(
-      ["assets", "work-orders", "maintenance-plans", "spare-parts"].map(
+      ["assets", "work-orders", "maintenance-plans", "spare-parts", "stock-transactions"].map(
         async (resource) => {
           const response = await upstream(
             resource,
             "GET",
-            "limit=2000",
+            "limit=5000",
             undefined,
             req.user.role === "ADMINISTRATOR" ? adminKey : key,
           );
@@ -279,16 +292,15 @@ app.get("/api/reports", async (req, res) => {
       .json({ ok: false, error: { message: "เชื่อมต่อฐานข้อมูลไม่ได้" } });
   }
 });
-app.get("/api/lookups", (req, res) => {
+app.get("/api/lookups", async (req, res) => {
   if (!authenticated(req)) return res.status(401).json({ ok: false });
+  let vendors=[];
+  if(canAccess(req,'calibration-history')){
+    try{vendors=masterData?(await masterData.vendors()).filter(v=>v.IsActive).map(({VendorID,VendorName})=>({VendorID,VendorName})):JSON.parse(readFileSync(new URL('./vendors.json',import.meta.url),'utf8'))}
+    catch{return res.status(503).json({ok:false,error:{message:'เชื่อมต่อฐานข้อมูลไม่ได้'}})}
+  }
   res.json({
-    asOf: "2026-09-15",
-    vendors:
-      !canAccess(req,"calibration-history")
-        ? []
-        : JSON.parse(
-            readFileSync(new URL("./vendors.json", import.meta.url), "utf8"),
-          ),
+    vendors,
     warehouses: [
       {
         WarehouseID: 1,
@@ -336,6 +348,7 @@ app.all("/api/cmms/:resource", async (req, res) => {
       .status(resources.includes(resource) ? 400 : 404)
       .json({ ok: false, error: { code: "INVALID_REQUEST", message: error } });
   const payloadError = validatePayload(resource, req.method, req.body);
+  if(resource==='stock-transactions'&&req.method==='POST'&&!['ISSUE','RETURN'].includes(req.body?.transactionTypeCode)&&!['ADMINISTRATOR','PLANNER'].includes(req.user.role))return forbidden(res);
   if (payloadError)
     return res.status(400).json({
       ok: false,
@@ -415,7 +428,7 @@ app.all("/api/cmms/:resource", async (req, res) => {
       if(mediaResources.includes(resource)&&canAccess(req,resource))json.data=mediaStore.enrich(resource,json.data);
       if (!canAccess(req,resource)) {
         const fields={
-          'spare-parts':['PartID','PartCode','PartName','Quantity','Unit'],
+          'spare-parts':['PartID','PartCode','SAPMaterial','PartName','Quantity','Unit','CabinetClass'],
           'assets':['AssetID','MachineCode','TagNo','AssetName'],
           'work-orders':['WorkOrderID','WorkOrderNo','Title'],
           'maintenance-plans':['PlanID','MachineCode','TagNo','TaskDescription']
@@ -461,3 +474,10 @@ app.use((err, req, res, next) =>
 app.listen(port, host, () =>
   console.log(`BASF CHEMCAT CMMS running at http://${host}:${port}`),
 );
+
+// Capture a baseline on startup, then hourly. Each month retains its latest successful capture.
+// SQL is read-only; dated quantities and PriceText values are frozen in the local history file.
+if(valuation){
+ const capture=()=>valuation.capture().catch(()=>console.error('Inventory valuation capture failed; previous history retained'));
+ capture();setInterval(capture,60*60*1000).unref();
+}
