@@ -14,6 +14,7 @@ export function UserManagement({ currentUser }: { currentUser: User }) {
     id?: string;
     username: string;
     displayName: string;
+    department: string;
     role: Role;
     active: boolean;
     password: string;
@@ -31,6 +32,7 @@ export function UserManagement({ currentUser }: { currentUser: User }) {
   useEffect(() => {
     load();
   }, []);
+  async function removeUser(user:User){if(!window.confirm('ลบผู้ใช้ '+user.username+' หรือไม่? บัญชีนี้จะเข้าสู่ระบบไม่ได้ โดยยังเก็บประวัติงานเดิมไว้'))return;setBusy(true);setError('');setNotice('');try{const r=await fetch('/api/users/'+user.id,{method:'DELETE',headers:{'Content-Type':'application/json'},body:JSON.stringify({version:user.version})});const j=await r.json();if(!r.ok)throw Error(j.error?.message||'ลบไม่สำเร็จ');if(draft?.id===user.id)setDraft(null);setNotice('ลบผู้ใช้ '+user.username+' แล้ว');await load()}catch(e){setError((e as Error).message)}finally{setBusy(false)}}
   async function save(e: React.FormEvent) {
     e.preventDefault();
     if (!draft) return;
@@ -77,6 +79,7 @@ export function UserManagement({ currentUser }: { currentUser: User }) {
               setDraft({
                 username: "",
                 displayName: "",
+                department: "",
                 role: "TECHNICIAN",
                 active: true,
                 password: "",
@@ -103,7 +106,7 @@ export function UserManagement({ currentUser }: { currentUser: User }) {
               <tr>
                 <th>ชื่อผู้ใช้</th>
                 <th>ชื่อแสดง</th>
-                <th>สิทธิ์</th>
+                <th>Department</th><th>สิทธิ์</th>
                 <th>สถานะ</th>
                 <th />
               </tr>
@@ -113,7 +116,7 @@ export function UserManagement({ currentUser }: { currentUser: User }) {
                 <tr key={u.id}>
                   <td>{u.username}</td>
                   <td>{u.displayName}</td>
-                  <td>{roleLabels[u.role]}</td>
+                  <td>{u.department||"ยังไม่ระบุ"}</td><td>{roleLabels[u.role]}</td>
                   <td>{u.active ? "ใช้งาน" : "ปิดใช้งาน"}</td>
                   <td>
                     <button
@@ -124,6 +127,7 @@ export function UserManagement({ currentUser }: { currentUser: User }) {
                           id: u.id,
                           username: u.username,
                           displayName: u.displayName,
+                          department: u.department||"",
                           role: u.role,
                           active: u.active,
                           password: "",
@@ -132,7 +136,7 @@ export function UserManagement({ currentUser }: { currentUser: User }) {
                     >
                       <UserRoundCog size={16} />
                       แก้ไขสิทธิ์
-                    </button>
+                    </button>{u.id!==currentUser.id&&<button className="button danger" disabled={busy} aria-label={"ลบผู้ใช้ "+u.username} onClick={()=>removeUser(u)}>ลบผู้ใช้</button>}
                   </td>
                 </tr>
               ))}
@@ -154,7 +158,7 @@ export function UserManagement({ currentUser }: { currentUser: User }) {
             </button>
           </div>
           <form onSubmit={save}>
-            <div className="form-grid">
+            <div className="form-grid"><label>Department<select aria-label="Department" required value={draft.department} onChange={e=>setDraft({...draft,department:e.target.value})}><option value="">เลือกแผนก</option>{["Maintenance","Slurry","Coating","Warehouse","PD Office","QA/QC","SCM"].map(d=><option key={d}>{d}</option>)}</select></label>
               <label>
                 ชื่อผู้ใช้
                 <input
@@ -202,7 +206,8 @@ export function UserManagement({ currentUser }: { currentUser: User }) {
                   type="password"
                   autoComplete="new-password"
                   required={!draft.id}
-                  minLength={12}
+                  aria-describedby="user-password-help"
+                  minLength={6}
                   maxLength={128}
                   value={draft.password}
                   onChange={(e) =>
@@ -210,6 +215,7 @@ export function UserManagement({ currentUser }: { currentUser: User }) {
                   }
                 />
               </label>
+              <p id="user-password-help">รหัสผ่าน 6–128 ตัวอักษร</p>
               <label>
                 เปิดใช้งาน
                 <input

@@ -48,6 +48,17 @@
 [data-theme="dark"] :is(.sidebar nav button.active,.sidebar-bottom > button.active,.segmented button.selected,.calendar-day button) { background: #193957; color: #95cbff; }
 [data-theme="dark"] :is(.sidebar nav button:hover,.sidebar-bottom > button:hover,.icon-button:hover,.work-row:hover,.plan-row:hover,.table-scroll tr:hover td) { background: #223449; }
 [data-theme="dark"] :is(.avatar,.count,.date-tile,.settings-icon) { background: #263b52; color: #b8d4ee; }
+[data-theme="dark"] .sidebar nav button:has(.count) { background:#3a232b; color:#ffb5b9; box-shadow:inset 3px 0 #ff6269; }
+[data-theme="dark"] .sidebar nav button:has(.count):hover,
+[data-theme="dark"] .sidebar nav button:has(.count).active { background:#4a2730; color:#ffd0d2; }
+[data-theme="dark"] .sidebar nav button:has(.count) > svg { color:#ff777e; }
+[data-theme="dark"] .sidebar nav button:has(.count) .count { background:#e0444c; color:#fff; box-shadow:0 0 0 3px rgba(255,98,105,.15); }
+[data-theme="dark"] .notification-summary { background:#172433; border-color:#3b4e64; }
+[data-theme="dark"] .notification-summary.has-alerts { background:linear-gradient(100deg,#3b2229 0%,#1b2735 72%); border-color:#77434a; border-left-color:#ff6269; }
+[data-theme="dark"] .notification-summary.has-alerts h3 { color:#ffb5b9; }
+[data-theme="dark"] .table-scroll tr.notification-unread td { background:#302129; border-color:#513039; }
+[data-theme="dark"] .table-scroll tr.notification-unread td:first-child { box-shadow:inset 4px 0 #ff6269; }
+[data-theme="dark"] .table-scroll tr.notification-unread:hover td { background:#3c252e; }
 [data-theme="dark"] :is(.button,.form-grid input:not([type="checkbox"]),.form-grid select,.form-grid textarea,.login-card input,.table-subbar select) { background: #142231; border-color: #3b4e64; color: #e1e9f2; }
 [data-theme="dark"] :is(input,textarea)::placeholder { color: #91a3b7; opacity: 1; }
 [data-theme="dark"] .button:hover:not(:disabled) { background: #263b52; }

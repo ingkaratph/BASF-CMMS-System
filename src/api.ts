@@ -13,6 +13,7 @@ export interface User {
   id: string;
   username: string;
   displayName: string;
+  department?: string;
   role: Role;
   active: boolean;
   version: number;

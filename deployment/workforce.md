@@ -1,0 +1,8 @@
+# Department, loans and technician overtime
+
+- Active identity API stores users including `department` in SQL identity state. `cmms_auth.Users.Department` and its stored procedure also support the field. Existing users retain an empty department until an administrator assigns one; no department is inferred.
+- Production inventory access is blocked in shared server permissions regardless of custom policy. Production work-order reads are filtered in SQL by RequestDepartment, with SectionName used only for legacy rows. Production must have a department before creating requests. New requests receive the signed-in user's department in the gateway, rather than accepting a browser-supplied department.
+- Planner and Administrator manage technician overtime and see all loans. Technicians see and resolve only their own loans. Custom stock POST permission is required for borrowing/resolving.
+- Borrowing debits stock using BORROW. Returning credits LOAN_RETURN. Using borrowed items records LOAN_RETURN + ISSUE together, leaving stock unchanged at resolution while recognizing an issue. Resolutions lock the loan row and reject repeat closure. Borrowing checks the selected warehouse's latest snapshot plus live movements. Records remain as loan history after closure.
+- Overtime entries are dated hours per technician, summarized by selected month. Edits use a version check. Payroll rates and pay calculation are not configured.
+- Verification: `npm test`; `artifacts/test-workforce-sql.mjs` creates and drops an isolated temporary SQL test database for transaction/ownership/concurrency/department tests; `artifacts/test-new-workflows-ui.mjs` blocks all application mutations and verifies live read-only screens.

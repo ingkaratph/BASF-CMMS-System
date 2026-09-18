@@ -1,3 +1,6 @@
+import {installNotifications} from './notifications.mjs';
+import {installPasswordRoute} from './account-password.mjs';
+import {createWorkforce,installWorkforce} from './workforce.mjs';
 import {createMasterData,installMasterDataRoutes} from './master-data.mjs';
 import "dotenv/config";
 import {setDefaultResultOrder} from 'node:dns';
@@ -45,6 +48,7 @@ const permissionStore=createPermissionsStore(process.env.CMMS_PERMISSIONS_FILE |
 const identityApi=databaseIdentity?createIdentityApi(base,adminKey):null;
 function canAccess(req,page){return policyAccess(req.user.role,page,req.policy.roles)}
 function canPerform(req,resource,method,row){return policyPerform(req.user.role,resource,method,row,req.policy.roles)}
+const workforce=process.env.CMMS_SQL_PASSWORD?createWorkforce({server:process.env.CMMS_SQL_HOST||'mt.local',user:process.env.CMMS_SQL_USER||'sa',password:process.env.CMMS_SQL_PASSWORD,database:'BASF_CHEMCAT_CMMS',options:{encrypt:false,trustServerCertificate:true},requestTimeout:30000}):null;
 const sessions = new Map();
 const mediaStore=createMediaStore(process.env.CMMS_MEDIA_DIR||'server/uploads');
 const attempts = new Map();
@@ -188,6 +192,9 @@ function forbidden(res) {
       error: { code: "FORBIDDEN", message: "คุณไม่มีสิทธิ์ใช้ฟังก์ชันนี้" },
     });
 }
+installPasswordRoute(app,{read:()=>identityApi?identityApi.read():null,authenticate:(state,name,password)=>identityApi?identityApi.authenticate(state,name,password):users.authenticate(name,password),saveUser:(...args)=>(identityApi||users).saveUser(...args),revoke:userId=>{for(const[id,session]of sessions)if(session.userId===userId)sessions.delete(id)}});
+installNotifications(app,{server:process.env.CMMS_SQL_HOST||'mt.local',user:process.env.CMMS_SQL_USER||'sa',password:process.env.CMMS_SQL_PASSWORD,database:'BASF_CHEMCAT_CMMS',options:{encrypt:false,trustServerCertificate:true}},canAccess);
+installWorkforce(app,workforce,req=>req.identity?.users||users.list(),canAccess,canPerform);
 function mediaAccess(req,res,next){
   const {resource,id}=req.params;
   if(!mediaResources.includes(resource)||!/^\d{1,20}$/.test(id))return res.status(400).json({ok:false,error:{message:'รายการไม่ถูกต้อง'}});
@@ -231,7 +238,7 @@ app.put('/api/permissions/:role',async (req,res)=>{
 });
 app.get("/api/users", (req, res) =>
   canAccess(req, "users")
-    ? res.json({ ok: true, data: identityApi?req.identity.users.map(publicUser):users.list() })
+    ? res.json({ ok: true, data: identityApi?req.identity.users.filter(u=>!u.deletedAt).map(publicUser):users.list() })
     : forbidden(res),
 );
 app.post("/api/users", async (req, res) => {
@@ -244,6 +251,7 @@ app.post("/api/users", async (req, res) => {
     res.status(e.status||400).json({ ok: false, error: { message: e.message } });
   }
 });
+app.delete('/api/users/:id',async(req,res)=>{if(!canAccess(req,'users'))return forbidden(res);try{await(identityApi||users).deleteUser(req.params.id,req.user.id,req.body?.version);for(const[id,session]of sessions)if(session.userId===req.params.id)sessions.delete(id);res.json({ok:true})}catch(e){res.status(e.status||400).json({ok:false,error:{message:e.message}})}});
 app.put("/api/users/:id", async (req, res) => {
   if (!canAccess(req, "users")) return forbidden(res);
   try {
@@ -407,6 +415,15 @@ app.all("/api/cmms/:resource", async (req, res) => {
           },
         });
     }
+    if(resource==='work-orders'&&req.user.role==='PRODUCTION'&&req.method==='GET'){
+      if(!req.user.department)return res.status(403).json({ok:false,error:{message:'กรุณาให้ Administrator กำหนด Department ของบัญชีก่อน'}});
+      if(!workforce)return res.status(503).json({ok:false,error:{message:'เชื่อมต่อฐานข้อมูลไม่ได้'}});
+      return res.json({ok:true,role:req.user.role,data:await workforce.departmentOrders(req.user,req.query.id,req.query.search)});
+    }
+    if(resource==='work-orders'&&req.method==='POST'){
+      if(req.user.role==='PRODUCTION'&&!req.user.department)return res.status(400).json({ok:false,error:{message:'กรุณากำหนด Department ของบัญชีก่อนแจ้งซ่อม'}});
+      req.body.requestDepartment=req.user.department||null;
+    }
     const query = new URLSearchParams();
     for (const field of ["id", "search", "limit", ...(resource==='spare-parts'?['department','partType']:[])])
       if (req.query[field] !== undefined && req.query[field] !== '')
@@ -455,7 +472,7 @@ app.use("/api", (_req, res) =>
   res.status(404).json({ ok: false, error: { message: "Unknown API route" } }),
 );
 if (process.argv.includes("--production")) {
-  app.use(express.static(resolve("dist")));
+  app.use(express.static(resolve("dist"),{setHeaders:(res,path)=>{if(path.endsWith(".html"))res.setHeader("Cache-Control","no-store")}}));
   app.get("/{*path}", (_req, res) => res.sendFile(resolve("dist/index.html")));
 } else {
   const { createServer } = await import("vite");

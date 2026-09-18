@@ -1,4 +1,4 @@
-import {prepareUser,publicUser,verifyPassword} from './users.mjs';
+import {prepareUser,prepareUserDeletion,publicUser,verifyPassword} from './users.mjs';
 import {validateRolePermissions} from './permissions-store.mjs';
 import {roles} from '../shared/permissions.mjs';
 
@@ -32,6 +32,7 @@ export function createIdentityApi(base,key) {
       const valid=verifyPassword(password,u?.passwordHash||'unrecognized-user:'+ '00'.repeat(64));
       return valid&&u?.active?publicUser(u):null;
     },
+    async deleteUser(id,actorId,version){const state=await call('READ');const user=prepareUserDeletion(state.users,id,actorId,version);await call('SAVE_USER',{user,revision:state.usersRevision,actor:actorId});const after=await call('READ');if(after.users.some(u=>u.id===id&&!u.deletedAt))throw Error('บริการบัญชีไม่รองรับการลบผู้ใช้');return publicUser(user)},
     async saveUser(id,body,actorId) {
       const state=await call('READ');
       const user=prepareUser(state.users,id,body,actorId);

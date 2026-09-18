@@ -1,3 +1,6 @@
+import {Notifications,NotificationCount} from './notifications';
+import {AccountSettings} from './account-settings';
+import {Loans,Technicians} from './workforce';
 import {VendorList,CalibrationPoints,PMHistory,PartHistory} from './master-data';
 import { CategoryReports } from './category-reports';
 import { IssueParts } from './issue-parts';
@@ -60,17 +63,17 @@ import {canAccess,applyPermissions} from "./access";
 import { UserManagement } from "./users";
 import {MediaGallery} from "./media-gallery";
 
-type Page = "vendors" | "pm-history" | Resource | "overview" | "reports" | "settings" | "users" | "none";
+type Page = "notifications" | "account" | "loans" | "technicians" | "vendors" | "pm-history" | Resource | "overview" | "reports" | "settings" | "users" | "none";
 const navigation: [Page, string, typeof Factory][] = [
   ["overview", "ภาพรวม", LayoutDashboard],
   ["work-orders", "ใบงานซ่อมบำรุง", ClipboardList],
   ["maintenance-plans", "แผนบำรุงรักษา", CalendarDays],
   ["assets", "ทะเบียนเครื่องจักร", Factory],
   ["spare-parts", "คลังอะไหล่", Package],
-  ["stock-transactions", "ประวัติรับ–เบิก", ArrowLeftRight],
-  ["calibration-history", "การสอบเทียบ", ShieldCheck],
   ["reports", "รายงานและวิเคราะห์", BarChart3],
   ["users", "ผู้ใช้และสิทธิ์", Users],
+  ["notifications", "Notification", AlertCircle],
+  ["account", "Setting / บัญชีของฉัน", Settings],
 ];
 function inputDate(v: unknown, type?: string) {
   if (!v) return "";
@@ -370,7 +373,7 @@ function App() {
                 onClick={() => go(id)}
               >
                 <Icon size={19} />
-                <span>{label}</span>
+                <span>{label}</span>{id==='notifications'&&<NotificationCount/>}
                 {page === id && <span className="nav-dot" />}
               </button>
             ))}
@@ -511,8 +514,8 @@ function App() {
               go={go}
               onDetail={(resource, row) => setDetail({ resource, row })}
             />
-          ) : page === "vendors" ? (<VendorList role={role} refresh={refresh}/>) : page === "pm-history" ? (<PMHistory refresh={refresh}/>) : page === "users" ? (
-            <UserManagement currentUser={session.user!} />
+          ) : page === "notifications" ? (<Notifications/>) : page === "account" ? (<AccountSettings/>) : page === "loans" ? (<Loans/>) : page === "technicians" ? (<Technicians/>) : page === "vendors" ? (<VendorList role={role} refresh={refresh}/>) : page === "pm-history" ? (<PMHistory refresh={refresh}/>) : page === "users" ? (
+            <UsersWorkspace currentUser={session.user!} />
           ) : page === "settings" ? (
             <SettingsPage
               configured={session.configured}
@@ -531,7 +534,7 @@ function App() {
               role={role}
               onRole={dataConnected}
               onNew={() => setForm({ resource: page })}
-              onDetail={(row) => setDetail({ resource: page, row })}
+              onDetail={(row, resourceOverride) => setDetail({ resource: resourceOverride || page, row })}
             />
           )}
           <footer>
@@ -652,7 +655,7 @@ function Overview({
           "maintenance-plans",
           "spare-parts",
         ] as Resource[]
-      ).filter(resource=>canAccess(role,resource)).map(async (resource) => {
+      ).filter(resource=>canAccess(role,resource)&&(role!=='TECHNICIAN'||['work-orders','maintenance-plans'].includes(resource))).map(async (resource) => {
         try {
           const j = await api(
             resource,
@@ -747,8 +750,8 @@ function Overview({
         </span>
       </div>
       <div className="metrics">
-        {metrics.map((m) => (
-          <button className="metric" key={m.label} onClick={() => go(m.page)}>
+        {metrics.filter(m=>role!=='TECHNICIAN'||['work-orders','maintenance-plans'].includes(m.page)).map((m) => (
+          <button className="metric" key={m.label} onClick={() => go(m.page,m.page==="spare-parts"?"reorder":"all")}>
             <div className="metric-top">
               <span>{m.label}</span>
               <div className={`metric-icon ${m.color}`}>
@@ -943,7 +946,7 @@ function Overview({
           )}
           {plans?.length === 0 && <Empty />}
         </section>
-        <section className="panel stock-panel">
+        {role!=='TECHNICIAN'&&<section className="panel stock-panel">
           <div className="panel-heading">
             <div>
               <h2>สุขภาพคลังอะไหล่</h2>
@@ -990,7 +993,7 @@ function Overview({
               เปิดคลังอะไหล่ <ArrowUpRight size={16} />
             </button>
           </div>
-        </section>
+        </section>}
       </div>
       {report && (
         <section className="panel report-panel">
@@ -1087,10 +1090,11 @@ function ModulePage({
   role: Role | undefined;
   onRole: (r: Role) => void;
   onNew: () => void;
-  onDetail: (r: Row) => void;
+  onDetail: (r: Row, resourceOverride?: Resource) => void;
 }) {
   const [maintenanceTab,setMaintenanceTab]=useState(location.hash === "#pm-history" ? "history" : "plans");
   const [assetTab,setAssetTab]=useState('assets');
+  const [inventoryTab,setInventoryTab]=useState('parts');
   
   const [cartRows,setCartRows]=useState<Row[]>([]),[cartOpen,setCartOpen]=useState(false),[cartCount,setCartCount]=useState(0);
   useEffect(()=>{if(resource==='spare-parts'&&issueSelection.length){setCartRows(issueSelection);onIssueConsumed()}},[issueSelection,resource]);
@@ -1102,6 +1106,7 @@ function ModulePage({
   const [error, setError] = useState<Error>();
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
+  const [addedCode,setAddedCode]=useState("");
   const [limit, setLimit] = useState(5000);
   const [status, setStatus] = useState("all");
   const [health,setHealth]=useState(inventoryFilter);
@@ -1144,6 +1149,7 @@ function ModulePage({
       });
     return () => ctrl.abort();
   }, [resource, refresh, query, limit, retry, department, partType, showIssue]);
+  useEffect(()=>{if(resource!=='spare-parts'||!canIssue||loading||!search.trim()||query!==search)return;const exact=rows.find(r=>str(r,'PartCode').toLowerCase()===search.trim().toLowerCase());if(exact){setCartRows([exact]);setAddedCode(str(exact,'PartCode'));setSearch('');}},[rows,loading,query,search,resource,canIssue]);
   const statuses = useMemo(
     () =>
       [
@@ -1167,14 +1173,22 @@ function ModulePage({
   );
   const visible = filtered.slice(index * 15, index * 15 + 15);
   const maintenanceTabs=resource==='maintenance-plans'&&<div className="report-category-tabs" aria-label="แผนและประวัติบำรุงรักษา"><button className="button" aria-pressed={maintenanceTab==='plans'} onClick={()=>setMaintenanceTab('plans')}>แผนบำรุงรักษา</button><button className="button" aria-pressed={maintenanceTab==='history'} onClick={()=>setMaintenanceTab('history')}>ประวัติ PM</button></div>;
-  const assetTabs=resource==='assets'&&<div className="report-category-tabs"><button className="button" aria-pressed={assetTab==='assets'} onClick={()=>setAssetTab('assets')}>ทะเบียนเครื่องจักร</button>{canAccess(role,'vendors')&&<button className="button" aria-pressed={assetTab==='vendors'} onClick={()=>setAssetTab('vendors')}>Vendor list</button>}</div>;
+  const inventoryTabs=resource==='spare-parts'&&<div className="report-category-tabs" aria-label="เมนูคลังอะไหล่"><button className="button" aria-pressed={inventoryTab==='parts'} onClick={()=>setInventoryTab('parts')}>คลังอะไหล่</button>{canAccess(role,'stock-transactions')&&<button className="button" aria-pressed={inventoryTab==='history'} onClick={()=>setInventoryTab('history')}>ประวัติรับ–เบิก</button>}{canAccess(role,'loans')&&<button className="button" aria-pressed={inventoryTab==='loans'} onClick={()=>setInventoryTab('loans')}>รายการยืมอะไหล่</button>}</div>;
+  const assetTabs=resource==='assets'&&<div className="report-category-tabs" aria-label="ทะเบียนเครื่องจักรและเครื่องมือวัด"><button className="button" aria-pressed={assetTab==='assets'} onClick={()=>setAssetTab('assets')}>ทะเบียนเครื่องจักร</button>{canAccess(role,'calibration-history')&&<button className="button" aria-pressed={assetTab==='calibration'} onClick={()=>setAssetTab('calibration')}>ทะเบียนเครื่องมือวัด</button>}{canAccess(role,'vendors')&&<button className="button" aria-pressed={assetTab==='vendors'} onClick={()=>setAssetTab('vendors')}>ทะเบียนผู้รับเหมา</button>}</div>;
   if(resource==='assets'&&assetTab==='vendors'&&canAccess(role,'vendors'))return <>{assetTabs}<VendorList role={role} refresh={refresh}/></>;
+  if(resource==='assets'&&assetTab==='calibration'&&canAccess(role,'calibration-history'))return <>{assetTabs}<ModulePage inventoryFilter="all" issueSelection={[]} onIssue={()=>{}} onIssueConsumed={()=>{}} resource="calibration-history" refresh={refresh} role={role} onRole={onRole} onNew={()=>{}} onDetail={(row)=>onDetail(row,'calibration-history')}/></>;
   if(resource==='maintenance-plans'&&maintenanceTab==='history')return <>{maintenanceTabs}<PMHistory refresh={refresh}/></>;
+  if(resource==='spare-parts'&&inventoryTab==='history'&&canAccess(role,'stock-transactions'))return <>{inventoryTabs}<ModulePage inventoryFilter="all" issueSelection={[]} onIssue={()=>{}} onIssueConsumed={()=>{}} resource="stock-transactions" refresh={refresh} role={role} onRole={onRole} onNew={()=>{}} onDetail={(row)=>onDetail(row,'stock-transactions')}/></>;
 
   return (
     <>
+      {addedCode&&resource==='spare-parts'&&<p role="status">เพิ่ม {addedCode} เข้าตะกร้าแล้ว</p>}
+      {resource==='work-orders'&&role==='PRODUCTION'&&<div className="category-metrics"><div>งานแจ้งซ่อมในแผนก<strong>{rows.length}</strong></div><div>กำลังดำเนินการ<strong>{rows.filter(r=>!isClosed(r)).length}</strong></div><div>ปิดแล้ว<strong>{rows.filter(r=>isClosed(r)).length}</strong></div></div>}
       {maintenanceTabs}
       {assetTabs}
+      {inventoryTabs}
+      {inventoryTab==='loans'&&resource==='spare-parts'&&canAccess(role,'loans')&&<Loans/>}
+      <div style={{display:resource==='spare-parts'&&inventoryTab==='loans'&&canAccess(role,'loans')?'none':undefined}}>
       {resource==='spare-parts'&&canIssue&&<><button className="button primary cart-open" onClick={()=>setCartOpen(v=>!v)}>ตะกร้าทำรายการ ({cartCount})</button>{createPortal(<div className="cart-overlay" style={{display:cartOpen?undefined:'none'}}><div className="cart-dialog" role="dialog" aria-label="ตะกร้าทำรายการ"><button className="button cart-close" onClick={()=>setCartOpen(false)}>กลับไปเลือกอะไหล่</button><IssueParts cartOnly onCount={setCartCount} initial={cartRows} onConsumed={()=>setCartRows([])} role={role} onSaved={()=>setRetry(n=>n+1)}/></div></div>,document.body)}</>}
       <section className="panel resource-panel" style={{display:showIssue?'none':undefined}}>
         {resource==='stock-transactions'&&<h3>ประวัติรับ–เบิกอะไหล่</h3>}
@@ -1425,6 +1439,7 @@ function ModulePage({
           สำหรับข้อมูลที่ย้ายเข้าระบบ
         </p>
       )}
+      </div>
     </>
   );
 }
@@ -2099,3 +2114,5 @@ function matchesInventoryHealth(row:Row,filter:string){
  if(filter==='idle')return num(row,'Quantity')>0&&num(row,'DaysSinceLastTransaction')>=365;
  return true;
 }
+
+function UsersWorkspace({currentUser}:{currentUser:import("./api").User}){const [tab,setTab]=useState(currentUser.role==='ADMINISTRATOR'?'users':'technicians');return <><div className="report-category-tabs">{currentUser.role==='ADMINISTRATOR'&&<button className="button" aria-pressed={tab==='users'} onClick={()=>setTab('users')}>ผู้ใช้และสิทธิ์</button>}{currentUser.role==='ADMINISTRATOR'&&<button className="button" aria-pressed={tab==='logger'} onClick={()=>setTab('logger')}>Datalogger</button>}<button className="button" aria-pressed={tab==='technicians'} onClick={()=>setTab('technicians')}>จัดการ Technician / OT</button></div>{tab==='logger'&&currentUser.role==='ADMINISTRATOR'?<Notifications logger/>:tab==='users'&&currentUser.role==='ADMINISTRATOR'?<UserManagement currentUser={currentUser}/>:<Technicians/>}</>}

@@ -19,8 +19,8 @@ export function defaultPermissions() {
     resources:Object.fromEntries(permissionResources.map(resource=>{
       const master=['assets','maintenance-plans','spare-parts'].includes(resource);
       return [resource,{
-        GET:role!=='PRODUCTION'||['assets','work-orders','stock-transactions'].includes(resource),
-        POST:role==='ADMINISTRATOR'||role==='PLANNER'||(role==='TECHNICIAN'&&!master)||(role==='PRODUCTION'&&['work-orders','stock-transactions'].includes(resource)),
+        GET:role!=='PRODUCTION'||['assets','work-orders'].includes(resource),
+        POST:role==='ADMINISTRATOR'||role==='PLANNER'||(role==='TECHNICIAN'&&!master)||(role==='PRODUCTION'&&resource==='work-orders'),
         PUT:!immutableResources.includes(resource)&&(role==='ADMINISTRATOR'||role==='PLANNER'||(role==='TECHNICIAN'&&!master)),
         DELETE:!immutableResources.includes(resource)&&(role==='ADMINISTRATOR'||(role==='PLANNER'&&resource==='work-orders'))
       }];
@@ -32,6 +32,10 @@ const defaults=defaultPermissions();
 export function canAccess(role,page,policies=defaults) {
   if(!roles.includes(role))return false;
   if(page==='vendors'||page==='pm-history')return canAccess(role,'maintenance-plans',policies);
+  if(['spare-parts','stock-transactions','loans'].includes(page)&&role==='PRODUCTION')return false;
+  if(page==='technicians')return ['ADMINISTRATOR','PLANNER'].includes(role);
+  if(page==='loans'||page==='notifications')return canAccess(role,'spare-parts',policies);
+  if(page==='account')return true;
   if(page==='users')return role==='ADMINISTRATOR';
   const rules=policies?.[role];
   if(permissionResources.includes(page))return rules?.resources?.[page]?.GET===true;
@@ -39,6 +43,7 @@ export function canAccess(role,page,policies=defaults) {
   return permissionPages.includes(page)&&rules?.pages?.[page]===true;
 }
 export function canLookup(role,resource,policies=defaults) {
+  if(role==='PRODUCTION'&&['spare-parts','stock-transactions'].includes(resource))return false;
   const rights=policies?.[role]?.resources;
   if(!rights||!roles.includes(role))return false;
   if(resource==='spare-parts'||resource==='work-orders')return rights['stock-transactions']?.POST===true;
@@ -48,6 +53,7 @@ export function canLookup(role,resource,policies=defaults) {
 }
 export function canPerform(role,resource,method,row,policies=defaults) {
   if(!roles.includes(role)||!permissionResources.includes(resource)||!permissionMethods.includes(method))return false;
+  if(role==='PRODUCTION'&&['spare-parts','stock-transactions'].includes(resource))return false;
   if(method==='GET')return canAccess(role,resource,policies)||canLookup(role,resource,policies);
   if(immutableResources.includes(resource)&&method!=='POST')return false;
   const rules=policies?.[role];

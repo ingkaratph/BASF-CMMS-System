@@ -43,7 +43,7 @@ test("role matrix, master protection, history lock and navigation boundaries", (
   assert.equal(canAccess("TECHNICIAN", "reports"), false);
   assert.equal(canAccess("PLANNER", "reports"), true);
   assert.equal(canAccess("PRODUCTION", "spare-parts"), false);
-  assert.equal(canPerform("PRODUCTION", "spare-parts", "GET"), true);
+  assert.equal(canPerform("PRODUCTION", "spare-parts", "GET"), false);
   assert.equal(canPerform("PRODUCTION", "work-orders", "POST"), true);
   assert.equal(canPerform("PRODUCTION", "work-orders", "PUT"), false);
   assert.equal(canAccess("PRODUCTION", "settings"), false);
@@ -110,6 +110,7 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
       {
         username: role.toLowerCase(),
         displayName: role,
+        department: "Coating",
         role,
         password: "role-test-password",
       },
@@ -218,7 +219,7 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
       assert.equal((await request(role, "/api/users")).status, 403);
     for(const role of ['TECHNICIAN','PRODUCTION']){
       assert.equal((await request(role,'/api/cmms/stock-transactions','POST',{transactionTypeCode:'RECEIVE',partId:1,warehouseId:1,quantity:1})).status,403);
-      for(const transactionTypeCode of ['ISSUE','RETURN'])assert.equal((await request(role,'/api/cmms/stock-transactions','POST',{transactionTypeCode,partId:1,warehouseId:1,quantity:1})).status,201);
+      for(const transactionTypeCode of ['ISSUE','RETURN'])assert.equal((await request(role,'/api/cmms/stock-transactions','POST',{transactionTypeCode,partId:1,warehouseId:1,quantity:1})).status,role==='PRODUCTION'?403:201);
     }
     assert.equal((await request('PLANNER','/api/cmms/stock-transactions','POST',{transactionTypeCode:'RECEIVE',partId:1,warehouseId:1,quantity:1})).status,201);
     assert.equal((await request('ADMINISTRATOR','/api/cmms/spare-parts?id=1','PUT',{partCode:'P',partName:'P',unit:'PC',quantity:99})).status,400);
@@ -302,8 +303,8 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
     const parts = await (
       await request("PRODUCTION", "/api/cmms/spare-parts")
     ).json();
-    assert.equal(parts.role, "PRODUCTION");
-    assert.equal(parts.data[0].StandardCost, undefined);
+
+    assert.equal(parts.ok, false);
     assert.equal(
       (await request("ADMINISTRATOR", "/api/cmms/assets?id=1", "DELETE"))
         .status,
@@ -313,7 +314,7 @@ test("HTTP permission enforcement, role spoofing, closed history, reports and re
       const forbiddenUpload=await fetch(base+'/api/media/assets/1?name=manual.pdf',{method:'POST',headers:{Cookie:cookies[role],'Content-Type':'application/octet-stream'},body:Buffer.from('%PDF-1.4\n%%EOF')});
       assert.equal(forbiddenUpload.status,403);
     }
-    for(const role of ['TECHNICIAN','PRODUCTION']){const r=await fetch(base+'/api/media/stock-transactions/1?name=record.pdf',{method:'POST',headers:{Cookie:cookies[role],'Content-Type':'application/octet-stream'},body:Buffer.from('%PDF-1.4\n%%EOF')});assert.equal(r.status,201);const item=(await r.json()).data;assert.equal((await request(role,item.url)).status,200);assert.equal((await request(role,item.url,'DELETE')).status,403);}
+    for(const role of ['TECHNICIAN']){const r=await fetch(base+'/api/media/stock-transactions/1?name=record.pdf',{method:'POST',headers:{Cookie:cookies[role],'Content-Type':'application/octet-stream'},body:Buffer.from('%PDF-1.4\n%%EOF')});assert.equal(r.status,201);const item=(await r.json()).data;assert.equal((await request(role,item.url)).status,200);assert.equal((await request(role,item.url,'DELETE')).status,403);}
     const upload=await fetch(base+'/api/media/assets/1?name=manual.pdf',{method:'POST',headers:{Cookie:cookies.PLANNER,'Content-Type':'application/octet-stream'},body:Buffer.from('%PDF-1.4\n%%EOF')});
     assert.equal(upload.status,201);const media=(await upload.json()).data;
     assert.equal((await fetch(base+media.url)).status,401);
