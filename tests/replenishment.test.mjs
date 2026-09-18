@@ -1,0 +1,5 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import express from 'express';
+import {installMasterDataRoutes} from '../server/master-data.mjs';
+test('Replenishment details enforce planner/admin and inventory access',async()=>{const app=express();let calls=0;app.use((req,res,next)=>{req.user={role:req.get('role')};next()});installMasterDataRoutes(app,{planningDetails:async()=>{calls++;return [{PartID:1,StandardCost:12,LeadTimeDays:0}]}},req=>req.get('access')!=='no',()=>false);const server=app.listen(0);await new Promise(r=>server.once('listening',r));try{const url=`http://127.0.0.1:${server.address().port}/api/replenishment/details`;for(const role of ['TECHNICIAN','PRODUCTION',''])assert.equal((await fetch(url,{headers:{role}})).status,403);for(const role of ['PLANNER','ADMINISTRATOR']){const r=await fetch(url,{headers:{role}});assert.equal(r.status,200);assert.equal((await r.json()).data[0].LeadTimeDays,0)}assert.equal((await fetch(url,{headers:{role:'PLANNER',access:'no'}})).status,403);assert.equal(calls,2)}finally{await new Promise(r=>server.close(r))}});
