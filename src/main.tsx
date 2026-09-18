@@ -1848,6 +1848,19 @@ function Detail({
   const [error, setError] = useState<Error>();
   const c = modules[resource];
   const id = str(row, c.id);
+  const [partDetails,setPartDetails]=useState<Row|null>(null);
+  const [detailsLoading,setDetailsLoading]=useState(false);
+  useEffect(()=>{
+    setPartDetails(null);
+    if(resource!=='spare-parts'||!id)return;
+    const controller=new AbortController();setDetailsLoading(true);
+    fetch(`/api/parts/${id}/details`,{signal:controller.signal}).then(async response=>{
+      const result=await response.json();
+      if(!response.ok)throw new Error(result.error?.message||'โหลดรายละเอียดอะไหล่ไม่สำเร็จ');
+      setPartDetails(result.data);
+    }).catch(e=>{if(!controller.signal.aborted)setError(e)}).finally(()=>{if(!controller.signal.aborted)setDetailsLoading(false)});
+    return ()=>controller.abort();
+  },[resource,id]);
   if(resource==='calibration-history'&&showCalibration)return <Modal title={'รายละเอียดจุดสอบเทียบ · '+(str(row,'TagNo')||str(row,'AssetName'))} close={()=>setShowCalibration(false)} wide><div className="detail-body"><p>Record วันที่ {display(row.CalibrationDate,'CalibrationDate')} · {str(row,'CertificateNo')||'ไม่ระบุใบรับรอง'}</p><CalibrationPoints refresh={0} eventId={id}/></div><div className="modal-actions"><button className="button" onClick={()=>setShowCalibration(false)}>กลับ Calibration Detail</button></div></Modal>;
   return (
     <Modal
@@ -1876,8 +1889,25 @@ function Detail({
         {["spare-parts","assets","stock-transactions"].includes(resource)&&<MediaGallery resource={resource} id={id} role={role} row={row}/>}
         {resource==='calibration-history'&&id&&<button className="button primary" onClick={()=>setShowCalibration(true)}>Detail เพิ่มเติม · จุด CAL</button>}
         <dl className="detail-grid">
+          {resource === 'spare-parts' && <>
+            <div><dt>ราคาต่อชิ้น</dt><dd>{(() => {
+              if(detailsLoading)return 'กำลังโหลด…';
+              const cost = value(partDetails||row, 'StandardCost');
+              if (cost === null || cost === undefined || String(cost).trim() === '' || !Number.isFinite(Number(cost))) return '—';
+              const currency = str(partDetails||row, 'CurrencyCode').trim().toUpperCase() || 'THB';
+              const amount = Number(cost).toLocaleString('th-TH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+              return `${amount} ${currency === 'THB' ? 'บาท' : currency}`;
+            })()}</dd></div>
+            <div><dt>ระยะเวลาสั่งของ</dt><dd>{(() => {
+              if(detailsLoading)return 'กำลังโหลด…';
+              const days = value(partDetails||row, 'LeadTimeDays');
+              return days !== null && days !== undefined && String(days).trim() !== '' && Number.isFinite(Number(days))
+                ? `${Number(days).toLocaleString('th-TH')} วัน` : '—';
+            })()}</dd></div>
+          </>}
           {Object.entries(row)
             .filter(([k]) => !/ID$/i.test(k)&&!/^Reference|^ImageOrigin/.test(k))
+            .filter(([k]) => resource !== 'spare-parts' || !/^(PriceText|StandardCost|CurrencyCode|LeadTimeDays|LeadTimeText)$/i.test(k))
             .map(([k, v]) => (
               <div key={k}>
                 <dt>

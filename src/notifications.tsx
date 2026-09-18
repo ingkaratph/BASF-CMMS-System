@@ -43,6 +43,9 @@ export function Notifications({ logger = false }: { logger?: boolean }) {
   }
 
   const rows = logger ? data.rows : data.activities.filter((row: any) => showRead || !row.IsRead);
+  const technician = data.audience === "TECHNICIAN";
+  const entityLabel: Record<string, string> = { StockTransaction: "คลังอะไหล่", WorkOrder: "ใบแจ้งซ่อม", PartLoan: "ยืมอะไหล่" };
+  const actionLabel: Record<string, string> = { CREATE: "รายการใหม่", UPDATE: "อัปเดต", DELETE: "ลบ" };
   return (
     <section className="panel report-panel">
       <h2>{logger ? "Datalogger · กิจกรรมระบบ" : "Notification"}</h2>
@@ -52,7 +55,7 @@ export function Notifications({ logger = false }: { logger?: boolean }) {
         <div className={`report-toolbar notification-summary${data.unread || data.missing.length ? " has-alerts" : ""}`}>
           <div>
             <span className="notification-summary-label">สถานะการแจ้งเตือน</span>
-            <h3>ยังไม่อ่าน {data.unread} · รอ SAPMaterial {data.missing.length}</h3>
+            <h3>{technician ? `ยังไม่อ่าน ${data.unread} · ใบแจ้งซ่อมใหม่และการคืนของ` : `ยังไม่อ่าน ${data.unread} · รอ SAPMaterial ${data.missing.length}`}</h3>
           </div>
           <button className="button primary" disabled={busy || !data.unread} onClick={() => markRead("/api/notifications/read-all")}>
             {busy ? "กำลังบันทึก…" : "อ่านแล้วทั้งหมด"}
@@ -70,7 +73,7 @@ export function Notifications({ logger = false }: { logger?: boolean }) {
         <thead><tr><th>เวลา</th><th>หมวด</th><th>กิจกรรม</th><th>รายละเอียด</th><th /></tr></thead>
         <tbody>{rows.map((row: any) => <tr key={row.ActivityID} className={!logger && !row.IsRead ? "notification-unread" : undefined}>
           <td>{new Date(row.OccurredAt + "Z".repeat(!String(row.OccurredAt).endsWith("Z") ? 1 : 0)).toLocaleString("th-TH")}</td>
-          <td>{row.Entity}</td><td>{row.Action}</td><td>{row.Summary}</td>
+          <td>{entityLabel[row.Entity] || row.Entity}</td><td>{actionLabel[row.Action] || row.Action}</td><td>{row.Summary}</td>
           <td>{!logger && !row.IsRead && <button className="button" disabled={busy} onClick={() => markRead(`/api/notifications/${row.ActivityID}/read`)}>อ่านแล้ว</button>}</td>
         </tr>)}</tbody>
       </table></div>

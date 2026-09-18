@@ -28,4 +28,15 @@ BEGIN
 END;
 
 GO
+CREATE OR ALTER TRIGGER cmms.tr_CMMS_WorkOrderActivity ON cmms.WorkOrder AFTER INSERT,UPDATE,DELETE AS
+BEGIN
+ SET NOCOUNT ON;
+ INSERT cmms.InventoryActivity(Entity,RecordID,Action,Summary)
+ SELECT 'WorkOrder',COALESCE(i.WorkOrderID,d.WorkOrderID),
+  CASE WHEN i.WorkOrderID IS NULL THEN 'DELETE' WHEN d.WorkOrderID IS NULL THEN 'CREATE' ELSE 'UPDATE' END,
+  CONCAT(COALESCE(i.WorkOrderNo,d.WorkOrderNo),' · ',COALESCE(i.Title,d.Title))
+ FROM inserted i FULL JOIN deleted d ON d.WorkOrderID=i.WorkOrderID;
+END;
+
+GO
 IF OBJECT_ID('cmms.SystemActivity') IS NULL CREATE TABLE cmms.SystemActivity(LogID bigint IDENTITY PRIMARY KEY,OccurredAt datetime2 NOT NULL DEFAULT SYSUTCDATETIME(),Actor nvarchar(100),Path nvarchar(300),Method varchar(10),StatusCode int);

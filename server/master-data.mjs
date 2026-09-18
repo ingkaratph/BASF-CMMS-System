@@ -13,6 +13,7 @@ export function validateVendor(body,editing=false){
 export function createMasterData(config){
  async function withPool(fn){const pool=new sql.ConnectionPool(config);try{await pool.connect();return await fn(pool)}finally{await pool.close()}}
  return {
+ partDetails:id=>withPool(async pool=>(await pool.request().input('id',sql.BigInt,id).query('SELECT PartID,StandardCost,CurrencyCode,LeadTimeDays,LeadTimeText FROM inv.Part WHERE PartID=@id')).recordset[0]||null),
  partHistory:(id,page)=>withPool(async pool=>{
   const part=(await pool.request().input('id',sql.BigInt,id).query('SELECT PartID,SAPMaterial FROM inv.Part WHERE PartID=@id')).recordset[0];
   if(!part)throw Object.assign(Error('ไม่พบอะไหล่'),{status:404});
@@ -44,6 +45,12 @@ export function createMasterData(config){
 export function installMasterDataRoutes(app,service,access,perform){
  const route=(page,action)=>async(req,res)=>{if(!access(req,page))return res.status(403).json({ok:false,error:{message:'คุณไม่มีสิทธิ์ใช้ฟังก์ชันนี้'}});if(!service)return res.status(503).json({ok:false,error:{message:'เชื่อมต่อฐานข้อมูลไม่ได้'}});try{await action(req,res)}catch(e){const status=[400,404,409].includes(e.status)?e.status:503;res.status(status).json({ok:false,error:{message:status===503?'เชื่อมต่อฐานข้อมูลไม่ได้':e.message}})}};
  app.get('/api/vendors',route('vendors',async(req,res)=>res.json({ok:true,data:await service.vendors()})));
+ app.get('/api/parts/:id/details',route('spare-parts',async(req,res)=>{
+  if(!/^[1-9]\d{0,17}$/.test(req.params.id))return res.status(400).json({ok:false,error:{message:'รหัสอะไหล่ไม่ถูกต้อง'}});
+  const data=await service.partDetails(req.params.id);
+  if(!data)return res.status(404).json({ok:false,error:{message:'ไม่พบอะไหล่'}});
+  res.json({ok:true,data});
+ }));
  app.get('/api/parts/:id/history',route('stock-transactions',async(req,res)=>{
   if(!access(req,'spare-parts'))return res.status(403).json({ok:false,error:{message:'ไม่มีสิทธิ์ดูคลังอะไหล่'}});
   const page=String(req.query.page||'1');
