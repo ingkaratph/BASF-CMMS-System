@@ -1,3 +1,4 @@
+import {FactoryLayout} from './factory-layout';
 import {Replenishment} from './replenishment';
 import {Notifications,NotificationCount} from './notifications';
 import {AccountSettings} from './account-settings';
@@ -779,6 +780,7 @@ function Overview({
             .join(" · ")}
         </p>
       )}
+      <FactoryLayout assets={assets} workOrders={wo} loading={loading} onDetail={onDetail}/>
       <div className="overview-grid">
         <section className="panel work-panel">
           <div className="panel-heading">
