@@ -43,6 +43,6 @@ export function FactoryLayout({assets,workOrders,loading,onDetail}:{assets?:Row[
    </div>
   </div>
   <div className="factory-legend"><span>● สีแดง: งานเร่งด่วน</span><span>● สีเหลือง: งานเปิด</span><span>● สีเขียว: ไม่พบงานเปิดในชุดที่โหลด</span><span>ไม่มีจุด: ยังไม่แมพ</span></div>
-  <p className="factory-note">ใช้เฉพาะข้อมูลที่หน้าภาพรวมโหลดได้ตามสิทธิ์ สูงสุด 5,000 รายการต่อหมวด (แหล่งข้อมูลอาจส่งมาน้อยกว่า) · ยังไม่เชื่อม: เครื่อง {assets===undefined?'—':mapping.unmappedAssets.length} / ใบงาน {workOrders===undefined?'—':mapping.unmappedWorkOrders.length} · รายการที่รหัสซ้ำหรือไม่ตรงจะไม่เดาจับคู่</p>
+  <p className="factory-note">ใช้เฉพาะข้อมูลที่โหลดได้ตามสิทธิ์ สูงสุด 5,000 รายการต่อหมวด (แหล่งข้อมูลอาจส่งมาน้อยกว่า) · ยังไม่เชื่อม: เครื่อง {assets===undefined?'—':mapping.unmappedAssets.length} / ใบงาน {workOrders===undefined?'—':mapping.unmappedWorkOrders.length} · รายการที่รหัสซ้ำหรือไม่ตรงจะไม่เดาจับคู่</p>
  </section>;
 }

@@ -65,9 +65,10 @@ import {canAccess,applyPermissions} from "./access";
 import { UserManagement } from "./users";
 import {MediaGallery} from "./media-gallery";
 
-type Page = "notifications" | "account" | "loans" | "technicians" | "vendors" | "pm-history" | Resource | "overview" | "reports" | "settings" | "users" | "none";
+type Page = "notifications" | "account" | "loans" | "technicians" | "vendors" | "pm-history" | Resource | "overview" | "factory-layout" | "reports" | "settings" | "users" | "none";
 const navigation: [Page, string, typeof Factory][] = [
   ["overview", "ภาพรวม", LayoutDashboard],
+  ["factory-layout", "3D Layout โรงงาน", Factory],
   ["work-orders", "ใบงานซ่อมบำรุง", ClipboardList],
   ["maintenance-plans", "แผนบำรุงรักษา", CalendarDays],
   ["assets", "ทะเบียนเครื่องจักร", Factory],
@@ -471,6 +472,8 @@ function App() {
               </p>
             </div>
             <div className="heading-actions">
+              {page === "overview" && <button className="button" onClick={()=>go("factory-layout")}><Factory size={18}/>ดู 3D Layout โรงงาน</button>}
+              {page === "factory-layout" && <button className="button" onClick={()=>go("overview")}><LayoutDashboard size={18}/>กลับหน้าภาพรวม</button>}
               <button
                 className="button"
                 onClick={() => setRefresh((v) => v + 1)}
@@ -507,10 +510,11 @@ function App() {
               </button>
             </div>
           )}
-          {page === "none" ? <section className="panel report-panel"><h2>ยังไม่ได้รับสิทธิ์เข้าถึงฟังก์ชัน</h2><p>กรุณาติดต่อผู้ดูแลระบบเพื่อกำหนดสิทธิ์ให้บัญชีนี้</p></section> : page === "overview" || page === "reports" ? (
+          {page === "none" ? <section className="panel report-panel"><h2>ยังไม่ได้รับสิทธิ์เข้าถึงฟังก์ชัน</h2><p>กรุณาติดต่อผู้ดูแลระบบเพื่อกำหนดสิทธิ์ให้บัญชีนี้</p></section> : page === "overview" || page === "reports" || page === "factory-layout" ? (
             <Overview
               role={role}
               report={page === "reports"}
+              layoutOnly={page === "factory-layout"}
               refresh={refresh}
               onRole={dataConnected}
               go={go}
@@ -614,6 +618,7 @@ function Overview({
   go,
   onDetail,
   report,
+  layoutOnly = false,
 }: {
   role:Role|undefined;
   refresh: number;
@@ -621,6 +626,7 @@ function Overview({
   go: (p: Page, stockFilter?:string) => void;
   onDetail: (r: Resource, row: Row) => void;
   report: boolean;
+  layoutOnly?: boolean;
 }) {
   const [data, setData] = useState<Partial<Record<Resource, Row[]>>>({});
   const [errors, setErrors] = useState<Partial<Record<Resource, Error>>>({});
@@ -657,7 +663,7 @@ function Overview({
           "maintenance-plans",
           "spare-parts",
         ] as Resource[]
-      ).filter(resource=>canAccess(role,resource)&&(role!=='TECHNICIAN'||['work-orders','maintenance-plans'].includes(resource))).map(async (resource) => {
+      ).filter(resource=>(!layoutOnly||['assets','work-orders'].includes(resource))&&canAccess(role,resource)&&(role!=='TECHNICIAN'||['work-orders','maintenance-plans'].includes(resource))).map(async (resource) => {
         try {
           const j = await api(
             resource,
@@ -679,7 +685,7 @@ function Overview({
       if (!ctrl.signal.aborted) setLoading(false);
     });
     return () => ctrl.abort();
-  }, [refresh, report, role]);
+  }, [refresh, report, role, layoutOnly]);
   const assets = data.assets;
   const wo = data["work-orders"];
   const plans = data["maintenance-plans"];
@@ -739,6 +745,7 @@ function Overview({
     },
   ];
   const firstError = Object.values(errors)[0];
+  if(layoutOnly) return <>{firstError && <ErrorBox error={firstError}/>}<FactoryLayout assets={assets} workOrders={wo} loading={loading} onDetail={onDetail}/></>;
   if(report) return <CategoryReports data={data} loading={loading} error={firstError} onExport={exportCsv}/>;
   return (
     <>
@@ -780,7 +787,6 @@ function Overview({
             .join(" · ")}
         </p>
       )}
-      <FactoryLayout assets={assets} workOrders={wo} loading={loading} onDetail={onDetail}/>
       <div className="overview-grid">
         <section className="panel work-panel">
           <div className="panel-heading">

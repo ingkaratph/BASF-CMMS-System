@@ -2,7 +2,7 @@ import * as T from './vendor/three.module.js';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {buildSite} from './site-builder.mjs';
 export function mountLayout(host,data,onSelect){
- const renderer=new T.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.setClearColor(0xcbd8df);host.append(renderer.domElement);
+ const renderer=new T.WebGLRenderer({antialias:true,alpha:true});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.setClearColor(0x000000,0);host.append(renderer.domElement);
  renderer.domElement.setAttribute('aria-label','โมเดลอาคารและเครื่องจักร 3D');
  const scene=new T.Scene(),camera=new T.PerspectiveCamera(42,1,.1,3000);camera.up.set(0,0,1);
  const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;
